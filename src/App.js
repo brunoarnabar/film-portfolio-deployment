@@ -1,5 +1,4 @@
 import './App.scss';
-import clouds from './Images/Backgrounds/cloud-bg.jpg'
 
 function App() {
   return (
