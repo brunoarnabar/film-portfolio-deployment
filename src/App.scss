@@ -1,0 +1,30 @@
+.App {
+  
+  border: red 10px solid;
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  background-image: url('./Images/Backgrounds/cloud-bg.jpg') ;
+  border: rgb(255, 191, 0) 10px solid;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+  
+
+  .Title{
+    color: rgb(237, 40, 40);
+    font-size: 580%;
+    font-family: 'IM Fell English', serif;
+  }
+
+  .Sub-Title{
+    color: rgb(237, 142, 40);
+    font-size: 80%;
+  }
+}

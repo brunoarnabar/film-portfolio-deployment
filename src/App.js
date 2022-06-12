@@ -1,12 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import clouds from './Images/Backgrounds/cloud-bg.jpg'
 
 function App() {
   return (
+    
     <div className="App">
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        Brunos-Film-Portfolio.com
+
+        <div className='Title'>
+        Bruno Arnabar
+        </div>
+        
+
+        <p className='Sub-Title'>
+          Copyright© NouvelleFilms LinkedIn Instagram Vimeo
+        </p>
       </header>
     </div>
   );
