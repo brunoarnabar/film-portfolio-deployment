@@ -1,13 +1,14 @@
 .App {
   
-  border: red 10px solid;
+  // border: red 10px solid;
 }
 
 .App-header {
   /* background-color: #282c34; */
-  background-image: url('./Images/Backgrounds/cloud-bg.jpg') ;
-  border: rgb(255, 191, 0) 10px solid;
+  background-image: url('./Images/Backgrounds/bg.jpg') ;
+  // border: rgb(255, 191, 0) 10px solid;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,16 +16,52 @@
   font-size: calc(10px + 2vmin);
   color: white;
   text-align: center;
+  position: relative;
+
+
+  .poster {
+    // border: rgb(255, 0, 38) 10px solid;
+    display:inline-block;
+    background-image: url('./Images/Backgrounds/poster.jpg') ;
+    background-size: cover;
+    width: 95%;
+    height: 95%;
+    position: absolute;
+    margin:auto;
+
+    // display: table;
+    // margin: 0 auto;
+    // align-items: center;
+    display: grid;
+    // width: 100%;
+    // height: 100%;
+    
+  }
+
+  .Center-Poster{
+    // border: rgb(255, 191, 0) 10px solid;
+    align-self: center;
+    justify-self: center;
+    // position: absolute;
+    // top:50%;
+  }
   
 
   .Title{
-    color: rgb(237, 40, 40);
+    color: rgb(255, 250, 239);
     font-size: 580%;
     font-family: 'IM Fell English', serif;
+    display: table;
+    margin: 0 auto;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(240, 248, 255, 0.452);
   }
 
   .Sub-Title{
-    color: rgb(237, 142, 40);
+    color: rgb(255, 250, 239);
     font-size: 80%;
+    // background-color: rgba(158, 210, 255, 0.452);
   }
 }
