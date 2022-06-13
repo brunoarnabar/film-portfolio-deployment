@@ -23,9 +23,11 @@
     // border: rgb(255, 0, 38) 10px solid;
     display:inline-block;
     background-image: url('./Images/Backgrounds/poster.jpg') ;
-    background-size: cover;
-    width: 95%;
-    height: 95%;
+    background-size:cover;
+    width: 98%;
+    height: 98%;
+    // width: 100%;
+    // height: 100%;
     position: absolute;
     margin:auto;
 
@@ -48,9 +50,10 @@
   
 
   .Title{
-    color: rgb(255, 250, 239);
-    font-size: 580%;
-    font-family: 'IM Fell English', serif;
+    background-color: url('./Images/Backgrounds/poster.jpg') ;
+    font-size: 380%;
+    // font-family: 'IM Fell English', serif;
+    font-family: 'Chivo', sans-serif;
     display: table;
     margin: 0 auto;
     align-items: center;
