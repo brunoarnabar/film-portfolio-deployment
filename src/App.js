@@ -4,10 +4,8 @@ function App() {
   return (
     
     <div className="App">
-      <header className="App-header">
-        HEADER
-
-        <div className="poster">
+      <header className="poster-border">
+        <div className="poster-bg">
           <div className="Center-Poster">
 
           
@@ -27,7 +25,15 @@ function App() {
 
         
       </header>
+
+      <div className='gfg-div'>
+        <div className="text">
+          <span></span>
+        </div>
+      </div>
+      
     </div>
+
   );
 }
 
