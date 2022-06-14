@@ -15,12 +15,14 @@ function App() {
             BRUNO ARNABAR
           </div>
           
-
           <p className='Sub-Title'>
             Copyright© MMMXX LinkedIn Instagram Vimeo
           </p>
+          
 
           </div>
+
+          
         </div>
 
         
