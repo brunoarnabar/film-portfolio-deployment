@@ -2,47 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <link rel="shortcut icon" type="image/gif" sizes="32x32" href="favSVG/fav1.svg" width=32px>
+    <!-- <link rel="icon" type="image/gif" sizes="32x32" href="favSVG/fav1.svg" width=32px> -->
+    <!-- <link rel="icon" type="image/svg+xml" sizes="32x32" href="favSVG/fav1.svg" width=32px> -->
+    <!-- <link rel="shortcut icon" type="image/svg+xml" sizes="32x32" href="favSVG/fav1.svg" width=32px> -->
+    
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Bruno Arnabar's Website"
     />
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Chivo:wght@900&family=IM+Fell+English:ital@1&family=Josefin+Sans:wght@400;600&family=Philosopher:ital,wght@0,400;1,700&family=Syncopate:wght@700&display=swap" rel="stylesheet"> 
 
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Bruno Arnabar's Portfolio</title>
+    
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
+
+<script language='javascript'>
+    
+    
+  var favicon_images =[
+  'favSVG/fav1.svg', 'favSVG/fav2.svg', 'favSVG/fav3.svg', 'favSVG/fav4.svg', 'favSVG/fav5.svg', 'favSVG/fav6.svg', 'favSVG/fav7.svg', 'favSVG/fav8.svg', 'favSVG/fav9.svg', 'favSVG/fav10.svg', 'favSVG/fav11.svg', 'favSVG/fav12.svg', 'favSVG/fav13.svg', 'favSVG/fav14.svg', 'favSVG/fav15.svg', 'favSVG/fav16.svg', 'favSVG/fav17.svg', 'favSVG/fav18.svg', 'favSVG/fav19.svg', 'favSVG/fav20.svg', 'favSVG/fav21.svg', 'favSVG/fav22.svg', 'favSVG/fav23.svg', 'favSVG/fav24.svg', 'favSVG/fav25.svg', 'favSVG/fav26.svg', 'favSVG/fav27.svg', 'favSVG/fav28.svg', 'favSVG/fav29.svg', 'favSVG/fav30.svg', 'favSVG/fav31.svg', 'favSVG/fav32.svg', 'favSVG/fav33.svg', 'favSVG/fav34.svg', 'favSVG/fav35.svg', 'favSVG/fav36.svg', 'favSVG/fav37.svg', 'favSVG/fav38.svg', 'favSVG/fav39.svg', 'favSVG/fav40.svg', 'favSVG/fav41.svg', 'favSVG/fav42.svg', 'favSVG/fav43.svg', 'favSVG/fav44.svg', 'favSVG/fav45.svg', 'favSVG/fav46.svg', 'favSVG/fav47.svg', 'favSVG/fav48.svg', 'favSVG/fav49.svg', 'favSVG/fav50.svg', 'favSVG/fav51.svg', 'favSVG/fav52.svg', 'favSVG/fav53.svg', 'favSVG/fav54.svg', 'favSVG/fav55.svg', 'favSVG/fav56.svg', 'favSVG/fav57.svg', 'favSVG/fav58.svg', 'favSVG/fav59.svg', 'favSVG/fav60.svg', 'favSVG/fav61.svg', 'favSVG/fav62.svg'
+  ],
+  image_counter = 0; // To keep track of the current image
+
+  setInterval(function() {
+  // remove current favicon
+  if(document.querySelector("link[rel='icon']") !== null)
+  document.querySelector("link[rel='icon']").remove();
+  if(document.querySelector("link[rel='shortcut icon']") !== null)
+  document.querySelector("link[rel='shortcut icon']").remove();
+
+  // add new favicon image
+  document.querySelector("head").insertAdjacentHTML('beforeend', '<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif"');
+
+  // If last image then goto first image
+  // Else go to next image    
+  if(image_counter == favicon_images.length -1)
+  image_counter = 0;
+  else
+  image_counter++;
+  }, 82);
+
+</script>
+
+<!-- var favicon_images_ = [ 
+  'favSVG/fav1.svg', 'favSVG/fav2.svg', 'favSVG/fav3.svg', 'favSVG/fav4.svg', 'favSVG/fav5.svg', 'favSVG/fav6.svg', 'favSVG/fav7.svg', 'favSVG/fav8.svg', 'favSVG/fav9.svg', 'favSVG/fav10.svg', 'favSVG/fav11.svg', 'favSVG/fav12.svg', 'favSVG/fav13.svg', 'favSVG/fav14.svg', 'favSVG/fav15.svg', 'favSVG/fav16.svg', 'favSVG/fav17.svg', 'favSVG/fav18.svg', 'favSVG/fav19.svg', 'favSVG/fav20.svg', 'favSVG/fav21.svg', 'favSVG/fav22.svg', 'favSVG/fav23.svg', 'favSVG/fav24.svg', 'favSVG/fav25.svg', 'favSVG/fav26.svg', 'favSVG/fav27.svg', 'favSVG/fav28.svg', 'favSVG/fav29.svg', 'favSVG/fav30.svg', 'favSVG/fav31.svg', 'favSVG/fav32.svg', 'favSVG/fav33.svg', 'favSVG/fav34.svg', 'favSVG/fav35.svg', 'favSVG/fav36.svg', 'favSVG/fav37.svg', 'favSVG/fav38.svg', 'favSVG/fav39.svg', 'favSVG/fav40.svg', 'favSVG/fav41.svg', 'favSVG/fav42.svg', 'favSVG/fav43.svg', 'favSVG/fav44.svg', 'favSVG/fav45.svg', 'favSVG/fav46.svg', 'favSVG/fav47.svg', 'favSVG/fav48.svg', 'favSVG/fav49.svg', 'favSVG/fav50.svg', 'favSVG/fav51.svg', 'favSVG/fav52.svg', 'favSVG/fav53.svg', 'favSVG/fav54.svg', 'favSVG/fav55.svg', 'favSVG/fav56.svg', 'favSVG/fav57.svg', 'favSVG/fav58.svg', 'favSVG/fav59.svg', 'favSVG/fav60.svg', 'favSVG/fav61.svg', 'favSVG/fav62.svg' 
+  ], -->
+
+<!-- var favicon_images_ = [ 
+  'favGIF/fav1.gif', 'favGIF/fav2.gif', 'favGIF/fav3.gif', 'favGIF/fav4.gif', 'favGIF/fav5.gif', 'favGIF/fav6.gif', 'favGIF/fav7.gif', 'favGIF/fav8.gif', 'favGIF/fav9.gif', 'favGIF/fav10.gif', 'favGIF/fav11.gif', 'favGIF/fav12.gif', 'favGIF/fav13.gif', 'favGIF/fav14.gif', 'favGIF/fav15.gif', 'favGIF/fav16.gif', 'favGIF/fav17.gif', 'favGIF/fav18.gif', 'favGIF/fav19.gif', 'favGIF/fav20.gif', 'favGIF/fav21.gif', 'favGIF/fav22.gif', 'favGIF/fav23.gif', 'favGIF/fav24.gif', 'favGIF/fav25.gif', 'favGIF/fav26.gif', 'favGIF/fav27.gif', 'favGIF/fav28.gif', 'favGIF/fav29.gif', 'favGIF/fav30.gif', 'favGIF/fav31.gif', 'favGIF/fav32.gif', 'favGIF/fav33.gif', 'favGIF/fav34.gif', 'favGIF/fav35.gif', 'favGIF/fav36.gif', 'favGIF/fav37.gif', 'favGIF/fav38.gif', 'favGIF/fav39.gif', 'favGIF/fav40.gif', 'favGIF/fav41.gif', 'favGIF/fav42.gif', 'favGIF/fav43.gif', 'favGIF/fav44.gif', 'favGIF/fav45.gif', 'favGIF/fav46.gif', 'favGIF/fav47.gif', 'favGIF/fav48.gif', 'favGIF/fav49.gif', 'favGIF/fav50.gif', 'favGIF/fav51.gif', 'favGIF/fav52.gif', 'favGIF/fav53.gif', 'favGIF/fav54.gif', 'favGIF/fav55.gif', 'favGIF/fav56.gif', 'favGIF/fav57.gif', 'favGIF/fav58.gif', 'favGIF/fav59.gif', 'favGIF/fav60.gif', 'favGIF/fav61.gif', 'favGIF/fav62.gif'
+  ], -->

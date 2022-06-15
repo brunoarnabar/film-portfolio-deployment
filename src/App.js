@@ -30,7 +30,15 @@ function App() {
         <div className="text">
           <span></span>
         </div>
+
+        
+
+        {/* <iframe src='favicon.svg' alt='anim' title="Equalize Digital Home Page iframe example" ></iframe> */}
       </div>
+
+      <object data='favicon.svg' type='image/svg+xml'>
+          <img src='favicon.svg' alt='ani' />
+        </object>
       
     </div>
 
