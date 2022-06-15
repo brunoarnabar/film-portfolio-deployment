@@ -159,6 +159,88 @@ and (orientation: portrait) {
 /* For Mobile Landscape View */
 @media screen and (max-device-width: 926px)
 and (orientation: landscape) {
+
+  .poster-border {
+    /* background-color: #282c34; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20),
+    rgba(0, 0, 0, 0.2)),url('./Images/Backgrounds/bg.jpg');
+    // filter: brightness(50%);
+    background-size:100% 100%;
+    // border: rgb(255, 191, 0) 10px solid;
+    width: 86;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    position: relative;
+  
+  
+    .poster-bg {
+      // border: rgb(255, 0, 38) 10px solid;
+      display:inline-block;
+      background-image: url('./Images/Backgrounds/poster.jpg') ;
+      background-size:cover;
+      width: 94.85%;
+      height: 95.5%;
+      // width: 100%;
+      // height: 100%;
+      position: absolute;
+      margin:auto;
+      box-shadow: 0 0 1px 1px #fae2bc7a inset;
+      
+      // display: table;
+      // margin: 0 auto;
+      // align-items: center;
+      display: grid;
+      // width: 100%;
+      // height: 100%;
+      
+    }
+  
+    .Center-Poster{
+       
+      align-self: center;
+      justify-self: center;
+      // position: absolute;
+      // top:50%;
+    }
+    
+  
+    .Title{
+      // border: rgb(255, 191, 0) 10px solid;
+      background-color: url('./Images/Backgrounds/poster.jpg') ;
+      font-size: 380%;
+      font-family: 'Josefin Sans', sans-serif;
+      // font-family: 'Syncopate', sans-serif;
+      // font-family: 'Chivo', sans-serif;
+      // font-family: 'Arsenal', sans-serif;
+      // font-family: 'IM Fell English', serif;
+      // font-family: 'Philosopher', sans-serif;
+      
+      display: table;
+      margin: 0 auto;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      // color: rgb(248, 240, 227);
+      // color: #ffe253;
+      color: rgb(255, 251, 241);
+      text-shadow: 0 0 2px rgb(248, 231, 191);
+    }
+  
+    .Sub-Title{
+      color: rgb(255, 250, 239);
+      font-size: 80%;
+  
+      // background-color: rgba(158, 210, 255, 0.452);
+    }
+  }
+  //-------------------------
   .gfg-div {
     width: 400px;
     height: 200px;
