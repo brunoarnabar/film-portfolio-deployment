@@ -21,9 +21,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Chivo:wght@900&family=IM+Fell+English:ital@1&family=Josefin+Sans:wght@400;600&family=Philosopher:ital,wght@0,400;1,700&family=Syncopate:wght@700&display=swap" rel="stylesheet"> 
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="css/global.css">
+    
 
     <title>Bruno Arnabar's Portfolio</title>
-    
+
   </head>
   <body>
     <div id="root"></div>
@@ -33,9 +35,10 @@
 <script language='javascript'>
     
     
-  var favicon_images =[
-  'favSVG/fav1.svg', 'favSVG/fav2.svg', 'favSVG/fav3.svg', 'favSVG/fav4.svg', 'favSVG/fav5.svg', 'favSVG/fav6.svg', 'favSVG/fav7.svg', 'favSVG/fav8.svg', 'favSVG/fav9.svg', 'favSVG/fav10.svg', 'favSVG/fav11.svg', 'favSVG/fav12.svg', 'favSVG/fav13.svg', 'favSVG/fav14.svg', 'favSVG/fav15.svg', 'favSVG/fav16.svg', 'favSVG/fav17.svg', 'favSVG/fav18.svg', 'favSVG/fav19.svg', 'favSVG/fav20.svg', 'favSVG/fav21.svg', 'favSVG/fav22.svg', 'favSVG/fav23.svg', 'favSVG/fav24.svg', 'favSVG/fav25.svg', 'favSVG/fav26.svg', 'favSVG/fav27.svg', 'favSVG/fav28.svg', 'favSVG/fav29.svg', 'favSVG/fav30.svg', 'favSVG/fav31.svg', 'favSVG/fav32.svg', 'favSVG/fav33.svg', 'favSVG/fav34.svg', 'favSVG/fav35.svg', 'favSVG/fav36.svg', 'favSVG/fav37.svg', 'favSVG/fav38.svg', 'favSVG/fav39.svg', 'favSVG/fav40.svg', 'favSVG/fav41.svg', 'favSVG/fav42.svg', 'favSVG/fav43.svg', 'favSVG/fav44.svg', 'favSVG/fav45.svg', 'favSVG/fav46.svg', 'favSVG/fav47.svg', 'favSVG/fav48.svg', 'favSVG/fav49.svg', 'favSVG/fav50.svg', 'favSVG/fav51.svg', 'favSVG/fav52.svg', 'favSVG/fav53.svg', 'favSVG/fav54.svg', 'favSVG/fav55.svg', 'favSVG/fav56.svg', 'favSVG/fav57.svg', 'favSVG/fav58.svg', 'favSVG/fav59.svg', 'favSVG/fav60.svg', 'favSVG/fav61.svg', 'favSVG/fav62.svg'
+  var favicon_images = [ 
+  'favFLM/fav1.gif', 'favFLM/fav2.gif', 'favFLM/fav3.gif', 'favFLM/fav4.gif', 'favFLM/fav5.gif', 'favFLM/fav6.gif', 'favFLM/fav7.gif', 'favFLM/fav8.gif', 'favFLM/fav9.gif', 'favFLM/fav10.gif', 'favFLM/fav11.gif', 'favFLM/fav12.gif', 'favFLM/fav13.gif', 'favFLM/fav14.gif', 'favFLM/fav15.gif', 'favFLM/fav16.gif', 'favFLM/fav17.gif', 'favFLM/fav18.gif', 'favFLM/fav19.gif', 'favFLM/fav20.gif', 'favFLM/fav21.gif', 'favFLM/fav22.gif', 'favFLM/fav23.gif', 'favFLM/fav24.gif', 'favFLM/fav25.gif', 'favFLM/fav26.gif', 'favFLM/fav27.gif', 'favFLM/fav28.gif', 'favFLM/fav29.gif', 'favFLM/fav30.gif', 'favFLM/fav31.gif', 'favFLM/fav32.gif', 'favFLM/fav33.gif', 'favFLM/fav34.gif', 'favFLM/fav35.gif', 'favFLM/fav36.gif', 'favFLM/fav37.gif'  
   ],
+
   image_counter = 0; // To keep track of the current image
 
   setInterval(function() {
@@ -58,10 +61,14 @@
 
 </script>
 
-<!-- var favicon_images_ = [ 
+<!-- var favicon_images = [ 
   'favSVG/fav1.svg', 'favSVG/fav2.svg', 'favSVG/fav3.svg', 'favSVG/fav4.svg', 'favSVG/fav5.svg', 'favSVG/fav6.svg', 'favSVG/fav7.svg', 'favSVG/fav8.svg', 'favSVG/fav9.svg', 'favSVG/fav10.svg', 'favSVG/fav11.svg', 'favSVG/fav12.svg', 'favSVG/fav13.svg', 'favSVG/fav14.svg', 'favSVG/fav15.svg', 'favSVG/fav16.svg', 'favSVG/fav17.svg', 'favSVG/fav18.svg', 'favSVG/fav19.svg', 'favSVG/fav20.svg', 'favSVG/fav21.svg', 'favSVG/fav22.svg', 'favSVG/fav23.svg', 'favSVG/fav24.svg', 'favSVG/fav25.svg', 'favSVG/fav26.svg', 'favSVG/fav27.svg', 'favSVG/fav28.svg', 'favSVG/fav29.svg', 'favSVG/fav30.svg', 'favSVG/fav31.svg', 'favSVG/fav32.svg', 'favSVG/fav33.svg', 'favSVG/fav34.svg', 'favSVG/fav35.svg', 'favSVG/fav36.svg', 'favSVG/fav37.svg', 'favSVG/fav38.svg', 'favSVG/fav39.svg', 'favSVG/fav40.svg', 'favSVG/fav41.svg', 'favSVG/fav42.svg', 'favSVG/fav43.svg', 'favSVG/fav44.svg', 'favSVG/fav45.svg', 'favSVG/fav46.svg', 'favSVG/fav47.svg', 'favSVG/fav48.svg', 'favSVG/fav49.svg', 'favSVG/fav50.svg', 'favSVG/fav51.svg', 'favSVG/fav52.svg', 'favSVG/fav53.svg', 'favSVG/fav54.svg', 'favSVG/fav55.svg', 'favSVG/fav56.svg', 'favSVG/fav57.svg', 'favSVG/fav58.svg', 'favSVG/fav59.svg', 'favSVG/fav60.svg', 'favSVG/fav61.svg', 'favSVG/fav62.svg' 
   ], -->
 
-<!-- var favicon_images_ = [ 
+<!-- var favicon_images = [ 
   'favGIF/fav1.gif', 'favGIF/fav2.gif', 'favGIF/fav3.gif', 'favGIF/fav4.gif', 'favGIF/fav5.gif', 'favGIF/fav6.gif', 'favGIF/fav7.gif', 'favGIF/fav8.gif', 'favGIF/fav9.gif', 'favGIF/fav10.gif', 'favGIF/fav11.gif', 'favGIF/fav12.gif', 'favGIF/fav13.gif', 'favGIF/fav14.gif', 'favGIF/fav15.gif', 'favGIF/fav16.gif', 'favGIF/fav17.gif', 'favGIF/fav18.gif', 'favGIF/fav19.gif', 'favGIF/fav20.gif', 'favGIF/fav21.gif', 'favGIF/fav22.gif', 'favGIF/fav23.gif', 'favGIF/fav24.gif', 'favGIF/fav25.gif', 'favGIF/fav26.gif', 'favGIF/fav27.gif', 'favGIF/fav28.gif', 'favGIF/fav29.gif', 'favGIF/fav30.gif', 'favGIF/fav31.gif', 'favGIF/fav32.gif', 'favGIF/fav33.gif', 'favGIF/fav34.gif', 'favGIF/fav35.gif', 'favGIF/fav36.gif', 'favGIF/fav37.gif', 'favGIF/fav38.gif', 'favGIF/fav39.gif', 'favGIF/fav40.gif', 'favGIF/fav41.gif', 'favGIF/fav42.gif', 'favGIF/fav43.gif', 'favGIF/fav44.gif', 'favGIF/fav45.gif', 'favGIF/fav46.gif', 'favGIF/fav47.gif', 'favGIF/fav48.gif', 'favGIF/fav49.gif', 'favGIF/fav50.gif', 'favGIF/fav51.gif', 'favGIF/fav52.gif', 'favGIF/fav53.gif', 'favGIF/fav54.gif', 'favGIF/fav55.gif', 'favGIF/fav56.gif', 'favGIF/fav57.gif', 'favGIF/fav58.gif', 'favGIF/fav59.gif', 'favGIF/fav60.gif', 'favGIF/fav61.gif', 'favGIF/fav62.gif'
+  ], -->
+
+  <!-- var favicon_images = [ 
+  'favFLM/fav1.gif', 'favFLM/fav2.gif', 'favFLM/fav3.gif', 'favFLM/fav4.gif', 'favFLM/fav5.gif', 'favFLM/fav6.gif', 'favFLM/fav7.gif', 'favFLM/fav8.gif', 'favFLM/fav9.gif', 'favFLM/fav10.gif', 'favFLM/fav11.gif', 'favFLM/fav12.gif', 'favFLM/fav13.gif', 'favFLM/fav14.gif', 'favFLM/fav15.gif', 'favFLM/fav16.gif', 'favFLM/fav17.gif', 'favFLM/fav18.gif', 'favFLM/fav19.gif', 'favFLM/fav20.gif', 'favFLM/fav21.gif', 'favFLM/fav22.gif', 'favFLM/fav23.gif', 'favFLM/fav24.gif', 'favFLM/fav25.gif', 'favFLM/fav26.gif', 'favFLM/fav27.gif', 'favFLM/fav28.gif', 'favFLM/fav29.gif', 'favFLM/fav30.gif', 'favFLM/fav31.gif', 'favFLM/fav32.gif', 'favFLM/fav33.gif', 'favFLM/fav34.gif', 'favFLM/fav35.gif', 'favFLM/fav36.gif', 'favFLM/fav37.gif'  
   ], -->
