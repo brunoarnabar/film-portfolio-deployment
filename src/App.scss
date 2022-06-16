@@ -59,10 +59,10 @@
 
 .Header{
 
-  grid-row-start: r1c2;
-  grid-column-start: r1c2; /* Start at d */
-  grid-row-end: r1c3;
-  grid-column-end: r1c3; /* End at e */
+  grid-row-start: r1c1;
+  grid-column-start: r1c1; /* Start at d */
+  grid-row-end: r1c4;
+  grid-column-end: r1c4; /* End at e */
 
   padding-bottom: 0.5rem;
 
@@ -139,7 +139,7 @@
 
 .Bottom{
   color: rgb(245, 222, 94);
-  font-size: 104%;
+  font-size: 85%;
   padding-bottom: 1rem;
 
   font-family: 'Arsenal', sans-serif;
