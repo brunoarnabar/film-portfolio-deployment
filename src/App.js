@@ -4,9 +4,16 @@ function App() {
   return (
     
     <div className="App">
-      <header className="poster-border">
-        <div className="poster-bg">
-          <div className="Center-Poster">
+      <header className="Border">
+        <div className="Poster">
+
+        {/* <div className="Center"> */}
+
+          <div className='Header'>SITE DEVELOPED BY A</div>
+          <div className='MovingHeader'>SCREENWRITER</div>
+          {/* </div> */}
+
+          <div className="Center">
 
           
           <div className='Title'>
@@ -19,6 +26,8 @@ function App() {
           
 
           </div>
+
+          <div className='Bottom'>Copywrite ⓒ MMXV LinkedIn Instagram Vimeo,<br/> All Rights Reserved.</div>
 
           
         </div>
