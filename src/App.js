@@ -7,6 +7,8 @@ function App() {
     
     <div className="App">
       <Landing/>
+
+      {/* <div className='gfg-div'> <div className="text"> <span></span> </div> </div> */}
     </div>
 
   );
