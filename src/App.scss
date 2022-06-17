@@ -131,8 +131,8 @@
     text-shadow: 0 0 2px rgb(248, 231, 191);
 
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 
 }
@@ -153,6 +153,31 @@
   padding-top: 2rem;
 
   // background-color: rgba(158, 210, 255, 0.452);
+}
+
+.Gif{
+  grid-area: r7c1;
+  background-color: #c2baa7;
+  border-radius: 10%;
+  width: 75%;
+  height: 75%;
+  border: hsl(40, 19%, 60%) solid 1mm;
+
+  //center align within GRID
+  align-self: center;
+  justify-self: center;
+  // border:green 10px solid;
+
+  display: block;
+  overflow: hidden;
+
+  .GifObject{
+    width: fit-content;
+    // height: fit-content;
+    // background-color: #63c9716e;
+    border-radius: 5%;
+    // height: 75%;
+  }
 }
 
 

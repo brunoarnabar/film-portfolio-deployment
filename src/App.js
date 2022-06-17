@@ -29,6 +29,12 @@ function App() {
 
           <div className='Bottom'>Copywrite ⓒ MMXV LinkedIn Instagram Vimeo,<br/> All Rights Reserved.</div>
 
+          <div className='Gif'>
+            <object className='GifObject' data='fav-animated.svg' type='image/svg+xml'>
+              <img src='fav-animated.svg' alt='animated' />
+            </object>
+          </div>
+
           
         </div>
 
