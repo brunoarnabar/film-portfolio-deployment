@@ -66,7 +66,7 @@
 
   padding-bottom: 0.5rem;
 
-  color: rgb(245, 222, 94);
+  color: rgb(255, 218, 11);
 
   display: flex;
   justify-content: center;
@@ -84,7 +84,7 @@
   padding-top: 3rem;
   font-size: 150%;
 
-  color: rgb(245, 222, 94);
+  color: rgb(255, 218, 11);
 
   grid-row-start: r1c2;
   grid-column-start: r1c2; /* Start at d */
@@ -138,7 +138,7 @@
 }
 
 .Bottom{
-  color: rgb(245, 222, 94);
+  color: rgb(255, 218, 11);
   font-size: 85%;
   padding-bottom: 1rem;
 
@@ -151,34 +151,32 @@
   grid-column-end: r8c4; /* End at e */
 
   padding-top: 2rem;
-
-  // background-color: rgba(158, 210, 255, 0.452);
 }
 
-.Gif{
-  grid-area: r7c1;
-  background-color: #c2baa7;
-  border-radius: 10%;
-  width: 75%;
-  height: 75%;
-  border: hsl(40, 19%, 60%) solid 1mm;
+// .Gif{
+//   grid-area: r7c1;
+//   background-color: #c2baa7;
+//   border-radius: 10%;
+//   width: 75%;
+//   height: 75%;
+//   border: hsl(40, 25%, 44%) solid 1mm;
 
-  //center align within GRID
-  align-self: center;
-  justify-self: center;
-  // border:green 10px solid;
+//   //center align within GRID
+//   align-self: center;
+//   justify-self: center;
+//   // border:green 10px solid;
 
-  display: block;
-  overflow: hidden;
+//   display: block;
+//   overflow: hidden;
 
-  .GifObject{
-    width: fit-content;
-    // height: fit-content;
-    // background-color: #63c9716e;
-    border-radius: 5%;
-    // height: 75%;
-  }
-}
+//   .GifObject{
+//     width: fit-content;
+//     // height: fit-content;
+//     // background-color: #63c9716e;
+//     border-radius: 5%;
+//     // height: 75%;
+//   }
+// }
 
 
 /* RESPONSIVE DESIGN */
@@ -256,90 +254,6 @@ and (orientation: portrait) {
 /* For Mobile Landscape View */
 @media screen and (max-device-width: 926px)
 and (orientation: landscape) {
-
-  // .Border {
-  //   /* background-color: #282c34; */
-  //   background-image: linear-gradient(rgba(0, 0, 0, 0.20),
-  //   rgba(0, 0, 0, 0.2)),url('./Images/Backgrounds/bg.jpg');
-  //   // filter: brightness(50%);
-  //   background-size:100% 100%;
-  //   // border: rgb(255, 191, 0) 10px solid;
-  //   width: 100%;
-  //   min-height: 90vh;
-  //   height: 90vh;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: center;
-  //   font-size: calc(10px + 2vmin);
-  //   color: white;
-  //   text-align: center;
-  //   position: relative;
-
-  //   margin:0;
-  //   padding:0;
-  
-  
-  //   .Poster {
-  //     // border: rgb(255, 0, 38) 10px solid;
-  //     display:inline-block;
-  //     background-image: url('./Images/Backgrounds/poster.jpg') ;
-  //     background-size:cover;
-  //     width: 94.85%;
-  //     height: 95.5%;
-  //     // width: 100%;
-  //     // height: 100%;
-  //     position: absolute;
-  //     margin:auto;
-  //     box-shadow: 0 0 1px 1px #fae2bc7a inset;
-      
-  //     // display: table;
-  //     // margin: 0 auto;
-  //     // align-items: center;
-  //     display: grid;
-  //     // width: 100%;
-  //     // height: 100%;
-      
-  //   }
-  
-  //   .Center{
-       
-  //     align-self: center;
-  //     justify-self: center;
-  //     // position: absolute;
-  //     // top:50%;
-  //   }
-    
-  
-  //   .Title{
-  //     // border: rgb(255, 191, 0) 10px solid;
-  //     font-size: 380%;
-  //     font-family: 'Josefin Sans', sans-serif;
-  //     // font-family: 'Syncopate', sans-serif;
-  //     // font-family: 'Chivo', sans-serif;
-  //     // font-family: 'Arsenal', sans-serif;
-  //     // font-family: 'IM Fell English', serif;
-  //     // font-family: 'Philosopher', sans-serif;
-      
-  //     display: table;
-  //     margin: 0 auto;
-  //     align-items: center;
-  //     width: 100%;
-  //     height: 100%;
-  //     // color: rgb(248, 240, 227);
-  //     // color: #ffe253;
-  //     color: rgb(255, 251, 241);
-  //     text-shadow: 0 0 2px rgb(248, 231, 191);
-  //   }
-  
-  //   .Sub-Title{
-  //     color: rgb(255, 250, 239);
-  //     font-size: 80%;
-  
-  //     // background-color: rgba(158, 210, 255, 0.452);
-  //   }
-  // }
-  //-------------------------
   .gfg-div {
     width: 400px;
     height: 200px;
