@@ -8,7 +8,7 @@ export default function App() {
 
       <div className="App">
         <Landing/>
-        {/* <Philosophy/> */}
+        <Philosophy/>
         {/* <div className='gfg-div'> <div className="text"> <span></span> </div> </div> */}
       </div>
 
