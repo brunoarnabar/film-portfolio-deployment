@@ -3,7 +3,7 @@
     //SET BACKGROUND
         //get border image and slightly darken it
         background-image: linear-gradient(rgba(0, 0, 0, 0.20),
-        rgba(0, 0, 0, 0.2)),url('../Images/Backgrounds/bg.jpg');
+        rgba(0, 0, 0, 0.2)),url('../../Images/Backgrounds/bg.jpg');
         //make border fit upon resize
         background-size:100% 100%;
 
@@ -24,7 +24,7 @@
 
     //SET POSTER BACKGROUND
         //background image
-        background-image: url('../Images/Backgrounds/poster.jpg') ;
+        background-image: url('../../Images/Backgrounds/poster.jpg') ;
         background-size:cover;
         //fit within poster border
         width: 94.85%;

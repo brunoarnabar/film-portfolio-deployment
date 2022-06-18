@@ -3,7 +3,7 @@ import './landing.scss';
 
 export default function Landing() {
   return (
-    <div>
+    <div className="landContainer">
         <header className="Border">
             <div className="Poster">
                 <div className='Header'>SITE DEVELOPED BY A</div>
