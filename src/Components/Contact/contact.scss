@@ -1,0 +1,194 @@
+.BackdropCo{
+
+    height: 50vh;
+
+    //SET POSTER BACKGROUND
+        //background color
+        background: rgba(158,180,184);
+  
+    //MAKE GRID
+        //design grid
+        display: grid;
+        //minmax to prevent overflow
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(5, minmax(0, 1fr));
+        grid-gap: .4rem;
+        //create matrix
+        grid-template-areas: 
+        "r1c1 r1c2 r1c3 r1c4"
+        "r2c1 r2c2 r2c3 r2c4"
+        "r3c1 r3c2 r3c3 r3c4"
+        "r4c1 r4c2 r4c3 r4c4"
+        "r5c1 r5c2 r5c3 r5c4";
+}
+
+.HeadingCo{
+
+     //ASSIGN GRID AREA
+        //start
+        grid-row-start: r1c1;
+        grid-column-start: r1c1;
+        //end
+        grid-row-end: r1c4;
+        grid-column-end: r1c4;
+
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    //AESTETIC
+        //font and color
+        font-family: 'Arsenal', sans-serif;
+        font-weight: bolder;
+        font-size: 355%;
+        color: rgb(255, 255, 255);
+        //alignment
+        padding-bottom: 0.5rem;
+}
+
+.Message-con{
+
+    //AESTETIC
+        //font and color
+        font-family: 'Arsenal', sans-serif;
+        font-weight: bolder;
+        font-size: 117%;
+        color: rgb(255, 247, 228);
+        //alignment
+        padding: 3%;
+
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    &.First-con{
+
+        //ASSIGN GRID AREA
+            //start
+            grid-row-start: r2c1;
+            grid-column-start: r2c1;
+            //end
+            grid-row-end: r2c4;
+            grid-column-end: r2c4;
+
+        //AESTETIC
+            //alignment
+            padding: 4%;
+    }
+}
+
+.List{
+
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    &.OneDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r3c1;
+        grid-column-start: r3c1;
+        //end
+        grid-row-end: r3c4;
+        grid-column-end: r3c4;
+    }
+    &.TwoDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r4c1;
+        grid-column-start: r4c1;
+        //end
+        grid-row-end: r4c4;
+        grid-column-end: r4c4;
+    }
+    &.ThreeDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r5c1;
+        grid-column-start: r5c1;
+        //end
+        grid-row-end: r5c4;
+        grid-column-end: r5c4;
+    }
+
+    .Option {
+        height: 90%;
+        width: 97%;
+        //rounded edges
+        border-radius: 18px;
+        //unnoticable button
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px rgba(0, 0, 0, 0) solid;
+
+        //MAKE GRID
+            //design grid
+            display: grid;
+            //minmax to prevent overflow
+            grid-template-columns:minmax(0,.33fr) repeat(2, minmax(0, 1fr));
+            grid-template-rows: minmax(0, 1fr);
+            grid-gap: .4rem;
+            //create matrix
+            grid-template-areas: 
+            "op1 op2 op3";
+
+        .OptImg{
+
+            //ASSIGN GRID AREA
+                //area
+                grid-area: op1;
+
+            //CENTER WITHIN DIV
+                //flexbox
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            .ListImg{
+                //DISPLAY
+                    //snug fit in its grid
+                    width: 95%;
+                    height: 65%;
+                    //circular
+                    border-radius: 50%;
+            }
+        }
+
+        .OptPromt{
+            
+            //ASSIGN GRID AREA
+                //start
+                grid-column-start: op2;
+                //end
+                grid-column-end: op3;
+
+            //CENTER WITHIN DIV
+                //flexbox
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+            //AESTETIC
+                //font and color
+                font-family: 'Arsenal', sans-serif;
+                font-weight: bolder;
+                font-size: 140%;
+                color: rgb(255, 247, 228);
+        }
+    }
+}
+
+Form {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+  }

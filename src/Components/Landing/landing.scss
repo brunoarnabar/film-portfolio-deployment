@@ -39,8 +39,9 @@
     //MAKE GRID
         //design grid
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        //minmax to prevent overflow
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(8, minmax(0, 1fr));
         grid-gap: .2rem;
         //create matrix
         grid-template-areas: 

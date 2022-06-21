@@ -9,6 +9,7 @@
     //MAKE GRID
         //design grid
         display: grid;
+        //minmax to prevent overflow
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-template-rows: repeat(20, minmax(0, 1fr));
         grid-gap: .2rem;
@@ -61,7 +62,7 @@
         padding-bottom: 0.5rem;
 }
 
-.Message{
+.Message-phi{
     color: rgb(255, 255, 255);
 
     //AESTETIC
@@ -80,7 +81,7 @@
         align-items: center;
         text-align: center;
 
-    &.First{
+    &.First-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r5c2;
@@ -93,7 +94,7 @@
             //alignment
             padding: 4%;
     }
-    &.Second{
+    &.Second-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r9c1;
@@ -102,7 +103,7 @@
             grid-row-end: r10c3;
             grid-column-end: r10c3;
     }
-    &.Third{
+    &.Third-phi{
         //ASSIGN GRID AREA
         //start
         grid-row-start: r13c2;
@@ -115,7 +116,7 @@
             //alignment
             padding: 8%;
     }
-    &.Final{
+    &.Final-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r17c1;
@@ -131,7 +132,7 @@
 }
 
 .SVG{
-    &.One{
+    &.One-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r3c1;
@@ -142,7 +143,7 @@
 
             background-color: rgba(255, 0, 251, 0.402);
     }
-    &.Two{
+    &.Two-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r7c3;
@@ -153,7 +154,7 @@
 
             background-color: rgba(106, 255, 0, 0.402);
     }
-    &.Three{
+    &.Three-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r11c2;
@@ -164,7 +165,7 @@
 
             background-color: rgba(251, 255, 0, 0.402);
     }
-    &.Four{
+    &.Four-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r15c1;
@@ -175,7 +176,7 @@
 
             background-color: rgba(221, 0, 255, 0.402);
     }
-    &.Five{
+    &.Five-phi{
         //ASSIGN GRID AREA
             //start
             grid-row-start: r19c1;
