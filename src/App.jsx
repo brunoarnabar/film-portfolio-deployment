@@ -3,7 +3,7 @@ import Landing from './Components/Landing/Landing';
 import Philosophy from './Components/Philosophy/Philosophy'
 import Contact from './Components/Contact/Contact'
 
-import React, { Component }  from 'react';
+import React from 'react';
 
 
 export default function App() {

@@ -1,17 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './contact.scss';
+
 // import myImg from "../../Images/Backgrounds/cloud-bg.jpg"
 import DirImg from "../../Images/ListIcons/filmDir.jpg"
 import DevImg from "../../Images/ListIcons/webDev.jpg"
 import HeyImg from "../../Images/ListIcons/sayHey.jpg"
 
+import Modal from 'react-modal'
 import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
-const SERVICE_ID = "**************";
-const TEMPLATE_ID = "*******";
-const USER_ID = "****************";
+const SERVICE_ID = "gmail";
+const TEMPLATE_ID = "porfolio_template";
+const USER_ID = "CN0RNMNddtaLSaAyj";
+
+Modal.setAppElement('#root')
+
 
 function clickMe(e) {
 e.preventDefault();   
@@ -39,6 +44,7 @@ const handleOnSubmit = (e) => {
   };
 
 function Contact() {
+    const [dirModalIsOpen, setDirModalIsOpen] = useState(false)
   return (
     <div className="contactContainer">
         <div className="BackdropCo">
@@ -47,7 +53,7 @@ function Contact() {
             <br/>
 
 <div className='List OneDir'>
-    <button onClick={clickMe} className='Option'>
+    <button onClick={()=> setDirModalIsOpen(true)} className='Option'>
         <div className='OptImg'> <img src={DirImg} alt='DirImg' className='ListImg'/> </div>
         <div className='OptPromt'> I want to work with you as a director. </div>
     </button>
@@ -67,13 +73,24 @@ function Contact() {
     </button>
 </div>
 
-{/* 
-<Form onSubmit={handleOnSubmit}>
+<Modal isOpen={dirModalIsOpen} onRequestClose={() => setDirModalIsOpen(false)}>
+    <button onClick={() => setDirModalIsOpen(false)}>x</button>
+    <Form onSubmit={handleOnSubmit}>
+        <Form.Field
+            id='form-input-control-subject'
+            control={Input}
+            label='subject'
+            name='subject'
+            placeholder='subject...'
+            required
+            icon='mail'
+            iconPosition='left'
+            />
         <Form.Field
           id='form-input-control-email'
           control={Input}
           label='Email'
-          name='user_email'
+          name='email'
           placeholder='Email…'
           required
           icon='mail'
@@ -83,7 +100,7 @@ function Contact() {
           id='form-input-control-last-name'
           control={Input}
           label='Name'
-          name='user_name'
+          name='name'
           placeholder='Name…'
           required
           icon='user circle'
@@ -93,28 +110,13 @@ function Contact() {
           id='form-textarea-control-opinion'
           control={TextArea}
           label='Message'
-          name='user_message'
+          name='message'
           placeholder='Message…'
           required
         />
         <Button type='submit' color='green'>Submit</Button>
-      </Form> */}
-
-
-
-            
-            {/* <p data-v-e99b2f8e="" data-v-28174110="">
-                <button type="button" class="ButtonIcon h-4 color-red" data-v-b8eb0766="" data-v-28174110="" data-v-e99b2f8e="">
-                    <span class="ButtonIcon__icon" data-v-b8eb0766="">
-                        <img src="src/Images/Backgrounds/bg_.jpg" alt="I'd like to book you in" width="60" height="60"/>
-                    </span> 
-                    <span class="ButtonIcon__label" data-v-b8eb0766="">
-                        I'd like to book you in
-                    </span>
-                </button>
-            </p> */}
-            
-
+    </Form>
+</Modal>
         </div> 
     </div>
   )
