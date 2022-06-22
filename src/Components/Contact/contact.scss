@@ -1,6 +1,8 @@
 .BackdropCo{
 
-    height: 50vh;
+    //SIZE OF PAGE
+        //not sure if I should be setting height
+        height: 50vh;
 
     //SET POSTER BACKGROUND
         //background color
@@ -122,24 +124,27 @@
     }
 
     .Option {
-        height: 90%;
-        width: 97%;
-        //rounded edges
-        border-radius: 18px;
-        //unnoticable button
-        background-color: rgba(255, 255, 255, 0);
-        border: 1px rgba(0, 0, 0, 0) solid;
 
         //MAKE GRID
             //design grid
             display: grid;
             //minmax to prevent overflow
-            grid-template-columns:minmax(0,.33fr) repeat(2, minmax(0, 1fr));
+            grid-template-columns:minmax(0,.66fr) repeat(2, minmax(0, 1fr));
             grid-template-rows: minmax(0, 1fr);
             grid-gap: .4rem;
             //create matrix
             grid-template-areas: 
             "op1 op2 op3";
+
+        //AESTETIC
+            //size of button
+            height: 70%;
+            width: 60%;
+            //rounded edges
+            border-radius: 30px;
+            //slightly-noticable button
+            background-color: rgba(97, 122, 138, 0.363);
+            border: 1px rgba(0, 0, 0, 0.151) solid;
 
         .OptImg{
 
@@ -156,8 +161,8 @@
             .ListImg{
                 //DISPLAY
                     //snug fit in its grid
-                    width: 95%;
-                    height: 65%;
+                    width: 100%;
+                    height: 100%;
                     //circular
                     border-radius: 50%;
             }
@@ -183,12 +188,12 @@
                 font-weight: bolder;
                 font-size: 140%;
                 color: rgb(255, 247, 228);
+
+            &.HelloOpt{
+                //AESTETIC
+                    //shorter prompt needed to be shifted for mobile
+                    margin-right: 10%;
+            }
         }
     }
 }
-
-Form {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 20px;
-  }
