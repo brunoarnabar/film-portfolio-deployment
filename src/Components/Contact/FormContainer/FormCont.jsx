@@ -1,5 +1,5 @@
-import React, {useState, Component} from 'react';  
-import InputChild from '../FormComponents/InputChild';
+import React, {useState} from 'react';  
+// import InputChild from '../FormComponents/InputChild';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./form.scss"
