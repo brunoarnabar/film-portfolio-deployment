@@ -1,0 +1,132 @@
+.form-container{
+    overflow: scroll;
+}
+
+.email-form{
+    // border: aqua 10px solid;
+    //MAKE GRID
+        //design grid
+        display: grid;
+        //minmax to prevent overflow
+        grid-template-rows: repeat(13, minmax(0, 1fr)) minmax(auto-fit, .5fr) repeat(3, minmax(0, 1fr));
+        grid-gap: .4rem;
+        //create matrix
+        grid-template-areas: 
+        "FormNameLabel"
+        "FormName"
+        "FormEmailLabel"
+        "FormEmail"
+        "FormCompanyLabel"
+        "FormCompany"
+        "FormBudgetLabel"
+        "FormBudget"
+        "FormStartLabel"
+        "FormStart"
+        "FormEndLabel"
+        "FormEnd"
+        "FormMessageLabel"
+        "FormMessage"
+        "FormQuestionLabel"
+        "FormQuestion"
+        "FormButton";
+        
+        //deal with
+        // height: 80rem;
+        padding: 1.8rem;
+        overflow: scroll;
+        min-height: 53rem;
+}
+
+.form-name.label{
+    // &.label{
+        grid-area:FormNameLabel;
+    // }
+}
+
+.input{
+    height: 3.25em;
+    width: 88%;
+
+    //AESTETIC
+                //font and color
+                font-family: 'Arsenal', sans-serif;
+                font-weight: lighter;
+                // font-size: 140%;
+                color: #9293a1;
+                align-self: flex-end;
+                font-size: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-top: .15rem;
+                padding-bottom: .15rem;
+
+}
+
+.form-message.input{
+    // &.label{
+        padding-top: 1rem;
+        grid-area:FormMessage;
+        resize: vertical;
+        height: 5rem;
+        min-height: 5rem;
+    // }
+}
+
+
+
+
+
+
+
+
+
+
+
+.react-datepicker {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    background-color: rgb(115, 123, 134);
+    border: 0px;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .react-datepicker__header {
+    text-align: center;
+    background-color: #3e82cf;
+    border-bottom: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 8px;
+    position: relative;
+  
+  }
+  
+  .react-datepicker__today-button {
+    background: #82afe2;
+    border-top: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    clear: left;
+  }
+
+  .label {
+      //AESTETIC
+                //font and color
+                font-family: 'Arsenal', sans-serif;
+                font-weight: bolder;
+                // font-size: 140%;
+                color: rgb(182, 0, 0);
+                align-self: flex-end;
+                font-size: 125%;
+                padding-bottom: 0.4rem;
+  }
+
+  .input {
+    border: none;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+  }

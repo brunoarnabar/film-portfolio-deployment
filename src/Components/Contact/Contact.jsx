@@ -7,44 +7,56 @@ import DevImg from "../../Images/ListIcons/webDev.jpg"
 import HeyImg from "../../Images/ListIcons/sayHey.jpg"
 
 import Modal from 'react-modal'
-import { Form, Input, TextArea, Button } from 'semantic-ui-react';
-import emailjs from 'emailjs-com';
-// import Swal from 'sweetalert2';
+// import { Form, Input, Button } from 'semantic-ui-react';
 
-const SERVICE_ID = "gmail";
-const TEMPLATE_ID = "porfolio_template";
-const USER_ID = "CN0RNMNddtaLSaAyj";
+// EMAIL.JS
+// import emailjs from 'emailjs-com';
+
+// import Swal from 'sweetalert2';
+// import styled, { createGlobalStyle, css} from 'styled-components'
+// import FormContainer from "./FormContainer/FormContainer";
+import FormCont from "./FormContainer/FormCont";
+
+// EMAIL.JS
+// const SERVICE_ID = "gmail";
+// const TEMPLATE_ID = "porfolio_template";
+// const USER_ID = "CN0RNMNddtaLSaAyj";
+
 
 Modal.setAppElement('#root')
 
 
-function clickMe(e) {
-e.preventDefault();   
-    console.log('You clicked submit.');
-}
 
-const handleOnSubmit = (e) => {
-    e.preventDefault();
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-      .then((result) => {
-        console.log(result.text);
-        // Swal.fire({
-        //   icon: 'success',
-        //   title: 'Message Sent Successfully'
-        // })
-      }, (error) => {
-        console.log(error.text);
-        // Swal.fire({
-        //   icon: 'error',
-        //   title: 'Ooops, something went wrong',
-        //   text: error.text,
-        // })
-      });
-    e.target.reset()
-  };
+
+// EMAIL.JS
+
+// const handleOnSubmit = (e) => {
+//     e.preventDefault();
+//     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+//       .then((result) => {
+//         console.log(result.text);
+//         // Swal.fire({
+//         //   icon: 'success',
+//         //   title: 'Message Sent Successfully'
+//         // })
+//       }, (error) => {
+//         console.log(error.text);
+//         // Swal.fire({
+//         //   icon: 'error',
+//         //   title: 'Ooops, something went wrong',
+//         //   text: error.text,
+//         // })
+//       });
+//     e.target.reset()
+//   };
 
 function Contact() {
     const [dirModalIsOpen, setDirModalIsOpen] = useState(false)
+
+    function clickMe(e) {
+      setDirModalIsOpen(true)
+    }
+
   return (
     <div className="contactContainer">
         <div className="BackdropCo">
@@ -53,7 +65,10 @@ function Contact() {
             <br/>
 
 <div className='List OneDir'>
-    <button onClick={()=> setDirModalIsOpen(true)} className='Option'>
+    <button 
+    onClick={clickMe} 
+    className='Option'
+    >
         <div className='OptImg'> <img src={DirImg} alt='DirImg' className='ListImg'/> </div>
         <div className='OptPromt'> I want to work with you as a director. </div>
     </button>
@@ -76,57 +91,115 @@ function Contact() {
 <Modal isOpen={dirModalIsOpen} onRequestClose={() => setDirModalIsOpen(false)}
 onAfterOpen={() => {
   document.body.style.top = `-${window.scrollY}px`
-  document.body.style.position = 'fixed'
+  document.body.style.position = `fixed`
 }}
 onAfterClose={() => {
   const scrollY = document.body.style.top
   document.body.style.position = ''
   document.body.style.top = ''
   window.scrollTo(0, parseInt(scrollY || '0') * -1)
-}}>
-    <button onClick={() => setDirModalIsOpen(false)}>x</button>
-    <Form onSubmit={handleOnSubmit}>
+}} 
+className="Modal"
+overlayClassName="Overlay">
+
+    <div className='formHeader'>
+      {/* <div className='List OneDir'>
+          <div className='OptImg'> <img src={DirImg} alt='DirImg' className='ListImg'/> </div>
+          <div className='OptPromt'> I want to work with you as a director. </div>
+      </div>
+    BIG X
+    <button className='formHeadButton'  onClick={() => setDirModalIsOpen(false)}>x</button> */}
+    </div>
+    
+    
+
+    {/* <FormContainer className='formStyle'/> */}
+    <FormCont className='formStyle'/>
+    {/* <Form onSubmit={handleOnSubmit} className='formStyle'>
+
+
+
         <Form.Field
-            id='form-input-control-subject'
+            id='form-input-name'
             control={Input}
-            label='subject'
-            name='subject'
-            placeholder='subject...'
+            label='Name'
+            name='Name'
+            placeholder='Luis Buñuel'
             required
             icon='mail'
             iconPosition='left'
-            />
-        <Form.Field
-          id='form-input-control-email'
+            /> */}
+        {/* <Form.Field
+          id='form-input-email'
           control={Input}
           label='Email'
-          name='email'
-          placeholder='Email…'
+          name='Email'
+          placeholder='janus@gmail.com'
           required
           icon='mail'
           iconPosition='left'
         />
         <Form.Field
-          id='form-input-control-last-name'
+          id='form-input-company'
           control={Input}
-          label='Name'
-          name='name'
-          placeholder='Name…'
+          label='Company'
+          name='Company'
+          placeholder='Criterion Channel'
           required
           icon='user circle'
           iconPosition='left'
         />
         <Form.Field
-          id='form-textarea-control-opinion'
+          id='form-input-budget'
           control={TextArea}
           label='Message'
           name='message'
           placeholder='Message…'
           required
         />
-        <Button type='submit' color='green'>Submit</Button>
-    </Form>
-</Modal>
+        <Form.Field
+          id='form-input-start'
+          control={Input}
+          label='Email'
+          name='Email'
+          placeholder='janus@gmail.com'
+          required
+          icon='mail'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-end'
+          control={Input}
+          label='Email'
+          name='Email'
+          placeholder='janus@gmail.com'
+          required
+          icon='mail'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-message'
+          control={Input}
+          label='Email'
+          name='Email'
+          placeholder='janus@gmail.com'
+          required
+          icon='mail'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-question'
+          control={Input}
+          label='Email'
+          name='Email'
+          placeholder='janus@gmail.com'
+          required
+          icon='mail'
+          iconPosition='left'
+        /> */}
+        {/* <Button id='form-button' type='submit' color='green'>Submit</Button> */}
+    {/* </Form> */}
+          </Modal>
         </div> 
     </div>
   )
