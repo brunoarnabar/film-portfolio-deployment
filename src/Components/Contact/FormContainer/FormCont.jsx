@@ -60,7 +60,7 @@ function FormCont() {
             <label className='form-company label'>Company</label>
             <input 
               placeholder='Avant Film Collection'
-className='form-company input'
+              className='form-company input'
                 name='company'
                 type='text'
                 required
