@@ -11,27 +11,6 @@ const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
 
-
-function SendEmail(object, closeModal) {
-
-  emailjs.send(SERVICE_ID, TEMPLATE_ID, object,USER_ID )
-
-      .then((result) => {
-        console.log(result.text);
-        Swal.fire({
-          icon: 'success',
-          title: 'Message Sent Successfully'
-        })
-      }, (error) => {
-        console.log(error.text);
-        Swal.fire({
-          icon: 'error',
-          title: 'Ooops, something went wrong',
-          text: error.text,
-        })
-      })
-}
-
 const initialValues = {
   name:"",
   email:"",
@@ -57,7 +36,7 @@ const validate = (values) => {
   return errors;
 };
 
-function FormCont({ closeModal }) {
+function FormCont({closeModal}) {
 
   const onSubmit = (values, actions) => {
 
@@ -66,6 +45,28 @@ function FormCont({ closeModal }) {
   (newStart.getMonth() + 1) + "-" + 
   newStart.getDate() + "-" +
   newStart.getFullYear();
+
+  function SendEmail(object) {
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, object,USER_ID )
+  
+        .then((result) => {
+          console.log(result.text);
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent Successfully'
+          })
+          setVal(true)
+        }, (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: 'error',
+            title: 'Ooops, something went wrong',
+            text: error.text,
+          })
+          setVal(true)
+        })
+  }
 
   const newEnd = values.end;
   const newFormattedEnd =
@@ -76,7 +77,7 @@ function FormCont({ closeModal }) {
 
     SendEmail(updatedValues);
     actions.setSubmitting(false)
-    setVal(true)
+    // setVal(true)
 };
 
   const [val, setVal] = useState(false);
