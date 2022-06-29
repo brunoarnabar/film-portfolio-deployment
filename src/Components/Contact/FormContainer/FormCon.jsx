@@ -7,7 +7,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 // EMAIL.JS
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-// import { values } from "lodash";
 const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
@@ -45,7 +44,6 @@ const initialValues = {
 
 };
 
-
 const validate = (values) => {
 
   let errors = {};
@@ -76,34 +74,28 @@ function FormCont({ closeModal }) {
   newEnd.getFullYear();
   const updatedValues = { ...values, start: newFormattedStart,  end: newFormattedEnd }
 
-  console.log("The data: ", updatedValues);
-  setTimeout(() => {
     SendEmail(updatedValues);
     actions.setSubmitting(false)
-    
-  }, 1000)  
-
-  setVal(true)
+    setVal(true)
 };
 
   const [val, setVal] = useState(false);
 
-  // function onThisClick() {
-    useEffect(() => {
-      console.log('useEffect ran. val is: ', String(val));
-  
-      if (val)
-      {
+  //wait for email to send to close modal
+  useEffect(() => {
+    if (val)
+    {
+      setTimeout(() => {
         closeModal();
-      }
-    }, [val, closeModal]);
-  // }
+      }, 1500)  
+    }
+  }, [val, closeModal]);
+
 
   return (
     <Formik
       initialValues={initialValues}
       onSubmit={(values, actions) => onSubmit(values, actions, closeModal)}
-      // {onSubmit({ closeModal })}
       validate={validate}
     >
       {(formik) => {
