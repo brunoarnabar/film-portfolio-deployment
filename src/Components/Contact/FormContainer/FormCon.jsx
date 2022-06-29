@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./form.scss";
 import DatePicker from "./DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -7,12 +7,13 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 // EMAIL.JS
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
+import { values } from "lodash";
 const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
 
 
-function SendEmail(object) {
+function SendEmail(object, closeModal) {
 
   emailjs.send(SERVICE_ID, TEMPLATE_ID, object,USER_ID )
 
@@ -43,7 +44,24 @@ const initialValues = {
   question:""
 
 };
-const onSubmit = (values, actions) => {
+
+
+const validate = (values) => {
+
+  let errors = {};
+
+  if (!values.email) {
+    errors.email = "Required";
+  } else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+    errors.email = "Please Enter An Valid Email That I Can Reach You";
+  }
+
+  return errors;
+};
+
+function FormCont({ closeModal }) {
+
+  const onSubmit = (values, actions) => {
 
   const newStart = values.start;
   const newFormattedStart =
@@ -60,31 +78,32 @@ const onSubmit = (values, actions) => {
 
   console.log("The data: ", updatedValues);
   setTimeout(() => {
-    SendEmail(values)
+    SendEmail(updatedValues);
     actions.setSubmitting(false)
-  }, 1000)
+    
+  }, 1000)  
+
+  setVal(true)
+};
+
+  const [val, setVal] = useState(false);
+
+  // function onThisClick() {
+    useEffect(() => {
+      console.log('useEffect ran. val is: ', String(val));
   
-};
-
-const validate = (values) => {
-
-  let errors = {};
-
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Please Enter An Valid Email That I Can Reach You";
-  }
-
-  return errors;
-};
-
-function FormCont() {
+      if (val)
+      {
+        closeModal();
+      }
+    }, [val]);
+  // }
 
   return (
     <Formik
       initialValues={initialValues}
-      onSubmit={onSubmit}
+      onSubmit={(values, actions) => onSubmit(values, actions, closeModal)}
+      // {onSubmit({ closeModal })}
       validate={validate}
     >
       {(formik) => {
@@ -159,10 +178,12 @@ function FormCont() {
                 id="form-button"
                 type="submit"
                 disabled={!(formik.dirty && formik.isValid)}
+                // onClick={closeModal}
+                // onClick={closeModal}
               >
                 Submit
               </button>
-              
+
             </div>
           </Form>
         );
