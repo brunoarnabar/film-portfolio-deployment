@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './contact.scss';
 
 // import myImg from "../../Images/Backgrounds/cloud-bg.jpg"
@@ -64,27 +64,27 @@ function Contact() {
       setDirModalIsOpen(true)
     }
 
-    function handleOnSubmit(e) {
-      e.preventDefault();
-      // checkEmail();
-      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-        .then((result) => {
-          setDirModalIsOpen(false);
-          console.log(result.text);
-          Swal.fire({
-          icon: 'success',
-          title: 'Message Sent Successfully'
-        })
-        }, (error) => {
-          console.log(error.text);
-                  Swal.fire({
-          icon: 'error',
-          title: 'Ooops, something went wrong',
-          text: error.text,
-        })
-        });
-      e.target.reset()
-    };
+    // function handleOnSubmit(e) {
+    //   e.preventDefault();
+    //   // checkEmail();
+    //   emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+    //     .then((result) => {
+    //       setDirModalIsOpen(false);
+    //       console.log(result.text);
+    //       Swal.fire({
+    //       icon: 'success',
+    //       title: 'Message Sent Successfully'
+    //     })
+    //     }, (error) => {
+    //       console.log(error.text);
+    //               Swal.fire({
+    //       icon: 'error',
+    //       title: 'Ooops, something went wrong',
+    //       text: error.text,
+    //     })
+    //     });
+    //   e.target.reset()
+    // };
 
   return (
     <div className="contactContainer">
