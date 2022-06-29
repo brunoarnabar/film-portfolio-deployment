@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react'
+import React, {useState} from 'react'
 import './contact.scss';
 import DirImg from "../../Images/ListIcons/filmDir.jpg"
 import DevImg from "../../Images/ListIcons/webDev.jpg"

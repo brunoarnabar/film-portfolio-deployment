@@ -7,7 +7,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 // EMAIL.JS
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
-import { values } from "lodash";
+// import { values } from "lodash";
 const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
