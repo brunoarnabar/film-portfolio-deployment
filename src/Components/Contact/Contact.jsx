@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useSate} from 'react'
 import './contact.scss';
 
 // import myImg from "../../Images/Backgrounds/cloud-bg.jpg"
