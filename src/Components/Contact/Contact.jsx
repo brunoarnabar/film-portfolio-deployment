@@ -9,45 +9,52 @@ import HeyImg from "../../Images/ListIcons/sayHey.jpg"
 import Modal from 'react-modal'
 // import { Form, Input, Button } from 'semantic-ui-react';
 
-// EMAIL.JS
-// import emailjs from 'emailjs-com';
-
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 // import styled, { createGlobalStyle, css} from 'styled-components'
 // import FormContainer from "./FormContainer/FormContainer";
-import FormCont from "./FormContainer/FormCont";
+// import FormCont from "./FormContainer/FormCont";
+import FormCon from "./FormContainer/FormCon";
+
+// import { emailSchema } from './FormContainer/EmailVal'
 
 // EMAIL.JS
-// const SERVICE_ID = "gmail";
-// const TEMPLATE_ID = "porfolio_template";
-// const USER_ID = "CN0RNMNddtaLSaAyj";
+import emailjs from 'emailjs-com';
+const SERVICE_ID = "gmail";
+const TEMPLATE_ID = "hire_template";
+const USER_ID = "CN0RNMNddtaLSaAyj";
 
 
 Modal.setAppElement('#root')
 
 
+// const checkEmail = async (e) => {
+//   e.preventDefault()
+
+//   const isValid = await emailSchema.isValid(e.target[1].value)
+//   console.log(isValid)
+// }
 
 
 // EMAIL.JS
 
 // const handleOnSubmit = (e) => {
-//     e.preventDefault();
-//     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-//       .then((result) => {
-//         console.log(result.text);
-//         // Swal.fire({
-//         //   icon: 'success',
-//         //   title: 'Message Sent Successfully'
-//         // })
-//       }, (error) => {
-//         console.log(error.text);
-//         // Swal.fire({
-//         //   icon: 'error',
-//         //   title: 'Ooops, something went wrong',
-//         //   text: error.text,
-//         // })
-//       });
-//     e.target.reset()
+    // e.preventDefault();
+    // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+    //   .then((result) => {
+    //     console.log(result.text);
+    //     Swal.fire({
+    //       icon: 'success',
+    //       title: 'Message Sent Successfully'
+    //     })
+    //   }, (error) => {
+    //     console.log(error.text);
+    //     Swal.fire({
+    //       icon: 'error',
+    //       title: 'Ooops, something went wrong',
+    //       text: error.text,
+    //     })
+    //   });
+    // e.target.reset()
 //   };
 
 function Contact() {
@@ -56,6 +63,28 @@ function Contact() {
     function clickMe(e) {
       setDirModalIsOpen(true)
     }
+
+    function handleOnSubmit(e) {
+      e.preventDefault();
+      // checkEmail();
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        .then((result) => {
+          setDirModalIsOpen(false);
+          console.log(result.text);
+          Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        })
+        }, (error) => {
+          console.log(error.text);
+                  Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+        });
+      e.target.reset()
+    };
 
   return (
     <div className="contactContainer">
@@ -114,7 +143,12 @@ overlayClassName="Overlay">
     
 
     {/* <FormContainer className='formStyle'/> */}
-    <FormCont className='formStyle'/>
+    <div className='form-container-contact'>
+        {/* <form className='email-form' onSubmit={handleOnSubmit}> */}
+          {/* <FormCont className='formStyle'/> */}
+          <FormCon className='formStyle'/>
+          {/* </form> */}
+    </div>
     {/* <Form onSubmit={handleOnSubmit} className='formStyle'>
 
 

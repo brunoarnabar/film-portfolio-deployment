@@ -3,30 +3,40 @@ import React, {useState} from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./form.scss"
+
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import LocalError from "./LocalError";
 // EMAIL.JS
 import emailjs from 'emailjs-com';
 const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
 
+
+
+  // const onChange {
+  //   setDisabledState(false);
+  // };
+
+
+
+
+
+// import * as yup from 'yup';
+// import { emailSchema } from './EmailVal'
+
 // EMAIL.JS
+
+
 
 const handleOnSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
         console.log(result.text);
-        // Swal.fire({
-        //   icon: 'success',
-        //   title: 'Message Sent Successfully'
-        // })
       }, (error) => {
         console.log(error.text);
-        // Swal.fire({
-        //   icon: 'error',
-        //   title: 'Ooops, something went wrong',
-        //   text: error.text,
-        // })
       });
     e.target.reset()
   };
@@ -38,9 +48,10 @@ function FormCont() {
   const [enddate, setEndDate] = useState(null);
   const enddateChange = enddate => setEndDate(enddate);
 
+  const [emailValid, setEmailValid] = useState(false);
+
   return (
     <div className='form-container'>
-        <form className='email-form' onSubmit={handleOnSubmit}>
             <label className='form-name label' >Name</label>
             <input
                 className='form-name input' 
@@ -50,13 +61,74 @@ function FormCont() {
                 required
             />
             <label className='form-email label'>Email</label>
-            <input 
-                className='form-email input'
-                placeholder='AvantFilms@example.com'
-                name='email'
-                type='text'
-                required
-            />
+           
+
+            {/* <Formik
+              initialValues={{ email: ""}}
+              validationSchema={LoginSchema}
+              onSubmit={({ setSubmitting }) => {
+                // alert("Form is validated! Submitting the form...");
+                setSubmitting(false);
+              }}>
+              {({ touched, errors, isSubmitting }) => (
+              <><input
+            className='form-email input'
+            placeholder='AvantFilms@example.com'
+            name='email'
+            type='text'
+            required /><ErrorMessage
+              component="div"
+              name="email"
+              className="invalid-feedback" /></>
+              )}
+            </Formik> */}
+            <div className="container m-5">
+      <Formik
+        initialValues={{ email: "" }}
+        validationSchema={validationSearch}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          alert("submitting");
+          setSubmitting(true);
+          resetForm();
+          setSubmitting(false);
+        }}
+      >
+        {({
+          values,
+          errors,
+          touched,
+          handleBlur,
+          handleChange,
+          // handleSubmit,
+          // isSubmitting
+        }) => (
+          // <form onSubmit={handleSubmit}>
+            <div>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email please"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                className="form-control"
+              />
+
+              <LocalError touched={touched.email} error={errors.email} />
+              {/* <button
+                className="btn btn-primary"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                Submit
+              </button> */}
+            </div>
+          // </form>
+        )}
+      </Formik>
+    </div>
+
             <label className='form-company label'>Company</label>
             <input 
               placeholder='Avant Film Collection'
@@ -77,11 +149,13 @@ function FormCont() {
             <DatePicker 
             placeholderText={'mm/dd/yyyy'}
             className='form-start input'
+            required
                 name='start' selected={startdate} onChange={startdateChange} />
             <label className='form-end label' >End Date</label>
             <DatePicker 
             placeholderText='mm/dd/yyyy'
             className='form-end input'
+            required
             name='end' selected={enddate} onChange={enddateChange} />
             <label className='form-message label' >Message</label>
             <textarea 
@@ -103,9 +177,7 @@ function FormCont() {
               <option value="audi">Audi</option>
             </select>
             <button id='form-button' type='submit' color='green'>Submit</button>
-            
-        </form>
-    </div>
+        </div>
   )
 }
 
