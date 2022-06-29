@@ -96,7 +96,7 @@ function FormCont({ closeModal }) {
       {
         closeModal();
       }
-    }, [val]);
+    }, [val, closeModal]);
   // }
 
   return (
