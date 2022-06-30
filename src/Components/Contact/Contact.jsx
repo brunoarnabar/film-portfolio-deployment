@@ -9,8 +9,17 @@ Modal.setAppElement('#root')
 
 function Contact() {
     const [dirModalIsOpen, setDirModalIsOpen] = useState(false)
-    const closeModal = () => { setDirModalIsOpen(false) }
-    const openModal = () => { setDirModalIsOpen(true) }
+    
+    
+    const openModal = () => { 
+      setDirModalIsOpen(true);
+      document.body.style.overflow = 'hidden';
+    }
+
+    const closeModal = () => { 
+      setDirModalIsOpen(false);
+      document.body.style.overflow = 'unset';
+}
 
   return (
     <div className="contactContainer">
@@ -43,17 +52,8 @@ function Contact() {
     </button>
 </div>
 
-<Modal isOpen={dirModalIsOpen} onRequestClose={() => setDirModalIsOpen(false)}
-onAfterOpen={() => {
-  document.body.style.top = `-${window.scrollY}px`
-  document.body.style.position = `fixed`
-}}
-onAfterClose={() => {
-  const scrollY = document.body.style.top
-  document.body.style.position = ''
-  document.body.style.top = ''
-  window.scrollTo(0, parseInt(scrollY || '0') * -1)
-}} 
+<Modal isOpen={dirModalIsOpen} onRequestClose={() => closeModal()}
+
 className="Modal"
 overlayClassName="Overlay">
 

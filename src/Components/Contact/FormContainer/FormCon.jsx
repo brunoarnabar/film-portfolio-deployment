@@ -11,6 +11,7 @@ const SERVICE_ID = "gmail";
 const TEMPLATE_ID = "hire_template";
 const USER_ID = "CN0RNMNddtaLSaAyj";
 
+
 const initialValues = {
   name:"",
   email:"",
@@ -46,28 +47,6 @@ function FormCont({closeModal}) {
   newStart.getDate() + "-" +
   newStart.getFullYear();
 
-  function SendEmail(object) {
-
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, object,USER_ID )
-  
-        .then((result) => {
-          console.log(result.text);
-          Swal.fire({
-            icon: 'success',
-            title: 'Message Sent Successfully'
-          })
-          setVal(true)
-        }, (error) => {
-          console.log(error.text);
-          Swal.fire({
-            icon: 'error',
-            title: 'Ooops, something went wrong',
-            text: error.text,
-          })
-          setVal(true)
-        })
-  }
-
   const newEnd = values.end;
   const newFormattedEnd =
   (newEnd.getMonth() + 1) + "-" + 
@@ -76,9 +55,30 @@ function FormCont({closeModal}) {
   const updatedValues = { ...values, start: newFormattedStart,  end: newFormattedEnd }
 
     SendEmail(updatedValues);
-    actions.setSubmitting(false)
-    // setVal(true)
+    actions.setSubmitting(false)   
 };
+
+function SendEmail(object) {
+
+  emailjs.send(SERVICE_ID, TEMPLATE_ID, object,USER_ID )
+
+      .then((result) => {
+        console.log(result.text);
+        Swal.fire({
+          icon: 'success',
+          title: 'Message Sent Successfully'
+        })
+        setVal(true)
+      }, (error) => {
+        console.log(error.text);
+        Swal.fire({
+          icon: 'error',
+          title: 'Ooops, something went wrong',
+          text: error.text,
+        })
+        setVal(true)
+      })
+}
 
   const [val, setVal] = useState(false);
 
@@ -171,8 +171,6 @@ function FormCont({closeModal}) {
                 id="form-button"
                 type="submit"
                 disabled={!(formik.dirty && formik.isValid)}
-                // onClick={closeModal}
-                // onClick={closeModal}
               >
                 Submit
               </button>
