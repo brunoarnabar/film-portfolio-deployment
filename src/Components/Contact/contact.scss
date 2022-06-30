@@ -2,7 +2,7 @@
 
     //SIZE OF PAGE
         //not sure if I should be setting height
-        height: 50vh;
+        height: 65vh;
 
     //SET POSTER BACKGROUND
         //background color
@@ -13,7 +13,7 @@
         display: grid;
         //minmax to prevent overflow
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: repeat(5, minmax(0, 1fr));
+        grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.5fr);
         grid-gap: .4rem;
         //create matrix
         grid-template-areas: 
@@ -21,7 +21,8 @@
         "r2c1 r2c2 r2c3 r2c4"
         "r3c1 r3c2 r3c3 r3c4"
         "r4c1 r4c2 r4c3 r4c4"
-        "r5c1 r5c2 r5c3 r5c4";
+        "r5c1 r5c2 r5c3 r5c4"
+        "footer footer footer footer";
 }
 
 .HeadingCo{
@@ -200,7 +201,7 @@
 
 .Modal {
 
-    height: 89vh;
+    height: 80vh;
 
     position: absolute;
     top: 40px;
@@ -271,69 +272,6 @@
         "FormButton";
     }
   }
-
-  label{
-    //AESTETIC
-            //font and color
-            font-family: 'Arsenal', sans-serif;
-            font-weight: bolder;
-            font-size: 140%;
-            color: rgb(37, 37, 37);
-    }
-
-    label[htmlFor=form-input-name]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormNameLabel;
-    }
-    #form-input-name{
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormName;
-    }
-    label[htmlFor=form-input-email]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormEmailLabel;
-    }
-    label[htmlFor=form-input-company]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormCompanyLabel;
-    }
-    label[htmlFor=form-input-budget]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormBudgetLabel;
-    }
-    label[htmlFor=form-input-start]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormStartLabel;
-    }
-    label[htmlFor=form-input-end]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormEndLabel;
-    }
-    label[htmlFor=form-input-message]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormMessageLabel;
-    }
-    label[htmlFor=form-input-question]{
-        color: red;
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormQuestionLabel;
-    }
 
     #form-button{
         //ASSIGN GRID AREA
