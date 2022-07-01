@@ -41,8 +41,18 @@ function Contact() {
           </button>
       </div>
 
-          <Modal isOpen={dirModalIsOpen} onRequestClose={() => closeModal()} className="Modal" overlayClassName="Overlay">
+          <Modal isOpen={dirModalIsOpen} onRequestClose={() => closeModal()} className="Modal" overlayClassName="Overlay" onAfterOpen={() => {
+  document.body.style.top = `-${window.scrollY}px`
+  document.body.style.position = `fixed`
+}}
+onAfterClose={() => {
+  const scrollY = document.body.style.top
+  document.body.style.position = ''
+  document.body.style.top = ''
+  window.scrollTo(0, parseInt(scrollY || '0') * -1)
+}} >
             <div className='formHeader'>
+              HEADER
             </div>
             <div className='form-container-contact'>
               <FormCon className='formStyle' closeModal={closeModal} />

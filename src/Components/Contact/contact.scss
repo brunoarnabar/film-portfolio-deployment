@@ -123,7 +123,6 @@
         grid-row-end: r5c4;
         grid-column-end: r5c4;
     }
-
     .Option {
 
         //MAKE GRID
@@ -199,87 +198,7 @@
     }
 }
 
-.Modal {
-
-    height: 90vh;
-
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    background-color: rgb(255, 247, 235);
-
-    // border: rgb(136, 255, 0) 10px solid;
-
-    //MAKE GRID
-        //design grid
-        display: grid;
-        //minmax to prevent overflow
-        grid-template-rows: minmax(0, .1fr) minmax(0, 1fr);
-        grid-gap: .4rem;
-        //create matrix
-        grid-template-areas: 
-        "header"
-        "form";
-
-    // .formLabel{
-
-        // //AESTETIC
-        //         //font and color
-        //         font-family: 'Arsenal', sans-serif;
-        //         font-weight: bolder;
-        //         font-size: 140%;
-        //         color: rgb(37, 37, 37);
-
-        // //design grid
-        // display: grid;
-    // }
-
-    .form-container-contact{
-        overflow: scroll;
-    }
-
-    .formStyle{
-
-        grid-area: form;
-
-        border: aqua 10px solid;
-        //MAKE GRID
-        //design grid
-        display: grid;
-        //minmax to prevent overflow
-        grid-template-rows: repeat(17, minmax(0, 1fr));
-        grid-gap: .4rem;
-        //create matrix
-        grid-template-areas: 
-        "FormNameLabel"
-        "FormName"
-        "FormEmailLabel"
-        "FormEmail"
-        "FormCompanyLabel"
-        "FormCompany"
-        "FormBudgetLabel"
-        "FormBudget"
-        "FormStartLabel"
-        "FormStart"
-        "FormEndLabel"
-        "FormEnd"
-        "FormMessageLabel"
-        "FormMessage"
-        "FormQuestionLabel"
-        "FormQuestion"
-        "FormButton";
-    }
-  }
-
-    #form-button{
-        //ASSIGN GRID AREA
-            //area
-            grid-area: FormButton;
-    }
-
-  .Overlay {
+.Overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -287,5 +206,67 @@
     bottom: 0;
     background-color: rgba(102, 51, 153, 0.222);
   }
+
+.ReactModal__Content.ReactModal__Content--after-open.Modal{
+
+    // height: 90vh;
+
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: rgb(130, 192, 223);
+    border-radius: 15px;
+
+    // border: rgb(136, 255, 0) 10px solid;
+
+    //MAKE GRID
+        //design grid
+        display: grid;
+        //minmax to prevent overflow
+        grid-template-rows: minmax(0, .14fr) minmax(0, 1fr);
+        // grid-gap: .4rem;
+        //create matrix
+        grid-template-areas: 
+        "header"
+        "form";
+
+    .form-container-contact{
+
+        //ASSIGN GRID AREA
+            //area
+            grid-area: form;
+
+        //form should scroll
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }    
+
+    .formHeader {
+
+        //ASSIGN GRID AREA
+            //area
+            grid-area: header;
+            background-color: #74b7d8;
+            height: 100%;
+            width: 100%;
+            
+
+        //AESTETIC
+            //font and color
+            font-family: 'Arsenal', sans-serif;
+            font-weight: bolder;
+            font-size: 355%;
+            color: rgb(255, 255, 255);
+            //alignment
+            // padding-bottom: 0.5rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+    }
+  }
+
 
   

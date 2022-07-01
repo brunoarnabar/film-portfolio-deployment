@@ -1,86 +1,124 @@
-// .form-container{
-//     overflow: scroll;
-// }
-
 .form-container{
-    // border: aqua 10px solid;
-    //MAKE GRID
-        //design grid
-        display: grid;
-        //minmax to prevent overflow
-        grid-template-rows: repeat(13, minmax(0, 1fr)) minmax(auto, .5fr) repeat(3, minmax(0, 1fr));
-        grid-gap: .4rem;
-        //create matrix
-        grid-template-areas: 
-        "FormNameLabel"
-        "FormName"
-        "FormEmailLabel"
-        "FormEmail"
-        "FormCompanyLabel"
-        "FormCompany"
-        "FormBudgetLabel"
-        "FormBudget"
-        "FormStartLabel"
-        "FormStart"
-        "FormEndLabel"
-        "FormEnd"
-        "FormMessageLabel"
-        "FormMessage"
-        "FormQuestionLabel"
-        "FormQuestion"
-        "FormButton";
-        
-        //deal with
-        // height: 80rem;
-        padding: 1.8rem;
-        overflow: scroll;
-        // height: 10rem;
-}
+  //     border: rgb(96, 172, 216) 10px solid;
+  //     border-radius: 15px;
+  //     //MAKE GRID
+  //         //design grid
+          display: grid;
 
-.form-name.label{
-    // &.label{
-        grid-area:FormNameLabel;
-    // }
-}
+  //         //auto must align with the textbox
+          grid-template-rows: repeat(5, minmax(0, 1fr)) auto repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: .4rem;
+  //         //create matrix
+          grid-template-areas: 
+          'FormName FormName'
+          'FormEmail FormEmail'
+          'FormCompany FormCompany'
+          'FormBudget FormBudget'
+          'FormStart FormEnd'
+          'FormMessage FormMessage'
+          'FormQuestion FormQuestion'
+          'FormButton FormButton';
+          
+  //         //deal with
+  //         // height: 80rem;
+          padding: 1.8rem;
+          padding-top: 0;
+  //         overflow: scroll;
+  //         // height: 10rem;
+  
+  //flexbox
+  
+  // justify-items: center;
+  }
+  
 
-.input{
+
+.inputContainer{
+  // background-color: rgba(203, 203, 203, 0.628);
+  margin-bottom: 1em;
+
+  display:grid;
+  grid-template-rows: minmax(0, 2em) auto;
+  
+  grid-template-areas: 
+        "label"
+        "input";
+
+  
+
+  &.label{
+    grid-area: label;
+  }
+
+  &.input{
+    grid-area: input;
+  }
+
+  .form-message.input{
+    // background-color: rgba(255, 131, 131, 0.227);
+    resize: vertical;
+    min-height: 5rem;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .form-start.input{
+    // background-color: rgba(255, 131, 131, 0.227);
+    resize: vertical;
+    width: 96.5%;
+    text-align: center;
+
+    padding-left: 0px;
+  }
+
+  .form-question.input{
+
+  }
+
+
+
+  .input{
     height: 3.25em;
-    width: 88%;
+  }
 
-    //AESTETIC
-                //font and color
-                font-family: 'Arsenal', sans-serif;
-                font-weight: lighter;
-                // font-size: 140%;
-                color: #9293a1;
-                align-self: flex-end;
-                font-size: 100%;
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-top: .15rem;
-                padding-bottom: .15rem;
+  &.name{ grid-area: FormName; }
+  &.email{ grid-area: FormEmail; }
+  &.company{ grid-area: FormCompany; }
+  &.budget{ grid-area: FormBudget; }
+  &.question{ grid-area: FormQuestion; }
+  &.message{ grid-area: FormMessage; }
+  &.start{ grid-area: FormStart;}
+  &.end{ grid-area: FormEnd; }
 
+  
 }
 
-.form-message.input{
-    // &.label{
-        padding-top: 1rem;
-        grid-area:FormMessage;
-        resize: vertical;
-        height: 5rem;
-        min-height: 5rem;
-    // }
+.buttonContainer{
+  // height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-area: FormButton;
 }
 
+.form-button{
+// display: grid;
 
+ height: 75%;
+ width: 280%;
+ margin-right: 10%;
+justify-self: center;
 
-
-
-
-
-
-
-
+//AESTETIC
+  //font and color
+  font-family: 'Arsenal', sans-serif;
+  font-weight: lighter;
+  font-size: 100%;
+  color: #9293a1;
+  border-radius: 30px;
+  border: none;
+}
 
 .react-datepicker {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -119,7 +157,7 @@
                 font-family: 'Arsenal', sans-serif;
                 font-weight: bolder;
                 // font-size: 140%;
-                color: rgb(182, 0, 0);
+                color: rgb(245, 245, 245);
                 align-self: flex-end;
                 font-size: 125%;
                 padding-bottom: 0.4rem;
@@ -129,4 +167,14 @@
     border: none;
     background-color: #f7f7f7;
     border-radius: 6px;
+
+    //AESTETIC
+  //font and color
+  font-family: 'Arsenal', sans-serif;
+  font-weight: lighter;
+  font-size: 100%;
+  color: #9293a1;
+  // border-radius: 30px;
+  padding-left: 10px;
+  border: none;
   }
