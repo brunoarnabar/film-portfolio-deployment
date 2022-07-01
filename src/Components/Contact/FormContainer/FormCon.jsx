@@ -30,7 +30,7 @@ const validate = (values) => {
   if (!values.email) {
     errors.email = "Required";
   } else if (!/^[A-Z0-9.%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Please Enter An Valid Email That I Can Reach You";
+    errors.email = "Please Enter Your Email";
   }
 
   return errors;
@@ -117,10 +117,10 @@ function FormCont({closeModal}) {
                 type="email"
                 required
               />
-              <ErrorMessage name="email">
-                {(errorMsg) => <div className="error">{errorMsg}</div>}
-              </ErrorMessage>
             </div>
+            <ErrorMessage name="email">
+                {(errorMsg) => <div className="error">{errorMsg}</div>}
+            </ErrorMessage>
 
             <div className="inputContainer company">
               <label className="form-company label">Company</label>

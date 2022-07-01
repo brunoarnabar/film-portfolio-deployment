@@ -6,13 +6,14 @@
           display: grid;
 
   //         //auto must align with the textbox
-          grid-template-rows: repeat(5, minmax(0, 1fr)) auto repeat(2, minmax(0, 1fr));
+          grid-template-rows: repeat(2, minmax(0, 1fr)) auto repeat(3, minmax(0, 1fr)) auto repeat(2, minmax(0, 1fr));
           grid-template-columns: repeat(2, minmax(0, 1fr));
           grid-gap: .4rem;
   //         //create matrix
           grid-template-areas: 
           'FormName FormName'
           'FormEmail FormEmail'
+          'error error'
           'FormCompany FormCompany'
           'FormBudget FormBudget'
           'FormStart FormEnd'
@@ -30,6 +31,30 @@
   //flexbox
   
   // justify-items: center;
+  }
+
+  .error{
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    width: 15em;
+    height: 1em;
+
+    font-size: 4.1vw;
+    line-height: 0.9;
+    letter-spacing: 0.182em;
+    font-weight: 600;
+    font-style: italic;
+
+    color: red;
+    background-color: rgb(255, 175, 188);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius: 10px;
+
+
   }
   
 
@@ -72,11 +97,9 @@
     padding-left: 0px;
   }
 
-  .form-question.input{
-
-  }
-
-
+  // .form-company{
+  //     margin-top: -1em;
+  // }
 
   .input{
     height: 3.25em;
@@ -84,7 +107,7 @@
 
   &.name{ grid-area: FormName; }
   &.email{ grid-area: FormEmail; }
-  &.company{ grid-area: FormCompany; }
+  &.company{ grid-area: FormCompany; margin-top: -.25em;}
   &.budget{ grid-area: FormBudget; }
   &.question{ grid-area: FormQuestion; }
   &.message{ grid-area: FormMessage; }
