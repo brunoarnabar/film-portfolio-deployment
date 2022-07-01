@@ -171,8 +171,8 @@ function FormCont({closeModal}) {
                   type='text'
                   required
               >
-                <option value="default">How'd You Find Me</option>
-                <option value="We've Previously Worked Together">We've Previously Worked Together</option>
+                <option value="We've Chatted In Person">We've Chatted In Person</option>
+                <option value="By Working Together Previously">By Working Together Previously</option>
                 <option value="Through A Recommendation">Through A Recommendation</option>
                 <option value="Discovered On The Web">Discovered On The Web</option>
                 <option value="Found On Social Media">Found On Social Media</option>
