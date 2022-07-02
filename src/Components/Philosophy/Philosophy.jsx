@@ -15,7 +15,7 @@ function Philosophy() {
             <div className="Message-phi Second-phi"> Although "Creative Director & Developer" may sound like an oxymoron (at least, to me it did), I realized my skillset has been defined by that very role. </div>
             <div className="SVG Three-phi"> </div>
 
-            <div className="Message-phi Third-phi"> Blending film and computer science, we can create beautiful and meaningful UI that improves our collective experiences through narrative. </div>
+            <div className="Message-phi Third-phi"> By blending film and computer science, we can create beautiful and meaningful UI that improves our collective experiences through narrative. </div>
             <div className="SVG Four-phi"> </div>
 
             <div className="Message-phi Final-phi"> I'm passionate about using my knowledge of art and technology to create innovative solutions and working with a team to explore modern approaches for supporting artistic expression. </div>
