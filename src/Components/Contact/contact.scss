@@ -13,7 +13,7 @@
         display: grid;
         //minmax to prevent overflow
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.5fr);
+        grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.15fr);
         grid-gap: .4rem;
         //create matrix
         grid-template-areas: 
@@ -93,6 +93,9 @@
         justify-content: center;
         align-items: center;
 
+        // padding: 1em;
+        // margin: 1em;
+
     &.OneDir{
 
     //ASSIGN GRID AREA
@@ -139,12 +142,13 @@
         //AESTETIC
             //size of button
             height: 70%;
-            width: 60%;
+            width: 65%;
             //rounded edges
             border-radius: 30px;
             //slightly-noticable button
-            background-color: rgba(97, 122, 138, 0.363);
-            border: 1px rgba(0, 0, 0, 0.151) solid;
+            background-color: rgba(70, 145, 192, 0.344);
+            border: 3px rgba(0, 0, 0, 0) solid;
+            
 
         .OptImg{
 
@@ -161,8 +165,7 @@
             .ListImg{
                 //DISPLAY
                     //snug fit in its grid
-                    width: 100%;
-                    height: 100%;
+                    width: 3rem;
                     //circular
                     border-radius: 50%;
             }
@@ -174,8 +177,8 @@
             width: 84%;
              justify-content: center;
                 //slightly-noticable button
-                background-color: rgba(137, 138, 97, 0);
-                border: 1px rgba(0, 0, 0, 0) solid;
+                // background-color: rgba(137, 138, 97, 0);
+                // border: 1px rgba(0, 0, 0, 0) solid;
         }
 
         .OptPromt{
