@@ -102,7 +102,7 @@ function FormCont({closeModal}) {
             <div className="inputContainer name">
               <label className="form-name label">Name</label>
               <Field className="form-name input"
-                placeholder="Luis Buñuel"
+                placeholder="Johnny Doe"
                 name="name"
                 type="text"
                 required
