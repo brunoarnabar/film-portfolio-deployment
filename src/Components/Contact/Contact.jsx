@@ -17,7 +17,7 @@ function Contact() {
 
     const [dirModalIsOpen, setDirModalIsOpen] = useState(false)
     
-    const openModal = () => { setDirModalIsOpen(true); document.body.style.overflow = 'hidden'; }
+    // const openModal = () => { setDirModalIsOpen(true); document.body.style.overflow = 'hidden'; }
 
     const openModalOne = () => { 
       setDirModalIsOpen(true); 
