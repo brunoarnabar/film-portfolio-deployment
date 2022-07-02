@@ -166,6 +166,20 @@
                     //circular
                     border-radius: 50%;
             }
+
+           
+        }
+
+        &.formHead{
+            width: 84%;
+             justify-content: center;
+                //slightly-noticable button
+                background-color: rgba(137, 138, 97, 0);
+                border: 1px rgba(0, 0, 0, 0) solid;
+
+            &.hey{
+                color: green;
+            }
         }
 
         .OptPromt{
@@ -193,6 +207,11 @@
                 //AESTETIC
                     //shorter prompt needed to be shifted for mobile
                     margin-right: 10%;
+            }
+
+            &.formHead{
+                text-align: center;
+                font-size: 120%;
             }
         }
     }
@@ -258,7 +277,7 @@
             //font and color
             font-family: 'Arsenal', sans-serif;
             font-weight: bolder;
-            font-size: 355%;
+            font-size: 100%;
             color: rgb(255, 255, 255);
             //alignment
             // padding-bottom: 0.5rem;
@@ -266,8 +285,6 @@
             justify-content:center;
             align-items:center;
 
+            
     }
   }
-
-
-  
