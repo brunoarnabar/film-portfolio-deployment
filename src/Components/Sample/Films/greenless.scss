@@ -1,0 +1,135 @@
+.filmSampleConainer{
+  overflow: hidden;
+  // margin: 0;
+  // padding: 0;
+
+  height: 98vh;
+  overflow-y: hidden;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  background-color: #c4a8ff;
+  width: 18.75rem;
+  height: 100vh;
+  z-index: 4;
+  overflow: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+}
+
+.imgBlur{
+z-index: 1;
+  position: fixed;
+
+  // background-color: antiquewhite;
+background-image: url("../../../Video/Poster/theBox.png");
+background-position: bottom;
+
+background-size: cover;
+height: 100%;
+width: 100%;
+
+top: 0;
+left: 0;
+
+/* Add the blur effect */
+// filter: blur(5px);
+// -webkit-filter: blur(5px);
+
+background-attachment: fixed;
+overflow-y: hidden;
+
+}
+
+.divContainer{
+  z-index: 2;
+
+  overflow: hidden;
+  position: fixed;
+  height: 90%;
+  width: 90%;
+
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-rows: .3fr 1fr 1fr 1fr .6fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "back . . about"
+    "information information information information"
+    "film film film film"
+    "film film film film"
+    "vimeo . . contact";
+
+//AESTETIC
+      //font and color
+      font-family: 'Arsenal', sans-serif;
+      font-weight: bolder;
+      font-size: 160%;
+      color: rgb(0, 0, 0);
+      //alignment
+      padding: 5%;
+
+.back { grid-area: back;background-color: #fff8efde; border-radius: 50%; //CENTER WITHIN DIV
+  //flexbox
+  align-self: center; display: flex; justify-self: center;
+  align-items: center;justify-content: center; 
+  width: 30px;
+  height: 30px;}
+.about { grid-area: about; 
+  align-items: center; display: flex; justify-content: center; 
+}
+.information { grid-area: information; }
+.vimeo { grid-area: vimeo;
+  align-items: flex-end; display: flex; justify-content: center ;
+.filmInstance{
+  width: 100%;
+  box-shadow: #000000 6px 7px 10px 1px ;
+} }
+.contact { grid-area: contact;  align-items: flex-end; display: flex; justify-content: center ;}
+.film { grid-area: film;
+  display: flex;
+  align-items: center;
+
+.filmCont{
+  height: 50%;
+width: 100%;
+align-items: center;
+display: flex;
+box-shadow: #000000 6px 7px 10px 1px ;
+}}
+
+// h2,h5,h3 {
+//   background-color: #e8e8e8;
+//   border-radius: 15px;
+//   width: fit-content;
+//   padding: .2em;
+// }
+h5{
+  // font-size: 18px; font-weight: 100; margin: 44px 0px 0px ;
+  // font-family: Arsenal font-size: 18px gap: normal grid-area: auto
+  // Local Modifications / Inline Styles
+  font-weight: 700; margin: 3em 0px 0px 2em;
+  
+}
+h2{
+  // font-family: Arsenal font-size: 38.4px font-weight: 700 gap: normal grid-area: auto
+  // Local Modifications / Inline Styles
+ margin: 0px 0px 0px .75em; padding: 1px 0px 4px;
+}
+h3{
+  // font-family: Arsenal font-weight: 700 gap: normal grid-area: auto
+  // Local Modifications / Inline Styles
+  font-size: 22px; margin: 0px 0px 22px 2em  ;
+}
+
+
+}
+
+.infoAside {
+  text-decoration: underline;
+}

@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-// import 'semantic-ui-css/semantic.min.css';
+import ReactDom from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import App from "./App";
+import Greenless from "./Components/Sample/Films/Greenless";
+import GoBack from "./Components/Sample/Helpers/GoBack";
 
-import './index.css';
-import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
-  // <React.StrictMode>
-    <App />
-  // </React.StrictMode>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="/Greenless" element={<Greenless />} />
+      <Route
+        path="*"
+        element={
+          <div style={{backgroundColor: "white", height: "86vh" }}>
+            <GoBack />
+            <p>There's nothing here!</p>
+          </div>
+        }
+      />
+    </Routes>
+  </BrowserRouter>
 );
