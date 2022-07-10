@@ -11,10 +11,10 @@ export default function App() {
   return (
 
       <div className="App">
-        {/* <Landing/>
-        <Philosophy/>*/}
+        <Landing/>
+        <Philosophy/>
         <Sample/>
-        {/* <Contact/> */}
+        <Contact/>
         
         {/* <div className='gfg-div'> <div className="text"> <span></span> </div> </div>  */}
       </div>
