@@ -91,11 +91,11 @@ export default function Greenless(props) {
           <div   className="about">
             About
           </div>
-          <div   className="information">
+          <div  onClick={openInfo}  className="information">
 
             <h5> {num} / {Greenless.workType} </h5>
             <h2>{Greenless.title}</h2>
-            <h3 onClick={openInfo} className="infoAside"> information </h3>
+            <h3  className="infoAside"> information </h3>
 
           </div>
           
