@@ -101,9 +101,9 @@ export default function Greenless(props) {
           
           <div   className="film">
             <div className="filmCont">
-              <ReactPlayer className="filmInstance" width="100%" controls url="https://vimeo.com/600214381">
-                
-              </ReactPlayer>
+              <div className="innerWrapperFilm">
+                <ReactPlayer className="filmInstance" width="100%" height="100%" controls url="https://vimeo.com/600214381"/>
+              </div>
             </div>
           </div>
 
