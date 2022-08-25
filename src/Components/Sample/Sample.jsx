@@ -38,7 +38,7 @@ const Four = {
 
 export default function Samples() {
   return (
-    <div className="grid-container">
+    <div className="sample-container">
       <div className="head">
         <div className="SampleName">Bruno Arnabar</div>
         <div className="sampleMenu">Menu</div>

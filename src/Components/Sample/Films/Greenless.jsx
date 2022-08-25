@@ -51,12 +51,6 @@ export default function Greenless(props) {
     }
   };
 
-  // const main = {
-  //   visible: {
-  //     opacity: 1,
-  //   },
-  // };
-
   const [open, openInfo] = useCycle(false, true);
 
   return (
