@@ -2,7 +2,7 @@ import "./skill.scss";
 import Roulette from "./Roulette/Roulette";
 // import Card from "./Card/Card";
 
-import React, { useState } from "react";
+import React from "react";
 
 const infoCompSci = [
   {steps:"1. Understand the task:", ex1:"Brainstorm a solution towards objective", ex2:"Draw diagrams to visualize concept", ex3:"Create pseudo-code, articulating steps needed", id:1},
