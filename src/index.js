@@ -1,14 +1,11 @@
-// import ReactDom from "react-dom/client";
-import { render } from "react-dom";
+import ReactDom from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Greenless from "./Components/Sample/Films/Greenless";
 import GoBack from "./Components/Sample/Helpers/GoBack";
 
-const root = document.getElementById('root');
-// const root = ReactDom.createRoot(document.getElementById("root"));
-// root.render(
-  render(
+const root = ReactDom.createRoot(document.getElementById("root"));
+root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
@@ -23,6 +20,5 @@ const root = document.getElementById('root');
         }
       />
     </Routes>
-  </BrowserRouter>,
-  root
+  </BrowserRouter>
 );

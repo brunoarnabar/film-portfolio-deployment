@@ -1,4 +1,4 @@
-.sample-container {
+.grid-container {
   display: grid;
 
   /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
@@ -12,7 +12,9 @@
     "body"
     "footer";
 
-  height: 115vh;
+  height: 230vh;
+
+    
 }
 
 .head {
