@@ -3,7 +3,8 @@ import React from 'react';
 import ServiceEntry from './ServiceEntry';
 import {IoDesktopOutline} from "react-icons/io5";
 import {GiFilmStrip} from "react-icons/gi";
-import {FaHandsHelping, FaPeopleCarry} from "react-icons/fa";
+import {FaPeopleCarry} from "react-icons/fa";
+// import {FaHandsHelping, FaPeopleCarry} from "react-icons/fa";
 
 const entryOne = {
   sub: "Programming",

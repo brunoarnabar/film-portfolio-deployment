@@ -18,8 +18,8 @@ export default function App() {
         <About/>
         <Service/>
         <Skill/>
-        <Philosophy/>
         <Sample/>
+        <Philosophy/>
         <Contact/>
         
         {/* <div className='gfg-div'> <div className="text"> <span></span> </div> </div>  */}
