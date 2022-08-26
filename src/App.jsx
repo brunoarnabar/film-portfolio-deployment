@@ -22,7 +22,7 @@ export default function App() {
         <Philosophy/>
         <Contact/>
         
-        {/* <div className='gfg-div'> <div className="text"> <span></span> </div> </div>  */}
+        {/* <div className='gfg-div'> <div className="responsiveBuilder"> <span></span> </div> </div>  */}
       </div>
 
   );

@@ -1,5 +1,6 @@
 .app,body,html{
     background: rgb(13,20,33);
+    margin: 0;
 }
 
 /* RESPONSIVE DESIGN */
@@ -18,10 +19,10 @@
   height: 300px;
   background-color: darkseagreen;
   color: #fff;
-  .text span {
+  .responsiveBuilder span {
       display: none;
       }
-      .text:before {
+      .responsiveBuilder:before {
       content: 'For Desktop View';
       }
   }
@@ -32,10 +33,10 @@
       background-color: #63c971;
       color: #fff;
   }
-  .text:before {
+  .responsiveBuilder:before {
       display: none;
       }
-  .text:after {
+  .responsiveBuilder:after {
       content: 'For Desktop View';
       }
   }
@@ -49,10 +50,10 @@
       background-color: orange;
       color: #fff;
   }
-  .text:before {
+  .responsiveBuilder:before {
       display: none;
       }
-  .text:after {
+  .responsiveBuilder:after {
       content: 'For Tablet View';
       }
   }
@@ -66,10 +67,10 @@
       background-color: red;
       color: #fff;
   }
-  .text:before {
+  .responsiveBuilder:before {
       display: none;
       }
-  .text:after {
+  .responsiveBuilder:after {
       content: 'For Mobile Portrait View';
       }
   }
@@ -83,10 +84,10 @@
       background-color: cyan;
       color: #fff;
   }
-  .text:before {
+  .responsiveBuilder:before {
       display: none;
       }
-  .text:after {
+  .responsiveBuilder:after {
       content: 'For Mobile Landscape View';
       }
   }
