@@ -16,11 +16,11 @@ export default function App() {
       <div className="App">
         <Landing/>
         <About/>
-        <Service/>
+        {/* <Service/>
         <Skill/>
         <Sample/>
         <Philosophy/>
-        <Contact/>
+        <Contact/> */}
         
         {/* <div className='gfg-div'> <div className="responsiveBuilder"> <span></span> </div> </div>  */}
       </div>

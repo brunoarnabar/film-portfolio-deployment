@@ -1,16 +1,35 @@
-.app,body,html{
-    background: rgb(13,20,33);
-    margin: 0;
+.app,
+body,
+html {
+  background: rgb(13, 20, 33);
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+:root {
+  --clr-primary-200: #819299;
+  --clr-primary-400: #5a707d;
+  --clr-primary-900: #253746;
+
+  --clr-neutral-200: #dfd8cf;
+  --clr-neutral-400: #c7b9a5;
+  --clr-neutral-900: #aca7a1;
+
+  --ff-primary: 'Arsenal', sans-serif;
+  --ff-accent: 'Josefin Sans', sans-serif;
+
+  --ff-size-sm: 1rem;
+  --ff-size-md: 1.5rem;
+  --ff-size-lrg: 2rem;
 }
 
 /* RESPONSIVE DESIGN */
 .gfg-div {
-
   /* To make all elements center */
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* Default Styling */
   margin: 20px auto;
   padding: 30px;
@@ -20,74 +39,71 @@
   background-color: darkseagreen;
   color: #fff;
   .responsiveBuilder span {
-      display: none;
-      }
-      .responsiveBuilder:before {
-      content: 'For Desktop View';
-      }
-  }
-  
-  /* For Desktop View */
-  @media screen and (min-width: 1024px) {
-  .gfg-div {
-      background-color: #63c971;
-      color: #fff;
+    display: none;
   }
   .responsiveBuilder:before {
-      display: none;
-      }
-  .responsiveBuilder:after {
-      content: 'For Desktop View';
-      }
+    content: "For Desktop View";
   }
-  
-  /* For Tablet View */
-  @media screen and (min-device-width: 810px)
-  and (max-device-width: 1200px) {
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
   .gfg-div {
-      width: 400px;
-      height: 400px;
-      background-color: orange;
-      color: #fff;
+    background-color: #63c971;
+    color: #fff;
   }
   .responsiveBuilder:before {
-      display: none;
-      }
-  .responsiveBuilder:after {
-      content: 'For Tablet View';
-      }
+    display: none;
   }
-  
-  /* For Mobile Portrait View */
-  @media screen and (max-device-width: 480px)
-  and (orientation: portrait) {
+  .responsiveBuilder:after {
+    content: "For Desktop View";
+  }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 810px) and (max-device-width: 1200px) {
   .gfg-div {
-      width: 200px;
-      height: 200px;
-      background-color: red;
-      color: #fff;
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    color: #fff;
   }
   .responsiveBuilder:before {
-      display: none;
-      }
-  .responsiveBuilder:after {
-      content: 'For Mobile Portrait View';
-      }
+    display: none;
   }
-  
-  /* For Mobile Landscape View */
-  @media screen and (max-device-width: 926px)
-  and (orientation: landscape) {
+  .responsiveBuilder:after {
+    content: "For Tablet View";
+  }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
   .gfg-div {
-      width: 400px;
-      height: 200px;
-      background-color: cyan;
-      color: #fff;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: #fff;
   }
   .responsiveBuilder:before {
-      display: none;
-      }
-  .responsiveBuilder:after {
-      content: 'For Mobile Landscape View';
-      }
+    display: none;
   }
+  .responsiveBuilder:after {
+    content: "For Mobile Portrait View";
+  }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 926px) and (orientation: landscape) {
+  .gfg-div {
+    width: 400px;
+    height: 200px;
+    background-color: cyan;
+    color: #fff;
+  }
+  .responsiveBuilder:before {
+    display: none;
+  }
+  .responsiveBuilder:after {
+    content: "For Mobile Landscape View";
+  }
+}
