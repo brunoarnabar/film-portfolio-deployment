@@ -1,0 +1,64 @@
+.card {
+  max-width: 45ch;
+  max-height: 45ch;
+  width: 80%;
+  height: 100%;
+  background: grey; 
+  border-radius: 5px;
+  background-image: url("/Images/Backgrounds/bg-1.jpg");
+  /* background-image: url(https://drscdn.500px.org/photo/435236/q%3D80_m%3D1500/v2?webp=true&sig=67031bdff6f582f3e027311e2074be452203ab637c0bd21d89128844becf8e40); */
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  // border: 15px solid white;
+  background-color: rgb(180, 115, 255);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+.insideCard {
+  height: 100%;
+  width: 100%;
+  color: rgb(0, 0, 0);
+
+  display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: .75fr 0.50fr 1fr 1fr; 
+  gap: 0px 1%; 
+  grid-template-areas: 
+    "cardIcon cardIcon"
+    "cardTitle cardTitle"
+    "cardCol1 cardCol2"
+    "cardCol1 cardCol2"; 
+}
+.cardTitle { grid-area: cardTitle;display: flex; justify-content: center; }
+.cardIcon { grid-area: cardIcon;display: flex; justify-content: center; }
+.cardCol1 { grid-area: cardCol1;display: flex; justify-content: center; }
+.cardCol2 { grid-area: cardCol2; display: flex; justify-content: center; }
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+li {
+  margin: 1em;
+}
+
+.listItem {
+  flex: 1 0 auto;
+  margin: 0px;
+}
+
+// * {
+//   // outline: rgb(255, 214, 34, 0.3) 2px solid;
+// }
