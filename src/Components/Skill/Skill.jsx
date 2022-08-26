@@ -30,7 +30,7 @@ const infoCompSci = [
 
 export default function SkillTest() {
 
-    const [isClicked, setIsClicked] = useState(false)
+    // const [isClicked, setIsClicked] = useState(false)
 
     let contentRoulette=  <Roulette info={infoCompSci}/>;
     // let contentCard= <Card qual={dataCompSci}/>;
