@@ -1,5 +1,7 @@
 import './App.scss';
 import Landing from './Components/Landing/Landing'
+import About from './Components/About/About'
+import Service from './Components/Service/Service'
 import Philosophy from './Components/Philosophy/Philosophy'
 import Contact from './Components/Contact/Contact'
 import Sample from './Components/Sample/Sample'
@@ -13,6 +15,8 @@ export default function App() {
 
       <div className="App">
         <Landing/>
+        <About/>
+        <Service/>
         <Skill/>
         <Philosophy/>
         <Sample/>
