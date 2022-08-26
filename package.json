@@ -6,7 +6,7 @@
     "formik": "^2.2.9",
     "framer-motion": "^6.4.3",
     "react": "^16.14.0",
-    "react-dom": "^18.1.0",
+    "react-dom": "^16.14.0",
     "react-hook-form": "^7.33.0",
     "react-icons": "^4.4.0",
     "react-player": "^2.10.1",
