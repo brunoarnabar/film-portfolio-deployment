@@ -1,93 +1,123 @@
 .aboutContainer {
-    display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 4rem 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "aboutTitle"
-      "aboutContent"; 
+  display: flex;
+  flex-direction: column;
 
-    min-height: 40vh;
+  min-height: 40vh;
+  background-color: var(--clr-neutral-400);
+}
+
+.aboutContent {
+  grid-area: aboutContent;
+  // min-height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 0.62fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "aboutDesc aboutEnjoy";
+
+  .aboutDesc {
+    grid-area: aboutDesc;
+    // background-color: rgb(255, 0, 0);
+    max-width: 65ch;
+    // min-width: 15ch;
+    // outline: red 4px solid;
+
+    display: grid;
+
+    justify-self: center;
+    // align-items: center;
+
+    padding: 0 1rem 0 1rem;
+    margin: 1rem;
+
+    font-family: var(--ff-accent);
+    font-weight: 300;
+    font-size: var(--ff-size-sm);
+    color: var(--clr-primary-900);
   }
 
-  .aboutTitle { 
-    grid-area: aboutTitle; 
-    background-color: rgb(211, 211, 211);
+  .pad__top {
+    padding-top: 0.25rem;
+  }
 
-    background-color: var(--clr-neutral-400);
+  .aboutEnjoy {
+    grid-area: aboutEnjoy;
+    // background-color: rgb(178, 255, 224);
+    display: grid;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+    // row-gap: .5rem;
 
     display: flex;
-    justify-content: center; 
+
+    justify-content: flex-start;
     align-items: center;
+    /* flex-flow: column; */
+    flex-direction: column;
 
-    /* flex-flow: column; */ 
-    flex-direction: column; 
+    // outline: rgb(190, 110, 255) 4px solid;
 
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
+    margin: 1rem;
+
+    .boxImg {
+      border-radius: 0.5rem;
+      background-color: rgb(0, 0, 0);
+      // width: 14rem;
+      width: clamp(10rem, 25vw, 50rem);
+      // min-height: 15rem;
+      min-height: clamp(15rem, 20%, 30rem);
+      margin: auto 0 auto 0;
+
+      background-size: cover;
+      background-position: center center;
+
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // letter-spacing: .35rem;
+
+      display: grid;
+      // place-items: center;
+      align-items: flex-end;
+      justify-items: center;
+
+      box-shadow: black .2rem .3rem .6rem .1rem; 
+
+      // outline: 3px solid red;      
+
+      .imgLabel{
+        padding: .05em .3em;
+        border-radius: .25em;
+        color: var(--clr-neutral-400);
+        background-color: var(--clr-dark);
+        letter-spacing: .35rem;
+        font-size:var(--ff-size-md);
+      }
+    }
+
+    .cinema {
+      background-image: url("../../Images/About_Enjoy/cinema01.jpg");
+      margin-top:0;
+    }
+    .philosophy {
+      background-image: url("../../Images/About_Enjoy/philosophy01.jpg");
+      background-position: 35%;
+    }
+    .travel {
+      background-image: url("../../Images/About_Enjoy/travel01.jpg");
+      background-position: right;
+      margin: auto 0 2rem 0;
+    }
+
+    @media (max-width: 470px) {
+      .cinema, .travel {
+        margin: auto 0 auto 0;;
+      }
+    }
+  }
 }
 
-.aboutContent { 
-    grid-area: aboutContent; 
-    background-color: rgb(180, 180, 180);
-    // min-height: 100%;
-
-    display: grid; 
-    grid-template-columns: 0.62fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-        "aboutEnjoy aboutDesc"; 
-      
-
-      .aboutEnjoy { 
-        grid-area: aboutEnjoy;
-        // background-color: rgb(178, 255, 224);
-        display: grid;
-        justify-content: center;
-        padding: 0 1rem 0 1rem;
-        // row-gap: .5rem;
-
-        display: flex;
-    
-        justify-content: flex-start; 
-        align-items: center; 
-        /* flex-flow: column; */ 
-        flex-direction: column;  
-
-        .boxImg{
-            border-radius: .5rem;
-            background-color: rgb(0, 0, 0);
-            width: 7em;
-            min-height: 4em;
-
-            margin: auto 0 auto 0;
-        }
-     }
-
-      .aboutDesc { 
-        grid-area: aboutDesc;
-        // background-color: rgb(255, 0, 0);   
-        max-width: 65ch;
-        min-width: 25ch;
-
-        display: grid;
-
-        justify-self: center; 
-        // align-items: center;
-
-        padding: 0 1rem 0 1rem;
-     }
-
-     .aboutSub{
-        font-size: 1.25rem;
-        padding-bottom: 1rem;
-    }
-    .pad__top{
-        padding-top: 1rem;
-    }
-      
-}
-
-s{
-  height: .5rem;
+s {
+  height: 0.5rem;
 }
