@@ -15,7 +15,7 @@ export default function App() {
 
       <div className="App">
         <Landing/>
-        {/* <About/> */}
+        <About/>
         {/* <Service/>
         <Skill/>
         <Sample/>

@@ -1,36 +1,30 @@
 .Poster {
-    //SET BACKGROUND
-        //get border image and slightly darken it
-        background-image: linear-gradient(rgba(0, 0, 0, 0.20),
-        rgba(0, 0, 0, 0.2)),url('../../Images/Backgrounds/BrunoPoster.jpg');
-        //make border fit upon resize
-        background-size:100% 100%;
+  //SET BACKGROUND
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../Images/Backgrounds/BrunoPoster.jpg");
+  background-size: 100% 100%;
 
-    //CENTER WITHIN DIV
-        //flexbox
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  //CENTER WITHIN DIV
 
-        display: grid;
-        //minmax to prevent overflow
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        grid-template-rows: repeat(8, minmax(0, 1fr));
-        grid-gap: .2rem;
-        //create matrix
-        grid-template-areas: 
-        "r1c1 r1c2 r1c3 r1c4"
-        "r2c1 r2c2 r2c3 r2c4"
-        "r3c1 r3c2 r3c3 r3c4"
-        "r4c1 r4c2 r4c3 r4c4"
-        "r5c1 r5c2 r5c3 r5c4"
-        "r6c1 r6c2 r6c3 r6c4"
-        "r7c1 r7c2 r7c3 r7c4"
-        "r8c1 r8c2 r8c3 r8c4";
+  display: grid;
+  //minmax to prevent overflow
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  grid-gap: 0.2rem;
+  //create matrix
+  grid-template-areas:
+    "r1c1 r1c2 r1c3 r1c4"
+    "r2c1 r2c2 r2c3 r2c4"
+    "r3c1 r3c2 r3c3 r3c4"
+    "r4c1 r4c2 r4c3 r4c4"
+    "r5c1 r5c2 r5c3 r5c4"
+    "r6c1 r6c2 r6c3 r6c4"
+    "r7c1 r7c2 r7c3 r7c4"
+    "r8c1 r8c2 r8c3 r8c4";
 
-        min-width: 100vw;
-        min-height: 100vh;
-        max-height: 100vh;;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .Typewriter {
@@ -52,50 +46,49 @@
   //alignment
   padding-top: 1.5em;
 }
-  
-.MyName{
-    // ASSIGN GRID AREA
-        //start
-        grid-row-start: r3c1;
-        grid-column-start: r3c1;
-        //end
-        grid-row-end: r4c4;
-        grid-column-end: r4c4;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+.MyName {
+  // ASSIGN GRID AREA
+  //start
+  grid-row-start: r3c1;
+  grid-column-start: r3c1;
+  //end
+  grid-row-end: r4c4;
+  grid-column-end: r4c4;
 
-        justify-self: center;
-        align-items: center;
-        text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-        max-width: 75%;
-        // min-width: 75%;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
 
+  max-width: 74.7%;
+  // min-width: 75%;
 }
- 
+
 .Logline {
-    //ASSIGN GRID AREA
-        //start
-        grid-row-start: r4c1;
-        grid-column-start: r4c1;
-        //end
-        grid-row-end: r4c4;
-        grid-column-end: r4c4;
+  //ASSIGN GRID AREA
+  //start
+  grid-row-start: r4c1;
+  grid-column-start: r4c1;
+  //end
+  grid-row-end: r4c4;
+  grid-column-end: r4c4;
 
-    //CENTER WITHIN DIV
-        //flexbox
-        display: flex;
-        justify-self: center;
-        align-items: center;
-        text-align: center;
+  //CENTER WITHIN DIV
+  //flexbox
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
 
-        flex-direction: column;
+  flex-direction: column;
 
-        max-width: 77.2%;
-        margin-top: 4.5rem;
+  max-width: 84%;
+  margin-top: 4.5rem;
 
-        letter-spacing: 6.83px;
+  letter-spacing: 6.83px;
 }
