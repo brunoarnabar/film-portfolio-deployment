@@ -1,17 +1,10 @@
 .Poster {
-  //SET BACKGROUND
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url("../../Images/Backgrounds/BrunoPoster.jpg");
-  background-size: 100% 100%;
-
-  //CENTER WITHIN DIV
-
+  // display
   display: grid;
-  //minmax to prevent overflow
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
   grid-gap: 0.2rem;
-  //create matrix
+  // grid-area
   grid-template-areas:
     "r1c1 r1c2 r1c3 r1c4"
     "r2c1 r2c2 r2c3 r2c4"
@@ -21,74 +14,63 @@
     "r6c1 r6c2 r6c3 r6c4"
     "r7c1 r7c2 r7c3 r7c4"
     "r8c1 r8c2 r8c3 r8c4";
-
+  // box-model
   min-width: 100vw;
   min-height: 100vh;
   max-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../Images/Backgrounds/BrunoPoster.jpg");
+  background-size: 100% 100%;
 }
 
 .Typewriter {
-  font-family: var(--ff-body);
-  font-size: var(--fs-title);
-
+  // display
   display: flex;
   justify-content: center;
   align-items: center;
-
-  //ASSIGN GRID AREA
-  //start
+  // grid-area
   grid-row-start: r1c2;
   grid-column-start: r1c2;
-  //end
   grid-row-end: r1c3;
   grid-column-end: r1c3;
-
-  //alignment
+  // box-model
   padding-top: 1.5em;
+  // type
+  font-size: var(--fs-title);
+  font-family: var(--ff-body);
 }
 
 .MyName {
-  // ASSIGN GRID AREA
-  //start
-  grid-row-start: r3c1;
-  grid-column-start: r3c1;
-  //end
-  grid-row-end: r4c4;
-  grid-column-end: r4c4;
-
+  // display
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
   justify-self: center;
   align-items: center;
-  text-align: center;
-
+  // grid-area
+  grid-row-start: r3c1;
+  grid-column-start: r3c1;
+  grid-row-end: r4c4;
+  grid-column-end: r4c4;
+  // box-model
   max-width: 74.7%;
-  // min-width: 75%;
+  // type
+  text-align: center;
 }
 
 .Logline {
-  //ASSIGN GRID AREA
-  //start
-  grid-row-start: r4c1;
-  grid-column-start: r4c1;
-  //end
-  grid-row-end: r4c4;
-  grid-column-end: r4c4;
-
-  //CENTER WITHIN DIV
-  //flexbox
+  // display
   display: flex;
+  flex-direction: column;
   justify-self: center;
   align-items: center;
-  text-align: center;
-
-  flex-direction: column;
-
+  // grid-area
+  grid-row-start: r4c1;
+  grid-column-start: r4c1;
+  grid-row-end: r4c4;
+  grid-column-end: r4c4;
+  // box-model
   max-width: 84%;
   margin-top: 4.5rem;
-
+  // type
+  text-align: center;
   letter-spacing: 6.83px;
 }

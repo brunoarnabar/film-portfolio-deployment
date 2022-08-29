@@ -8,7 +8,7 @@ export default function Landing() {
       <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
       <Typewriter
         options={{
-          strings: ["SCREENWRITER", "DEVELOPER", "FILMMAKER"],
+          strings: ["SCREENWRITER", "DEVELOPER", "FILMMAKER", "CREATOR"],
           autoStart: true,
           loop: true,
           delay: 110,
