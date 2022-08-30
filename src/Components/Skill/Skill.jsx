@@ -146,7 +146,7 @@ export default function SkillTest() {
       <div className="sectionHeading">
         <div className="heading">SKILLS</div>
         <div className="subHeading wrap-lg">
-          Slide&nbsp;Index&nbsp;Currently Is:&nbsp;{slideIndex+1}
+          Slide&nbsp;Index&nbsp;Currently Is:&nbsp;{slideIndex + 1}
         </div>
       </div>
       <div className="SkillGrid">
@@ -160,7 +160,7 @@ export default function SkillTest() {
         </div>
         {/* <div className="card-roulette">{contentRoulette}</div> */}
         <div className="card-skill">{contentCard}</div>
-        <button className="dark-mode-btn" onClick={myFunction}>
+        <button className="button-accent fs-button" onClick={myFunction}>
           {isClicked ? "☾" : "☼"}
         </button>
       </div>

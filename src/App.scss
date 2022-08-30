@@ -262,6 +262,15 @@ svg {
   }
 }
 
+.button-accent{
+  //box-model
+  min-height: 3em;
+  min-width: 7em;
+  background-color: var(--clr-accent-400);
+  border-radius:1.5rem;
+
+}
+
 // @media (max-width: 40em){
 
 // }
