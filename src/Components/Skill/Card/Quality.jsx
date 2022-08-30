@@ -11,26 +11,24 @@ export default function Quality(props) {
         icon = <GiFilmProjector size={100}/>;    
     }
 
-  return(
+  return (
     <div className="insideCard">
-      <div className="cardIcon"> 
-        {icon}
-      </div>
-        <div className="cardTitle">{props.title}</div>
-        <div className="cardCol1">
-          <div className="list">
-            <div className="listItem">{props.oneOne}</div>
-            <div className="listItem">{props.oneTwo}</div>
-            <div className="listItem">{props.oneThree}</div>
-          </div>
-        </div>
-        <div className="cardCol2">
-          <div className="list">
-            <div className="listItem">{props.twoOne}</div>
-            <div className="listItem">{props.twoTwo}</div>
-            <div className="listItem">{props.twoThree}</div>
-          </div>
+      <div className="cardIcon">{icon}</div>
+      <div className="title CardTitle">{props.title}</div>
+      <div className="cardCol1">
+        <div className="list">
+          <div className="textBody noPad">{props.oneOne}</div>
+          <div className="textBody noPad">{props.oneTwo}</div>
+          <div className="textBody noPad">{props.oneThree}</div>
         </div>
       </div>
-  )
+      <div className="cardCol2">
+        <div className="list">
+          <div className="textBody noPad">{props.twoOne}</div>
+          <div className="textBody noPad">{props.twoTwo}</div>
+          <div className="textBody noPad">{props.twoThree}</div>
+        </div>
+      </div>
+    </div>
+  );
 }

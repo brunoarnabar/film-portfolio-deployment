@@ -3,16 +3,14 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="aboutContainer">
+    <div className="AboutContainer">
       <div className="sectionHeading">
         <div className="heading">ABOUT</div>
-        <div className="subHeading wrap centerH">
-          Let Me Introduce&nbsp;Myself
-        </div>
+        <div className="subHeading wrap-sm">Let Me Introduce&nbsp;Myself</div>
       </div>
 
-      <div className="aboutContent">
-        <div className="aboutDesc">
+      <div className="AboutContent">
+        <div className="AboutDesc">
           <div className="title"> Hey! </div>
           <div className="textBody">
             I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer with
@@ -36,23 +34,22 @@ export default function About() {
           </div>
         </div>
 
-        <div className="aboutEnjoy">
+        <div className="AboutEnjoy">
+
           <div className="title">I enjoy...</div>
-          <div className="boxImg cinema">
+          <div className="AboutImgBox Cinema">
             <div className="label">Cinema</div>
-          </div>{" "}
-          <s />
-          <div className="boxImg philosophy">
+          </div>
+          <div className="AboutImgBox Philosophy">
             <div className="label">Philosophy</div>
-          </div>{" "}
-          <s />
-          <div className="boxImg travel">
-            {" "}
+          </div>
+          <div className="AboutImgBox Travel">
             <div className="label">Traveling</div>
-          </div>{" "}
-          <s />
+          </div>
+          
         </div>
       </div>
+
     </div>
   );
 }

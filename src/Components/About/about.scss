@@ -1,4 +1,4 @@
-.aboutContainer {
+.AboutContainer {
   // display
   display: flex;
   flex-direction: column;
@@ -6,91 +6,73 @@
   background-color: var(--clr-neutral-400);
 }
 
-.aboutContent {
+.AboutContent {
   // display
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "aboutDesc aboutEnjoy";
+  grid-template-areas: "AboutDesc AboutEnjoy";
   // box-model
   margin: 0 0 var(--padding) var(--padding);
-  // misc
-  --padding: 1rem;
-
-  .aboutDesc {
-    // display
-    display: grid;
-    justify-self: center;
-    // grid-area
-    grid-area: aboutDesc;
-    // box-model
-    max-width: 200ch;
-    padding: 0 0 0 var(--padding);
-    margin: 0 auto;
-  }
-
-  .aboutEnjoy {
-    // display
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    // grid-area
-    grid-area: aboutEnjoy;
-    // box-model
-    margin: 0 auto;
-  }
-
-  .boxImg {
-    // display
-    display: grid;
-    align-items: flex-end;
-    justify-items: center;
-    // box-model
-    width: clamp(10rem, 25vw, 40rem);
-    min-height: clamp(5rem, 20%, 35rem);
-    margin: auto 0;
-    background-size: cover;
-    background-position: center center;
-    // misc
-    border-radius: 0.5rem;
-    box-shadow: black 0.2rem 0.3rem 0.6rem 0.1rem;
-
-    .imgLabel {
-      // box-model
-      padding: 0.05em 0.3em;
-      background-color: var(--clr-dark);
-      // type
-      font-size: var(--fs-body);
-      color: var(--clr-neutral-400);
-      letter-spacing: 0.35rem;
-      // misc
-      border-radius: 0.25em;
-    }
-  }
-
-  .cinema {
-    background-image: url("../../Images/About_Enjoy/cinema01.jpg");
-    margin-top: 0;
-  }
-  .philosophy {
-    background-image: url("../../Images/About_Enjoy/philosophy01.jpg");
-    background-position: 35%;
-  }
-  .travel {
-    background-image: url("../../Images/About_Enjoy/travel01.jpg");
-    background-position: right;
-    margin: auto 0 2rem 0;
-  }
-
-  @media (max-width: 470px) {
-    .cinema,
-    .travel {
-      margin: auto 0 auto 0;
-    }
-  }
 }
 
-// s {
-//   // min-height: 2.5rem;
-// }
+.AboutDesc {
+  // display
+  display: grid;
+  justify-self: center;
+  // grid-area
+  grid-area: AboutDesc;
+  // box-model
+  max-width: 200ch;
+  padding: 0 0 0 var(--padding);
+  margin: 0 auto;
+}
+
+.AboutEnjoy {
+  // display
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  // grid-area
+  grid-area: AboutEnjoy;
+  // box-model
+  margin: 0 auto;
+}
+
+.AboutImgBox {
+  // display
+  display: grid;
+  align-items: flex-end;
+  justify-items: center;
+  // box-model
+  width: clamp(10rem, 25vw, 40rem);
+  min-height: clamp(5rem, 20%, 35rem);
+  margin: auto 0;
+  background-size: cover;
+  background-position: center center;
+  // misc
+  border-radius: 0.5rem;
+  box-shadow: black 0.2rem 0.3rem 0.6rem 0.1rem;
+}
+
+.Cinema {
+  background-image: url("../../Images/About_Enjoy/cinema01.jpg");
+  margin-top: 0;
+}
+.Philosophy {
+  background-image: url("../../Images/About_Enjoy/philosophy01.jpg");
+  background-position: 35%;
+}
+.Travel {
+  background-image: url("../../Images/About_Enjoy/travel01.jpg");
+  background-position: right;
+  margin: auto 0 2rem 0;
+}
+
+@media (max-width: 37.5em) {
+  .Cinema,
+  .Travel {
+    margin: auto 0 auto 0;
+  }
+}

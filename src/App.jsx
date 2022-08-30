@@ -14,11 +14,11 @@ export default function App() {
   return (
 
       <div className="App">
-        <Landing/>
+        {/* <Landing/>
         <About/>
-        {/* <Service/>
+        <Service/> */}
         <Skill/>
-        <Sample/>
+        {/* <Sample/>
         <Philosophy/>
         <Contact/> */}
         
