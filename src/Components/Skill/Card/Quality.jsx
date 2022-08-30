@@ -17,16 +17,16 @@ export default function Quality(props) {
       <div className="title CardTitle">{props.title}</div>
       <div className="cardCol1">
         <div className="list">
-          <div className="textBody noPad">{props.oneOne}</div>
-          <div className="textBody noPad">{props.oneTwo}</div>
-          <div className="textBody noPad">{props.oneThree}</div>
+          <div className="textBody noPad fs-logline">{props.oneOne}</div>
+          <div className="textBody noPad fs-logline">{props.oneTwo}</div>
+          <div className="textBody noPad fs-logline">{props.oneThree}</div>
         </div>
       </div>
       <div className="cardCol2">
         <div className="list">
-          <div className="textBody noPad">{props.twoOne}</div>
-          <div className="textBody noPad">{props.twoTwo}</div>
-          <div className="textBody noPad">{props.twoThree}</div>
+          <div className="textBody noPad fs-logline">{props.twoOne}</div>
+          <div className="textBody noPad fs-logline">{props.twoTwo}</div>
+          <div className="textBody noPad fs-logline">{props.twoThree}</div>
         </div>
       </div>
     </div>

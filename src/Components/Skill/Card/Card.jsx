@@ -31,7 +31,3 @@ export default function Card(data) {
     </animated.div>
   );
 }
-
-// export default function skills() {
-//   return <Card />;
-// }

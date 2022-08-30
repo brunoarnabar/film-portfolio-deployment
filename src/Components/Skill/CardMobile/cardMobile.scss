@@ -2,7 +2,17 @@
   // display
   display: flex;
   justify-self: center;
-  align-self: center;
+  align-self: flex-start;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  justify-items: center;
+  align-content: flex-start;
+
+  text-align: start;
+
   // box-model
   height: 75vh;
   width: clamp(32rem, 70vw, 40rem);
@@ -13,19 +23,31 @@
   box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
 }
 
+#example {
+  &.carousel.slide {
+    text-align: start;
+  }
+}
+
 .CarouselSlide {
   // display
   display: flex;
   flex-direction: column;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  justify-items: center;
+  align-content: flex-start;
   //  box-model
   width: 100%;
 }
-@media (min-width: 50em)
-{
+@media (min-width: 50em) {
   .CarouselSlide {
-  // display
-  display: none;
-}
+    // display
+    display: none;
+  }
 }
 
 .control-arrow {

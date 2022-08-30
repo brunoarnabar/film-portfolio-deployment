@@ -20,6 +20,8 @@
   // misc
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
   border-radius: 1.5rem;
+
+  background-color: var(--clr-neutral-900);
 }
 
 .card:hover {
@@ -43,6 +45,7 @@
     "cardCol1 cardCol2"
     "cardCol1 cardCol2"; 
 }
+
 .CardTitle { grid-area: cardTitle;display: flex; justify-content: center; }
 .cardIcon { grid-area: cardIcon;display: flex; justify-content: center; }
 .cardCol1 { grid-area: cardCol1;display: flex; justify-content: center; }

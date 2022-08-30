@@ -14,13 +14,13 @@ export default function App() {
   return (
 
       <div className="App">
-        {/* <Landing/>
+        <Landing/>
         <About/>
-        <Service/> */}
+        <Service/>
         <Skill/>
-        {/* <Sample/>
+        <Sample/>
         <Philosophy/>
-        <Contact/> */}
+        <Contact/>
         
         {/* <div className='gfg-div'> <div className="responsiveBuilder"> <span></span> </div> </div>  */}
       </div>

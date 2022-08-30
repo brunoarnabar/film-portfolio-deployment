@@ -115,12 +115,20 @@ export default function SkillTest() {
   let contentRoulette = <Roulette info={infoCompSci} />;
   let contentCard = <Card qual={dataCompSci} />;
 
-  function myFunction() {
-    setIsClicked((isClicked) => !isClicked);
-  }
+  // function myFunction() {
+  //   setIsClicked((isClicked) => !isClicked);
+  // }
+
+  const [slideIndex, setSlideIndex] = useState(0);
 
   if (isClicked) {
-    contentRoulette = <Roulette info={infoCompSci} />;
+    contentRoulette = (
+      <Roulette
+        info={infoCompSci}
+        slideIndex={slideIndex}
+        setSlideIndex={setSlideIndex}
+      />
+    );
     contentCard = <Card qual={dataCompSci} />;
   } else {
     contentRoulette = <Roulette info={infoFilm} />;
@@ -132,16 +140,20 @@ export default function SkillTest() {
       <div className="sectionHeading">
         <div className="heading">SKILLS</div>
         <div className="subHeading wrap-md">
-          What&nbsp;Should&nbsp;I Say&nbsp;Right&nbsp;Here?
+          Slide&nbsp;Index&nbsp;Currently Is:&nbsp;{slideIndex+1}
         </div>
       </div>
       <div className="SkillGrid">
         <div className="card-roulette">
-          <CardMobile info={infoCompSci} />
+          <CardMobile
+            info={infoCompSci}
+            setSlideIndex={setSlideIndex}
+            slideIndex={slideIndex}
+          />
           {contentRoulette}
         </div>
         {/* <div className="card-roulette">{contentRoulette}</div> */}
-        {/* <div className="card-skill">{contentCard}</div> */}
+        <div className="card-skill">{contentCard}</div>
         {/* <button className="dark-mode-btn" onClick={myFunction}>
           {isClicked ? "☾" : "☼"}
         </button> */}
