@@ -2,7 +2,7 @@ import "./roulette.scss";
 import Steps from "./Steps";
 import { React, useEffect, useRef } from "react";
 import ReactCardCarousel from "react-card-carousel";
-import useMediaQuery from "../../Hooks/useMediaQuery";
+// import useMediaQuery from "../../Hooks/useMediaQuery";
 
 export default function Roulette(props) {
   const carouselRef = useRef(null);
