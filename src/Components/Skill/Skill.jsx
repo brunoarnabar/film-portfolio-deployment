@@ -154,9 +154,9 @@ export default function SkillTest() {
         </div>
         {/* <div className="card-roulette">{contentRoulette}</div> */}
         <div className="card-skill">{contentCard}</div>
-        {/* <button className="dark-mode-btn" onClick={myFunction}>
+        <button className="dark-mode-btn" onClick={myFunction}>
           {isClicked ? "☾" : "☼"}
-        </button> */}
+        </button>
       </div>
     </div>
   );
