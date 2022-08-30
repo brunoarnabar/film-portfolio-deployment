@@ -111,6 +111,7 @@ const dataFilm = [
 
 export default function SkillTest() {
   const [isClicked, setIsClicked] = useState(true);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   let contentRoulette = (
     <Roulette
@@ -131,8 +132,6 @@ export default function SkillTest() {
   function myFunction() {
     setIsClicked((isClicked) => !isClicked);
   }
-
-  const [slideIndex, setSlideIndex] = useState(0);
 
   if (isClicked) {
     contentRoulette = 
