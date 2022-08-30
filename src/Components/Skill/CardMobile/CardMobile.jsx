@@ -37,6 +37,7 @@ function CardMobile(props) {
         infiniteLoop={true}
         autoPlay={true}
         showStatus={false}
+        showArrows={false}
         swipeable={true}
         emulateTouch={true}
         interval={9500}
