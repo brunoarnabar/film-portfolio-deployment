@@ -17,6 +17,9 @@
         justify-items: center;
         align-content: center;
 
+        background-color: rgb(146, 222, 255) 3px solid;
+
+        // margin: 0 auto;
 }
 
 .rouletteStyle{
@@ -35,20 +38,32 @@
     border-radius: 10px;
     box-sizing: border-box;
 
+    // margin: 0 auto;
+
     // padding: 2rem;
+    padding: 0 4rem;
+     background-color:var(--clr-primary-900);
+    border-radius: 1.5rem;
+    box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
+    display: none;
 }
 @media (min-width: 50em) and (max-width: 64em)
 {
   .rouletteStyle{
-    height: 25em;
-    width: 30em;
+    display: flex;
+    height: 75vh;
+    width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
 @media (min-width: 64em) 
 {
   .rouletteStyle{
+    display: flex;
     height: 25em;
     width: 35em;
+
+    height: 75vh;
+    width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
 
@@ -56,8 +71,12 @@
     height: 100%;
     width: 100%;
 
+    margin: 0 auto;
+
+   
+
     // outline:#f552d7 solid 3px;
-    padding: 0 4rem;
+    // padding: 0 4rem;
   
     display: grid;
     grid-template-columns: 1fr;

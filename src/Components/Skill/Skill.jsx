@@ -138,8 +138,9 @@ export default function SkillTest() {
       <div className="SkillGrid">
         <div className="card-roulette">
           <CardMobile info={infoCompSci} />
+          {contentRoulette}
         </div>
-        <div className="card-roulette">{contentRoulette}</div>
+        {/* <div className="card-roulette">{contentRoulette}</div> */}
         {/* <div className="card-skill">{contentCard}</div> */}
         {/* <button className="dark-mode-btn" onClick={myFunction}>
           {isClicked ? "☾" : "☼"}

@@ -4,6 +4,9 @@ import Steps from "../Roulette/Steps";
 import './cardMobile.scss'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
+
+
+
 function CardMobile(props) {
   return (
     <Carousel
@@ -16,6 +19,7 @@ function CardMobile(props) {
       emulateTouch={true}
       interval={9550}
       useKeyboardArrows={true}
+    //   selectedItem={info.num}
     >
       {props.info.map((info) => (
         <div className="blue"
