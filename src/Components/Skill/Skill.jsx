@@ -176,11 +176,7 @@ export default function SkillTest() {
       </div>
       <div className="SkillGrid">
         <div className="card-roulette">
-          <MobileRoulette
-            info={infoCompSci}
-            setSlideIndex={setSlideIndex}
-            slideIndex={slideIndex}
-          />
+          {mobileRoulette}
           {contentRoulette}
         </div>
         {/* <div className="card-roulette">{contentRoulette}</div> */}
