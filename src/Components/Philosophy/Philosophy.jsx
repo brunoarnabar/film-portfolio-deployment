@@ -1,7 +1,7 @@
 import React from 'react'
 import './philosophy.scss';
 
-import {GiRomanToga} from 'react-icons/gi';
+// import {GiRomanToga} from 'react-icons/gi';
 
 function Philosophy() {
   return (

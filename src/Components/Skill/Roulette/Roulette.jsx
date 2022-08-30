@@ -8,11 +8,11 @@ export default function Roulette(props) {
   const carouselRef = useRef(null);
 
   const isMobile = useMediaQuery("(max-width: 50em)");
-  const [autoPlay, setAutoPlay] = useState(!isMobile);
+  // const [autoPlay, setAutoPlay] = useState(!isMobile);
  
     //media query for phone
     useEffect(() => {
-      setAutoPlay(isMobile);
+      // setAutoPlay(isMobile);
       // console.log("Roulette autoplay is:" + isMobile);
       //  if (!isMobile) {
          // console.log("RouletteSlideIndex from cardMobile:" + props.slideIndex);

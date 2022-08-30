@@ -16,15 +16,15 @@ function CardMobile(props) {
     }
   }
 
-  const isNotMobile = useMediaQuery("(min-width: 50em)");
+//   const isNotMobile = useMediaQuery("(min-width: 50em)");
 
 
     useEffect(() => {
-        //   if (isNotMobile) {
-            //   console.log("cardMobile from RouletteSlideIndex:" + props.slideIndex);
-            setCurrentSlide(props.slideIndex);
-        //   }
-    });
+      //   if (isNotMobile) {
+      //   console.log("cardMobile from RouletteSlideIndex:" + props.slideIndex);
+      setCurrentSlide(props.slideIndex);
+      //   }
+    }, [props.slideIndex]);
 
 
   return (
