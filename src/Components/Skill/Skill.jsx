@@ -115,9 +115,9 @@ export default function SkillTest() {
   let contentRoulette = <Roulette info={infoCompSci} />;
   let contentCard = <Card qual={dataCompSci} />;
 
-  // function myFunction() {
-  //   setIsClicked((isClicked) => !isClicked);
-  // }
+  function myFunction() {
+    setIsClicked((isClicked) => !isClicked);
+  }
 
   const [slideIndex, setSlideIndex] = useState(0);
 
