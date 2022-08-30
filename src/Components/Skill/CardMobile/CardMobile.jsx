@@ -44,6 +44,8 @@ function CardMobile(props) {
         selectedItem={currentSlide}
         onChange={updateCurrentSlide}
         stopOnHover={false}
+        swipeScrollTolerance={25}
+        preventMovementUntilSwipeScrollTolerance={true}
       >
         {props.info.map((info) => (
           <div className="blue" key={info.id}>
