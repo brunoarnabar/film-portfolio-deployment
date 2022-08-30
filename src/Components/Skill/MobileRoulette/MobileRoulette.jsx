@@ -1,11 +1,11 @@
 import { React, useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Steps from "../Roulette/Steps";
-import "./cardMobile.scss";
+import "./mobileRoulette.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 // import useMediaQuery from "../../Hooks/useMediaQuery";
 
-function CardMobile(props) {
+function MobileRoulette(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function updateCurrentSlide(index) {
@@ -64,4 +64,4 @@ function CardMobile(props) {
   );
 }
 
-export default CardMobile;
+export default MobileRoulette;

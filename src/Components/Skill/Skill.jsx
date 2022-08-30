@@ -1,7 +1,7 @@
 import "./skill.scss";
 import Roulette from "./Roulette/Roulette";
 import Card from "./Card/Card";
-import CardMobile from "./CardMobile/CardMobile";
+import MobileRoulette from "./MobileRoulette/MobileRoulette";
 
 import React, { useState } from "react";
 
@@ -112,7 +112,20 @@ const dataFilm = [
 export default function SkillTest() {
   const [isClicked, setIsClicked] = useState(true);
 
-  let contentRoulette = <Roulette info={infoCompSci} />;
+  let contentRoulette = (
+    <Roulette
+      info={infoCompSci}
+      slideIndex={slideIndex}
+      setSlideIndex={setSlideIndex}
+    />
+  );
+  let mobileRoulette = (
+    <MobileRoulette
+      info={infoCompSci}
+      slideIndex={slideIndex}
+      setSlideIndex={setSlideIndex}
+    />
+  );
   let contentCard = <Card qual={dataCompSci} />;
 
   function myFunction() {
@@ -122,22 +135,35 @@ export default function SkillTest() {
   const [slideIndex, setSlideIndex] = useState(0);
 
   if (isClicked) {
-    contentRoulette = (
+    contentRoulette = 
       <Roulette
         info={infoCompSci}
         slideIndex={slideIndex}
         setSlideIndex={setSlideIndex}
+      />;
+      
+    mobileRoulette = (
+      <MobileRoulette
+        info={infoCompSci}
+        setSlideIndex={setSlideIndex}
+        slideIndex={slideIndex}
       />
     );
     contentCard = <Card qual={dataCompSci} />;
   } else {
-    contentRoulette = (
+    contentRoulette =
       <Roulette
         info={infoFilm}
         slideIndex={slideIndex}
         setSlideIndex={setSlideIndex}
-      />
-    );
+      />;
+      mobileRoulette = (
+        <MobileRoulette
+          info={infoFilm}
+          setSlideIndex={setSlideIndex}
+          slideIndex={slideIndex}
+        />
+      );
     contentCard = <Card qual={dataFilm} />;
   }
 
@@ -151,7 +177,7 @@ export default function SkillTest() {
       </div>
       <div className="SkillGrid">
         <div className="card-roulette">
-          <CardMobile
+          <MobileRoulette
             info={infoCompSci}
             setSlideIndex={setSlideIndex}
             slideIndex={slideIndex}
