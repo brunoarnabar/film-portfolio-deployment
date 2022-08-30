@@ -131,7 +131,13 @@ export default function SkillTest() {
     );
     contentCard = <Card qual={dataCompSci} />;
   } else {
-    contentRoulette = <Roulette info={infoFilm} />;
+    contentRoulette = (
+      <Roulette
+        info={infoFilm}
+        slideIndex={slideIndex}
+        setSlideIndex={setSlideIndex}
+      />
+    );
     contentCard = <Card qual={dataFilm} />;
   }
 
