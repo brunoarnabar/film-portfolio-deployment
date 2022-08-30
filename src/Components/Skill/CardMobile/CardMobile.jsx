@@ -3,7 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import Steps from "../Roulette/Steps";
 import "./cardMobile.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import useMediaQuery from "../../Hooks/useMediaQuery";
+// import useMediaQuery from "../../Hooks/useMediaQuery";
 
 function CardMobile(props) {
   const [currentSlide, setCurrentSlide] = useState(0);

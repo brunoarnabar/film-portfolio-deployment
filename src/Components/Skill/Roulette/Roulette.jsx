@@ -1,13 +1,13 @@
 import "./roulette.scss";
 import Steps from "./Steps";
-import { React, useEffect, useState, useRef } from "react";
+import { React, useEffect, useRef } from "react";
 import ReactCardCarousel from "react-card-carousel";
 import useMediaQuery from "../../Hooks/useMediaQuery";
 
 export default function Roulette(props) {
   const carouselRef = useRef(null);
 
-  const isMobile = useMediaQuery("(max-width: 50em)");
+  // const isMobile = useMediaQuery("(max-width: 50em)");
   // const [autoPlay, setAutoPlay] = useState(!isMobile);
  
     //media query for phone
