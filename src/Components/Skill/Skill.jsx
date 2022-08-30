@@ -139,7 +139,7 @@ export default function SkillTest() {
     <div className="SkillContainer">
       <div className="sectionHeading">
         <div className="heading">SKILLS</div>
-        <div className="subHeading wrap-md">
+        <div className="subHeading wrap-lg">
           Slide&nbsp;Index&nbsp;Currently Is:&nbsp;{slideIndex+1}
         </div>
       </div>
