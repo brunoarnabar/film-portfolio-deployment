@@ -24,19 +24,18 @@
   // box-model
   // height: 80vh;
   // width: 100vw;
-  margin: 1rem;
-  background-color: rgb(153, 208, 255);
+  // margin: 1rem;
+  // background-color: rgb(153, 208, 255);
 
-  outline: red 1px solid;
+  // outline: rgb(251, 255, 0) 1px solid;
 
   .card-roulette {
-    // outline: red 1px solid;
-    background-color: rgb(153, 255, 158);
-    padding: 1rem;
-    outline: rgb(255, 166, 0) 1px solid;
+    // background-color: rgb(153, 255, 158);
+    // padding: 1rem;
+    // outline: rgb(255, 166, 0) 1px solid;
 
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
 
     min-height: 80vh;
 
@@ -44,6 +43,8 @@
     
     justify-content: center; 
     align-items: center;   
+
+    margin: 0 1rem;
   }
 
   // .card-skill {

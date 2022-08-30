@@ -8,7 +8,7 @@
     //   justify-content: center;
     //   align-items: center;
  
-    background-color: peru;
+    // background-color: peru;
 
         display: flex;
         justify-content: center; 
@@ -25,17 +25,17 @@
     width: clamp(15em, 60vw, 30em);
     width: 20em;
     // padding-top: 5rem; clamp(15em, 60vw, 30em);
-    text-align: center;
-    background: #52C0F5;
+    // text-align: center;
+    // background: #52C0F5;
     // background-image: url("/Images/Backgrounds/bg-2.jpg");
-    color: #FFF;
-    font-family: sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
+    // color: #FFF;
+    // font-family: sans-serif;
+    // font-size: 12px;
+    // text-transform: uppercase;
     border-radius: 10px;
     box-sizing: border-box;
 
-    padding: 2rem;
+    // padding: 2rem;
 }
 @media (min-width: 50em) and (max-width: 64em)
 {
@@ -56,17 +56,20 @@
     height: 100%;
     width: 100%;
 
-    outline:#f552d7 solid 3px;
-    // padding: 2rem;
+    // outline:#f552d7 solid 3px;
+    padding: 0 4rem;
   
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.8fr 1fr;
-    gap: 0px 0px;
+    grid-template-rows: 0.3fr 1fr;
     grid-template-areas:
       "steps"
       "examples";
   }
+
+  // .StepContainer{
+
+  // }
   
   .steps {
     grid-area: steps;
@@ -76,11 +79,36 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+
+    max-width: 22ch;
+
+    display: flex;
+    
+    justify-content: space-evenly; 
+    align-items: center; 
+    /* flex-flow: column; */ 
+    flex-direction: column;  
+    align-content: center;
+    flex-basis: 1;
+
+    flex: 1 0 auto;
+
+    margin: 0 auto;
+
   }
   .examples {
     grid-area: examples;
     display: flex;
     justify-content: center;
+
+    // display: flex;
+    
+    // justify-content: space-evenly; 
+    // align-items: center; 
+    // /* flex-flow: column; */ 
+    // flex-direction: column;  
+    // align-content: stretch;
+
   }
   
   .list {
@@ -100,6 +128,9 @@
   } */
   
   .listItem {
+    display:list-item;
+    list-style: circle;
     flex: 1 0 auto;
     margin: 10px;
+    max-width: 25ch;
   }

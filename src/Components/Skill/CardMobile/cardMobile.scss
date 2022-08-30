@@ -2,9 +2,12 @@
 .green,
 .red {
     height: 75vh;
-    width: 100%;
+    width: 80%;
+    width: clamp(36rem, 70vw, 40rem);
+    width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
 
-    padding: 2em;
+    // padding: 2em;
+    margin: 0 auto;
 
     display:flex;
     justify-self: center;
@@ -12,7 +15,10 @@
 }
 
 .blue{
-    background-color: rgb(114, 173, 250);
+    background-color:var(--clr-primary-900);
+    border-radius: 1.5rem;
+    box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
+    // margin: 0 1rem;
 }
 .green{
     background-color: rgb(114, 250, 125);
@@ -30,10 +36,17 @@
     flex-direction: column;
 }
 
-.carousel.carousel-slider{
-    width: 25%;
-    outline: red 2px solid;
+.control-arrow{
+    min-width: 25vw;
+    align-items: center;
+    display: flex; 
 
-    display:flex;
-    flex-direction: column;
+    color: black;
+
+    &.control-next{
+        justify-content: flex-end; 
+    }
+    &.control-prev{
+        justify-content: flex-start; 
+    }
 }
