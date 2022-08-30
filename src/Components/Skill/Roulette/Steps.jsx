@@ -5,9 +5,9 @@ export default function Steps(props) {
       <div className="steps fs-logline">{props.steps}</div>
       <div className="examples">
         <div className="list">
-          <li className="listItem fs-logline">{props.ex1}</li>
-          <li className="listItem fs-logline">{props.ex2}</li>
-          <li className="listItem fs-logline">{props.ex3}</li>
+          <div className="listItem fs-logline">{props.ex1}</div>
+          <div className="listItem fs-logline">{props.ex2}</div>
+          <div className="listItem fs-logline">{props.ex3}</div>
         </div>
       </div>
     </div>

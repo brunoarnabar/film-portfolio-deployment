@@ -1,6 +1,7 @@
 import "./skill.scss";
 import Roulette from "./Roulette/Roulette";
 import Card from "./Card/Card";
+import CardMobile from "./CardMobile/CardMobile";
 
 import React, { useState } from "react";
 
@@ -135,7 +136,9 @@ export default function SkillTest() {
         </div>
       </div>
       <div className="SkillGrid">
-        <div className="card-roulette">ROULETTE</div>
+        <div className="card-roulette">
+          <CardMobile info={infoCompSci} />
+        </div>
         <div className="card-roulette">{contentRoulette}</div>
         {/* <div className="card-skill">{contentCard}</div> */}
         {/* <button className="dark-mode-btn" onClick={myFunction}>

@@ -1,0 +1,39 @@
+.blue,
+.green,
+.red {
+    height: 75vh;
+    width: 100%;
+
+    padding: 2em;
+
+    display:flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.blue{
+    background-color: rgb(114, 173, 250);
+}
+.green{
+    background-color: rgb(114, 250, 125);
+}
+.red{
+    background-color: rgb(250, 114, 114);
+}
+
+.CarouselSlide
+{
+    padding-top: 3em;
+    width: 100%;
+
+    display:flex;
+    flex-direction: column;
+}
+
+.carousel.carousel-slider{
+    width: 25%;
+    outline: red 2px solid;
+
+    display:flex;
+    flex-direction: column;
+}
