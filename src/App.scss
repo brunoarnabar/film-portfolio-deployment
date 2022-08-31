@@ -23,7 +23,7 @@
   --fw-semi-bold: 500;
   --fw-bold: 700;
 
-  --letter-spacing: .2em;
+  --letter-spacing: 0.2em;
 
   --padding: 1rem;
 
@@ -181,13 +181,18 @@ svg {
 
 .heading {
   // box-model
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   // type
   font-size: var(--fs-heading);
   font-weight: var(--fw-bold);
   font-family: var(--ff-heading);
   color: var(--clr-primary-900);
   line-height: 1;
+
+  &.no-margin {
+    // box-model
+    margin-bottom: 0;
+  }
 }
 
 .name {
@@ -262,13 +267,13 @@ svg {
   }
 }
 
-.button-accent{
+.button-accent {
   //box-model
-  min-height: 3em;
-  min-width: 7em;
+  // min-height: 3em;
+  // min-width: 7em;
+  padding: var(--padding);
   background-color: var(--clr-accent-400);
-  border-radius:1.5rem;
-
+  border-radius: 1.5rem;
 }
 
 // @media (max-width: 40em){
@@ -312,8 +317,6 @@ svg {
     --fs-900: 12.2rem;
   }
 }
-
-
 
 // Utility Classes
 .text-primary-200 {

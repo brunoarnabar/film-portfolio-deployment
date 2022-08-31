@@ -128,6 +128,11 @@ export default function SkillTest() {
     />
   );
   let contentCard = <Card qual={dataCompSci} />;
+  let skillButton = 
+    <button className="button-accent fs-title" onClick={myFunction}>
+      {isClicked ? "Filmmaker" : "Developer"}
+    </button>
+  ;
 
   function myFunction() {
     setIsClicked((isClicked) => !isClicked);
@@ -169,21 +174,20 @@ export default function SkillTest() {
   return (
     <div className="SkillContainer">
       <div className="sectionHeading">
-        <div className="heading">SKILLS</div>
-        <div className="subHeading wrap-lg">
-          Slide&nbsp;Index&nbsp;Currently Is:&nbsp;{slideIndex + 1}
+        <div className="heading no-margin">SKILLS</div>
+        <div className="title">
+          Click&nbsp;To&nbsp;View My&nbsp;{skillButton}&nbsp;Abilities
         </div>
       </div>
       <div className="SkillGrid">
+        <div className="card-skill">
+          <div className="subHeading wrap-lg">Tools Used As A Filmmaker</div>
+          {contentCard}
+        </div>
         <div className="card-roulette">
           {mobileRoulette}
           {contentRoulette}
         </div>
-        {/* <div className="card-roulette">{contentRoulette}</div> */}
-        <div className="card-skill">{contentCard}</div>
-        <button className="button-accent fs-button" onClick={myFunction}>
-          {isClicked ? "☾" : "☼"}
-        </button>
       </div>
     </div>
   );
