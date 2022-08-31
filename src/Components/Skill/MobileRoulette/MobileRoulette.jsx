@@ -14,7 +14,7 @@ export default function MobileRoulette(props) {
 
   useEffect(() => {
     updateCurrentSlide(props.slideIndex);
-  }, [props.slideIndex]);
+  }, [props.slideIndex, updateCurrentSlide]);
 
   return (
     <Carousel

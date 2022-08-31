@@ -21,9 +21,6 @@ export default function App() {
         <Sample/>
         <Philosophy/>
         <Contact/>
-        
-        {/* <div className='gfg-div'> <div className="responsiveBuilder"> <span></span> </div> </div>  */}
       </div>
-
   );
 }
