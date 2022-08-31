@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React, useEffect, useCallback } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Steps from "../Roulette/Steps";
 import "./mobileRoulette.scss";
@@ -6,11 +6,20 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 
 export default function MobileRoulette(props) {
 
-  function updateCurrentSlide(index) {
+  // function updateCurrentSlide(index) {
+  //     if (props.slideIndex !== index) {
+  //     props.setSlideIndex(index);
+  //   }
+  // }
+
+  const updateCurrentSlide = useCallback(
+    (index) => {
       if (props.slideIndex !== index) {
-      props.setSlideIndex(index);
-    }
-  }
+        props.setSlideIndex(index);
+      }
+    },
+    [index, props.slideIndex, props.setSlideIndex]
+  );
 
   useEffect(() => {
     updateCurrentSlide(props.slideIndex);
