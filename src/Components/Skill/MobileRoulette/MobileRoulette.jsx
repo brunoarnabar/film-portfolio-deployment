@@ -13,7 +13,7 @@ export default function MobileRoulette(props) {
   // }
 
   const updateCurrentSlide = useCallback(
-    (index) => {
+    () => {
       if (props.slideIndex !== index) {
         props.setSlideIndex(index);
       }
