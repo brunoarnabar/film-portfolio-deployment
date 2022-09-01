@@ -27,14 +27,14 @@ export default function MobileRoulette(props) {
       showStatus={false}
       showArrows={false}
       swipeable={true}
-      // emulateTouch={true}
+      emulateTouch={true}
       interval={9500}
       useKeyboardArrows={true}
       selectedItem={currentSlide}
       onChange={updateCurrentSlide}
       stopOnHover={false}
       swipeScrollTolerance={5}
-      preventMovementUntilSwipeScrollTolerance={true}
+      preventMovementUntilSwipeScrollTolerance={false}
     >
       {props.info.map((info) => (
         <div className="MobileRouletteCardBody" key={info.id}>
