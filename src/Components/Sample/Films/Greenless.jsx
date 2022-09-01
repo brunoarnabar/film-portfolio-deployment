@@ -1,8 +1,12 @@
 import GoBack from "../Helpers/GoBack";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { 
+  // AnimatePresence, motion, 
+  useCycle } from "framer-motion";
 import { React } from "react";
 import ReactPlayer from "react-player";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { 
+  // Link, Navigate, 
+  useNavigate } from "react-router-dom";
 
 import imggy from "../../../Video/Thumbnail/theBox.png";
 import giffy from "../../../Video/Gifs/theBox.gif";
@@ -20,42 +24,42 @@ export default function Greenless(props) {
     workType: "Personal",
   };
   const num = String(Greenless.key).padStart(2, "0");
-  const sideInfoAnim = {
-    visible: {
-      x: "-1vh",
-      width: "100%",
-      opacity: 1,
-      transition: {
-        duration: 1,
-        mass: 0.005,
-        type: "tween",
-        when: "beforeChildren",
-        staggerChildren: 0.125,
-      },
-    },
-    hidden: {
-      x: "200vh",
-      width: "100%",
-      opacity: 0,
-      transition: {
-        duration: 1,
-        when: "afterChildren",
-        staggerChildren: 0.125,
-      },
-    },
-  };
-  const childAnim = {
-    visible: {
-      opacity: 1,
-      x: "0vh",
-    },
-    hidden: {
-      opacity: 0,
-      x: "10vh",
-    },
-  };
+  // const sideInfoAnim = {
+  //   visible: {
+  //     x: "-1vh",
+  //     width: "100%",
+  //     opacity: 1,
+  //     transition: {
+  //       duration: 1,
+  //       mass: 0.005,
+  //       type: "tween",
+  //       when: "beforeChildren",
+  //       staggerChildren: 0.125,
+  //     },
+  //   },
+  //   hidden: {
+  //     x: "200vh",
+  //     width: "100%",
+  //     opacity: 0,
+  //     transition: {
+  //       duration: 1,
+  //       when: "afterChildren",
+  //       staggerChildren: 0.125,
+  //     },
+  //   },
+  // };
+  // const childAnim = {
+  //   visible: {
+  //     opacity: 1,
+  //     x: "0vh",
+  //   },
+  //   hidden: {
+  //     opacity: 0,
+  //     x: "10vh",
+  //   },
+  // };
 
-  const [open, openInfo] = useCycle(false, true);
+  // const [open, openInfo] = useCycle(false, true);
   let navigate = useNavigate();
 
   return (

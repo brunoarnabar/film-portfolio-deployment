@@ -14,23 +14,23 @@ export default function Contact() {
   const [three, setThree] = useState(false);
 
   const [dirModalIsOpen, setDirModalIsOpen] = useState(false);
-  const openModalOne = () => {
-    setDirModalIsOpen(true);
-    document.body.style.overflow = "hidden";
-    setOne((current) => !current);
-  };
+  // const openModalOne = () => {
+  //   setDirModalIsOpen(true);
+  //   document.body.style.overflow = "hidden";
+  //   setOne((current) => !current);
+  // };
 
-  const openModalTwo = () => {
-    setDirModalIsOpen(true);
-    document.body.style.overflow = "hidden";
-    setTwo((current) => !current);
-  };
+  // const openModalTwo = () => {
+  //   setDirModalIsOpen(true);
+  //   document.body.style.overflow = "hidden";
+  //   setTwo((current) => !current);
+  // };
 
-  const openModalThree = () => {
-    setDirModalIsOpen(true);
-    document.body.style.overflow = "hidden";
-    setThree((current) => !current);
-  };
+  // const openModalThree = () => {
+  //   setDirModalIsOpen(true);
+  //   document.body.style.overflow = "hidden";
+  //   setThree((current) => !current);
+  // };
 
   const closeModal = () => {
     setDirModalIsOpen(false);

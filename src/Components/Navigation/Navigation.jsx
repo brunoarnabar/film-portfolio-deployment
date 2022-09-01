@@ -1,16 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 import "./navigation.scss"
 
 function Navigation({ aboutRef }) {
 
-  const handleScroll = (ref) => {
-    window.scrollTo({
-      top: ref.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
-  };
+//   const handleScroll = (ref) => {
+//     window.scrollTo({
+//       top: ref.offsetTop,
+//       left: 0,
+//       behavior: "smooth",
+//     });
+//   };
 
   return (
     <div className="NavigationContainer">
