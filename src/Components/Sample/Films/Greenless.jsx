@@ -1,10 +1,12 @@
 import GoBack from "../Helpers/GoBack";
 // import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { React } from "react";
+import { React} from "react";
 import ReactPlayer from "react-player";
-import { 
-  // Link, Navigate, 
-  useNavigate } from "react-router-dom";
+import {
+  // Link, Navigate,
+  useNavigate,
+} from "react-router-dom";
+// import GridLoader from "react-spinners/GridLoader";
 
 import imggy from "../../../Video/Thumbnail/theBox.png";
 import giffy from "../../../Video/Gifs/theBox.gif";
@@ -58,11 +60,83 @@ export default function Greenless(props) {
   // };
 
   // const [open, openInfo] = useCycle(false, true);
-  let navigate = useNavigate();
 
+  let navigate = useNavigate();
+  // const [loadingInstance, setLoadingInstance] = useState(false);
+
+  // useEffect(() => {
+  //   // console.log(loading);
+  //   setLoadingInstance(true);
+  //   setTimeout(() => {
+  //     setLoadingInstance(false);
+  //   }, 6000);
+  // }, []);
+
+  // let spinner = <></>;
+
+  // if (loadingInstance) {
+  //   spinner = (
+  //     <div className="AppLoader fs-heading">
+  //       <GridLoader
+  //         color={"var(--clr-neutral-accent-300)"}
+  //         loading={loadingInstance}
+  //         size={50}
+  //       />
+  //       Bruno Arnabar's Portfolio
+  //     </div>
+  //   );
+  // } else {
+  //   spinner = <></>;
+  // }
   return (
     <>
-      {/* <AnimatePresence>
+      {/* {spinner} */}
+      <div className="FilmInstanceContainer bg-neutral-200">
+        <div className="FilmInstanceTopNav">
+          <div
+            className="title"
+            onClick={() => {
+              navigate("/#sample");
+            }}
+          >
+            Back
+          </div>
+          <div className="title">
+            <GoBack />
+          </div>
+          <div className="title">NavBar</div>
+        </div>
+        <div className="FilmInstanceId">
+          <div className="title noPad">
+            {num} / {Greenless.workType}
+          </div>
+          <div className="title noPad">{Greenless.title}</div>
+        </div>
+        <div className="FilmInstanceInfo">
+          <div className="fs-sub-heading ff-body fw-bold text-primary-900 FilmInstanceInfoButton">
+            information
+          </div>
+        </div>
+        <div className="FilmInstanceFilmPlayer">
+          <ReactPlayer
+            className="filmInstance"
+            width="100%"
+            height="100%"
+            controls={true}
+            light={true}
+            url="https://vimeo.com/600214381"
+          />
+        </div>
+        <div className="FilmInstanceBotNav">
+          <div className="title">Vimeo</div>
+          <div className="title">About</div>
+          <div className="title">Contact</div>
+        </div>
+      </div>
+    </>
+  );
+}
+/* <AnimatePresence>
         {open && (
           <motion.aside
             variants={sideInfoAnim}
@@ -112,46 +186,4 @@ export default function Greenless(props) {
           <div className="vimeo">Vimeo</div>
           <div className="contact">Contact</div>
         </div>
-      </div> */}
-
-      <div className="FilmInstanceContainer bg-neutral-200">
-        <div className="FilmInstanceTopNav">
-          <div className="title" onClick={()=> {
-            navigate("/sample");
-          }}>
-            Back
-          </div>
-          <div className="title">
-            <GoBack />
-          </div>
-          <div className="title">NavBar</div>
-        </div>
-        <div className="FilmInstanceId">
-          <div className="title noPad">
-            {num} / {Greenless.workType}
-          </div>
-          <div className="title noPad">{Greenless.title}</div>
-        </div>
-        <div className="FilmInstanceInfo">
-          <div className="fs-sub-heading ff-body fw-bold text-primary-900 FilmInstanceInfoButton">
-            information
-          </div>
-        </div>
-        <div className="FilmInstanceFilmPlayer">
-          <ReactPlayer
-            className="filmInstance"
-            width="100%"
-            height="100%"
-            controls={true}
-            url="https://vimeo.com/600214381"
-          />
-        </div>
-        <div className="FilmInstanceBotNav">
-          <div className="title">Vimeo</div>
-          <div className="title">About</div>
-          <div className="title">Contact</div>
-        </div>
-      </div>
-    </>
-  );
-}
+      </div> */
