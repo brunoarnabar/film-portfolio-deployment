@@ -1,7 +1,5 @@
 import GoBack from "../Helpers/GoBack";
-import { 
-  // AnimatePresence, motion, 
-  useCycle } from "framer-motion";
+// import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { React } from "react";
 import ReactPlayer from "react-player";
 import { 
