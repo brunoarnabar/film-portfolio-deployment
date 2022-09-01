@@ -4,6 +4,7 @@
   --clr-primary-900: #253746;
 
   --clr-neutral-200: #dfd8cf;
+  --clr-neutral-accent-300: #f5e799;
   --clr-neutral-400: #e9dbc6;
   --clr-neutral-900: #bbab94;
 
@@ -27,6 +28,7 @@
   --letter-spacing: 0.2em;
 
   --padding: 1rem;
+  --thick-padding:  calc(3 * var(--padding));
 
   --fs-init: 0.625rem;
   --fs-final: 1.5rem;
@@ -68,7 +70,8 @@ $media-wide-display: 60em;
 
 //Reset
 body,
-html {
+html,
+#root {
   height: 100%;
   background: var(--clr-primary-900);
   font-size: 62.5%;
@@ -109,6 +112,7 @@ svg {
 a:hover, a:visited, a:link, a:active
 {
     text-decoration: none;
+    color: var(--clr-neutral-400);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -126,6 +130,18 @@ a:hover, a:visited, a:link, a:active
 }
 
 // General Styling
+.AppLoader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  color: var(--clr-neutral-400);
+}
+
+
 .textBody {
   // box-model
   padding: 0 0 2rem 0;
@@ -149,6 +165,10 @@ a:hover, a:visited, a:link, a:active
   font-weight: var(--fw-bold);
   font-family: var(--ff-body);
   color: var(--clr-primary-900);
+
+  &.noPad{
+    padding: 0;
+  }
 }
 
 .label {
