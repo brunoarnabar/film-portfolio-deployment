@@ -1,0 +1,70 @@
+.FilmInstanceContainer {
+  // display
+  display: flex;
+  flex-direction: column;
+  outline: red 1px solid;
+
+  height: 100%;
+//   min-height: 100%;
+//   min-height: max(100%, 10vh);
+}
+
+.FilmInstanceTopNav {
+  // display
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  // box-model
+  // gap: var(--padding);
+  margin: var(--thick-padding) var(--thick-padding) 0 var(--thick-padding);
+
+  outline: rgb(255, 196, 0) 1px solid;
+}
+
+.FilmInstanceId {
+  // display
+  display: flex;
+  flex-direction: column;
+  // box-model
+  margin: 0 var(--thick-padding);
+  outline: rgb(123, 255, 0) 1px solid;
+}
+
+.FilmInstanceInfo {
+    // display
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  // box-model
+  height: 50%;
+  margin: 0 var(--thick-padding);
+  outline: rgb(0, 255, 162) 1px solid;
+  // type
+  
+//   text-decoration-color: var(--clr-primary-900);
+
+.FilmInstanceInfoButton{
+text-decoration: underline;
+  text-decoration-thickness: 0.4rem;
+}
+  
+}
+
+.FilmInstanceFilmPlayer {
+  outline: rgb(0, 166, 255) 1px solid;
+  height: 100%;
+  margin: 0 var(--thick-padding);
+}
+
+.FilmInstanceBotNav {
+  // display
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; 
+  // box-model
+  height: 40%;
+  margin: 0 var(--thick-padding) var(--thick-padding) var(--thick-padding);
+  outline: rgb(179, 0, 255) 1px solid;
+}

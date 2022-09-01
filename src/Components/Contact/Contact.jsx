@@ -86,9 +86,30 @@ function outputHTML(one, two, three) {
   }
 
   return (
-    <div className="contactContainer">
-      <div className="BackdropCo">
-        <div className="HeadingCo"> Get In Touch </div>
+    <div className="ContactContainer">
+      {/* <div className="BackdropCo"> */}
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+      <div className="sectionHeading noMarginBot">
+        <div className="heading text-neutral-400">CONTACT</div>
+        <div className="subHeading wrap-lg text-neutral-200">
+          Lets Get In&nbsp;Touch
+        </div>
+      </div>
+      <div className="ContactContent">
+        <div className="fs-body text-neutral-400">
+          To make an inquiry about a project, please select from the following:
+        </div>
+        <div className="ContactOptionBlock fs-body">
+          Employ Me As A Developer
+        </div>
+        <div className="ContactOptionBlock fs-body">Hire Me As A Director</div>
+        <div className="ContactOptionBlock fs-body">
+          Just Reach Out To Say Hello
+        </div>
+      </div>
+      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++ */}
+
+      {/* <div className="HeadingCo fs-title"> Get In Touch </div>
         <div className="Message-con First-con">
           {" "}
           To make an inquiry about a project, please select from the following
@@ -130,32 +151,31 @@ function outputHTML(one, two, three) {
             </div>
             <div className="OptPromt HelloOpt"> I just want to say hello. </div>
           </button>
+        </div> */}
+      <Modal
+        isOpen={dirModalIsOpen}
+        onRequestClose={() => closeModal()}
+        className="Modal"
+        overlayClassName="Overlay"
+        onAfterOpen={() => {
+          document.body.style.top = `-${window.scrollY}px`;
+          document.body.style.position = `fixed`;
+        }}
+        onAfterClose={() => {
+          const scrollY = document.body.style.top;
+          document.body.style.position = "";
+          document.body.style.top = "";
+          window.scrollTo(0, parseInt(scrollY || "0") * -1);
+        }}
+      >
+        <div className="formHeader">
+          <div>{outputHTML(one, two, three)}</div>
         </div>
-
-        <Modal
-          isOpen={dirModalIsOpen}
-          onRequestClose={() => closeModal()}
-          className="Modal"
-          overlayClassName="Overlay"
-          onAfterOpen={() => {
-            document.body.style.top = `-${window.scrollY}px`;
-            document.body.style.position = `fixed`;
-          }}
-          onAfterClose={() => {
-            const scrollY = document.body.style.top;
-            document.body.style.position = "";
-            document.body.style.top = "";
-            window.scrollTo(0, parseInt(scrollY || "0") * -1);
-          }}
-        >
-          <div className="formHeader">
-            <div>{outputHTML(one, two, three)}</div>
-          </div>
-          <div className="form-container-contact">
-            <FormCon className="formStyle" closeModal={closeModal} />
-          </div>
-        </Modal>
-      </div>
+        <div className="form-container-contact">
+          <FormCon className="formStyle" closeModal={closeModal} />
+        </div>
+      </Modal>
+      {/* </div> */}
     </div>
   );
 }

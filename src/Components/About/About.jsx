@@ -6,7 +6,7 @@ export default function About() {
     <div className="AboutContainer">
       <div className="sectionHeading">
         <div className="heading">ABOUT</div>
-        <div className="subHeading wrap-sm">Let Me Introduce&nbsp;Myself</div>
+        <div className="subHeading wrap-sm">Get To Know&nbsp;Me</div>
       </div>
 
       <div className="AboutContent">

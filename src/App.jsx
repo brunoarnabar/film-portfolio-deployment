@@ -8,18 +8,23 @@ import Sample from './Components/Sample/Sample'
 import Skill from './Components/Skill/Skill'
 
 import React from 'react';
-
+// import {Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-      <div className="App">
-        <Landing/>
-        <About/>
-        <Service/> 
-        <Skill/>
-        <Sample/>
-        {/* <Philosophy/> */}
-        <Contact/>
-      </div>
+    // <Routes>
+    //   <Route path="/" element={<Landing/>} />
+    //   <Route path="/sample" element={<Sample/>} />
+    // </Routes>;
+
+    <div className="App">
+      <Landing />
+      <About />
+      <Service />
+      <Skill />
+      <Sample />
+      <Philosophy />
+      <Contact />
+    </div>
   );
 }

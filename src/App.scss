@@ -27,6 +27,7 @@
   --letter-spacing: 0.2em;
 
   --padding: 1rem;
+  --thick-padding:  calc(3 * var(--padding));
 
   --fs-init: 0.625rem;
   --fs-final: 1.5rem;
@@ -68,7 +69,8 @@ $media-wide-display: 60em;
 
 //Reset
 body,
-html {
+html,
+#root {
   height: 100%;
   background: var(--clr-primary-900);
   font-size: 62.5%;
@@ -149,6 +151,10 @@ a:hover, a:visited, a:link, a:active
   font-weight: var(--fw-bold);
   font-family: var(--ff-body);
   color: var(--clr-primary-900);
+
+  &.noPad{
+    padding: 0;
+  }
 }
 
 .label {
