@@ -19,34 +19,34 @@ export default function MobileRoulette(props) {
   }, [props.slideIndex]);
 
   return (
-      <Carousel
-        className="CarouselSlide"
-        showThumbs={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        showStatus={false}
-        showArrows={false}
-        swipeable={true}
-        emulateTouch={true}
-        interval={9500}
-        useKeyboardArrows={false}
-        selectedItem={currentSlide}
-        onChange={updateCurrentSlide}
-        stopOnHover={false}
-        swipeScrollTolerance={25}
-        preventMovementUntilSwipeScrollTolerance={true}
-      >
-        {props.info.map((info) => (
-          <div className="blue" key={info.id}>
-            <Steps
-              steps={info.steps}
-              ex1={info.ex1}
-              ex2={info.ex2}
-              ex3={info.ex3}
-              key={info.id}
-            />
-          </div>
-        ))}
-      </Carousel>
+    <Carousel
+      className="MobileRouletteContainer"
+      showThumbs={false}
+      infiniteLoop={true}
+      autoPlay={true}
+      showStatus={false}
+      showArrows={false}
+      swipeable={true}
+      emulateTouch={true}
+      interval={9500}
+      useKeyboardArrows={false}
+      selectedItem={currentSlide}
+      onChange={updateCurrentSlide}
+      stopOnHover={false}
+      swipeScrollTolerance={25}
+      preventMovementUntilSwipeScrollTolerance={true}
+    >
+      {props.info.map((info) => (
+        <div className="MobileRouletteCardBody" key={info.id}>
+          <Steps
+            steps={info.steps}
+            ex1={info.ex1}
+            ex2={info.ex2}
+            ex3={info.ex3}
+            key={info.id}
+          />
+        </div>
+      ))}
+    </Carousel>
   );
 }

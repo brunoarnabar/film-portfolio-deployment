@@ -1,3 +1,5 @@
+@import "../../App.scss";
+
 .SkillContainer {
   // display
   display: flex;
@@ -7,31 +9,163 @@
 }
 
 .SkillGrid {
-  //design
+  // display
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-rows:
+    minmax(0, 0.7fr) minmax(0, 0.3fr)
+    minmax(0, 0.2fr) minmax(0, 1fr);
+  grid-template-areas:
+    "cardToggle"
+    "subHeader"
+    "titleToggle"
+    "roulToggle";
   justify-items: center;
   align-items: center;
-
-  .card-roulette {
-    //design
+}
+@media(max-width:$media-wide-display)
+{
+  .SkillRouletteToggle {
+    // display
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     // box-model
     height: 100%;
     width: 100%;
     min-height: 80vh;
+    min-height: 70vh;
+
+    grid-area: roulToggle;
   }
 
-  .card-skill {
-    //design
+  .SkillCardToggle {
+    // display
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     // box-model
     min-width: 90vw;
+
+    height: 100%;
+    width: 100%;
+
+    grid-area: cardToggle;
   }
+
+  .SkillCardDev,
+  .SkillCardFilm,
+  .SkillTitleDev,
+  .SkillTitleFilm,
+  .SkillRouletteDev,
+  .SkillRouletteFilm {
+    display: none;
+  }
+}
+@media (min-width: $media-wide-display) {
+  .SkillGrid {
+    // display
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "cardDev cardFilm"
+      "subHeader subHeader"
+      "titleDev titleFilm"
+      "roulDev roulFilm";
+  }
+
+  .SkillCardToggle,
+  .SkillRouletteToggle,
+  .SkillTitleToggle {
+    display: none;
+  }
+
+  
+  .SkillCardDev, .SkillCardFilm {
+    // display
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // box-model    
+    height: 100%;
+    width: 100%;
+    
+  }
+  .SkillRouletteDev, .SkillRouletteFilm {
+    // display
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // box-model
+    height: 100%;
+    width: 100%;
+    min-height: 80vh;
+    min-height: 70vh;
+  }
+  
+  .SkillCardDev {
+    display: flex;
+    grid-area: cardDev;
+  }
+  .SkillCardFilm {
+    display: flex;
+    grid-area: cardFilm;
+  }
+  .SkillTitleDev {
+    display: flex;
+    grid-area: titleDev;
+  }
+  .SkillTitleFilm {
+    display: flex;
+    grid-area: titleFilm;
+  }
+  .SkillRouletteDev {
+    display: flex;
+    grid-area: roulDev;
+  }
+  .SkillRouletteFilm {
+    display: flex;
+    grid-area: roulFilm;
+  }
+  .SkillGridSubHeading {
+    grid-area: subHeader;
+  }
+}
+
+.SkillSwitchWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: clamp(3rem, 10vw, 8rem);
+}
+@media (min-width: $media-wide-display) {
+  .SkillSwitchWrapper {
+    // display
+    display: none;
+  }
+}
+
+.SkillSwitchWrapper > * {
+  flex-basis: 100%;
+  cursor: pointer;
+}
+
+.SkillGridSubHeading {
+  display: flex;
+  text-align: center;
+  padding: calc(2 * var(--padding));
+  max-width: 30ch;
+  justify-content: center;
+  grid-area: subHeader;
+}
+
+.SkillGridTitle {
+  display: flex;
+  text-align: center;
+  padding: calc(2 * var(--padding));
 }

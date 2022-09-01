@@ -2,8 +2,9 @@ import "./skill.scss";
 import Roulette from "./Roulette/Roulette";
 import Card from "./Card/Card";
 import MobileRoulette from "./MobileRoulette/MobileRoulette";
-
+// import SwitchSelector from "react-switch-selector";
 import React, { useState } from "react";
+import useMediaQuery from "../Hooks/useMediaQuery";
 
 const infoCompSci = [
   {
@@ -84,7 +85,7 @@ const infoFilm = [
 const dataCompSci = [
   {
     compSciIcon: true,
-    title: "Developer",
+    title: "Developer Languages",
     oneOne: "Java",
     oneTwo: "SQL",
     oneThree: "React/JS",
@@ -98,7 +99,7 @@ const dataCompSci = [
 const dataFilm = [
   {
     compSciIcon: false,
-    title: "Filmmaker",
+    title: "Filmmaking Software",
     oneOne: "StudioBinder",
     oneTwo: "Storyboarder",
     oneThree: "DaVinci Resolve",
@@ -110,84 +111,146 @@ const dataFilm = [
 ];
 
 export default function SkillTest() {
-  const [isClicked, setIsClicked] = useState(true);
+  const [skillDev, setSkillDev] = useState(true);
   const [slideIndex, setSlideIndex] = useState(0);
+  const isDesktop = useMediaQuery("(min-width:60em)");
 
-  let contentRoulette = (
+  const rouletteDev = (
     <Roulette
       info={infoCompSci}
       slideIndex={slideIndex}
       setSlideIndex={setSlideIndex}
     />
   );
-  let mobileRoulette = (
+  const mobileRouletteDev = (
     <MobileRoulette
       info={infoCompSci}
       slideIndex={slideIndex}
       setSlideIndex={setSlideIndex}
     />
   );
-  let contentCard = <Card qual={dataCompSci} />;
-  let skillButton = 
-    <button className="button-accent fs-title" onClick={myFunction}>
-      {isClicked ? "Filmmaker" : "Developer"}
-    </button>
-  ;
+  const cardDev = <Card qual={dataCompSci}/>;
 
-  function myFunction() {
-    setIsClicked((isClicked) => !isClicked);
+  const rouletteFilm = (
+    <Roulette
+      info={infoFilm}
+      slideIndex={slideIndex}
+      setSlideIndex={setSlideIndex}
+    />
+  );
+  const mobileRouletteFilm = (
+    <MobileRoulette
+      info={infoFilm}
+      setSlideIndex={setSlideIndex}
+      slideIndex={slideIndex}
+    />
+  );
+  const cardFilm = <Card qual={dataFilm}/>;
+
+  const titleDev = (
+    <div className="fs-title text-primary-400">
+      My&nbsp;programming&nbsp;process:
+    </div>
+  );
+  const titleFilm = (
+    <div className="fs-title text-primary-400">
+      My&nbsp;filmmaking&nbsp;process:
+    </div>
+  );
+
+  let rouletteToggler = rouletteDev;
+  let mobileRouletteToggler = mobileRouletteDev;;
+  let cardToggler = cardDev;
+  let titleToggler = titleDev;
+
+  function skillDevToggle() {
+    setSkillDev(!skillDev);
+  };
+
+  if (skillDev) {
+    cardToggler = cardDev;
+    titleToggler = titleDev;
+    rouletteToggler = rouletteDev;
+    mobileRouletteToggler = mobileRouletteDev;
+  } else {
+    cardToggler = cardFilm;
+    titleToggler = titleFilm;
+    rouletteToggler = rouletteFilm;
+    mobileRouletteToggler = mobileRouletteFilm;
   }
 
-  if (isClicked) {
-    contentRoulette = 
+  if (isDesktop) {
+    rouletteToggler = (
       <Roulette
         info={infoCompSci}
         slideIndex={slideIndex}
         setSlideIndex={setSlideIndex}
-      />;
-      
-    mobileRoulette = (
+      />
+    );
+
+    mobileRouletteToggler = (
       <MobileRoulette
         info={infoCompSci}
         setSlideIndex={setSlideIndex}
         slideIndex={slideIndex}
       />
     );
-    contentCard = <Card qual={dataCompSci} />;
-  } else {
-    contentRoulette =
-      <Roulette
-        info={infoFilm}
-        slideIndex={slideIndex}
-        setSlideIndex={setSlideIndex}
-      />;
-      mobileRoulette = (
-        <MobileRoulette
-          info={infoFilm}
-          setSlideIndex={setSlideIndex}
-          slideIndex={slideIndex}
-        />
-      );
-    contentCard = <Card qual={dataFilm} />;
+    cardToggler = <Card qual={dataCompSci} />;
   }
 
   return (
     <div className="SkillContainer">
       <div className="sectionHeading">
         <div className="heading no-margin">SKILLS</div>
-        <div className="title">
-          Click&nbsp;To&nbsp;View My&nbsp;{skillButton}&nbsp;Abilities
+        <div className="SkillSwitchWrapper">
+          <div
+            className={
+              skillDev
+                ? "switch-text --active fs-title dv"
+                : "switch-text fs-title dv"
+            }
+            onClick={skillDevToggle}
+          >
+            Developer
+          </div>
+          <div
+            className={
+              skillDev
+                ? "switch-text fs-title fm"
+                : "switch-text --active fs-title fm"
+            }
+            onClick={skillDevToggle}
+          >
+            Filmmaker
+          </div>
         </div>
       </div>
       <div className="SkillGrid">
-        <div className="card-skill">
-          <div className="subHeading wrap-lg">Tools Used As A Filmmaker</div>
-          {contentCard}
+        {/* <div className="SkillGridCard"> */}
+        <div className="SkillCardToggle">{cardToggler}</div>
+        <div className="SkillCardDev">{cardDev}</div>
+        <div className="SkillCardFilm">{cardFilm}</div>
+        {/* </div> */}
+        <div className="SkillGridSubHeading">
+          <div className="fs-sub-heading text-primary-900">
+            The&nbsp;tools&nbsp;are&nbsp;important,
+            but&nbsp;only&nbsp;as&nbsp;much&nbsp;as
+            how&nbsp;they&nbsp;are&nbsp;used.
+          </div>
         </div>
-        <div className="card-roulette">
-          {mobileRoulette}
-          {contentRoulette}
+        {/* <div className="SkillGridTitle"> */}
+        <div className="SkillTitleToggle">{titleToggler}</div>
+        <div className="SkillTitleDev">{titleDev}</div>
+        <div className="SkillTitleFilm">{titleFilm}</div>
+        {/* </div> */}
+        {/* <div className="SkillGridRoulette"> */}
+        <div className="SkillRouletteToggle">
+          {mobileRouletteToggler}
+          {rouletteToggler}
         </div>
+        <div className="SkillRouletteDev">{rouletteDev}</div>
+        <div className="SkillRouletteFilm">{rouletteFilm}</div>
+        {/* </div> */}
       </div>
     </div>
   );

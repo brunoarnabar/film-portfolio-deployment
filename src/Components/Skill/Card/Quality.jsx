@@ -12,18 +12,18 @@ export default function Quality(props) {
     }
 
   return (
-    <div className="insideCard">
-      <div className="cardIcon">{icon}</div>
+    <div className="CardContent">
+      <div className="CardIcon">{icon}</div>
       <div className="title CardTitle">{props.title}</div>
-      <div className="cardCol1">
-        <div className="list">
+      <div className="CardCol1">
+        <div className="CardList">
           <div className="textBody noPad fs-logline">{props.oneOne}</div>
           <div className="textBody noPad fs-logline">{props.oneTwo}</div>
           <div className="textBody noPad fs-logline">{props.oneThree}</div>
         </div>
       </div>
-      <div className="cardCol2">
-        <div className="list">
+      <div className="CardCol2">
+        <div className="CardList">
           <div className="textBody noPad fs-logline">{props.twoOne}</div>
           <div className="textBody noPad fs-logline">{props.twoTwo}</div>
           <div className="textBody noPad fs-logline">{props.twoThree}</div>

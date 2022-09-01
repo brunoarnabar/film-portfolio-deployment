@@ -1,4 +1,4 @@
-.blue {
+.MobileRouletteCardBody {
   // display
   display: flex;
   justify-self: center;
@@ -15,21 +15,18 @@
 
   // box-model
   height: 75vh;
+  height: clamp(45rem, 65vh, 55rem);
   width: clamp(32rem, 70vw, 40rem);
   margin: 0 auto;
   background-color: var(--clr-primary-900);
   // misc
-  border-radius: 1.5rem;
+  // border-radius: 2rem; 
+  border-radius: clamp(0rem, -12rem + 36vw, 2rem);
   box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
 }
 
-#example {
-  &.carousel.slide {
-    text-align: start;
-  }
-}
-
-.CarouselSlide {
+// OverRides
+.MobileRouletteContainer {
   // display
   display: flex;
   flex-direction: column;
@@ -44,24 +41,8 @@
   width: 100%;
 }
 @media (min-width: 50em) {
-  .CarouselSlide {
+  .MobileRouletteContainer {
     // display
     display: none;
-  }
-}
-
-.control-arrow {
-  // display
-  display: flex;
-  align-items: center;
-  // box-model
-  min-width: 25vw;
-  &.control-next {
-    // display
-    justify-content: flex-end;
-  }
-  &.control-prev {
-    // display
-    justify-content: flex-start;
   }
 }

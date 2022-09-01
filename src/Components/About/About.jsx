@@ -35,21 +35,18 @@ export default function About() {
         </div>
 
         <div className="AboutEnjoy">
-
           <div className="title">I enjoy...</div>
-          <div className="AboutImgBox Cinema">
+          <div className="AboutImgBox AboutCinema">
             <div className="label">Cinema</div>
           </div>
-          <div className="AboutImgBox Philosophy">
+          <div className="AboutImgBox AboutPhilosophy">
             <div className="label">Philosophy</div>
           </div>
-          <div className="AboutImgBox Travel">
+          <div className="AboutImgBox AboutTravel">
             <div className="label">Traveling</div>
           </div>
-          
         </div>
       </div>
-
     </div>
   );
 }

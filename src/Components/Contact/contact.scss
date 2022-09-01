@@ -2,7 +2,7 @@
 
     //SIZE OF PAGE
         //not sure if I should be setting height
-        height: 65vh;
+        // height: 65vh;
 
     //SET POSTER BACKGROUND
         //background color
@@ -86,7 +86,6 @@
 }
 
 .List{
-
     //CENTER WITHIN DIV
         //flexbox
         display: flex;
@@ -173,8 +172,6 @@
                     //circular
                     border-radius: 50%;
             }
-
-           
         }
 
         &.formHead{
@@ -275,7 +272,6 @@
             width: 100%;
             border-radius: 10px;
             
-
         //AESTETIC
             //font and color
             font-family: 'Arsenal', sans-serif;
@@ -287,7 +283,5 @@
             display:flex;
             justify-content:center;
             align-items:center;
-
-            
     }
   }

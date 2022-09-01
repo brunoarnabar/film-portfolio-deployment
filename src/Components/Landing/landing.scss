@@ -1,4 +1,4 @@
-.Poster {
+.LandingPoster {
   // display
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -40,7 +40,7 @@
   font-family: var(--ff-body);
 }
 
-.MyName {
+.LandingMyName {
   // display
   display: flex;
   justify-self: center;
@@ -56,7 +56,7 @@
   text-align: center;
 }
 
-.Logline {
+.LandingLogline {
   // display
   display: flex;
   flex-direction: column;

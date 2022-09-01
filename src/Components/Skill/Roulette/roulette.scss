@@ -1,5 +1,5 @@
 
-.containerStyle{
+.RouletteContainer{
     position: relative;
       height: 90%;
       width: 90%;
@@ -17,13 +17,14 @@
         justify-items: center;
         align-content: center;
 
-        background-color: rgb(146, 222, 255) 3px solid;
+        // background-color: rgb(146, 222, 255) 3px solid;
 
         // margin: 0 auto;
 }
 
-.rouletteStyle{
+.RouletteCardBody{
     height: 40em;
+    // height: clamp(45rem, 65vh, 55rem);
     width: 60vw;
     width: clamp(15em, 60vw, 30em);
     width: 20em;
@@ -49,25 +50,26 @@
 }
 @media (min-width: 50em) and (max-width: 64em)
 {
-  .rouletteStyle{
+  .RouletteCardBody{
     display: flex;
-    height: 75vh;
+    height: 45vh;
+    height: clamp(45rem, 65vh, 55rem);
     width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
 @media (min-width: 64em) 
 {
-  .rouletteStyle{
+  .RouletteCardBody{
     display: flex;
     height: 25em;
     width: 35em;
 
-    height: 75vh;
+    height: 45vh;
     width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
 
-.insideRoulette {
+.RouletteContent {
     height: 100%;
     width: 100%;
 
@@ -82,16 +84,16 @@
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 1fr;
     grid-template-areas:
-      "steps"
-      "examples";
+      "step"
+      "example";
   }
 
   // .StepContainer{
 
   // }
   
-  .steps {
-    grid-area: steps;
+  .RouletteStep {
+    grid-area: step;
   
     display: flex;
     flex-wrap: nowrap;
@@ -115,8 +117,8 @@
     margin: 0 auto;
 
   }
-  .examples {
-    grid-area: examples;
+  .RouletteExample {
+    grid-area: example;
     display: flex;
     justify-content: center;
 
@@ -132,7 +134,7 @@
 
   }
   
-  .list {
+  .RouletteList {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -143,12 +145,7 @@
     // background-color: rgb(254, 195, 205, 0.8);
   }
   
-  /* li {
-    flex: 1 1 auto;
-    margin: 10px;
-  } */
-  
-  .listItem {
+  .RouletteListItem {
     display:list-item;
     list-style: circle;
     flex: 1 0 auto;

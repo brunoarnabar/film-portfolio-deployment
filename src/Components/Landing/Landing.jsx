@@ -4,9 +4,10 @@ import Typewriter from "typewriter-effect";
 
 export default function Landing() {
   return (
-    <div className="Poster">
+    <div className="LandingPoster">
       <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
       <Typewriter
+        className="LandingTypewriter"
         options={{
           strings: ["SCREENWRITER", "DEVELOPER", "FILMMAKER", "CREATOR"],
           autoStart: true,
@@ -18,8 +19,8 @@ export default function Landing() {
           cursorClassName: "poster-accent typewriter",
         }}
       />
-      <div className="name MyName">BRUNO ARNABAR</div>
-      <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation Logline">
+      <div className="name LandingMyName">BRUNO ARNABAR</div>
+      <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
       <div className="poster-accent bottom">

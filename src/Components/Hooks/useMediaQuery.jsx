@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../../App.scss";
 
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(false);

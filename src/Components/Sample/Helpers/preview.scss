@@ -1,0 +1,129 @@
+.PreviewContainer {
+  // box-model
+  width: min(85vw, 100%);
+  margin-inline: auto;
+  background-color: var(--clr-dark);
+  // misc
+  border-radius: 2rem;
+}
+
+.PreviewContent {
+  // display
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-areas:
+    "vid vid"
+    "title date";
+  // box-model
+  align-items: flex-end;
+  gap: 0.5rem;
+
+  &.PreviewIsHovered {
+    .PreviewTitle {
+      // manipulation
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .PreviewDate {
+      // manipulation
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .PreviewBanner {
+      // manipulation
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  }
+}
+.PreviewBgImg {
+  // positioning
+  position: relative;
+  z-index: 1;
+  // grid-area
+  grid-row-start: vid;
+  grid-column-start: vid;
+  grid-row-end: date;
+  grid-column-end: date;
+  // box-model
+  width: 100%;
+  height: 100%;
+  // misc
+  border-radius: 1rem;
+}
+
+.PreviewTitle {
+  // positioning
+  z-index: 3;
+  // grid-area
+  grid-area: title;
+  // box-model
+  padding: 0 0 2% 5%;
+  // padding-left: 5%;
+  // padding-bottom: 2%;
+
+  // position: relative;
+
+  // opacity: 100;
+  // transition: opacity 0.25s ease-in-out;
+
+  // //AESTETIC
+  // //font and color
+  // font-family: "Times New Roman", sans-serif;
+  // font-weight: lighter;
+  // font-size: 100%;
+  // color: rgb(245, 216, 0);
+  // text-shadow: 1px 1px 2px rgba(206, 146, 42, 0.57);
+}
+
+.PreviewDate {
+  opacity: 100;
+  transition: opacity 0.25s ease-in-out;
+
+  // grid-area
+  grid-area: date;
+  // type
+  text-align: right;
+  padding: 0 5% 2% 0;
+
+  position: relative;
+  z-index: 3;
+
+  //AESTETIC
+  //font and color
+  //   font-family: "Times New Roman", sans-serif;
+  //   font-weight: lighter;
+  //   font-size: 100%;
+  //   color: rgb(245, 216, 0);
+  //   text-shadow: 1px 1px 2px rgba(206, 146, 42, 0.57);
+}
+
+.PreviewBanner {
+  background: 
+            // linear-gradient(0deg, rgba(13,20,33,0.7553221972382703) 0%, rgba(0,0,0,0.5256303204875701) 3%, rgba(0,0,0,0.1922969871542367) 16%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 100%);
+    linear-gradient(
+    0deg,
+    rgba(13, 20, 33, 0.5088235977984944) 0%,
+    rgba(0, 0, 0, 0.31554628687412467) 3%,
+    rgba(0, 0, 0, 0.09425777146796221) 16%,
+    rgba(0, 0, 0, 0) 22%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  border-radius: 10px;
+
+  //ASSIGN GRID AREA
+  //start
+  grid-row-start: vid;
+  grid-column-start: vid;
+  //end
+  grid-row-end: date;
+  grid-column-end: date;
+
+  position: relative;
+  z-index: 2;
+
+  opacity: 100;
+  transition: opacity 0.25s ease-in-out;
+}

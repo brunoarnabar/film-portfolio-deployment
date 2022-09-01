@@ -4,7 +4,7 @@ import { React } from "react";
 import ReactPlayer from "react-player";
 
 import imggy from "../../../Video/Thumbnail/theBox.png";
-import giffy from "../../../Video/Preview/theBox.gif";
+import giffy from "../../../Video/Gifs/theBox.gif";
 
 import "./greenless.scss";
 

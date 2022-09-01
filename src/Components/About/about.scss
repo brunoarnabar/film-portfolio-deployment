@@ -56,23 +56,23 @@
   box-shadow: black 0.2rem 0.3rem 0.6rem 0.1rem;
 }
 
-.Cinema {
+.AboutCinema {
   background-image: url("../../Images/About_Enjoy/cinema01.jpg");
   margin-top: 0;
 }
-.Philosophy {
+.AboutPhilosophy {
   background-image: url("../../Images/About_Enjoy/philosophy01.jpg");
   background-position: 35%;
 }
-.Travel {
+.AboutTravel {
   background-image: url("../../Images/About_Enjoy/travel01.jpg");
   background-position: right;
   margin: auto 0 2rem 0;
 }
 
 @media (max-width: 37.5em) {
-  .Cinema,
-  .Travel {
+  .AboutCinema,
+  .AboutTravel {
     margin: auto 0 auto 0;
   }
 }

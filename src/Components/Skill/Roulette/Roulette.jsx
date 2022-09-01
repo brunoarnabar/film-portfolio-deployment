@@ -26,7 +26,7 @@ export default function Roulette(props) {
   }
 
   return (
-    <div className="containerStyle">
+    <div className="RouletteContainer">
       <ReactCardCarousel
         // autoplay={false}
         // autoplay_speed={3500}
@@ -36,7 +36,7 @@ export default function Roulette(props) {
         // ref={(Carousel) => (this.Carousel = Carousel)}
       >
         {props.info.map((info) => (
-          <div className="rouletteStyle" key={info.id}>
+          <div className="RouletteCardBody" key={info.id}>
             <Steps
               steps={info.steps}
               ex1={info.ex1}
