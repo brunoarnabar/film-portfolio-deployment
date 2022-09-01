@@ -13,7 +13,7 @@ root.render(
       <Route
         path="*"
         element={
-          <div style={{ backgroundColor: "white", height: "86vh" }}>
+          <div style={{backgroundColor: "white", height: "86vh" }}>
             <GoBack />
             <p>There's nothing here!</p>
           </div>

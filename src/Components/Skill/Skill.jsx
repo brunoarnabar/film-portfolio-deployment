@@ -148,12 +148,12 @@ export default function SkillTest() {
   const cardFilm = <Card qual={dataFilm}/>;
 
   const titleDev = (
-    <div className="fs-title fs-sub-heading text-primary-900 fw-semi-bold">
+    <div className="fs-title text-primary-400">
       My&nbsp;programming&nbsp;process:
     </div>
   );
   const titleFilm = (
-    <div className="fs-title fs-sub-heading text-primary-900 fw-semi-bold">
+    <div className="fs-title text-primary-400">
       My&nbsp;filmmaking&nbsp;process:
     </div>
   );
@@ -232,7 +232,7 @@ export default function SkillTest() {
         <div className="SkillCardFilm">{cardFilm}</div>
         {/* </div> */}
         <div className="SkillGridSubHeading">
-          <div className="fs-sub-heading text-primary-400">
+          <div className="fs-sub-heading text-primary-900">
             The&nbsp;tools&nbsp;are&nbsp;important,
             but&nbsp;only&nbsp;as&nbsp;much&nbsp;as
             how&nbsp;they&nbsp;are&nbsp;used.

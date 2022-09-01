@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Steps from "../Roulette/Steps";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./mobileRoulette.scss";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function MobileRoulette(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -29,12 +29,12 @@ export default function MobileRoulette(props) {
       swipeable={true}
       emulateTouch={true}
       interval={9500}
-      useKeyboardArrows={true}
+      useKeyboardArrows={false}
       selectedItem={currentSlide}
       onChange={updateCurrentSlide}
       stopOnHover={false}
-      swipeScrollTolerance={5}
-      preventMovementUntilSwipeScrollTolerance={false}
+      swipeScrollTolerance={25}
+      preventMovementUntilSwipeScrollTolerance={true}
     >
       {props.info.map((info) => (
         <div className="MobileRouletteCardBody" key={info.id}>

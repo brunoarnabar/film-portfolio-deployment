@@ -1,303 +1,287 @@
-.ContactContainer {
-  // display
-  display: flex;
-  flex-direction: column;
-  // box-model
-  background-color: var(--clr-primary-900);
-}
+.BackdropCo{
 
+    //SIZE OF PAGE
+        //not sure if I should be setting height
+        // height: 65vh;
 
-.ContactContent {
-  // display
-  display: flex;
-  flex-direction: column;
-  // box-model
-  margin: 0 var(--padding) calc(3 * var(--thick-padding)) var(--padding);
-  gap: var(--thick-padding);
-  // type
-  text-align: center;
-}
-
-.ContactOptionBlock {
-  // box-model
-  min-width: 25rem;
-  padding: var(--padding);
-  margin-inline: var(--padding);
-  margin: 0 auto;
-  background-color: antiquewhite;
-
-  // type
-  color: var(--clr-primary-900);
-  text-align: left;
-  // misc
-  border-radius: var(--thick-padding);
-}
-
-.BackdropCo {
-  //SIZE OF PAGE
-  //not sure if I should be setting height
-  // height: 65vh;
-
-  //SET POSTER BACKGROUND
-  //background color
-  background: rgba(158, 180, 184);
-
-  //MAKE GRID
-  //design grid
-  display: grid;
-  //minmax to prevent overflow
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.15fr);
-  grid-gap: 0.4rem;
-  //create matrix
-  grid-template-areas:
-    "r1c1 r1c2 r1c3 r1c4"
-    "r2c1 r2c2 r2c3 r2c4"
-    "r3c1 r3c2 r3c3 r3c4"
-    "r4c1 r4c2 r4c3 r4c4"
-    "r5c1 r5c2 r5c3 r5c4"
-    "footer footer footer footer";
-}
-
-.HeadingCo {
-  // display
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // grid-area
-  grid-row-start: r1c1;
-  grid-column-start: r1c1;
-  grid-row-end: r1c4;
-  grid-column-end: r1c4;
-
-  //AESTETIC
-  //font and color
-  // font-family: 'Arsenal', sans-serif;
-  // font-weight: bolder;
-  // font-size: 355%;
-  // color: rgb(255, 255, 255);
-  //alignment
-  padding-bottom: 0.5rem;
-}
-
-.Message-con {
-  //AESTETIC
-  //font and color
-  font-family: "Arsenal", sans-serif;
-  font-weight: bolder;
-  font-size: 117%;
-  color: rgb(255, 247, 228);
-  //alignment
-  padding: 3%;
-
-  //CENTER WITHIN DIV
-  //flexbox
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  &.First-con {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r2c1;
-    grid-column-start: r2c1;
-    //end
-    grid-row-end: r2c4;
-    grid-column-end: r2c4;
-
-    //AESTETIC
-    //alignment
-    padding: 4%;
-  }
-}
-
-.List {
-  //CENTER WITHIN DIV
-  //flexbox
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // padding: 1em;
-  // margin: 1em;
-
-  &.OneDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r3c1;
-    grid-column-start: r3c1;
-    //end
-    grid-row-end: r3c4;
-    grid-column-end: r3c4;
-  }
-  &.TwoDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r4c1;
-    grid-column-start: r4c1;
-    //end
-    grid-row-end: r4c4;
-    grid-column-end: r4c4;
-  }
-  &.ThreeDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r5c1;
-    grid-column-start: r5c1;
-    //end
-    grid-row-end: r5c4;
-    grid-column-end: r5c4;
-  }
-  .Option {
+    //SET POSTER BACKGROUND
+        //background color
+        background: rgba(158,180,184);
+  
     //MAKE GRID
-    //design grid
-    display: grid;
-    //minmax to prevent overflow
-    grid-template-columns: minmax(0, 0.66fr) repeat(2, minmax(0, 1fr));
-    grid-template-rows: minmax(0, 1fr);
-    grid-gap: 0.4rem;
-    //create matrix
-    grid-template-areas: "op1 op2 op3";
+        //design grid
+        display: grid;
+        //minmax to prevent overflow
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.15fr);
+        grid-gap: .4rem;
+        //create matrix
+        grid-template-areas: 
+        "r1c1 r1c2 r1c3 r1c4"
+        "r2c1 r2c2 r2c3 r2c4"
+        "r3c1 r3c2 r3c3 r3c4"
+        "r4c1 r4c2 r4c3 r4c4"
+        "r5c1 r5c2 r5c3 r5c4"
+        "footer footer footer footer";
+}
+
+.HeadingCo{
+
+     //ASSIGN GRID AREA
+        //start
+        grid-row-start: r1c1;
+        grid-column-start: r1c1;
+        //end
+        grid-row-end: r1c4;
+        grid-column-end: r1c4;
+
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     //AESTETIC
-    //size of button
-    height: 70%;
-    width: 65%;
-    //rounded edges
-    border-radius: 30px;
-    //slightly-noticable button
-    background-color: rgba(70, 145, 192, 0.344);
-    border: 3px rgba(0, 0, 0, 0) solid;
+        //font and color
+        font-family: 'Arsenal', sans-serif;
+        font-weight: bolder;
+        font-size: 355%;
+        color: rgb(255, 255, 255);
+        //alignment
+        padding-bottom: 0.5rem;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.Message-con{
 
-    .OptImg {
-      //ASSIGN GRID AREA
-      //area
-      grid-area: op1;
+    //AESTETIC
+        //font and color
+        font-family: 'Arsenal', sans-serif;
+        font-weight: bolder;
+        font-size: 117%;
+        color: rgb(255, 247, 228);
+        //alignment
+        padding: 3%;
 
-      //CENTER WITHIN DIV
-      //flexbox
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .ListImg {
-        //DISPLAY
-        //snug fit in its grid
-        width: 3rem;
-        //circular
-        border-radius: 50%;
-      }
-    }
-
-    &.formHead {
-      width: 84%;
-      justify-content: center;
-      //slightly-noticable button
-      background-color: rgba(137, 138, 97, 0);
-      // border: 1px rgba(0, 0, 0, 0) solid;
-    }
-
-    .OptPromt {
-      //ASSIGN GRID AREA
-      //start
-      grid-column-start: op2;
-      //end
-      grid-column-end: op3;
-
-      //CENTER WITHIN DIV
-      //flexbox
-      display: flex;
-      justify-content: left;
-      align-items: center;
-
-      //AESTETIC
-      //font and color
-      font-family: "Arsenal", sans-serif;
-      font-weight: bolder;
-      font-size: 140%;
-      color: rgb(255, 247, 228);
-
-      &.HelloOpt {
-        //AESTETIC
-        //shorter prompt needed to be shifted for mobile
-        margin-right: 10%;
-      }
-
-      &.formHead {
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        font-size: 120%;
-      }
+
+    &.First-con{
+
+        //ASSIGN GRID AREA
+            //start
+            grid-row-start: r2c1;
+            grid-column-start: r2c1;
+            //end
+            grid-row-end: r2c4;
+            grid-column-end: r2c4;
+
+        //AESTETIC
+            //alignment
+            padding: 4%;
     }
-  }
+}
+
+.List{
+    //CENTER WITHIN DIV
+        //flexbox
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        // padding: 1em;
+        // margin: 1em;
+
+    &.OneDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r3c1;
+        grid-column-start: r3c1;
+        //end
+        grid-row-end: r3c4;
+        grid-column-end: r3c4;
+    }
+    &.TwoDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r4c1;
+        grid-column-start: r4c1;
+        //end
+        grid-row-end: r4c4;
+        grid-column-end: r4c4;
+    }
+    &.ThreeDir{
+
+    //ASSIGN GRID AREA
+        //start
+        grid-row-start: r5c1;
+        grid-column-start: r5c1;
+        //end
+        grid-row-end: r5c4;
+        grid-column-end: r5c4;
+    }
+    .Option {
+
+        //MAKE GRID
+            //design grid
+            display: grid;
+            //minmax to prevent overflow
+            grid-template-columns:minmax(0,.66fr) repeat(2, minmax(0, 1fr));
+            grid-template-rows: minmax(0, 1fr);
+            grid-gap: .4rem;
+            //create matrix
+            grid-template-areas: 
+            "op1 op2 op3";
+
+        //AESTETIC
+            //size of button
+            height: 70%;
+            width: 65%;
+            //rounded edges
+            border-radius: 30px;
+            //slightly-noticable button
+            background-color: rgba(70, 145, 192, 0.344);
+            border: 3px rgba(0, 0, 0, 0) solid;
+
+            display: flex;
+                justify-content: center;
+                align-items: center;
+            
+
+        .OptImg{
+
+            //ASSIGN GRID AREA
+                //area
+                grid-area: op1;
+
+            //CENTER WITHIN DIV
+                //flexbox
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            .ListImg{
+                //DISPLAY
+                    //snug fit in its grid
+                    width: 3rem;
+                    //circular
+                    border-radius: 50%;
+            }
+        }
+
+        &.formHead{
+            width: 84%;
+             justify-content: center;
+                //slightly-noticable button
+                 background-color: rgba(137, 138, 97, 0);
+                // border: 1px rgba(0, 0, 0, 0) solid;
+        }
+
+        .OptPromt{
+            
+            //ASSIGN GRID AREA
+                //start
+                grid-column-start: op2;
+                //end
+                grid-column-end: op3;
+
+            //CENTER WITHIN DIV
+                //flexbox
+                display: flex;
+                justify-content: left;
+                align-items: center;
+
+            //AESTETIC
+                //font and color
+                font-family: 'Arsenal', sans-serif;
+                font-weight: bolder;
+                font-size: 140%;
+                color: rgb(255, 247, 228);
+
+            &.HelloOpt{
+                //AESTETIC
+                    //shorter prompt needed to be shifted for mobile
+                    margin-right: 10%;
+            }
+
+            &.formHead{
+                text-align: center;
+                font-size: 120%;
+            }
+        }
+    }
 }
 
 .Overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(102, 51, 153, 0.222);
-}
-
-.ReactModal__Content.ReactModal__Content--after-open.Modal {
-  // height: 90vh;
-
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: rgb(130, 192, 223);
-  border-radius: 15px;
-
-  // border: rgb(136, 255, 0) 10px solid;
-
-  //MAKE GRID
-  //design grid
-  display: grid;
-  //minmax to prevent overflow
-  grid-template-rows: minmax(0, 0.14fr) minmax(0, 1fr);
-  // grid-gap: .4rem;
-  //create matrix
-  grid-template-areas:
-    "header"
-    "form";
-
-  .form-container-contact {
-    //ASSIGN GRID AREA
-    //area
-    grid-area: form;
-
-    //form should scroll
-    overflow-y: scroll;
-    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(102, 51, 153, 0.222);
   }
 
-  .formHeader {
-    //ASSIGN GRID AREA
-    //area
-    grid-area: header;
-    background-color: #74b7d8;
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
+.ReactModal__Content.ReactModal__Content--after-open.Modal{
 
-    //AESTETIC
-    //font and color
-    font-family: "Arsenal", sans-serif;
-    font-weight: bolder;
-    font-size: 100%;
-    color: rgb(255, 255, 255);
-    //alignment
-    // padding-bottom: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // height: 90vh;
+
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background-color: rgb(130, 192, 223);
+    border-radius: 15px;
+
+    // border: rgb(136, 255, 0) 10px solid;
+
+    //MAKE GRID
+        //design grid
+        display: grid;
+        //minmax to prevent overflow
+        grid-template-rows: minmax(0, .14fr) minmax(0, 1fr);
+        // grid-gap: .4rem;
+        //create matrix
+        grid-template-areas: 
+        "header"
+        "form";
+
+    .form-container-contact{
+
+        //ASSIGN GRID AREA
+            //area
+            grid-area: form;
+
+        //form should scroll
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }    
+
+    .formHeader {
+
+        //ASSIGN GRID AREA
+            //area
+            grid-area: header;
+            background-color: #74b7d8;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            
+        //AESTETIC
+            //font and color
+            font-family: 'Arsenal', sans-serif;
+            font-weight: bolder;
+            font-size: 100%;
+            color: rgb(255, 255, 255);
+            //alignment
+            // padding-bottom: 0.5rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+    }
   }
-}
