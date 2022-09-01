@@ -5,7 +5,7 @@ import About from "./Components/About/About";
 import Service from "./Components/Service/Service";
 import Skill from "./Components/Skill/Skill";
 import Sample from "./Components/Sample/Sample";
-import Philosophy from "./Components/Philosophy/Philosophy";
+// import Philosophy from "./Components/Philosophy/Philosophy";
 import Contact from "./Components/Contact/Contact";
 import GridLoader from "react-spinners/GridLoader";
 
@@ -40,7 +40,7 @@ export default function App() {
           <Service />
           <Skill />
           <Sample />
-          <Philosophy />
+          {/* <Philosophy /> */}
           <Contact />
         </>
       )}
