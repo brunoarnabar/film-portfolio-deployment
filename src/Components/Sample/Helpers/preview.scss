@@ -1,10 +1,18 @@
+@import "../../../App.scss";
+
 .PreviewContainer {
   // box-model
   width: min(85vw, 100%);
+  width: 30vw;
   margin-inline: auto;
   background-color: var(--clr-dark);
   // misc
   border-radius: 2rem;
+}
+@media (max-width: $media-wide-display) {
+  .PreviewContainer{
+    // display: grid;
+  }
 }
 
 .PreviewContent {

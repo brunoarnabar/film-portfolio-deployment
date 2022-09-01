@@ -70,8 +70,7 @@ $media-wide-display: 60em;
 
 //Reset
 body,
-html,
-#root {
+html {
   height: 100%;
   background: var(--clr-primary-900);
   font-size: 62.5%;
