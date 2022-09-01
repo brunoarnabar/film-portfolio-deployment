@@ -1,8 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Steps from "../Roulette/Steps";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./mobileRoulette.scss";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 export default function MobileRoulette(props) {
   const [currentSlide, setCurrentSlide] = useState(0);
