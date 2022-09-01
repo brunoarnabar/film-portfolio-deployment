@@ -17,6 +17,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.4",
     "react-spring": "^9.5.2",
     "sass": "^1.52.3",
     "semantic-ui-react": "^2.1.3",

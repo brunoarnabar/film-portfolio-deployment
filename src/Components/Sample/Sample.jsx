@@ -37,7 +37,7 @@ const Four = {
 
 export default function Samples() {
   return (
-    <div className="SampleContainer" href='/sample'>
+    <div className="SampleContainer" id='sample'>
       <div className="sectionHeading noMarginBot">
         <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
