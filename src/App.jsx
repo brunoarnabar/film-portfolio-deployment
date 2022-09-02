@@ -18,7 +18,7 @@ export default function App() {
         <Service/> 
         <Skill/>
         <Sample/>
-        <Philosophy/>
+        {/* <Philosophy/> */}
         <Contact/>
       </div>
   );
