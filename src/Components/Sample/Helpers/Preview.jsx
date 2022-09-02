@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 
 export default function Preview(props) {
-  function clickHandle() {
-    console.log(props.title);
-  }
+  // function clickHandle() {
+  //   console.log(props.title);
+  // }
   const img = props.img;
   const gif = props.gif;
   const string = props.title;
@@ -25,7 +25,7 @@ export default function Preview(props) {
         className="PreviewContainer"
         onMouseOver={() => setOver(true)}
         onMouseOut={() => setOver(false)}
-        onClick={clickHandle}
+        // onClick={clickHandle}
       >
         <div className={className}>
           <div className="PreviewBanner" />

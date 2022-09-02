@@ -4,10 +4,10 @@
   --clr-primary-900: #253746;
 
   --clr-neutral-200: #dfd8cf;
-  --clr-neutral-accent-300: #f5e799;
   --clr-neutral-400: #e9dbc6;
   --clr-neutral-900: #bbab94;
-
+  
+  --clr-accent-300: #f5e799;
   --clr-accent-400: #ffda0b;
   --clr-accent-900: #ce922a91;
 
@@ -129,18 +129,6 @@ a:hover, a:visited, a:link, a:active
 }
 
 // General Styling
-.AppLoader{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-
-  color: var(--clr-neutral-400);
-}
-
-
 .textBody {
   // box-model
   padding: 0 0 2rem 0;

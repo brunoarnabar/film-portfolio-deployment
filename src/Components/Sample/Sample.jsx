@@ -8,7 +8,7 @@ const Greenless = {
   title: "Greenless",
   date: "05-22-2000",
   gif: giffy,
-  img: imggy
+  img: imggy,
 };
 
 const TheBox = {
@@ -16,7 +16,7 @@ const TheBox = {
   title: "The Box",
   date: "03-23-2010",
   gif: giffy,
-  img: imggy
+  img: imggy,
 };
 
 const Three = {
@@ -24,7 +24,7 @@ const Three = {
   title: "Three",
   date: "03-03-2033",
   gif: giffy,
-  img: imggy
+  img: imggy,
 };
 
 const Four = {
@@ -32,12 +32,12 @@ const Four = {
   title: "Four",
   date: "04-04-2014",
   gif: giffy,
-  img: imggy
+  img: imggy,
 };
 
 export default function Samples() {
   return (
-    <div className="SampleContainer" id='sample'>
+    <div className="SampleContainer" id="sample">
       <div className="sectionHeading noMarginBot">
         <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
