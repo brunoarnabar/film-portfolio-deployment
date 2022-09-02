@@ -2,24 +2,23 @@
   // display
   display: flex;
   flex-direction: column;
-  // outline: red 1px solid;
-
-  // height: 100%;
+  // box-model
   height: 100vh;
-//   min-height: max(100%, 10vh);
 }
-.FilmInstanceOpenAside{
-   // display
+.FilmInstanceOpenAside {
+  // display
   display: flex;
   flex-direction: column;
 }
-.FilmInstanceMotionContainer{
+.FilmInstanceAsideContainer {
+  // display
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  // box-model
   height: 100vh;
-  padding: 0 calc(1.3* var(--thick-padding)) 0 calc(1.3* var(--thick-padding));
+  padding: 0 calc(1.3 * var(--thick-padding)) 0 calc(1.3 * var(--thick-padding));
 }
 
 .FilmInstanceTopNav {
@@ -27,14 +26,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; 
-
+  align-items: center;
   // box-model
-  // gap: var(--padding);
-  margin: var(--thick-padding) var(--thick-padding) 0 var(--thick-padding);
   margin: var(--thick-padding);
-
-  // outline: rgb(255, 196, 0) 1px solid;
 }
 
 .FilmInstanceId {
@@ -43,96 +37,67 @@
   flex-direction: column;
   // box-model
   margin: 0 var(--thick-padding);
-  // outline: rgb(123, 255, 0) 1px solid;
 }
 
 .FilmInstanceInfo {
-    // display
-    display: flex;
-    justify-content: center; 
-    align-items: flex-end; 
+  // display
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   // box-model
   height: 20%;
   margin: 5% 0 5% 15%;
-  // outline: rgb(0, 255, 162) 1px solid;
-  // type
-
   margin-inline: auto;
 
-  display: flex;
-    
-    justify-content: space-between; 
-    align-items: flex-end;
-  
-//   text-decoration-color: var(--clr-primary-900);
-
-.FilmInstanceInfoButton{
-text-decoration: underline;
-  text-decoration-thickness: 0.4rem;
-}
-  
+  .FilmInstanceInfoButton {
+    // type
+    text-decoration: underline;
+    text-decoration-thickness: 0.4rem;
+  }
 }
 
-.FilmInstanceFilmPlayerWrapper{
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  height:94.6125vh;
-  width: 115.6375.75vh;
-  height:clamp(45em, 65%,37.7rem); 
-  //clamp(45em, 94.6125vh;,450em)
+.FilmInstanceFilmPlayerWrapper {
+  // box-model
+  height: clamp(45em, 65%, 37.7rem);
   width: clamp(45em, 115.6375vh, 169.3rem);
 }
 
-
-
 .player-wrapper {
+  // positioning
   position: relative;
-  // padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
-  // background-color: red;
   z-index: 2;
-  
+  // box-model
   height: 100%;
-   margin: 0 var(--thick-padding);
+  margin: 0 var(--thick-padding);
 }
 
 .react-player {
+  // positioning
   position: absolute;
   top: 0;
   left: 0;
-  
-  // width: 80vw;
-  // height: 10vh;
 }
 
-// *{
-  //   background-color: rgba(0, 255, 255, 0.395);
-  // }
-  .FilmInstanceBotNav {
-    // display
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // align-items: flex-end; 
-  
-    display: flex;
-      
-      justify-content: space-around; 
-      align-items: flex-end;    
-    // box-model
-    height: 40%;
-    margin: 0 var(--thick-padding) var(--thick-padding) var(--thick-padding);
-    // outline: rgb(179, 0, 255) 1px solid;
-  }
+.FilmInstanceBotNav {
+  // display
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  // box-model
+  height: 40%;
+  margin: 0 var(--thick-padding) var(--thick-padding) var(--thick-padding);
+}
 
-  aside {
-  background-color: var(--clr-primary-900);
+aside {
+  // positioning
+  position: fixed;
+  top: 0;
+  // box-model
   width: 18.75rem;
   height: 100vh;
   z-index: 4;
+  background-color: var(--clr-primary-900);
+  // misc
   overflow: hidden;
   overflow-y: hidden;
-  position: fixed;
-  top: 0;
 }

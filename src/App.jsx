@@ -7,19 +7,26 @@ import Contact from './Components/Contact/Contact'
 import Sample from './Components/Sample/Sample'
 import Skill from './Components/Skill/Skill'
 
-import React from 'react';
+import React, {useState} from 'react';
 
 
 export default function App() {
+
+  const [isSampleVisible, setIsSampleVisble] = useState(false);
+  // const [toSampleBool, setToSampleBool] = useState(false);
+  console.log("App: " + isSampleVisible);
+
   return (
-      <div className="App">
-        <Landing/>
-        <About/>
-        <Service/> 
-        <Skill/>
-        <Sample/>
-        <Philosophy/>
-        <Contact/>
-      </div>
+    <div className="App">
+      <Landing />
+      <About />
+      <Service />
+      <Skill />
+      <Sample
+        setIsSampleVisble={setIsSampleVisble}
+      />
+      <Philosophy />
+      <Contact />
+    </div>
   );
 }

@@ -8,8 +8,10 @@ import Loader from "../../Loader/LoaderRing";
 
 function ResponsivePlayer({ url }) {
   const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
-  function successState() {
-    setInstanceLoadSuccess(true);
+  function successState() {   
+    setTimeout(() => {
+      setInstanceLoadSuccess(true);
+    }, 500);  
   }
   return (
     <div className="player-wrapper">

@@ -3,13 +3,10 @@ import imggy from "../../Video/Thumbnail/theBox.png";
 import giffy from "../../Video/Gifs/theBox.gif";
 import Preview from "./Helpers/Preview";
 
-const Greenless = {
-  key: 1,
-  title: "Greenless",
-  date: "05-22-2000",
-  gif: giffy,
-  img: imggy,
-};
+import { useRef, useEffect } from "react";
+import useOnScreen from "../Hooks/useOnScreen";
+
+
 
 const TheBox = {
   key: 2,
@@ -35,35 +32,47 @@ const Four = {
   img: imggy,
 };
 
-export default function Samples() {
+export default function Samples({setIsSampleVisble}) {
+
+  const Greenless = {
+    key: 1,
+    title: "Greenless",
+    date: "05-22-2000",
+    gif: giffy,
+    img: imggy,
+  };
+ 
+  const ref = useRef();
+  const isVisible = useOnScreen(ref);
+  console.log(isVisible);
+
+  useEffect(() => {
+    setIsSampleVisble(isVisible);
+  }, [isVisible]);
+
   return (
     <div className="SampleContainer" id="sample">
       <div className="sectionHeading noMarginBot">
-        <div className="heading text-neutral-400">SAMPLES</div>
+        <div ref={ref} className="heading text-neutral-400">
+          SAMPLES
+        </div>
         <div className="subHeading wrap-lg text-neutral-200">
           Check&nbsp;Out My&nbsp;Work
         </div>
       </div>
       <div className="SamplePreviewContainers text-neutral-400">
-        {/* <Preview className="SamplePreview" {...Greenless} />
-        <Preview className="SamplePreview" {...Three} /> */}
         <div className="SamplePreview fs-heading">
           <Preview {...Greenless} />
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...TheBox} />
+          <Preview {...TheBox}/>
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...Three} />
+          <Preview {...Three}/>
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...Four} />
+          <Preview {...Four}/>
         </div>
-
-        {/* <Preview {...Greenless} />
-        
-        
-         */}
       </div>
     </div>
   );

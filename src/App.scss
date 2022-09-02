@@ -296,23 +296,17 @@ a:hover, a:visited, a:link, a:active
     text-shadow: 0 0 1px var(--clr-accent-400);
     font-weight: var(--fw-semi-bold);
     background: var(--clr-primary-900);
-    padding: calc(.25*var(--padding)) var(--padding);
+    padding: calc(.25 * var(--padding)) var(--padding);
     border-radius: 3rem;
   }
 }
 
 .button-accent {
   //box-model
-  // min-height: 3em;
-  // min-width: 7em;
   padding: var(--padding);
   background-color: var(--clr-accent-400);
   border-radius: 1.5rem;
 }
-
-// @media (max-width: 40em){
-
-// }
 
 @media (min-width: 50em) and (max-width: 64em) {
   :root {
