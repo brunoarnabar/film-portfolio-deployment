@@ -1,13 +1,12 @@
 import GoBack from "../Helpers/GoBack";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { React, useState, useEffect } from "react";
-import ReactPlayer from "react-player";
+import { React
+  // , useState, useEffect 
+} from "react";
+// import ReactPlayer from "react-player";
 import ResponsivePlayer from "../Helpers/ResponsivePlayer";
-import {
-  // Link, Navigate,
-  useNavigate,
-} from "react-router-dom";
-import Loader from "../../Loader/LoaderRing";
+// import { // Link, Navigate, useNavigate, } from "react-router-dom";
+// import Loader from "../../Loader/LoaderRing";
 
 import imggy from "../../../Video/Thumbnail/theBox.png";
 import giffy from "../../../Video/Gifs/theBox.gif";
