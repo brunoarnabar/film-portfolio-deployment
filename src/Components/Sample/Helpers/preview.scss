@@ -2,16 +2,32 @@
 
 .PreviewContainer {
   // box-model
-  width: min(85vw, 100%);
   width: 85vw;
   margin-inline: auto;
   background-color: var(--clr-dark);
   // misc
   border-radius: 2rem;
 }
-@media (max-width: $media-wide-display) {
-  .PreviewContainer{
-    display: grid;
+
+$max-col-count: 3;
+
+@media (min-width: $media-mid-display) {
+  .PreviewContainer {
+  // box-model
+  width: 40rem;
+  width: 100%;
+  }
+
+  // .PreviewContainer{
+  //   display: grid;
+  //   grid-auto-flow: column;
+  //   gap: 5rem;
+  // }
+
+  @for $i from 1 through $max-col-count {
+    .grid-item:nth-child(#{$max-col-count}n + #{$i}){
+      grid-column: $i;
+    }
   }
 }
 

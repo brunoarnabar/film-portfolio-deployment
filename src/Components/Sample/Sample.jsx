@@ -44,10 +44,27 @@ export default function Samples() {
           Check&nbsp;Out My&nbsp;Work
         </div>
       </div>
-      <Preview {...Greenless} />
-      <Preview {...TheBox} />
-      <Preview {...Three} />
-      <Preview {...Four} />
+      <div className="SamplePreviewContainers text-neutral-400">
+        {/* <Preview className="SamplePreview" {...Greenless} />
+        <Preview className="SamplePreview" {...Three} /> */}
+        <div className="SamplePreview fs-heading">
+          <Preview className="SamplePreviews" {...TheBox} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview className="SamplePreviews" {...TheBox} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview className="SamplePreviews" {...TheBox} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview className="SamplePreviews" {...TheBox} />
+        </div>
+
+        {/* <Preview className="SamplePreview" {...Greenless} />
+        <Preview className="SamplePreview" {...TheBox} />
+        <Preview className="SamplePreview" {...Three} />
+        <Preview className="SamplePreview" {...Four} /> */}
+      </div>
     </div>
   );
 }
