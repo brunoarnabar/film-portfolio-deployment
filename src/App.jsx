@@ -13,13 +13,13 @@ import React from 'react';
 export default function App() {
   return (
       <div className="App">
-        {/* <Landing/>
+        <Landing/>
         <About/>
         <Service/> 
-        <Skill/> */}
+        <Skill/>
         <Sample/>
-        {/* <Philosophy/>
-        <Contact/> */}
+        <Philosophy/>
+        <Contact/>
       </div>
   );
 }
