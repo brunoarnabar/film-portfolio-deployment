@@ -3,7 +3,7 @@
 .PreviewContainer {
   // box-model
   width: min(85vw, 100%);
-  width: 30vw;
+  width: 85vw;
   margin-inline: auto;
   background-color: var(--clr-dark);
   // misc
@@ -11,7 +11,7 @@
 }
 @media (max-width: $media-wide-display) {
   .PreviewContainer{
-    // display: grid;
+    display: grid;
   }
 }
 
