@@ -6,6 +6,8 @@ import Preview from "./Helpers/Preview";
 import { useRef, useEffect } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
 
+import { useSampleTrueContext } from "../../Contexts/BackToSample";
+
 
 
 const TheBox = {
@@ -32,7 +34,9 @@ const Four = {
   img: imggy,
 };
 
-export default function Samples({setIsSampleVisble}) {
+export default function Samples() {
+
+  const setSampleTrue = useSampleTrueContext();
 
   const Greenless = {
     key: 1,
@@ -44,18 +48,19 @@ export default function Samples({setIsSampleVisble}) {
  
   const ref = useRef();
   const isVisible = useOnScreen(ref);
-  console.log(isVisible);
+  
 
   useEffect(() => {
-    setIsSampleVisble(isVisible);
-  }, [isVisible]);
+    if (isVisible) {
+      setSampleTrue();
+      // console.log("Sample is visible: " + isVisible + " so is setAtSample");
+    }
+  }, [isVisible, setSampleTrue]);
 
   return (
-    <div className="SampleContainer" id="sample">
+    <div className="SampleContainer" id="sample" ref={ref}>
       <div className="sectionHeading noMarginBot">
-        <div ref={ref} className="heading text-neutral-400">
-          SAMPLES
-        </div>
+        <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
           Check&nbsp;Out My&nbsp;Work
         </div>
@@ -65,13 +70,14 @@ export default function Samples({setIsSampleVisble}) {
           <Preview {...Greenless} />
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...TheBox}/>
+          <Preview {...TheBox} />
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...Three}/>
+          <Preview {...Three} />
         </div>
+        <div className="SamplePreview fs-heading"></div>
         <div className="SamplePreview fs-heading">
-          <Preview {...Four}/>
+          <Preview {...Four} />
         </div>
       </div>
     </div>
