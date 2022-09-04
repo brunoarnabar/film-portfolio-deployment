@@ -9,8 +9,8 @@ export default function GoBack() {
   const setSampleFalse = useSampleFalseContext();
 
   return (
-    <button onClick={setSampleFalse}>
+    <div onClick={setSampleFalse}>
       <img src={back} alt="backButton" width="35rem" />
-    </button>
+    </div>
   );
 }

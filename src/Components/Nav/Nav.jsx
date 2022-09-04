@@ -1,5 +1,6 @@
 import React from "react";
 import useScrollDirection from "../Hooks/useScrollDirection";
+import BrunoLogo from "../../Images/Logo/MyLogo"
 import "./nav.scss";
 
 function Nav() {
@@ -11,6 +12,11 @@ function Nav() {
         scrollDirection === "down" ? "NavHidden" : "NavShowing"
       }`}
     >
+      <div className="NavHome">
+        <a href="#landing">
+          <BrunoLogo/>
+        </a>
+      </div>
       <div className="NavHome">
         <a href="#landing">Home</a>
       </div>
