@@ -6,17 +6,9 @@ import Preview from "./Helpers/Preview";
 import { useRef, useEffect } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
 
-// import { useSampleTrueContext } from "../../Contexts/BackToSample";
-import { useSendToSampleContext } from "../../Contexts/BackToSample";
+import { useSampleTrueContext } from "../../Contexts/BackToSample";
 
-const Greenless = {
-    key: 1,
-    title: "Greenless",
-    date: "05-22-2000",
-    gif: giffy,
-    img: imggy,
-  };
- 
+
 
 const TheBox = {
   key: 2,
@@ -42,26 +34,33 @@ const Four = {
   img: imggy,
 };
 
-export default function Samples({ setIsSampleVisble, innerRef }) {
-  // const setSampleTrue = useSampleTrueContext();
-  const { setSendToSample } = useSendToSampleContext();
+export default function Samples() {
 
+  const setSampleTrue = useSampleTrueContext();
+
+  const Greenless = {
+    key: 1,
+    title: "Greenless",
+    date: "05-22-2000",
+    gif: giffy,
+    img: imggy,
+  };
+ 
   const ref = useRef();
   const isVisible = useOnScreen(ref);
+  
 
   useEffect(() => {
     if (isVisible) {
-      setSendToSample(false);
+      setSampleTrue();
       // console.log("Sample is visible: " + isVisible + " so is setAtSample");
     }
-  }, [isVisible, setSendToSample]);
+  }, [isVisible, setSampleTrue]);
 
   return (
     <div className="SampleContainer" id="sample" ref={ref}>
       <div className="sectionHeading noMarginBot">
-        <div className="heading text-neutral-400" ref={innerRef}>
-          SAMPLES
-        </div>
+        <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
           Check&nbsp;Out My&nbsp;Work
         </div>
@@ -76,7 +75,6 @@ export default function Samples({ setIsSampleVisble, innerRef }) {
         <div className="SamplePreview fs-heading">
           <Preview {...Three} />
         </div>
-        <div className="SamplePreview fs-heading"></div>
         <div className="SamplePreview fs-heading">
           <Preview {...Four} />
         </div>

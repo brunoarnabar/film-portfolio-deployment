@@ -29,7 +29,7 @@ const entryThree = {
 
 export default function Service() {
   return (
-    <div className="ServiceContainer">
+    <div className="ServiceContainer" id="service">
       <div className="sectionHeading">
         <div className="heading">SERVICES</div>
         <div className="subHeading wrap-md">

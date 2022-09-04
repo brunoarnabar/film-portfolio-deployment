@@ -199,7 +199,7 @@ export default function SkillTest() {
   }
 
   return (
-    <div className="SkillContainer">
+    <div className="SkillContainer" id="skill">
       <div className="sectionHeading">
         <div className="heading no-margin">SKILLS</div>
         <div className="SkillSwitchWrapper">

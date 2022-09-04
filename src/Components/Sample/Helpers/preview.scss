@@ -11,7 +11,7 @@
 
 $max-col-count: 3;
 
-@media (min-width: $media-mid-display) {
+@media (min-width: $media-300) {
   .PreviewContainer {
   // box-model
   width: 40rem;

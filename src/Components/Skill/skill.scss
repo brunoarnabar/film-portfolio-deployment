@@ -23,7 +23,7 @@
   justify-items: center;
   align-items: center;
 }
-@media(max-width:$media-wide-display)
+@media(max-width:$media-800)
 {
   .SkillRouletteToggle {
     // display
@@ -34,8 +34,7 @@
     // box-model
     height: 100%;
     width: 100%;
-    min-height: 80vh;
-    min-height: 70vh;
+    min-height: 50vh;
 
     grid-area: roulToggle;
   }
@@ -64,7 +63,7 @@
     display: none;
   }
 }
-@media (min-width: $media-wide-display) {
+@media (min-width: $media-800) {
   .SkillGrid {
     // display
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -104,7 +103,7 @@
     height: 100%;
     width: 100%;
     min-height: 80vh;
-    min-height: 70vh;
+    min-height: 50vh;
   }
   
   .SkillCardDev {
@@ -143,7 +142,7 @@
 
   gap: clamp(3rem, 10vw, 8rem);
 }
-@media (min-width: $media-wide-display) {
+@media (min-width: $media-800) {
   .SkillSwitchWrapper {
     // display
     display: none;
@@ -159,7 +158,8 @@
   display: flex;
   text-align: center;
   padding: calc(2 * var(--padding));
-  max-width: 30ch;
+  // max-width: 50%;
+  max-width:clamp(90em, 75%, 110em);
   justify-content: center;
   grid-area: subHeader;
 }

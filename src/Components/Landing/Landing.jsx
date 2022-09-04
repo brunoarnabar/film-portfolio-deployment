@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Landing() {
   return (
-    <div className="LandingPoster">
+    <div className="LandingPoster" id="landing">
       <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
       <Typewriter
         className="LandingTypewriter"

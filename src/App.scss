@@ -66,8 +66,9 @@
 
 }
 // MediaQueries
-$media-wide-display: 60em;
-$media-mid-display: 32em;
+$media-800: 84em;
+$media-600: 60em;
+$media-300: 32em;
 
 //Reset
 body,
@@ -453,3 +454,7 @@ a:hover, a:visited, a:link, a:active
 .ff-heading {
   font-family: var(--ff-heading);
 }
+
+// *{
+//   background-color: #bdebff65;
+// }
