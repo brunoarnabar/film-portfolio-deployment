@@ -2,19 +2,19 @@
 
 .NavContainer {
 // --value: 30rem;
---new-val: 0;
+--nav-height: 0;
 
   background-color: var(--clr-navbar);
   text-align: left;
   position: sticky;
-  top: var(--new-val);
+  top: var(--nav-height);
   z-index: 999;
   width: 100%;
   padding: 0.5em 0;
   // height: var(--value) ;
   // height:200px;
   // manipulation
-  transition: top .3s;
+  transition: top .4s cubic-bezier(0.4, 0, 0.2, 1);
 
   // transition-property: all; 
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,26 +22,8 @@
 }
 
 .NavContainer.NavDown {
-  
     // positioning
-    --new-val: var(--NavHeight);
-    // --old-val:  -7.8rem;
-    // --new-val:var(--old-val);
-    // --new-val:  calc(-7 - .8)rem;
-    // // top: calc(-1 * var(--value));
-    // top: calc(-1 * var(--new-val));
-    // transform: translateY(var(--new-val));
-// transform: translateY(-7.8rem);
-    // top: calc(-1 * var(--NavHeight));
-    // top: var(--new-val);
-
-    // transform: translatey(calc(-1 * var(--NavHeight)));
-    // top: -200px;
-    // box-model
-    // background-color: var(--clr-primary-400);
-    // transition: all 700ms cubic-bezier(0.65, 0.05, 0.36, 1);
-    // transition: transform 1s ease 0s;
-    // transition: top 700ms cubic-bezier(0.65, 0.05, 0.36, 1) 300ms;
+    --nav-height: var(--NavHeight);
   }
 
 .NavLogo {

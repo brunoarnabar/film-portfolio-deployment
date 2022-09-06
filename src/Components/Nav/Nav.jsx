@@ -24,8 +24,6 @@ function Nav() {
   // const [height, setHeight] = useState(0);
   // const NavRef = useRef(null);
 
-  const [heightTop, setHeightTop] = useState(0);
-  const [heightBot, setHeightBot] = useState(0);
   const [totalHeight, setTotalHeight] = useState(0);
 
   const NavRefTop = useRef(null);
@@ -41,8 +39,6 @@ function Nav() {
       if (NavRefBot.current.classList.contains("NavShowing")) {
         newHeightBot = NavRefBot.current.clientHeight;
       }
-      setHeightTop(newHeightTop);
-      setHeightBot(newHeightBot);
 
       setTotalHeight((newHeightTop + newHeightBot) * .1);
       // set CSS variable
@@ -51,8 +47,6 @@ function Nav() {
         '-' + totalHeight + 'rem'
       );
 
-      const style = getComputedStyle(document.body);
-
     }, 300);  
 
 
@@ -60,11 +54,11 @@ function Nav() {
 
   useEffect(() => {
     getNavSize();
-  }, [toggleNav]);
+  }, [toggleNav, getNavSize]);
 
   useEffect(() => {
     window.addEventListener("resize", getNavSize);
-  }, []);
+  }, [getNavSize]);
 
   return (
       <div
