@@ -19,7 +19,7 @@ function Nav() {
   const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
     getNavSize();
-  });
+  }, );
 
   // const [height, setHeight] = useState(0);
   // const NavRef = useRef(null);
@@ -30,9 +30,7 @@ function Nav() {
   const NavRefBot = useRef(null);
 
   const getNavSize = useCallback(() => {
-
     setTimeout(() => {
-      
       const newHeightTop = NavRefTop.current.clientHeight;
       let newHeightBot = 0;
 
@@ -40,19 +38,18 @@ function Nav() {
         newHeightBot = NavRefBot.current.clientHeight;
       }
 
-      setTotalHeight((newHeightTop + newHeightBot) * .1);
+      setTotalHeight((newHeightTop + newHeightBot) * 0.1);
       // set CSS variable
       document.documentElement.style.setProperty(
         `--NavHeight`,
-        '-' + totalHeight + 'rem'
+        "-" + totalHeight + "rem"
       );
-
-    }, 300);  
-  });
+    }, 300);
+  }, [NavRefTop.current.clientHeight, NavRefBot.current.classList]);
 
   useEffect(() => {
     getNavSize();
-  }, []);
+  }, [getNavSize]);
 
   useEffect(() => {
     window.addEventListener("resize", getNavSize);
