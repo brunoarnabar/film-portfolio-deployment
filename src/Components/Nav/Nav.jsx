@@ -19,7 +19,7 @@ function Nav() {
   const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
     getNavSize();
-  }, );
+  }, [toggleMenu, getNavSize]);
 
   // const [height, setHeight] = useState(0);
   // const NavRef = useRef(null);
@@ -45,7 +45,7 @@ function Nav() {
         "-" + totalHeight + "rem"
       );
     }, 300);
-  }, [NavRefTop.current.clientHeight, NavRefBot.current.classList]);
+  }, [NavRefTop.current.clientHeight, NavRefBot.current.classList, totalHeight]);
 
   useEffect(() => {
     getNavSize();
