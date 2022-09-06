@@ -16,10 +16,7 @@ function Nav() {
     initialToggleMenuValue
   );
 
-  const toggleNav = useCallback(() => {
-    setToggleMenu(!toggleMenu);
-    getNavSize();
-  }, [toggleMenu, getNavSize]);
+  
 
   // const [height, setHeight] = useState(0);
   // const NavRef = useRef(null);
@@ -47,6 +44,11 @@ function Nav() {
     }, 300);
   }, [NavRefTop.current.clientHeight, NavRefBot.current.classList, totalHeight]);
 
+const toggleNav = useCallback(() => {
+    setToggleMenu(!toggleMenu);
+    getNavSize();
+  }, [toggleMenu, setToggleMenu, getNavSize]);
+  
   useEffect(() => {
     getNavSize();
   }, [getNavSize]);
