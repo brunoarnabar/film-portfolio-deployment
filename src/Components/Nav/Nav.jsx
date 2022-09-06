@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import useScrollDirection from "../Hooks/useScrollDirection";
 import BrunoLogo from "../../Images/Logo/MyLogo";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -16,10 +16,10 @@ function Nav() {
     initialToggleMenuValue
   );
 
-  const toggleNav = () => {
+  const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
     getNavSize();
-  };
+  });
 
   // const [height, setHeight] = useState(0);
   // const NavRef = useRef(null);
@@ -29,7 +29,7 @@ function Nav() {
   const NavRefTop = useRef(null);
   const NavRefBot = useRef(null);
 
-  const getNavSize = () => {
+  const getNavSize = useCallback(() => {
 
     setTimeout(() => {
       
@@ -48,13 +48,11 @@ function Nav() {
       );
 
     }, 300);  
-
-
-  };
+  });
 
   useEffect(() => {
     getNavSize();
-  }, [toggleNav, getNavSize]);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("resize", getNavSize);
