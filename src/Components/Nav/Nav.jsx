@@ -8,18 +8,13 @@ import "./navigation.scss";
 
 function Nav() {
   const initialToggleMenuValue = false;
-  const scrollDirection = useScrollDirection();
+  let scrollDirection = useScrollDirection();
 
   // const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenu, setToggleMenu] = usePersistedState(
     "toggleMenuValue",
     initialToggleMenuValue
   );
-
-  
-
-  // const [height, setHeight] = useState(0);
-  // const NavRef = useRef(null);
 
   const [totalHeight, setTotalHeight] = useState(0);
 
@@ -83,22 +78,22 @@ const toggleNav = useCallback(() => {
           ref={NavRefBot}
         >
           <div className="NavHome NavListItem">
-            <a href="#landing">Home</a>
+            <a href="#landing" onClick={toggleNav} >Home</a>
           </div>
           <div className="NavAbout NavListItem">
-            <a href="#about">About</a>
+            <a href="#about" onClick={toggleNav} >About</a>
           </div>
           <div className="NavService NavListItem">
-            <a href="#service">Services</a>
+            <a href="#service" onClick={toggleNav} >Services</a>
           </div>
           <div className="NavSkill NavListItem">
-            <a href="#skill">Skills</a>
+            <a href="#skill" onClick={toggleNav} >Skills</a>
           </div>
           <div className="NavSample NavListItem">
-            <a href="#sample">Samples</a>
+            <a href="#sample" onClick={toggleNav} >Samples</a>
           </div>
           <div className="NavContact NavListItem">
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={toggleNav} >Contact</a>
           </div>
         </div>
       </div>
