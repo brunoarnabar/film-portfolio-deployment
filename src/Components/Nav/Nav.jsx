@@ -32,40 +32,50 @@ function Nav() {
   const NavRefBot = useRef(null);
 
   const getNavSize = () => {
-    const newHeightTop = NavRefTop.current.clientHeight;
-    let newHeightBot = 0;
 
-    if (NavRefBot.current.classList.contains("NavShowing")) {
-      newHeightBot = NavRefBot.current.clientHeight;
-    }
-    setHeightTop(newHeightTop);
-    setHeightBot(newHeightBot);
+    setTimeout(() => {
+      
+      const newHeightTop = NavRefTop.current.clientHeight;
+      let newHeightBot = 0;
 
-    setTotalHeight(newHeightTop + newHeightBot);
-    // set CSS variable
-    document.documentElement.style.setProperty(`--NavHeight`, `'${totalHeight}'`);
+      if (NavRefBot.current.classList.contains("NavShowing")) {
+        newHeightBot = NavRefBot.current.clientHeight;
+      }
+      setHeightTop(newHeightTop);
+      setHeightBot(newHeightBot);
+
+      setTotalHeight((newHeightTop + newHeightBot) * .1);
+      // set CSS variable
+      document.documentElement.style.setProperty(
+        `--NavHeight`,
+        '-' + totalHeight + 'rem'
+      );
+
+      const style = getComputedStyle(document.body);
+
+    }, 300);  
+
+
   };
 
   useEffect(() => {
     getNavSize();
-  }, [toggleMenu]);
+  }, [toggleNav]);
 
   useEffect(() => {
     window.addEventListener("resize", getNavSize);
   }, []);
 
   return (
-    <div className="attempt" ref={NavRefTop}>
       <div
         className={`NavContainer fs-logline ${
-          scrollDirection === "down" ? "NavHidden" : "NavShowing"
+          scrollDirection === "down" ? "NavDown" : "NavUp"
         }`}
+        ref={NavRefTop}
       >
         <div className="NavLogo">
           <a href="#landing">
-            {/* <BrunoLogo /> */}
-            scrollDirection:{scrollDirection}&nbsp;TotalHeight:
-            {totalHeight}
+            <BrunoLogo />
           </a>
         </div>
         <div className="NavMobileToggler text-neutral-400" onClick={toggleNav}>
@@ -101,7 +111,6 @@ function Nav() {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
