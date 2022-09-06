@@ -10,9 +10,11 @@
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 99999;
   outline: salmon 1px solid;
   overflow: hidden;
+
+  
 
   background-color: var(--clr-primary-900);
 
