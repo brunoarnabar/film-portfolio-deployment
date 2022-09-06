@@ -157,7 +157,7 @@
 .SkillGridSubHeading {
   display: flex;
   text-align: center;
-  padding: calc(2 * var(--padding));
+  // padding: calc(2 * var(--padding));
   // max-width: 50%;
   max-width:clamp(90em, 75%, 110em);
   justify-content: center;

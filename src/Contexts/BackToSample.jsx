@@ -27,7 +27,7 @@ export function BackToSampleProvider({ children }) {
     // setTimeout(() => {
     //   isLoading(true);
     // }, 9500);
-    console.log("done")
+    // console.log("done")
     setTimeout(() => {
       isLoading(false);
     }, 1500);

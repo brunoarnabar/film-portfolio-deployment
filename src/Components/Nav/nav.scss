@@ -18,51 +18,91 @@
   // type
   color: var(--clr-neutral-400);
   text-decoration: none;
-// manipulation
+  // manipulation
   transition: all 700ms cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-@media (max-width: $media-300){
-
-    .NavContainer{
-        justify-content: flex-start; 
-        align-items: center; 
-        /* flex-flow: column; */ 
-        flex-direction: column;
-        color: red;
-        align-items: center;
-        // height: 7em;
-        // gap: 1em;
-        // height: 70vh;
-    }
-
-    .NavContainer > * {
-        background-color: var(--clr-primary-900);
-        border:  var(--clr-neutral-400) 2px solid;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 1em 0;
-    }
-    .NavHidden {
-    // positioning
-    top: -90%;
-    // box-model
-    background-color: var(--clr-primary-400);
+.NavLogoContainter,
+.NavLinkContainer {
+  display: flex;
+  flex-grow: 1;
 }
 
+.NavLogoContainter{
+    justify-content: left;
+    // margin: calc(4 * var(--thick-padding));
+}
+.NavLogoContainter>*{
+    flex: none;
+    margin-inline-start: auto;
+
+    // &:hover{
+    //     box-shadow: 0 0 10px var(--clr-halation);
+    // }
+}
+
+.NavLinkContainer{
+    justify-content: right;
+}
+.NavLinkContainer>*{
+    display: inline-flex;
+    padding-inline-end: var(--padding);
+    // padding: 0 var(--thick-padding);
+    // width:4em;
+    text-align: center;
+    justify-content: center;
+}
+
+.NavHome,
+.NavAbout,
+.NavService,
+.NavSkill,
+.NavSample,
+.NavContact{
+    &:hover{
+        // text-shadow: 0 0 1px var(--clr-halation);
+        font-weight: 900;
+    }
+}
+
+
+@media (max-width: $media-300) {
+  .NavContainer {
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-flow: column; */
+    flex-direction: column;
+    color: red;
+    align-items: center;
+    // height: 7em;
+    // gap: 1em;
+    // height: 70vh;
+  }
+
+  .NavContainer > * {
+    background-color: var(--clr-primary-900);
+    border: var(--clr-neutral-400) 2px solid;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+  }
+  .NavHidden {
+    // positioning
+    top: -100%;
+    // box-model
+    background-color: var(--clr-primary-400);
+  }
 }
 
 .NavShowing {
-    // box-model
+  // box-model
   background-color: var(--clr-primary-900);
 }
 
 .NavHidden {
-    // positioning
-    top: -3em;
-    // box-model
-    background-color: var(--clr-primary-400);
+  // positioning
+  top: -3em;
+  // box-model
+  background-color: var(--clr-primary-400);
 }
-
-

@@ -12,7 +12,11 @@
   --clr-accent-900: #ce922a91;
 
   --clr-halation: #f8e7bf;
+  --clr-halation-logo: #f7b51caf;
   --clr-dark: #25374680;
+
+  --clr-navbar: var(--clr-primary-900);
+  --clr-navbar-hover: var(--clr-primary-400);
 
   --ff-primary: "Arsenal", sans-serif;
   --ff-accent: "Josefin Sans", sans-serif;
@@ -50,6 +54,7 @@
   --fs-400: clamp(1.8rem, -5.7rem + 10vw, 2.3rem);
   --fs-450: clamp(2.1rem, -5.4rem + 10vw, 2.6rem);
   --fs-500: clamp(2.5rem, -6.5rem + 12vw, 3.1rem);
+  --fs-500: clamp(2.7rem, -6.5rem + 12.2vw, 3.3rem);
   --fs-600: clamp(3rem, -9rem + 16vw, 3.8rem);
   --fs-700: clamp(3.5rem, -10rem + 18vw, 4.4rem);
   --fs-800: clamp(5rem, -14.5rem + 26vw, 6.3rem);
@@ -60,9 +65,12 @@
   --fs-body: var(--fs-400);
   --fs-logline: var(--fs-450);
   --fs-title: var(--fs-500);
+  --fs-title-hover: var(--fs-550);
   --fs-sub-heading: var(--fs-600);
   --fs-heading: var(--fs-700);
   --fs-name: var(--fs-800);
+
+  --NavHeight: 0;
 
 }
 // MediaQueries
