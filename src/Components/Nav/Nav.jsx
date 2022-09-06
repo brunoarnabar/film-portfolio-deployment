@@ -42,13 +42,13 @@ function Nav() {
         "-" + totalHeight + "rem"
       );
     }, 300);
-  }, [NavRefTop.current.clientHeight, NavRefBot.current.classList, totalHeight]);
+  }, [totalHeight]);
 
 const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
     getNavSize();
   }, [toggleMenu, setToggleMenu, getNavSize]);
-  
+
   useEffect(() => {
     getNavSize();
   }, [getNavSize]);
