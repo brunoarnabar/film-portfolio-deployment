@@ -74,19 +74,19 @@
 
 }
 // MediaQueries
-$media-300: 32em;
+$media-300: 34em;
 $media-600: 60em;
 $media-800: 84em;
 
 //Reset
 body,
 html {
+  // height: 100%;
+  background: var(--clr-primary-900);
+  font-size: 62.5%;
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
-  height: 100%;
-  background: var(--clr-primary-900);
-  font-size: 62.5%;
 }
 
 ::before,
@@ -111,7 +111,16 @@ html:focus-within {
 
 body {
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.5;  
+}
+
+.App{
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+
+  display: flex;
+  flex-direction: column;
 }
 
 img,

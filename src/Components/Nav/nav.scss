@@ -28,29 +28,29 @@
   flex-grow: 1;
 }
 
-.NavLogoContainter{
-    justify-content: left;
-    // margin: calc(4 * var(--thick-padding));
+.NavLogoContainter {
+  justify-content: left;
+  // margin: calc(4 * var(--thick-padding));
 }
-.NavLogoContainter>*{
-    flex: none;
-    margin-inline-start: auto;
+.NavLogoContainter > * {
+  flex: none;
+  margin-inline-start: auto;
 
-    // &:hover{
-    //     box-shadow: 0 0 10px var(--clr-halation);
-    // }
+  // &:hover{
+  //     box-shadow: 0 0 10px var(--clr-halation);
+  // }
 }
 
-.NavLinkContainer{
-    justify-content: right;
+.NavLinkContainer {
+  justify-content: right;
 }
-.NavLinkContainer>*{
-    display: inline-flex;
-    padding-inline-end: var(--padding);
-    // padding: 0 var(--thick-padding);
-    // width:4em;
-    text-align: center;
-    justify-content: center;
+.NavLinkContainer > * {
+  display: inline-flex;
+  padding-inline-end: var(--padding);
+  // padding: 0 var(--thick-padding);
+  // width:4em;
+  text-align: center;
+  justify-content: center;
 }
 
 .NavHome,
@@ -58,13 +58,12 @@
 .NavService,
 .NavSkill,
 .NavSample,
-.NavContact{
-    &:hover{
-        // text-shadow: 0 0 1px var(--clr-halation);
-        font-weight: 900;
-    }
+.NavContact {
+  &:hover {
+    // text-shadow: 0 0 1px var(--clr-halation);
+    font-weight: 900;
+  }
 }
-
 
 @media (max-width: $media-300) {
   .NavContainer {
