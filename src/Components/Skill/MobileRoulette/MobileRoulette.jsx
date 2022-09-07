@@ -27,13 +27,14 @@ export default function MobileRoulette(props) {
       showStatus={false}
       showArrows={false}
       swipeable={true}
-      emulateTouch={true}
+      // emulateTouch={true}
       interval={9500}
+      transitionTime={300}
       useKeyboardArrows={false}
       selectedItem={currentSlide}
       onChange={updateCurrentSlide}
       stopOnHover={false}
-      swipeScrollTolerance={5}
+      swipeScrollTolerance={15}
       preventMovementUntilSwipeScrollTolerance={true}
     >
       {props.info.map((info) => (
