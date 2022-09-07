@@ -8,7 +8,7 @@ export default function App() {
       className="BrunoLogo"
         fill="var(--clr-neutral-400)"
         stroke="none"
-        height={"2.5rem"}
+        height={"4rem"}
       />
     </div>
   );

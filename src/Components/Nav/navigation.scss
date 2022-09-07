@@ -28,7 +28,7 @@
 }
 
 .NavLogo {
-  height: 1rem;
+  height: 3rem;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -98,7 +98,7 @@
 }
 
 
-@media (max-width: $media-300) {
+@media (min-width: $media-600) {
   // .NavContainer {
   // }
   // .NavHidden {

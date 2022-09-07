@@ -4,7 +4,9 @@ import BrunoLogo from "../../Images/Logo/MyLogo";
 import { FiMenu } from "react-icons/fi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import usePersistedState from "../Hooks/usePersistedState";
+// import useComponentVisible from "../Hooks/useComponentVisible";
 import "./navigation.scss";
+import ReactDOM from "react-dom";
 
 function Nav() {
   const initialToggleMenuValue = false;
@@ -15,6 +17,8 @@ function Nav() {
     "toggleMenuValue",
     initialToggleMenuValue
   );
+  // const { NavRefClick, isComponentVisible, setIsComponentVisible } =
+  //   useComponentVisible(!toggleMenu);
 
   const [totalHeight, setTotalHeight] = useState(0);
 
@@ -33,7 +37,7 @@ function Nav() {
         }
       }
 
-      setTotalHeight(((newHeightTop + newHeightBot) * 0.1) + .4);
+      setTotalHeight((newHeightTop + newHeightBot) * 0.1 + 0.4);
       // set CSS variable
       document.documentElement.style.setProperty(
         `--NavHeight`,
@@ -44,6 +48,8 @@ function Nav() {
 
   const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
+    // setIsComponentVisible(!toggleMenu);
+    // console.log(toggleMenu);
     getNavSize();
   }, [toggleMenu, setToggleMenu, getNavSize]);
 
@@ -55,7 +61,24 @@ function Nav() {
     window.addEventListener("resize", getNavSize);
   }, [getNavSize]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const domNode = ReactDOM.findDOMNode(NavRefBot.current);
+
+      if (!domNode || !domNode.contains(event.target)) {
+        if (toggleMenu) {
+          toggleNav();
+        }
+      }
+    };
+    document.addEventListener("click", handleClickOutside, true);
+    return () => {
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  }, [toggleMenu, toggleNav]);
+
   return (
+    // <div className="NavFullContainer" ref={clickerRef}>
     <div
       className={`NavContainer fs-logline ${
         scrollDirection === "down" ? "NavDown" : "NavUp"
@@ -63,7 +86,7 @@ function Nav() {
       ref={NavRefTop}
     >
       <div className="NavLogo">
-        <a href="#top">
+        <a href="#top" onClick={toggleMenu ? toggleNav : null}>
           <BrunoLogo />
         </a>
       </div>
@@ -74,6 +97,7 @@ function Nav() {
           <FiMenu className="NavMobileMenu" size={30} />
         )}
       </div>
+
       <div
         className={
           toggleMenu ? "NavLinkContainer NavShowing" : "NavLinkContainer"
@@ -112,6 +136,7 @@ function Nav() {
         </div>
       </div>
     </div>
+    // </div>
   );
 }
 

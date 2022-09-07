@@ -8,6 +8,7 @@ import Sample from './Components/Sample/Sample'
 import Skill from './Components/Skill/Skill'
 import Nav from './Components/Nav/Nav'
 
+// import useComponentVisible from './Components/Hooks/useComponentVisible';
 // import {BackToSample} from "./Contexts/BackToSample"
 // import {BackToSampleProvider} from "./Contexts/BackToSample";
 
@@ -16,10 +17,15 @@ import React from 'react';
 
 export default function App() {
 
+  // const { NavRefClick, isComponentVisible} =
+  //   useComponentVisible(false);
+
+  //   console.log(isComponentVisible);
+
   return (
     // <BackToSampleProvider>
     <div className="App">
-      <Nav />
+      <Nav/>
       <Landing />
       <About />
       <Service />
