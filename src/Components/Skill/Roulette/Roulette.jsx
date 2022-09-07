@@ -28,7 +28,7 @@ export default function Roulette(props) {
   return (
     <div className="RouletteContainer">
       <ReactCardCarousel
-        // autoplay={false}
+        autoplay={false}
         // autoplay_speed={3500}
         disable_fade_in={true}
         ref={carouselRef}
