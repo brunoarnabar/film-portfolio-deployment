@@ -3,6 +3,8 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import React from "react";
 import ResponsivePlayer from "../Helpers/ResponsivePlayer";
 
+import { TbBrandVimeo } from "react-icons/tb";
+
 import imggy from "../../../Video/Thumbnail/theBox.png";
 import giffy from "../../../Video/Gifs/theBox.gif";
 
@@ -106,7 +108,11 @@ export default function Greenless(props) {
         </div>
         <ResponsivePlayer url={"https://vimeo.com/600214381"} />
         <div className="FilmInstanceBotNav">
-          <div className="title">Vimeo</div>
+          <div className="fs-sub-heading FilmInstanceVimeo">
+            <a href="https://vimeo.com/brunoarnabar">
+              <TbBrandVimeo color={"var(--clr-primary-900)"} />
+            </a>
+          </div>
           <div className="title">About</div>
           <div className="title">Contact</div>
         </div>

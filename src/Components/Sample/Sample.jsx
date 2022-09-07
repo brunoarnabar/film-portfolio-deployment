@@ -3,12 +3,10 @@ import imggy from "../../Video/Thumbnail/theBox.png";
 import giffy from "../../Video/Gifs/theBox.gif";
 import Preview from "./Helpers/Preview";
 
+//goToContext
 import { useRef, useEffect } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
-
 import { useSampleTrueContext } from "../../Contexts/BackToSample";
-
-
 
 const TheBox = {
   key: 2,
@@ -35,7 +33,7 @@ const Four = {
 };
 
 export default function Samples() {
-
+  //goToContext
   const setSampleTrue = useSampleTrueContext();
 
   const Greenless = {
@@ -45,11 +43,12 @@ export default function Samples() {
     gif: giffy,
     img: imggy,
   };
- 
+
+  //goToContext
   const ref = useRef();
   const isVisible = useOnScreen(ref);
-  
 
+  //goToContext
   useEffect(() => {
     if (isVisible) {
       setSampleTrue();
