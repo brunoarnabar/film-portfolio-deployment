@@ -4,6 +4,10 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
   grid-gap: 0.2rem;
+  //position
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   // grid-area
   grid-template-areas:
     "r1c1 r1c2 r1c3 r1c4"

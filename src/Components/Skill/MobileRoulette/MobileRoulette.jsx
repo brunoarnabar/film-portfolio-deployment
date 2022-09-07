@@ -33,7 +33,7 @@ export default function MobileRoulette(props) {
       selectedItem={currentSlide}
       onChange={updateCurrentSlide}
       stopOnHover={false}
-      swipeScrollTolerance={45}
+      swipeScrollTolerance={25}
       preventMovementUntilSwipeScrollTolerance={true}
     >
       {props.info.map((info) => (

@@ -13,6 +13,7 @@ export default function useScrollDirection() {
         direction !== scrollDirection &&
         (scrollY - lastScrollY > 5 || scrollY - lastScrollY < - 5)
       ) {
+        console.log(direction);
         setScrollDirection(direction);
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;

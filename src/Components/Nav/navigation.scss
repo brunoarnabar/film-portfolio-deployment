@@ -5,7 +5,7 @@
 --nav-height: 0;
 
   background-color: var(--clr-navbar);
-  text-align: left;
+  text-align: right;
   position: sticky;
   top: var(--nav-height);
   z-index: 999;
@@ -19,6 +19,7 @@
   // transition-property: all; 
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   // transition-duration: 500ms;
+  // border-bottom: .4rem var(--clr-neutral-900) solid;
 }
 
 .NavContainer.NavDown {
@@ -27,10 +28,12 @@
 }
 
 .NavLogo {
-  height: 5rem;
+  height: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
+  margin-inline: 1em;
+
 }
 
 .NavLinkContainer {
@@ -87,8 +90,8 @@
 .NavMobileToggler {
   position: absolute;
   top: 0;
-  left: 0;
-  margin-left: 1em;
+  right: 0;
+  margin-inline: 1em;
   height: 100%;
   display: flex;
   align-items: center;

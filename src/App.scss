@@ -81,6 +81,9 @@ $media-300: 32em;
 //Reset
 body,
 html {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
   height: 100%;
   background: var(--clr-primary-900);
   font-size: 62.5%;
