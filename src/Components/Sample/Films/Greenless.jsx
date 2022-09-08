@@ -100,7 +100,6 @@ export default function Greenless(props) {
       <div className="FilmInstanceContainer bg-neutral-200">
         <div className="FilmInstanceTopNav">
           <GoBack />
-          <div className="title">NavBar</div>
         </div>
         <div className="FilmInstanceOpenAside" onClick={openInfo}>
           <div className="FilmInstanceId">
@@ -128,7 +127,8 @@ export default function Greenless(props) {
           </div>
           <GoTo location="About" />
           {/* <div className="title">About</div> */}
-          <div className="title">Contact</div>
+          <GoTo location="Contact" />
+          {/* <div className="title">Contact</div> */}
         </div>
       </div>
     </>

@@ -7,15 +7,23 @@ export default function GoTo({location}) {
 
     // let startRedirect = null;
     const setAtAbout = useGoToContext();
+    const setAtContact = useGoToContext();
 
-    if (location === "About"){
-        console.log("hehe im here sneaky sneaky")
+    if (location === "About") {
+      console.log("hehe im here sneaky sneaky");
 
-        return (
-          <div onClick={() => setAtAbout(false)}>
-            <div className="title text-primary-900 pointer">About</div>
-          </div>
-        );
+      return (
+        <div onClick={() => setAtAbout(false)}>
+          <div className="title text-primary-900 pointer">About</div>
+        </div>
+      );
+    } else if (location === "Contact") {
+      console.log("hehe im at contact");
+      return (
+        <div onClick={() => setAtContact(false)}>
+          <div className="title text-primary-900 pointer">Contact</div>
+        </div>
+      );
     }
 
 //   return (
