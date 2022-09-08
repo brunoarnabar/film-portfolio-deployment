@@ -1,8 +1,8 @@
 @import "../../App.scss";
 
 .NavContainer {
-// --value: 30rem;
---nav-height: 0;
+  // --value: 30rem;
+  --nav-height: 0;
 
   background-color: var(--clr-navbar);
   text-align: right;
@@ -14,17 +14,17 @@
   // height: var(--value) ;
   // height:200px;
   // manipulation
-  transition: top .4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  // transition-property: all; 
+  // transition-property: all;
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   // transition-duration: 500ms;
   // border-bottom: .4rem var(--clr-neutral-900) solid;
 }
 
 .NavContainer.NavDown {
-    // positioning
-    --nav-height: var(--NavHeight);
+  // positioning
+  --nav-height: var(--NavHeight);
 }
 
 .NavLogo {
@@ -33,7 +33,6 @@
   justify-content: left;
   align-items: center;
   margin-inline: 1em;
-
 }
 
 .NavLinkContainer {
@@ -96,7 +95,6 @@
   display: flex;
   align-items: center;
 }
-
 
 @media (min-width: $media-600) {
   // .NavContainer {

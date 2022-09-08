@@ -19,7 +19,7 @@ export default function App() {
       <Landing />
       <About />
       <Service />
-      <Skill />
+      {/* <Skill /> */}
       <Sample />
       {/* <Philosophy /> */}
       <Contact />

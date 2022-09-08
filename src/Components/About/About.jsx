@@ -1,9 +1,26 @@
 import "./about.scss";
 import React from "react";
 
+//goToContext
+import { useRef, useEffect } from "react";
+import useOnScreen from "../Hooks/useOnScreen";
+import { useGoToContext } from "../../Contexts/GoToContext";
+
 export default function About() {
+  //goToContext
+  const setAtAbout = useGoToContext();
+  const AboutRef = useRef();
+  const isVisible = useOnScreen(AboutRef);
+
+  useEffect(() => {
+    if (isVisible) {
+      console.log("About is Visible... I get that");
+      setAtAbout(true);
+    }
+  }, [isVisible, setAtAbout]);
+
   return (
-    <div className="AboutContainer" id="about">
+    <div className="AboutContainer" id="about" ref={AboutRef}>
       <div className="sectionHeading">
         <div className="heading">ABOUT</div>
         <div className="subHeading wrap-sm">Let Me Introduce&nbsp;Myself</div>

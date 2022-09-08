@@ -5,6 +5,7 @@ import MobileRoulette from "./MobileRoulette/MobileRoulette";
 // import SwitchSelector from "react-switch-selector";
 import React, { useState } from "react";
 import useMediaQuery from "../Hooks/useMediaQuery";
+import { useEffect } from "react";
 
 const infoCompSci = [
   {
@@ -157,27 +158,30 @@ export default function SkillTest() {
       My&nbsp;filmmaking&nbsp;process:
     </div>
   );
-
+  
   let rouletteToggler = rouletteDev;
   let mobileRouletteToggler = mobileRouletteDev;;
   let cardToggler = cardDev;
   let titleToggler = titleDev;
-
+  
   function skillDevToggle() {
     setSkillDev(!skillDev);
   };
+  
+  useEffect(() => {
+    if (!skillDev) {
+      cardToggler = cardFilm;
+      titleToggler = titleFilm;
+      rouletteToggler = rouletteFilm;
+      mobileRouletteToggler = mobileRouletteFilm;
+    } else if (skillDev) {
+      cardToggler = cardDev;
+      titleToggler = titleDev;
+      rouletteToggler = rouletteDev;
+      mobileRouletteToggler = mobileRouletteDev;
+    }
+  }, [skillDev]);
 
-  if (skillDev) {
-    cardToggler = cardDev;
-    titleToggler = titleDev;
-    rouletteToggler = rouletteDev;
-    mobileRouletteToggler = mobileRouletteDev;
-  } else {
-    cardToggler = cardFilm;
-    titleToggler = titleFilm;
-    rouletteToggler = rouletteFilm;
-    mobileRouletteToggler = mobileRouletteFilm;
-  }
 
   if (isDesktop) {
     rouletteToggler = (

@@ -1,4 +1,5 @@
 import GoBack from "../Helpers/GoBack";
+import GoTo from "../Helpers/GoTo";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import React from "react";
 import ResponsivePlayer from "../Helpers/ResponsivePlayer";
@@ -90,7 +91,7 @@ export default function Greenless(props) {
       </AnimatePresence>
       <div className="FilmInstanceContainer bg-neutral-200">
         <div className="FilmInstanceTopNav">
-          <GoBack />
+          <GoBack/>
           <div className="title">NavBar</div>
         </div>
         <div className="FilmInstanceOpenAside" onClick={openInfo}>
@@ -113,7 +114,8 @@ export default function Greenless(props) {
               <TbBrandVimeo color={"var(--clr-primary-900)"} />
             </a>
           </div>
-          <div className="title">About</div>
+          <GoTo location="About"/>
+          {/* <div className="title">About</div> */}
           <div className="title">Contact</div>
         </div>
       </div>

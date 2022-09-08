@@ -45,8 +45,8 @@ export default function Samples() {
   };
 
   //goToContext
-  const ref = useRef();
-  const isVisible = useOnScreen(ref);
+  const SampleRef = useRef();
+  const isVisible = useOnScreen(SampleRef);
 
   //goToContext
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function Samples() {
   }, [isVisible, setSampleTrue]);
 
   return (
-    <div className="SampleContainer" id="sample" ref={ref}>
+    <div className="SampleContainer" id="sample" ref={SampleRef}>
       <div className="sectionHeading noMarginBot">
         <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
