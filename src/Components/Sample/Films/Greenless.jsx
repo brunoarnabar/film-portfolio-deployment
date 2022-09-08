@@ -58,6 +58,14 @@ export default function Greenless(props) {
 
   const [open, openInfo] = useCycle(false, true);
 
+  const handleMouseOver = () => {
+    openInfo(true);
+  };
+
+  const handleMouseOut = () => {
+    openInfo(false);
+  };
+
   return (
     <>
       <AnimatePresence>
@@ -91,7 +99,7 @@ export default function Greenless(props) {
       </AnimatePresence>
       <div className="FilmInstanceContainer bg-neutral-200">
         <div className="FilmInstanceTopNav">
-          <GoBack/>
+          <GoBack />
           <div className="title">NavBar</div>
         </div>
         <div className="FilmInstanceOpenAside" onClick={openInfo}>
@@ -102,7 +110,11 @@ export default function Greenless(props) {
             <div className="title noPad">{Greenless.title}</div>
           </div>
           <div className="FilmInstanceInfo">
-            <div className="fs-sub-heading ff-body fw-bold text-primary-900 FilmInstanceInfoButton">
+            <div
+              className="fs-sub-heading ff-body fw-bold text-primary-900 pointer FilmInstanceInfoButton"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               information
             </div>
           </div>
@@ -114,7 +126,7 @@ export default function Greenless(props) {
               <TbBrandVimeo color={"var(--clr-primary-900)"} />
             </a>
           </div>
-          <GoTo location="About"/>
+          <GoTo location="About" />
           {/* <div className="title">About</div> */}
           <div className="title">Contact</div>
         </div>

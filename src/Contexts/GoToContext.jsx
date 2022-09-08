@@ -12,6 +12,7 @@ export function GoToContextProvider({ children }) {
   const load = loading ? <LoaderDots /> : null;
 
   const [atAbout, setAtAbout] = useState(false);
+  // const [atContact, setAtContact] = useState(false);
 
   useEffect(() => {
     if (atAbout) {
@@ -29,6 +30,21 @@ export function GoToContextProvider({ children }) {
     }
   }, [atAbout, isLoading]);
 
+  // useEffect(() => {
+  //   if (atContact) {
+  //     console.log("I was set True!");
+  //     setTimeout(() => {
+  //       isLoading(false);
+  //     }, 1500);
+  //   } else {
+  //     console.log("I was set False!");
+  //     isLoading(true);
+  //     setTimeout(() => {
+  //       window.location.replace("/#contact");
+  //     }, 300);
+  //   }
+  // }, [atContact, isLoading]);
+
 //   function setAboutTrue() {
     
 //   }
@@ -42,8 +58,10 @@ export function GoToContextProvider({ children }) {
 
   return (
     <GoToContext.Provider value={(atAbout, setAtAbout)}>
-      {load}
-      {children}
+      {/* <GoToContext.Provider value={(atContact, setAtContact)}> */}
+        {load}
+        {children}
+      {/* </GoToContext.Provider> */}
     </GoToContext.Provider>
   );
 }
