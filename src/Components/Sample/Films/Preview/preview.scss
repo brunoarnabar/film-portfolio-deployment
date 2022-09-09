@@ -151,3 +151,8 @@ $max-col-count: 3;
   opacity: 100;
   transition: opacity 0.25s ease-in-out;
 }
+
+
+.PreviewContainer > * {
+  outline: red 1px solid;
+}
