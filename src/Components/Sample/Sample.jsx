@@ -6,7 +6,7 @@ import imggy from "../../Video/Thumbnail/theBox.png";
 import giffy from "../../Video/Gifs/theBox.gif";
 import greenlessGif from "../../Video/Gifs/Greenless.gif";
 // import giffy from "../../Video/Gifs/Greenless.gif";
-import Preview from "./Films/FilmInstance/Helpers/Preview"
+import Preview from "./Films/Preview/Preview"
 
 //goToContext
 import { useRef, useEffect } from "react";
@@ -19,6 +19,7 @@ const TheBox = {
   date: "03-23-2010",
   gif: giffy,
   img: imggy,
+  url: "TheBox",
 };
 
 const Three = {
@@ -27,6 +28,7 @@ const Three = {
   date: "03-03-2033",
   gif: giffy,
   img: imggy,
+  url: "TheBox",
 };
 
 const Four = {
@@ -35,6 +37,7 @@ const Four = {
   date: "04-04-2014",
   gif: giffy,
   img: imggy,
+  url: "TheBox",
 };
 
 export default function Samples() {
@@ -44,9 +47,10 @@ export default function Samples() {
   const Greenless = {
     key: 1,
     title: "Greenless",
-    date: "05-22-2000",
+    date: "06-22-2021",
     gif: greenlessGif,
     img: greenlessImg,
+    url: "Greenless",
   };
 
   //goToContext

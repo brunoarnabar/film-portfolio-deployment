@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss";
 
 .SampleContainer {
   // display
@@ -21,7 +21,7 @@
 }
 
 $max-col-count: 2;
-@media (min-width: $media-300) {
+@media (min-width: App.$media-300) {
   .SamplePreviewContainers {
     // display
     display: grid;
@@ -38,7 +38,7 @@ $max-col-count: 2;
   }
 }
 $max-col-count: 3;
-@media (min-width: $media-600) {
+@media (min-width: App.$media-600) {
   .SamplePreviewContainers {
     // display
     display: grid;

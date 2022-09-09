@@ -7,7 +7,7 @@ export default function Preview(props) {
 
   const img = props.img;
   const gif = props.gif;
-  const string = props.title;
+  const string = props.url;
 
   const [over, setOver] = useState(false);
 

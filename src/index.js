@@ -1,7 +1,8 @@
 import ReactDom from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Greenless from "./Components/Sample/Films/Greenless";
+import Greenless from "./Components/Sample/Films/FilmData/Greenless";
+import TheBox from "./Components/Sample/Films/FilmData/TheBox";
 import GoBack from "./Components/Sample/Films/FilmInstance/Helpers/GoBack";
 // import Nav from "./Components/Nav/Nav"
 
@@ -24,6 +25,7 @@ root.render(
               <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/Greenless" element={<Greenless />} />
+                <Route path="/TheBox" element={<TheBox />} />
                 <Route
                   path="*"
                   element={

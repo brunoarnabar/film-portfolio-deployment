@@ -5,7 +5,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import usePersistedState from "../Hooks/usePersistedState";
 // import useComponentVisible from "../Hooks/useComponentVisible";
-import "./navigation.scss";
+import "./nav.scss";
 import ReactDOM from "react-dom";
 
 function Nav() {
