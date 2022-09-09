@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "../filmInstance.scss";
-import Loader from "../../../../Loader/LoaderRing";
+// import Loader from "../../../../Loader/LoaderRing";
 // import LoadCaller from "../../../../Loader/LoadCaller";
 
 function ResponsivePlayer({ url, skinny, successState }) {
