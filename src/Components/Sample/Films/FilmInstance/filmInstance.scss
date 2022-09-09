@@ -89,6 +89,7 @@
 }
 
 .FilmInstancePlayerContainer {
+  position: relative;
   margin: auto;
   //max 1rem, 10vw, 48rem clamp(1rem, 10vw, 48rem)
   width: clamp(24rem, 70vw, 90rem);
