@@ -1,12 +1,12 @@
 import "./App.scss";
-import Landing from "./Components/Landing/Landing";
-import About from "./Components/About/About";
-import Service from "./Components/Service/Service";
-// import Philosophy from './Components/Philosophy/Philosophy'
-import Contact from "./Components/Contact/Contact";
+// import Nav from "./Components/Nav/Nav";
+// import Landing from "./Components/Landing/Landing";
+// import About from "./Components/About/About";
+// import Service from "./Components/Service/Service";
+// import Contact from "./Components/Contact/Contact";
 import Sample from "./Components/Sample/Sample";
 // import Skill from "./Components/Skill/Skill";
-import Nav from "./Components/Nav/Nav";
+// import Philosophy from './Components/Philosophy/Philosophy'
 import Footer from "./Components/Footer/Footer";
 
 import React from "react";
@@ -15,14 +15,14 @@ export default function App() {
   return (
 
     <div className="App">
-      <Nav />
+      {/* <Nav />
       <Landing />
       <About />
-      <Service />
+      <Service /> */}
       {/* <Skill /> */}
       <Sample />
       {/* <Philosophy /> */}
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
