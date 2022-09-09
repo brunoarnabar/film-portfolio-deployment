@@ -76,7 +76,7 @@
   padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
   height: 100%;
   overflow: hidden;
-  z-index: 10;
+  z-index: 2;
   outline: black 4px solid;
 
   &.skinny {
@@ -88,12 +88,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1;
 }
 
 .FilmInstancePlayerContainer {
   position: relative;
-  z-index: 20;
+  z-index: 3;
   margin: auto;
   //max 1rem, 10vw, 48rem clamp(1rem, 10vw, 48rem)
   width: clamp(23rem, 70vw, 90rem);
