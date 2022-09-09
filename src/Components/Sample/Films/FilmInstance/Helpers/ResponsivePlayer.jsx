@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player";
 import "../filmInstance.scss";
 import Loader from "../../../../Loader/LoaderRing";
+import LoadCaller from "../../../../Loader/LoadCaller";
 
 function ResponsivePlayer({ url, skinny }) {
+
+  const [spin, setSpin] = useState(true);
   const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
   function successState() {
     setTimeout(() => {
