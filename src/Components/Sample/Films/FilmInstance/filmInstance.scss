@@ -77,7 +77,6 @@
   height: 100%;
   overflow: hidden;
   z-index: 2;
-  outline: black 4px solid;
 
   &.skinny {
     padding-top: 42%;
@@ -99,8 +98,7 @@
   width: clamp(23rem, 70vw, 90rem);
   border-radius: 2rem;
   overflow: hidden;
-  box-shadow: #000000 4px 4px 5px 1px;
-
+  box-shadow: #000000 4px 4px 5px 1px, inset 0px 0px 90px #000000, inset 0px 0px 90px #000000, inset 0px 0px 90px #000000;
 }
 
 .FilmInstanceBotNav {

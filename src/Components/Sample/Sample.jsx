@@ -16,7 +16,7 @@ import { useSampleTrueContext } from "../../Contexts/BackToSample";
 const TheBox = {
   key: 2,
   title: "The Box",
-  date: "03-23-2010",
+  date: "11-25-2019",
   gif: giffy,
   img: imggy,
   url: "TheBox",
