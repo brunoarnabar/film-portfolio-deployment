@@ -100,7 +100,9 @@ function Nav() {
 
       <div
         className={
-          toggleMenu ? "NavLinkContainer NavShowing" : "NavLinkContainer"
+          toggleMenu
+            ? "NavLinkContainer NavShowing text-neutral-400"
+            : "NavLinkContainer text-neutral-400"
         }
         ref={NavRefBot}
       >

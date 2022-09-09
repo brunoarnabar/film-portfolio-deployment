@@ -46,6 +46,7 @@
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  color: var(--clr-neutral-400);
 
   &.NavShowing {
     // display: none;

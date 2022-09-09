@@ -1,8 +1,8 @@
 import ReactDom from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Greenless from "./Components/Sample/Films/FilmData/Greenless";
-import TheBox from "./Components/Sample/Films/FilmData/TheBox";
+import Greenless from "./Components/Sample/Films/FilmComponent/Greenless";
+import TheBox from "./Components/Sample/Films/FilmComponent/TheBox";
 import GoBack from "./Components/Sample/Films/FilmInstance/Helpers/GoBack";
 // import Nav from "./Components/Nav/Nav"
 

@@ -71,8 +71,6 @@
   --fs-name: var(--fs-800);
 
   --NavDynamicHeight: 0;
-  --NavHeight: clamp(5rem, -14.5rem + 26vw, 6.3rem);
-
 }
 // MediaQueries
 $media-300: 34em;
@@ -131,10 +129,12 @@ svg {
   display: block;
 }
 
-a:hover, a:visited, a:link, a:active
+a:hover, a:visited, a:link, a:active, a
 {
     text-decoration: none;
     color: var(--clr-neutral-400);
+
+
 }
 
 @media (prefers-reduced-motion: reduce) {
