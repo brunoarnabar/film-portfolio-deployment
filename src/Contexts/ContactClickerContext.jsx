@@ -8,9 +8,6 @@ export function useContactClickerContext() {
 
 export function ContactClickerProvider({ children }) {
   const [contactClicked, setContactClicked] = useState(false);
-
-  console.log("contact clicked: " + contactClicked);
-
   return (
     <ContactClickerContext.Provider value={{contactClicked, setContactClicked}}>
       {children}

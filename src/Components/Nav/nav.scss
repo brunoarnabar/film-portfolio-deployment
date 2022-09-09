@@ -10,7 +10,7 @@
   top: var(--nav-height);
   z-index: 999;
   width: 100%;
-  padding: 0.5em 0;
+  // padding: 0.5em 0;
   // height: var(--value) ;
   // height:200px;
   // manipulation
@@ -24,11 +24,12 @@
 
 .NavContainer.NavDown {
   // positioning
-  --nav-height: var(--NavHeight);
+  --nav-height: var(--NavDynamicHeight);
 }
 
 .NavLogo {
-  height: 3rem;
+  height: clamp(5rem, -14.5rem + 26vw, 6.3rem);
+  // height: var(--NavHeight);
   display: flex;
   justify-content: left;
   align-items: center;

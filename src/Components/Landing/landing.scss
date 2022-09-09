@@ -20,9 +20,11 @@
     "r8c1 r8c2 r8c3 r8c4";
   // box-model
   min-width: 100vw;
-  min-height: 100vh;
+  // min-height: 100vh;
+  // min-height: calc(100vh - clamp(5rem, -14.5rem + 26vw, 6.3rem));
+  height: calc(100vh - clamp(5rem, -14.5rem + 26vw, 6.3rem));
   /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
+  // min-height: -webkit-fill-available;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../../Images/Backgrounds/BrunoPoster.jpg");

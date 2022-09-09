@@ -70,7 +70,8 @@
   --fs-heading: var(--fs-700);
   --fs-name: var(--fs-800);
 
-  --NavHeight: 0;
+  --NavDynamicHeight: 0;
+  --NavHeight: clamp(5rem, -14.5rem + 26vw, 6.3rem);
 
 }
 // MediaQueries

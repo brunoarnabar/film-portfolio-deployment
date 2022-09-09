@@ -8,8 +8,6 @@ export function useAboutClickerContext() {
 
 export function AboutClickerProvider({children}) {
     const [aboutClicked, setAboutClicked] = useState(false);
-    console.log("about clicked: " + aboutClicked);
-
     return (
       <AboutClickerContext.Provider value={{aboutClicked, setAboutClicked}}>
         {children}
