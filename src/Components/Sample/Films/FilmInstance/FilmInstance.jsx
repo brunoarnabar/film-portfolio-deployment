@@ -110,8 +110,10 @@ export default function FilmInstance(props) {
             </div>
           </div>
         </div>
-        
-        <ResponsivePlayer url={props.filmInfo.vidUrl} />
+
+        <div className="FilmInstancePlayerContainer">
+          <ResponsivePlayer url={props.filmInfo.vidUrl} />
+        </div>
 
         <div className="FilmInstanceBotNav">
           <div className="fs-sub-heading FilmInstanceVimeo">
