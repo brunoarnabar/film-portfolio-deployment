@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
-import "./responsiveplayer.scss";
-import "../Films/filmInstance.scss"
-import Loader from "../../Loader/LoaderRing";
-
-
+import "../filmInstance.scss";
+import Loader from "../../../../Loader/LoaderRing";
 
 function ResponsivePlayer({ url }) {
   const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
-  function successState() {   
+  function successState() {
     setTimeout(() => {
       setInstanceLoadSuccess(true);
-    }, 500);  
+    }, 500);
   }
   return (
     <div className="player-wrapper">
@@ -29,4 +26,4 @@ function ResponsivePlayer({ url }) {
   );
 }
 
-export default ResponsivePlayer
+export default ResponsivePlayer;

@@ -18,7 +18,7 @@ function Footer() {
             <a href="https://www.instagram.com/bruno.arnabar/">
               <TbBrandInstagram />
             </a>
-            <a href="https://www.linkedin.com/in/bruno-arnabar/">
+            <a href="https://www.linkedin.com/in/brunoarnabar/">
               <TbBrandLinkedin />
             </a>
             <a href="https://github.com/bra40?tab=repositories">
@@ -43,7 +43,7 @@ function Footer() {
         <div className="FooterDivider" />
         <div className="FooterCopyright">
           <div className="fs-label FooterClosingTag">
-            © Copywrite {new Date().getFullYear()}. Created by&nbsp;
+            © Copyright {new Date().getFullYear()}. Created by&nbsp;
             <a href="#top" className="FooterUnderline">
               Bruno Arnabar
             </a>

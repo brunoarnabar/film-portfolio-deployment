@@ -1,7 +1,7 @@
-import back from "../../../Images/Icons/back.png";
+import back from "../../../../../Images/Icons/back.png";
+import { useSampleFalseContext } from "../../../../../Contexts/BackToSample";
 
 import React from "react";
-import { useSampleFalseContext } from "../../../Contexts/BackToSample";
 
 export default function GoBack() {
 

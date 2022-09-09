@@ -2,22 +2,33 @@ import "./about.scss";
 import React from "react";
 
 //goToContext
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
-import { useGoToContext } from "../../Contexts/GoToContext";
+import { useGoToContactContext } from "../../Contexts/GoToContactContext";
+
+import { useAboutClickerContext } from "../../Contexts/AboutClickerContext";
 
 export default function About() {
   //goToContext
-  const setAtAbout = useGoToContext();
+  const setAtAbout = useGoToContactContext();
+  
+  const {aboutClicked} = useAboutClickerContext();
+
   const AboutRef = useRef();
   const isVisible = useOnScreen(AboutRef);
 
-  useEffect(() => {
+  const checkIfVisible = useCallback(() => {
     if (isVisible) {
-      console.log("About is Visible... I get that");
+      console.log("About is Visible... setAtAbout(true)");
       setAtAbout(true);
     }
   }, [isVisible, setAtAbout]);
+
+  useEffect(() => {
+    if (aboutClicked) {
+      checkIfVisible();
+    }
+  }, [checkIfVisible, aboutClicked]);
 
   return (
     <div className="AboutContainer" id="about" ref={AboutRef}>

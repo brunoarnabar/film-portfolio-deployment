@@ -2,33 +2,42 @@ import ReactDom from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Greenless from "./Components/Sample/Films/Greenless";
-import GoBack from "./Components/Sample/Helpers/GoBack";
+import GoBack from "./Components/Sample/Films/FilmInstance/Helpers/GoBack";
 // import Nav from "./Components/Nav/Nav"
 
 //goToContext
 import { BackToSampleProvider } from "./Contexts/BackToSample";
-import { GoToContextProvider } from "./Contexts/GoToContext";
+import { GoToAboutContextProvider } from "./Contexts/GoToAboutContext";
+import { GoToContactContextProvider } from "./Contexts/GoToContactContext";
+import { AboutClickerProvider } from "./Contexts/AboutClickerContext";
+import { ContactClickerProvider } from "./Contexts/ContactClickerContext";
 
 const root = ReactDom.createRoot(document.getElementById("root"));
 root.render(
-  <GoToContextProvider>
-    <BackToSampleProvider>
-      <BrowserRouter>
-        {/* <Nav/> */}
-        <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/Greenless" element={<Greenless />} />
-          <Route
-            path="*"
-            element={
-              <div style={{ backgroundColor: "white", height: "86vh" }}>
-                <GoBack />
-                <p>There's nothing here!</p>
-              </div>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </BackToSampleProvider>
-  </GoToContextProvider>
+  <AboutClickerProvider>
+    <ContactClickerProvider>
+      <GoToContactContextProvider>
+        <GoToAboutContextProvider>
+          <BackToSampleProvider>
+            <BrowserRouter>
+              {/* <Nav/> */}
+              <Routes>
+                <Route path="/" element={<App />} />
+                <Route path="/Greenless" element={<Greenless />} />
+                <Route
+                  path="*"
+                  element={
+                    <div style={{ backgroundColor: "white", height: "86vh" }}>
+                      <GoBack />
+                      <p>There's nothing here!</p>
+                    </div>
+                  }
+                />
+              </Routes>
+            </BrowserRouter>
+          </BackToSampleProvider>
+        </GoToAboutContextProvider>
+      </GoToContactContextProvider>
+    </ContactClickerProvider>
+  </AboutClickerProvider>
 );

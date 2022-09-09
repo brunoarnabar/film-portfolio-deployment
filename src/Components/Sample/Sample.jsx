@@ -1,7 +1,12 @@
 import "./sample.scss";
+
+import greenlessImg from "../../Video/Thumbnail/Greenless.png";
 import imggy from "../../Video/Thumbnail/theBox.png";
+// import imggy from "../../Video/Thumbnail/Greenless.png";
 import giffy from "../../Video/Gifs/theBox.gif";
-import Preview from "./Helpers/Preview";
+import greenlessGif from "../../Video/Gifs/Greenless.gif";
+import giffy from "../../Video/Gifs/Greenless.gif";
+import Preview from "./Films/FilmInstance/Helpers/Preview"
 
 //goToContext
 import { useRef, useEffect } from "react";
@@ -40,8 +45,8 @@ export default function Samples() {
     key: 1,
     title: "Greenless",
     date: "05-22-2000",
-    gif: giffy,
-    img: imggy,
+    gif: greenlessGif,
+    img: greenlessImg,
   };
 
   //goToContext
