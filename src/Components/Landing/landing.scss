@@ -21,6 +21,8 @@
   // box-model
   min-width: 100vw;
   min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../../Images/Backgrounds/BrunoPoster.jpg");
