@@ -54,3 +54,7 @@ $max-col-count: 3;
     }
   }
 }
+
+.SampleContainer > * {
+  background: hsl(200, 100%, 50%, 10%);
+}
