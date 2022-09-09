@@ -80,9 +80,10 @@
 
   &.skinny {
     padding-top: 42%;
-    padding-inline: 2%;
-    // width: 99%;
+    padding-inline: 22%;
+    // width: 59%;
     // border: black 1px solid;
+
   }
 }
 
@@ -98,10 +99,11 @@
   z-index: 20;
   margin: auto;
   //max 1rem, 10vw, 48rem clamp(1rem, 10vw, 48rem)
-  width: clamp(24rem, 70vw, 90rem);
+  width: clamp(23rem, 70vw, 90rem);
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: #000000 4px 4px 5px 1px;
+
 }
 
 .FilmInstanceBotNav {
