@@ -11,6 +11,12 @@ import "./filmInstance.scss";
 export default function FilmInstance(props) {
 
   const num = String(props.filmInfo.key).padStart(2, "0");
+  const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
+  function successState() {
+    setTimeout(() => {
+      setInstanceLoadSuccess(true);
+    }, 500);
+  }
 
   const sideInfoAnim = {
     visible: {
@@ -111,10 +117,12 @@ export default function FilmInstance(props) {
           </div>
         </div>
 
+        {instanceLoadSuccess === false ? <Loader /> : null}
         <div className="FilmInstancePlayerContainer">
           <ResponsivePlayer
             url={props.filmInfo.vidUrl}
             skinny={props.filmInfo.skinny}
+            successState={successState}
           />
         </div>
 
