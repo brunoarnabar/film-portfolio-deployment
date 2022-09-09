@@ -5,7 +5,7 @@ import imggy from "../../Video/Thumbnail/theBox.png";
 // import imggy from "../../Video/Thumbnail/Greenless.png";
 import giffy from "../../Video/Gifs/theBox.gif";
 import greenlessGif from "../../Video/Gifs/Greenless.gif";
-import giffy from "../../Video/Gifs/Greenless.gif";
+// import giffy from "../../Video/Gifs/Greenless.gif";
 import Preview from "./Films/FilmInstance/Helpers/Preview"
 
 //goToContext
