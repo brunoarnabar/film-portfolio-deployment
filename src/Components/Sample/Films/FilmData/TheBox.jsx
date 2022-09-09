@@ -9,6 +9,7 @@ export default function TheBox() {
     vidUrl: "https://vimeo.com/600214381",
     workType: "University Project",
     info: "A man finds a box, taking him out from his mundane existence. Animated by hand and through lazer cutouts. Directed the collaboration with peers in a Studio Animation course at the University Of Pittsburgh",
+    skinny: false,
   };
 
   return <FilmInstance filmInfo={TheBoxInfo} />;

@@ -10,6 +10,7 @@ export default function Greenless() {
     vidUrl: "https://vimeo.com/600195237",
     workType: "Personal",
     info: "Shots from a feature film that was never finished due to in-cast complications. The script was feature length, and the experience on set the days we shoot have been invaluable",
+    skinny: true,
   };
 
   return <FilmInstance filmInfo={GreenlessInfo} />;

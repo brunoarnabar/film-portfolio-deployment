@@ -112,7 +112,10 @@ export default function FilmInstance(props) {
         </div>
 
         <div className="FilmInstancePlayerContainer">
-          <ResponsivePlayer url={props.filmInfo.vidUrl} />
+          <ResponsivePlayer
+            url={props.filmInfo.vidUrl}
+            skinny={props.filmInfo.skinny}
+          />
         </div>
 
         <div className="FilmInstanceBotNav">
