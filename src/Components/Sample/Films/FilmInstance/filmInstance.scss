@@ -77,12 +77,10 @@
   height: 100%;
   overflow: hidden;
   z-index: 10;
+  outline: black 4px solid;
 
   &.skinny {
     padding-top: 42%;
-    padding-inline: 22%;
-    // width: 59%;
-    outline: black 4px solid;
   }
 }
 
