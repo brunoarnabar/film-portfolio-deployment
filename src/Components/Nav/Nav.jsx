@@ -40,7 +40,7 @@ function Nav() {
       setTotalHeight((newHeightTop + newHeightBot) * 0.1 + 0.4);
       // set CSS variable
       document.documentElement.style.setProperty(
-        `--NavHeight`,
+        `--NavDynamicHeight`,
         "-" + totalHeight + "rem"
       );
     }, 300);

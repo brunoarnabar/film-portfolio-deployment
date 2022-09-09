@@ -6,7 +6,7 @@
   --clr-neutral-200: #dfd8cf;
   --clr-neutral-400: #e9dbc6;
   --clr-neutral-900: #bbab94;
-  
+
   --clr-accent-300: #f5e799;
   --clr-accent-400: #ffda0b;
   --clr-accent-900: #ce922a91;
@@ -32,7 +32,7 @@
   --letter-spacing: 0.2em;
 
   --padding: 1rem;
-  --thick-padding:  calc(3 * var(--padding));
+  --thick-padding: calc(3 * var(--padding));
 
   --fs-init: 0.625rem;
   --fs-final: 1.5rem;
@@ -70,7 +70,7 @@
   --fs-heading: var(--fs-700);
   --fs-name: var(--fs-800);
 
-  --NavHeight: 0;
+  --NavDynamicHeight: 0;
 }
 // MediaQueries
 $media-300: 34em;
@@ -110,10 +110,10 @@ html:focus-within {
 
 body {
   text-rendering: optimizeSpeed;
-  line-height: 1.5;  
+  line-height: 1.5;
 }
 
-.App{
+.App {
   min-height: 100vh;
   /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
@@ -129,12 +129,13 @@ svg {
   display: block;
 }
 
-a:hover, a:visited, a:link, a:active, a
-{
-    text-decoration: none;
-    color: var(--clr-neutral-400);
-
-
+a:hover,
+a:visited,
+a:link,
+a:active,
+a {
+  text-decoration: none;
+  color: var(--clr-neutral-400);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -176,7 +177,7 @@ a:hover, a:visited, a:link, a:active, a
   font-family: var(--ff-body);
   color: var(--clr-primary-900);
 
-  &.noPad{
+  &.noPad {
     padding: 0;
   }
 }
@@ -310,15 +311,14 @@ a:hover, a:visited, a:link, a:active, a
   color: var(--clr-primary-400);
   text-shadow: 0 0 1px var(--clr-primary-900);
   font-weight: var(--fw-bold);
-  margin:0 auto;
+  margin: 0 auto;
 
-
-  &.--active{
+  &.--active {
     color: var(--clr-accent-400);
     text-shadow: 0 0 1px var(--clr-accent-400);
     font-weight: var(--fw-semi-bold);
     background: var(--clr-primary-900);
-    padding: calc(.25 * var(--padding)) var(--padding);
+    padding: calc(0.25 * var(--padding)) var(--padding);
     border-radius: 3rem;
   }
 }
