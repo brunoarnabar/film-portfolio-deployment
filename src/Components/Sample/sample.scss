@@ -46,7 +46,7 @@ $max-col-count: 3;
     grid-auto-flow: column;
     gap: 3rem;
     margin: 0 3rem;
-    background: rgba(0, 255, 38, 0.1);
+    background: rgba(0, 255, 38, 0.8);
   }
 
   @for $i from 1 through $max-col-count {
