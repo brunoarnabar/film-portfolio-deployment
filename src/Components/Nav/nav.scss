@@ -1,8 +1,8 @@
-@use "../../App.scss";
+@import "../../App.scss";
 
 .NavContainer {
-  // --value: 30rem;
-  --nav-height: 0;
+// --value: 30rem;
+--nav-height: 0;
 
   background-color: var(--clr-navbar);
   text-align: right;
@@ -10,30 +10,30 @@
   top: var(--nav-height);
   z-index: 999;
   width: 100%;
-  // padding: 0.5em 0;
+  padding: 0.5em 0;
   // height: var(--value) ;
   // height:200px;
   // manipulation
-  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: top .4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  // transition-property: all;
+  // transition-property: all; 
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   // transition-duration: 500ms;
   // border-bottom: .4rem var(--clr-neutral-900) solid;
 }
 
 .NavContainer.NavDown {
-  // positioning
-  --nav-height: var(--NavDynamicHeight);
+    // positioning
+    --nav-height: var(--NavHeight);
 }
 
 .NavLogo {
-  height: clamp(5rem, -14.5rem + 26vw, 6.3rem);
-  // height: var(--NavHeight);
+  height: 3rem;
   display: flex;
   justify-content: left;
   align-items: center;
   margin-inline: 1em;
+
 }
 
 .NavLinkContainer {
@@ -46,7 +46,6 @@
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
-  color: var(--clr-neutral-400);
 
   &.NavShowing {
     // display: none;
@@ -98,7 +97,8 @@
   align-items: center;
 }
 
-@media (min-width: App.$media-600) {
+
+@media (min-width: $media-600) {
   // .NavContainer {
   // }
   // .NavHidden {
