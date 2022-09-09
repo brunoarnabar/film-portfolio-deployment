@@ -46,6 +46,7 @@ $max-col-count: 3;
     grid-auto-flow: column;
     gap: 3rem;
     margin: 0 3rem;
+    background: rgba(0, 255, 38, 0.1);
   }
 
   @for $i from 1 through $max-col-count {
@@ -55,6 +56,6 @@ $max-col-count: 3;
   }
 }
 
-.SampleContainer > * {
-  background: hsl(200, 100%, 50%, 10%);
-}
+// .SampleContainer > * {
+//   background: hsl(200, 100%, 50%, 10%);
+// }
