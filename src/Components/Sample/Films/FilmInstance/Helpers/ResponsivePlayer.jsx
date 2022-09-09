@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 import "../filmInstance.scss";
 import Loader from "../../../../Loader/LoaderRing";
