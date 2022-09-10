@@ -9,7 +9,6 @@
   gap: 2rem;
   padding: 0 0 2rem 0;
   background-color: var(--clr-primary-400);
-  outline: red 2px solid;
 }
 
 .SamplePreviewContainers {
@@ -19,7 +18,6 @@
   // box-model
   gap: 2rem;
   padding: 0 0 2rem 0;
-  
 }
 
 // $max-col-count: 1;
@@ -52,7 +50,7 @@ $max-col-count: 2;
   @for $i from 1 through $max-col-count {
     .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
       grid-column: $i;
-      background: rgba(0, 255, 38, calc($i * .2));
+      background: rgba(0, 255, 38, calc($i * 0.2));
     }
   }
 }
