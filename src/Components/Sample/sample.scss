@@ -10,21 +10,31 @@
   padding: 0 0 3.5vh 0;
   background-color: var(--clr-primary-400);
 }
-$max-col-count: 1;
+
 .SamplePreviewContainers {
   // display
   display: grid;
-    // grid
-    grid-auto-flow: column;
-    gap: 2rem;
-    margin: 0 2rem;
+  // align-items: center;
+  // box-model
+  // gap: 3.5vh;
+  padding: 0 0 3.5vh 0;
 }
 
-@for $i from 1 through $max-col-count {
-    .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
-      grid-column: $i;
-    }
-  }
+// $max-col-count: 1;
+// .SamplePreviewContainers {
+//   // display
+//   display: grid;
+//     // grid
+//     grid-auto-flow: column;
+//     gap: 2rem;
+//     margin: 0 2rem;
+// }
+
+// @for $i from 1 through $max-col-count {
+//     .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
+//       grid-column: $i;
+//     }
+//   }
 
 $max-col-count: 2;
 @media (min-width: App.$media-300) {
@@ -40,6 +50,7 @@ $max-col-count: 2;
   @for $i from 1 through $max-col-count {
     .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
       grid-column: $i;
+      background: rgba(0, 255, 38, calc($i * .2));
     }
   }
 }
