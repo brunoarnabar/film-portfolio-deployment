@@ -42,12 +42,12 @@ export default function Samples() {
           Boom
         </div>
         <div className="SamplePreview fs-heading">
-          {/* <Preview {...GreenlessInfo} /> */}
-          Boom
+          <Preview {...GreenlessInfo} />
+          {/* Boom */}
         </div>
         <div className="SamplePreview fs-heading">
-          {/* <Preview {...TheBoxInfo} /> */}
-          Boom
+          <Preview {...TheBoxInfo} />
+          {/* Boom */}
         </div>
       </div>
     </div>
