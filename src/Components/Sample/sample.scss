@@ -9,6 +9,7 @@
   gap: 2rem;
   padding: 0 0 2rem 0;
   background-color: var(--clr-primary-400);
+  outline: red 2px solid;
 }
 
 .SamplePreviewContainers {
@@ -18,7 +19,7 @@
   // box-model
   gap: 2rem;
   padding: 0 0 2rem 0;
-  outline: red 2px solid;
+  
 }
 
 // $max-col-count: 1;
