@@ -119,11 +119,11 @@ function Nav() {
             Services
           </a>
         </div>
-        <div className="NavSkill NavListItem">
+        {/* <div className="NavSkill NavListItem">
           <a href="#skill" onClick={toggleNav}>
             Skills
           </a>
-        </div>
+        </div> */}
         <div className="NavSample NavListItem">
           <a href="#sample" onClick={toggleNav}>
             Samples

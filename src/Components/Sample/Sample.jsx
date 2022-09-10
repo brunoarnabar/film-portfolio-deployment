@@ -33,21 +33,12 @@ export default function Samples() {
         </div>
       </div>
       <div className="SamplePreviewContainers text-neutral-400">
-        {/* <div className="SamplePreview fs-heading">
-          <Preview {...TheBoxInfo} />
-        </div> */}
         <div className="SamplePreview fs-heading">
           <Preview {...GreenlessInfo} />
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...TheBoxInfo} />
         </div>
-        {/* <div className="SamplePreview fs-heading">
-          <Preview {...TheBoxInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...TheBoxInfo} />
-        </div> */}
       </div>
     </div>
   );
