@@ -5,21 +5,15 @@
   --nav-height: 0;
 
   background-color: var(--clr-navbar);
+  outline: 3px solid var(--clr-navbar);
   text-align: right;
   position: sticky;
   top: var(--nav-height);
   z-index: 999;
   width: 100%;
   padding: 0.5em 0;
-  // height: var(--value) ;
-  // height:200px;
-  // manipulation
-  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  // transition-property: all;
-  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  // transition-duration: 500ms;
-  // border-bottom: .4rem var(--clr-neutral-900) solid;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .NavContainer.NavDown {
@@ -44,11 +38,12 @@
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
-  transition: transform 400ms ease-in-out;
+  // transition: transform 400ms ease-in-out;
 
   &.NavShowing {
     // display: none;
     transform: scale(1, 1);
+    transition: transform 400ms ease-in-out;
 
     .NavListItem {
       opacity: 1;
@@ -96,10 +91,35 @@
   align-items: center;
 }
 
-@media (min-width: $media-600) {
-  // .NavContainer {
-  // }
-  // .NavHidden {
+@media (min-width: $media-300) {
+  .NavMobileToggler {
+    display: none;
+  }
+  .NavContainer {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(40rem , 5fr) 1fr;
+  }
+  .NavLogo {
+    grid-column: 2 / 3;
+  }
 
-  // }
+  .NavLinkContainer {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // outline: 3px solid sandybrown;
+    gap: 1em;
+  }
+  .NavListItem {
+    all: unset;
+    opacity: 1;
+    color: var(--clr-neutral-400);
+
+    display: grid;
+    gap: 2em;
+    
+    
+    }
 }
