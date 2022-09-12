@@ -23,10 +23,10 @@ export default function Landing() {
       <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
-      <div className="poster-accent bottom">
+      {/* <div className="poster-accent bottom">
         Copyright ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
         <br /> All Rights Reserved.
-      </div>
+      </div> */}
       <div className="poster-accent bottom">
         <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div>
         <div className="LandingLinks">
