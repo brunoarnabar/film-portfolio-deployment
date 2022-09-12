@@ -48,10 +48,11 @@ export default function Landing() {
             className="link-poster-accent bottom"
             href="https://vimeo.com/brunoarnabar"
           >
-            Vimeo,&nbsp;
+            Vimeo,
           </a>
         </div>
-        <br /> All Rights Reserved.
+        <br />
+        &nbsp;All Rights Reserved.
       </div>
     </div>
   );
