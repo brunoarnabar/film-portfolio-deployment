@@ -64,9 +64,11 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="AboutExpand  fs-heading" onClick={toggleAbout}>
-          <BsArrowsExpand size={iconSize} color={iconColor} />
-        </div>
+        <a href="#about">
+          <div className="AboutExpand  fs-heading" onClick={toggleAbout}>
+            <BsArrowsExpand size={iconSize} color={iconColor} />
+          </div>
+        </a>
       </div>
     );
   } else {
