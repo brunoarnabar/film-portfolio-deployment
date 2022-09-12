@@ -74,7 +74,7 @@
 }
 // MediaQueries
 $media-300: 34em;
-$media-350: 40em;
+$media-350: 40.25em;
 // $media-400: 50em;
 $media-600: 60em;
 $media-800: 84em;
@@ -315,8 +315,7 @@ a {
   &.bottom {
 
     @media (max-width: $media-350){
-      display: flex;
-      flex-direction: column;
+      display:grid;
     }
 
     // display
