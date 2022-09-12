@@ -1,6 +1,6 @@
 import React from "react";
 import "./landing.scss";
-// import Typewriter from "typewriter-effect";
+import Typewriter from "typewriter-effect";
 
 export default function Landing() {
   return (
