@@ -52,7 +52,6 @@ export default function Landing() {
           </a>
         </div>
         <div className="LandingAllRights">
-          <br/>
           All Rights Reserved.</div>
       </div>
     </div>
