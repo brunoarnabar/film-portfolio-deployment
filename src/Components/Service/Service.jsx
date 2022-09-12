@@ -14,7 +14,7 @@ const entryOne = {
 };
 
 const entryTwo = {
-  sub: "Filmming",
+  sub: "Filmmaking",
   txt1: "I can write and create a compelling narrative to be produced independently or commercially. I can direct actors and bring a vision from a page to the screen.",
   // txt2: "I understand the importance of a well-rounded and complete product, and I’ll be enthusiastic to collaborate with you to help achieve your vision. I’ll work with you to create a product that is not only functional, but also beautiful, user-friendly, and efficient.",
   // txt3: "I’ll work with you to understand your vision for the project, and I’ll use my skills and knowledge to help you bring that vision to life. I’ll also be available to answer any questions and to provide support throughout the project."
