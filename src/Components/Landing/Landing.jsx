@@ -28,7 +28,7 @@ export default function Landing() {
         <br /> All Rights Reserved.
       </div> */}
       <div className="poster-accent bottom">
-        <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div>
+        {/* <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div> */}
         <div className="LandingLinks">
           <a
             className="link-poster-accent bottom"
