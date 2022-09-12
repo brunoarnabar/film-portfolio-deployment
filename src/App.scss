@@ -315,7 +315,8 @@ a {
   &.bottom {
 
     @media (max-width: $media-350){
-      display:grid;
+      display:flex;
+      flex-direction: column;
     }
 
     // display
