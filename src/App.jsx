@@ -15,15 +15,15 @@ export default function App() {
   return (
 
     <div className="App">
-      {/* <Nav /> */}
+      <Nav />
       <Landing />
-      {/* <About />
-      <Service /> */}
+      <About />
+      <Service />
       {/* <Skill /> */}
-      {/* <Sample /> */}
+      <Sample />
       {/* <Philosophy /> */}
-      {/* <Contact />
-      <Footer /> */}
+      <Contact />
+      <Footer />
     </div>
   );
 }

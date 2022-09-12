@@ -5,7 +5,7 @@ import "./landing.scss";
 export default function Landing() {
   return (
     <div className="LandingPoster" id="landing">
-      {/* <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
+      <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
       <Typewriter
         className="LandingTypewriter"
         options={{
@@ -22,13 +22,13 @@ export default function Landing() {
       <div className="name LandingMyName">BRUNO ARNABAR</div>
       <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
         Turning&nbsp;Ideas Into&nbsp;Experiences
-      </div> */}
-      {/* <div className="poster-accent bottom">
+      </div>
+      <div className="poster-accent bottom">
         Copyright ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
         <br /> All Rights Reserved.
-      </div> */}
+      </div>
       <div className="poster-accent bottom">
-        {/* <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div> */}
+        <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div>
         <div className="LandingLinks">
           <a
             className="link-poster-accent bottom"
