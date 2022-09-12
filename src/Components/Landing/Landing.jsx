@@ -51,7 +51,6 @@ export default function Landing() {
             Vimeo,&nbsp;
           </a>
         </div>
-        <br />
         <div className="LandingAllRights">All Rights Reserved.</div>
       </div>
     </div>
