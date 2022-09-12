@@ -14,7 +14,7 @@ function Footer() {
       <div className="FooterTopDiv">
         <div className="FooterSoc">
           <div className="fs-logline ff-heading FooterTitle">Social</div>
-          <div className="fs-logline FooterText">
+          <div className="fs-logline text-neutral-400 FooterText">
             <a href="https://www.instagram.com/bruno.arnabar/">
               <TbBrandInstagram />
             </a>

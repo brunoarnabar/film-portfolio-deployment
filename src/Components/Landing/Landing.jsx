@@ -23,8 +23,34 @@ export default function Landing() {
       <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
-      <div className="poster-accent bottom">
+      {/* <div className="poster-accent bottom">
         Copyright ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
+        <br /> All Rights Reserved.
+      </div> */}
+      <div className="poster-accent bottom">
+        Copyright ⓒ MMXV
+        <div className="LandingLinks">
+          <a
+            className="link-poster-accent bottom"
+            href="https://www.linkedin.com/in/brunoarnabar/"
+          >
+            LinkedIn
+          </a>
+          &nbsp;
+          <a
+            className="link-poster-accent bottom"
+            href="https://www.instagram.com/bruno.arnabar/"
+          >
+            Instagram
+          </a>
+          &nbsp;
+          <a
+            className="link-poster-accent bottom"
+            href="https://vimeo.com/brunoarnabar"
+          >
+            Vimeo,
+          </a>
+        </div>
         <br /> All Rights Reserved.
       </div>
     </div>

@@ -80,7 +80,7 @@ function Nav() {
   return (
     // <div className="NavFullContainer" ref={clickerRef}>
     <div
-      className={`NavContainer fs-logline ${
+      className={`NavContainer text-neutral-400 fs-logline ${
         scrollDirection === "down" ? "NavDown" : "NavUp"
       }`}
       ref={NavRefTop}
