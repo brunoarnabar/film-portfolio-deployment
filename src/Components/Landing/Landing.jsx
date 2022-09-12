@@ -34,7 +34,7 @@ export default function Landing() {
             className="link-poster-accent bottom"
             href="https://www.linkedin.com/in/brunoarnabar/"
           >
-            LinkedIn
+            &nbsp;LinkedIn
           </a>
           &nbsp;
           <a
@@ -48,7 +48,7 @@ export default function Landing() {
             className="link-poster-accent bottom"
             href="https://vimeo.com/brunoarnabar"
           >
-            Vimeo,
+            Vimeo,&nbsp;
           </a>
         </div>
         <br /> All Rights Reserved.
