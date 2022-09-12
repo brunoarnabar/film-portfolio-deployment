@@ -92,7 +92,7 @@ function outputHTML(one, two, three) {
       <div className="sectionHeading noMarginBot">
         <div className="heading text-neutral-400">CONTACT</div>
         <div className="subHeading wrap-lg text-neutral-200">
-          Lets Get In&nbsp;Touch
+          Let's Get In&nbsp;Touch
         </div>
       </div>
       <div className="ContactContent">

@@ -22,7 +22,7 @@ const entryTwo = {
 
 const entryThree = {
   sub: "Combination",
-  txt1: "My education has been multi-disiplinary, so theres lots of factors that cross-over between each other. I'm detail oriented and creative, I'm glad to bring this to your team",
+  txt1: "My education has been multi-disiplinary, so there's lots of factors that cross-over between each other. I'm detail oriented and creative, I'm glad to bring this to your team",
   // txt2: "I understand the importance of a well-rounded and complete product, and I’ll be enthusiastic to collaborate with you to help achieve your vision. I’ll work with you to create a product that is not only functional, but also beautiful, user-friendly, and efficient.",
   // txt3: "I’ll work with you to understand your vision for the project, and I’ll use my skills and knowledge to help you bring that vision to life. I’ll also be available to answer any questions and to provide support throughout the project."
 };
