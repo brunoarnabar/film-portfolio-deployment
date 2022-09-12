@@ -4,6 +4,13 @@
   flex-direction: column;
   // box-model
   background-color: var(--clr-neutral-400);
+  align-items: center;
+}
+
+.heading{
+  &.AboutMin{
+    margin-bottom: 0;
+  }
 }
 
 .AboutContent {
@@ -14,6 +21,10 @@
   grid-template-areas: "AboutDesc AboutEnjoy";
   // box-model
   margin: 0 0 var(--padding) var(--padding);
+
+  &.AboutMin {
+    display: flex;
+  }
 }
 
 .AboutDesc {
@@ -26,6 +37,11 @@
   max-width: 200ch;
   padding: 0 0 0 var(--padding);
   margin: 0 0 0 auto;
+
+  &.AboutMin {
+    max-width: clamp(80ch, 75vw, 175ch);
+    //80ch175ch
+  }
 }
 
 .AboutEnjoy {
@@ -38,6 +54,22 @@
   grid-area: AboutEnjoy;
   // box-model
   margin: 0 auto;
+}
+
+.AboutExpand {
+  display: flex;
+  justify-self: center;
+
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-primary-400);
+  width: clamp(25rem, 75vw, 75rem);
+  // min-width: 75vw;
+  border-radius: 2rem;
+  height: 1em;
+  padding: -var(--thick-padding);
+  // margin:
 }
 
 .AboutImgBox {

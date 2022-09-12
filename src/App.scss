@@ -5,7 +5,7 @@
 
   --clr-neutral-200: #dfd8cf;
   --clr-neutral-400: #e9dbc6;
-  --clr-neutral-900: #bbab94;
+  --clr-neutral-900: #c4ac87;
 
   --clr-accent-300: #f5e799;
   --clr-accent-400: #ffda0b;
@@ -74,6 +74,7 @@
 }
 // MediaQueries
 $media-300: 34em;
+// $media-400: 50em;
 $media-600: 60em;
 $media-800: 84em;
 
@@ -136,6 +137,7 @@ a:active,
 a {
   text-decoration: none;
   color: var(--clr-neutral-400);
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: reduce) {

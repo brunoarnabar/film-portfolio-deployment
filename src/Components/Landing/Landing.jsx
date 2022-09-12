@@ -24,7 +24,7 @@ export default function Landing() {
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
       <div className="poster-accent bottom">
-        Copywrite ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
+        Copyright ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
         <br /> All Rights Reserved.
       </div>
     </div>

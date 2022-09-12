@@ -78,6 +78,7 @@
     background-color: var(--clr-navbar-hover);
     padding-inline: 1em;
     border-radius: 1.5rem;
+    cursor: pointer;
   }
 }
 
@@ -98,19 +99,26 @@
   .NavContainer {
     display: grid;
     grid-template-columns: 1fr auto minmax(40rem , 5fr) 1fr;
+    grid-template-rows: auto;
   }
   .NavLogo {
-    grid-column: 2 / 3;
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 5rem;
+    margin-left: var(--thick-padding);
+    display: flex;
+    justify-content: left;
   }
 
   .NavLinkContainer {
     all: unset;
-    grid-column: 3 / 4;
+    grid-column: 2 / span 3;
+    grid-row: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
-    // outline: 3px solid sandybrown;
-    gap: 1em;
+
+    // gap: calc(2 * .01vw);
   }
   .NavListItem {
     all: unset;
@@ -118,8 +126,33 @@
     color: var(--clr-neutral-400);
 
     display: grid;
-    gap: 2em;
+    padding-inline: 1rem;
+
+    // min-width: 20rem;
     
     
     }
+
+    .NavListItem:hover {
+      all: unset;
+  // font-weight: var(--fw-bold);
+  // background-color: var(--clr-navbar-hover);
+
+  a {
+    all: unset;
+    background-color: var(--clr-navbar-hover);
+    padding-inline: 1rem;
+    border-radius: 1.5rem;
+    color: var(--clr-neutral-400);
+    cursor: pointer;
+  }
+}
+}
+
+@media (min-width: $media-600){
+
+  .NavLinkContainer {
+    grid-column: 1 / span 4;
+  }
+
 }
