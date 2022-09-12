@@ -28,13 +28,13 @@ export default function Landing() {
         <br /> All Rights Reserved.
       </div> */}
       <div className="poster-accent bottom">
-        Copyright ⓒ MMXV
+        Copyright ⓒ MMXV&nbsp;
         <div className="LandingLinks">
           <a
             className="link-poster-accent bottom"
             href="https://www.linkedin.com/in/brunoarnabar/"
           >
-            &nbsp;LinkedIn
+            LinkedIn
           </a>
           &nbsp;
           <a
@@ -48,11 +48,11 @@ export default function Landing() {
             className="link-poster-accent bottom"
             href="https://vimeo.com/brunoarnabar"
           >
-            Vimeo,
+            Vimeo,&nbsp;
           </a>
         </div>
         <br />
-        &nbsp;All Rights Reserved.
+        All Rights Reserved.
       </div>
     </div>
   );
