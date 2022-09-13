@@ -73,6 +73,7 @@
   --NavDynamicHeight: 0;
 }
 // MediaQueries
+$media-250: 30em;
 $media-300: 34em;
 $media-350: 40.25em;
 // $media-400: 50em;
@@ -314,10 +315,14 @@ a {
 
   &.bottom {
 
-    @media (max-width: $media-350){
-      display:flex;
-      flex-direction: column;
-    }
+    // @media (max-width: $media-350){
+    //   display:flex;
+    //   flex-direction: column;
+    // }
+
+    // display:flex;
+    //   flex-direction: column;
+    display:inline-block;
 
     // display
     justify-self: center;

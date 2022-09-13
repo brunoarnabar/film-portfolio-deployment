@@ -28,31 +28,35 @@ export default function Landing() {
         <br /> All Rights Reserved.
       </div> */}
       <div className="poster-accent bottom">
-        <div className="LandingCopyright">Copyright ⓒ MMXV&nbsp;</div>
-        <div className="LandingLinks">
-          <a
-            className="link-poster-accent bottom"
-            href="https://www.linkedin.com/in/brunoarnabar/"
-          >
-            LinkedIn
-          </a>
-          &nbsp;
-          <a
-            className="link-poster-accent bottom"
-            href="https://www.instagram.com/bruno.arnabar/"
-          >
-            Instagram
-          </a>
-          &nbsp;
-          <a
-            className="link-poster-accent bottom"
-            href="https://vimeo.com/brunoarnabar"
-          >
-            Vimeo,&nbsp;
-          </a>
+        <div className="LandingCopyright">
+          Copyright&nbsp;ⓒ&nbsp;MMXV&emsp;
+          <div className="LandingLinks">
+            <a
+              className="link-poster-accent bottom"
+              href="https://www.linkedin.com/in/brunoarnabar/"
+            >
+              LinkedIn
+            </a>
+            &nbsp;
+            <a
+              className="link-poster-accent bottom"
+              href="https://www.instagram.com/bruno.arnabar/"
+            >
+              Instagram
+            </a>
+            &nbsp;
+            <a
+              className="link-poster-accent bottom"
+              href="https://vimeo.com/brunoarnabar"
+            >
+              Vimeo,&nbsp;
+            </a>
+          </div>
         </div>
         <div className="LandingAllRights">
-          All Rights Reserved.</div>
+          {/* <br/> */}
+          All Rights Reserved.
+        </div>
       </div>
     </div>
   );

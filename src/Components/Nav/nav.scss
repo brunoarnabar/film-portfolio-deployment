@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@use "../../App.scss";
 
 .NavContainer {
   // --value: 30rem;
@@ -92,7 +92,7 @@
   align-items: center;
 }
 
-@media (min-width: $media-300) {
+@media (min-width: App.$media-300) {
   .NavMobileToggler {
     display: none;
   }
@@ -149,7 +149,7 @@
 }
 }
 
-@media (min-width: $media-600){
+@media (min-width: App.$media-600){
 
   .NavLinkContainer {
     grid-column: 1 / span 4;
