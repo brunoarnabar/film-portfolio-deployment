@@ -2,9 +2,7 @@ import { React, useState } from "react";
 import "./preview.scss";
 import { Link } from "react-router-dom";
 
-
 export default function Preview(props) {
-
   const img = props.img;
   const gif = props.gif;
   const string = props.url;
