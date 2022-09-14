@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./form.scss";
-import DatePicker from "./DatePicker";
+// import DatePicker from "./DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -39,30 +39,31 @@ function FormCont({ closeModal }) {
   const [val, setVal] = useState(false);
 
   const onSubmit = (values, actions) => {
-    const newStart = values.start;
-    const newFormattedStart =
-      newStart.getMonth() +
-      1 +
-      "-" +
-      newStart.getDate() +
-      "-" +
-      newStart.getFullYear();
+    // const newStart = values.start;
+    // const newFormattedStart =
+    //   newStart.getMonth() +
+    //   1 +
+    //   "-" +
+    //   newStart.getDate() +
+    //   "-" +
+    //   newStart.getFullYear();
 
-    const newEnd = values.end;
-    const newFormattedEnd =
-      newEnd.getMonth() +
-      1 +
-      "-" +
-      newEnd.getDate() +
-      "-" +
-      newEnd.getFullYear();
-    const updatedValues = {
-      ...values,
-      start: newFormattedStart,
-      end: newFormattedEnd,
-    };
+    // const newEnd = values.end;
+    // const newFormattedEnd =
+    //   newEnd.getMonth() +
+    //   1 +
+    //   "-" +
+    //   newEnd.getDate() +
+    //   "-" +
+    //   newEnd.getFullYear();
+    // const updatedValues = {
+    //   ...values,
+    //   start: newFormattedStart,
+    //   end: newFormattedEnd,
+    // };
 
-    SendEmail(updatedValues);
+    // SendEmail(updatedValues);
+    SendEmail(values);
     actions.setSubmitting(false);
   };
 
