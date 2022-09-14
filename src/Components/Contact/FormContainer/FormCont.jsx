@@ -38,8 +38,6 @@ const validate = (values) => {
 
 function FormCont({closeModal, employer}) {
 
-  console.log(employer);
-
   const [val, setVal] = useState(false);
 
   const onSubmit = (values, actions) => {

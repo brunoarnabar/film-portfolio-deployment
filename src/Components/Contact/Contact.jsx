@@ -14,18 +14,21 @@ export default function Contact() {
 
   const openModalOne = () => {
     setDirModalIsOpen(true);
+    setShowFullForm(true);
     document.body.style.overflow = "hidden";
     setOne((current) => !current);
   };
 
   const openModalTwo = () => {
     setDirModalIsOpen(true);
+    setShowFullForm(true);
     document.body.style.overflow = "hidden";
     setTwo((current) => !current);
   };
 
   const openModalThree = () => {
     setDirModalIsOpen(true);
+    setShowFullForm(false);
     document.body.style.overflow = "hidden";
     setThree((current) => !current);
   };
@@ -38,37 +41,31 @@ export default function Contact() {
     setThree(false);
   };
 
+  // const setFullFormTrue = useCallback(() => {
+  //   setShowFullForm(true);
+  // }, []);
+
+  // const setFullFormFalse = useCallback(() => {
+  //   setShowFullForm(false);
+  // }, []);
+
   function outputHTML(one, two, three) {
     let contactFormTitle = "";
 
     if (!one & !two & !three) return null;
     else if (one) {
       contactFormTitle = "Director Form";
-
-      useCallback(() => {
-        setShowFullForm(true);
-      }, []); 
-
+      // {setFullFormTrue};
     } else if (two) {
       contactFormTitle = "Developer Form";
-
-      useCallback(() => {
-        setShowFullForm(true);
-      }, []); 
-
+      // {setFullFormTrue};
     } else {
       contactFormTitle = "Just Saying Hello";
-      
-      useCallback(() => {
-        setShowFullForm(false);
-      }, []); 
-
+      // {setFullFormFalse};
     }
 
     return (
-      <div className="ContactFormTopTitle fs-title">
-        {contactFormTitle}
-      </div>
+      <div className="ContactFormTopTitle fs-title">{contactFormTitle}</div>
     );
   }
 
