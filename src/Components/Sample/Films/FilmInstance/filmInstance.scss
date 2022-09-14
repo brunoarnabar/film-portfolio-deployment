@@ -35,8 +35,13 @@
   justify-content: center;
   align-items: center;
   // box-model
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+
+  &.isFullScreen{
+    height: 100vh;
+    height: -webkit-fill-available;
+  }
+  // min-height: 100vh;
+  // min-height: -webkit-fill-available;
   padding: calc(1.3 * var(--thick-padding));
 
   //———
@@ -49,7 +54,7 @@
 }
 
 .FilmInstanceAsideClose {
-  min-height: 10vh;
+  min-height: 10%;
   width: 100%;
 
   display: flex;
