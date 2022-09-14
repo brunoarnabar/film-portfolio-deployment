@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState} from "react";
 import "./contact.scss";
 import Modal from "react-modal";
 import FormCont from "./FormContainer/FormCont";
