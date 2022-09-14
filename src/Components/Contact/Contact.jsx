@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import "./contact.scss";
-import DirImg from "../../Images/ListIcons/filmDir.jpg";
-import DevImg from "../../Images/ListIcons/webDev.jpg";
-import HeyImg from "../../Images/ListIcons/sayHey.jpg";
 import Modal from "react-modal";
 import FormCont from "./FormContainer/FormCont";
-import FormContHello from "./FormContainer/FormContHello";
 Modal.setAppElement("#root");
 
 export default function Contact() {
@@ -45,51 +41,6 @@ export default function Contact() {
   };
 
   function outputHTML(one, two, three) {
-    // if (!one & !two & !three) return null;
-    // else if (one) {
-    //   return (
-    //     <div className="ContactList fs-label">
-    //       <div className="ContactOption ContactFormHeader">
-    //         <div className="ContactOptionImg">
-    //           <img src={DirImg} alt="DirImg" className="ContactListImg" />
-    //         </div>
-    //         <div className="ContactOptionPrompt">
-    //           I want to work with you as a director.
-    //         </div>
-    //       </div>
-    //     </div>
-    //   );
-    // } else if (two) {
-    //   return (
-    //     <div className="ContactList fs-label">
-    //       <div className="ContactOption ContactFormHeader">
-    //         <div className="ContactOptionImg">
-    //           {" "}
-    //           <img src={DevImg} alt="DevImg" className="ContactListImg" />{" "}
-    //         </div>
-    //         <div className="ContactOptionPrompt">
-    //           {" "}
-    //           I want to work with you as a developer.{" "}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   );
-    // } else {
-    //   return (
-    //     <div className="ContactList fs-label">
-    //       <div className="ContactOption ContactFormHeader hey">
-    //         <div className="ContactOptionImg">
-    //           {" "}
-    //           <img src={HeyImg} alt="HeyImg" className="ContactListImg" />{" "}
-    //         </div>
-    //         <div className="ContactOptionPrompt ContactFormHeader">
-    //           {" "}
-    //           I just want to say hello.{" "}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   );
-    // }
     let contactFormTitle = "";
 
     if (!one & !two & !three) return null;
@@ -102,30 +53,9 @@ export default function Contact() {
     }
 
     return (
-      // <div className="ContactList fs-label">
-      //   <div className="ContactOption ContactFormHeader hey">
-      //     <div className="ContactOptionImg">
-      //       {" "}
-      //       <img src={HeyImg} alt="HeyImg" className="ContactListImg" />{" "}
-      //     </div>
-      //     <div className="ContactOptionPrompt ContactFormHeader"> . </div>
-      //   </div>
-      // </div>
-
-      // <div className="ContactFormTop fs-body">
-      // {/* <div class="circle">
-      //   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Chapultepec_Zoo_-_Jaguar_%2802%29.jpg/2560px-Chapultepec_Zoo_-_Jaguar_%2802%29.jpg" />
-      // </div> */}
-      // {/* <div class="ContactSquare">
-      //   <div class="ContactSquareImg">Hello!</div>
-      // </div> */}
-      // {/* <div className="ContactFormTopImg">
-      //   <img src={contactFormImg} alt="FormImg" className="ContactListImg" />
-      // </div> */}
       <div className="ContactFormTopTitle fs-title">
         {contactFormTitle}
       </div>
-      // </div>
     );
   }
 
@@ -151,51 +81,7 @@ export default function Contact() {
           Just Reach Out To Say Hello
         </div>
       </div>
-      {/* +++++++++++++++++++++++++++++++++++++++++++++++++++ */}
-
-      {/* <div className="HeadingCo fs-body"> Get In Touch </div>
-        <div className="Message-con First-con">
-          {" "}
-          To make an inquiry about a project, please select from the following
-          options:{" "}
-        </div>
-        <br />
-
-        <div className="List OneDir">
-          <button onClick={openModalOne} className="Option">
-            <div className="ContactOptionImg">
-              {" "}
-              <img src={DirImg} alt="DirImg" className="ContactListImg" />{" "}
-            </div>
-            <div className="ContactOptionPrompt">
-              {" "}
-              I want to work with you as a director.{" "}
-            </div>
-          </button>
-        </div>
-
-        <div className="List TwoDir">
-          <button onClick={openModalTwo} className="Option">
-            <div className="ContactOptionImg">
-              {" "}
-              <img src={DevImg} alt="DevImg" className="ContactListImg" />{" "}
-            </div>
-            <div className="ContactOptionPrompt">
-              {" "}
-              I want to work with you as a developer.{" "}
-            </div>
-          </button>
-        </div>
-
-        <div className="List ThreeDir">
-          <button onClick={openModalThree} className="Option">
-            <div className="ContactOptionImg">
-              {" "}
-              <img src={HeyImg} alt="HeyImg" className="ContactListImg" />{" "}
-            </div>
-            <div className="ContactOptionPrompt HelloOpt"> I just want to say hello. </div>
-          </button>
-        </div> */}
+     
       <Modal
         isOpen={dirModalIsOpen}
         onRequestClose={() => closeModal()}
@@ -221,28 +107,7 @@ export default function Contact() {
           />
         </div>
       </Modal>
-      {/* </div> helloModalIsOpen*/}
-      {/* <Modal
-        isOpen={helloModalIsOpen}
-        onRequestClose={() => closeModal()}
-        className="Modal"
-        overlayClassName="Overlay"
-        onAfterOpen={() => {
-          document.body.style.top = `-${window.scrollY}px`;
-          document.body.style.position = `fixed`;
-        }}
-        onAfterClose={() => {
-          const scrollY = document.body.style.top;
-          document.body.style.position = "";
-          document.body.style.top = "";
-          window.scrollTo(0, parseInt(scrollY || "0") * -1);
-        }}
-      >
-        <div className="ContactFormHeader">{outputHTML(one, two, three)}</div>
-        <div className="form-container-contact">
-          <FormContHello className="formStyle" closeModal={closeModal} />
-        </div>
-      </Modal> */}
+      
     </div>
   );
 }
