@@ -29,6 +29,7 @@ export default function Contact() {
   };
 
   const openModalThree = () => {
+    setDirModalIsOpen(true);
     setHelloModalIsOpen(true);
     document.body.style.overflow = "hidden";
     setThree((current) => !current);
@@ -213,7 +214,11 @@ export default function Contact() {
       >
         <div className="ContactFormHeader">{outputHTML(one, two, three)}</div>
         <div className="form-container-contact">
-          <FormCont className="formStyle" closeModal={closeModal} />
+          <FormCont
+            className="formStyle"
+            closeModal={closeModal}
+            employer={!helloModalIsOpen}
+          />
         </div>
       </Modal>
       {/* </div> helloModalIsOpen*/}

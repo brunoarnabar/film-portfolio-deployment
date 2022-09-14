@@ -30,6 +30,38 @@
   padding-top: 0;
 }
 
+.FormContainerMinimized{
+
+  // display
+  display: grid;
+  grid-template-rows:
+    repeat(2, minmax(0, 1fr))
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5em;
+  column-gap: 1em;
+  grid-template-areas:
+    "FormName FormName"
+    "FormEmail FormEmail"
+    "error error"
+    "FormCompany FormCompany"
+    "FormMessage FormMessage"
+    "FormQuestion FormQuestion"
+    "FormButton FormButton";
+  // positioning
+  position: relative;
+  z-index: 10;
+  // box-model
+  --form-padding: 1.8rem;
+  padding: var(--form-padding);
+  padding-top: 0;
+
+}
+
 .FormInput {
   // box-model
   padding-inline: 1rem;

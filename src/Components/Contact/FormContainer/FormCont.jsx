@@ -36,7 +36,7 @@ const validate = (values) => {
   return errors;
 };
 
-function FormCont({closeModal}) {
+function FormCont({closeModal, employer}) {
 
   const [val, setVal] = useState(false);
 
@@ -89,139 +89,252 @@ function FormCont({closeModal}) {
     }
   }, [val, closeModal]);
 
-  return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={(values, actions) => onSubmit(values, actions, closeModal)}
-      validate={validate}
-    >
-      {(formik) => { return (
-        <Form>
-          <div className="FormContainer fs-button">
-            <div className="FormInputContainer FormInputName">
-              <label className="FormName FormLabel">Name</label>
-              <Field
-                className="FormName FormInput"
-                placeholder="Johnny Doe"
-                name="name"
-                type="text"
-                required
-              />
-            </div>
+  if (employer) {
+    return (
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values, actions) => onSubmit(values, actions, closeModal)}
+        validate={validate}
+      >
+        {(formik) => {
+          return (
+            <Form>
+              <div className="FormContainer fs-button">
+                <div className="FormInputContainer FormInputName">
+                  <label className="FormName FormLabel">Name</label>
+                  <Field
+                    className="FormName FormInput"
+                    placeholder="Johnny Doe"
+                    name="name"
+                    type="text"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputEmail">
-              <label className="FormEmail FormLabel">Email</label>
-              <Field
-                className="FormEmail FormInput"
-                placeholder="AvantFilms@example.com"
-                name="email"
-                type="email"
-                required
-              />
-            </div>
-            <div className="FormErrorContainer">
-              <ErrorMessage name="email">
-                {(errorMsg) => (
-                  <div className="FormError fs-label">{errorMsg}</div>
-                )}
-              </ErrorMessage>
-            </div>
+                <div className="FormInputContainer FormInputEmail">
+                  <label className="FormEmail FormLabel">Email</label>
+                  <Field
+                    className="FormEmail FormInput"
+                    placeholder="AvantFilms@example.com"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div className="FormErrorContainer">
+                  <ErrorMessage name="email">
+                    {(errorMsg) => (
+                      <div className="FormError fs-label">{errorMsg}</div>
+                    )}
+                  </ErrorMessage>
+                </div>
 
-            <div className="FormInputContainer FormInputCompany">
-              <label className="FormCompany FormLabel">Company</label>
-              <Field
-                className="FormCompany FormInput"
-                placeholder="Avant Film Collection"
-                name="company"
-                type="text"
-                required
-              />
-            </div>
+                <div className="FormInputContainer FormInputCompany">
+                  <label className="FormCompany FormLabel">Company</label>
+                  <Field
+                    className="FormCompany FormInput"
+                    placeholder="Avant Film Collection"
+                    name="company"
+                    type="text"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputBudget">
-              <label className="FormBudget FormLabel">Budget</label>
-              <Field
-                className="FormBudget FormInput"
-                placeholder="$5,000 - $8,000"
-                name="budget"
-                type="text"
-                required
-              />
-            </div>
+                <div className="FormInputContainer FormInputBudget">
+                  <label className="FormBudget FormLabel">Budget</label>
+                  <Field
+                    className="FormBudget FormInput"
+                    placeholder="$5,000 - $8,000"
+                    name="budget"
+                    type="text"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputStart">
-              <label className="FormStart FormLabel">Start Date</label>
-              <DatePicker
-                name="start"
-                className="FormStart FormInput"
-                required
-              />
-            </div>
+                <div className="FormInputContainer FormInputStart">
+                  <label className="FormStart FormLabel">Start Date</label>
+                  <DatePicker
+                    name="start"
+                    className="FormStart FormInput"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputEnd">
-              <label className="FormEnd FormLabel">End Date</label>
-              <DatePicker
-                name="end"
-                className="FormEnd FormInput"
-                required
-              />
-            </div>
+                <div className="FormInputContainer FormInputEnd">
+                  <label className="FormEnd FormLabel">End Date</label>
+                  <DatePicker
+                    name="end"
+                    className="FormEnd FormInput"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputMessage">
-              <label className="FormMessage FormLabel">Message</label>
-              <Field
-                className="FormMessage FormInput"
-                as="textarea"
-                placeholder="Hey! It would be great working with you on our next project..."
-                name="message"
-                required
-              />
-            </div>
+                <div className="FormInputContainer FormInputMessage">
+                  <label className="FormMessage FormLabel">Message</label>
+                  <Field
+                    className="FormMessage FormInput"
+                    as="textarea"
+                    placeholder="Hey! It would be great working with you on our next project..."
+                    name="message"
+                    required
+                  />
+                </div>
 
-            <div className="FormInputContainer FormInputQuestion">
-              <label className="FormQuestion FormLabel">
-                How'd You Hear Of Me?
-              </label>
-              <Field
-                className="FormQuestion FormInput"
-                as="select"
-                name="question"
-                type="text"
-                required
-              >
-                <option value="We've Chatted In Person">
-                  We've Chatted In Person
-                </option>
-                <option value="By Working Together Before">
-                  Working Together Before
-                </option>
-                <option value="Through A Recommendation">
-                  Through A Recommendation
-                </option>
-                <option value="Discovered On The Web">
-                  Discovered On The Web
-                </option>
-                <option value="Found On Social Media">
-                  Found On Social Media
-                </option>
-              </Field>
-            </div>
+                <div className="FormInputContainer FormInputQuestion">
+                  <label className="FormQuestion FormLabel">
+                    How'd You Hear Of Me?
+                  </label>
+                  <Field
+                    className="FormQuestion FormInput"
+                    as="select"
+                    name="question"
+                    type="text"
+                    required
+                  >
+                    <option value="We've Chatted In Person">
+                      We've Chatted In Person
+                    </option>
+                    <option value="By Working Together Before">
+                      Working Together Before
+                    </option>
+                    <option value="Through A Recommendation">
+                      Through A Recommendation
+                    </option>
+                    <option value="Discovered On The Web">
+                      Discovered On The Web
+                    </option>
+                    <option value="Found On Social Media">
+                      Found On Social Media
+                    </option>
+                  </Field>
+                </div>
 
-            <div className="FormButtonContainer">
-              <button
-                className="FormButton"
-                // id="FormButton"
-                type="submit"
-                disabled={!(formik.dirty && formik.isValid)}
-              >
-                Submit
-              </button>
-            </div>
-          </div>
-        </Form>
-      );}}
-    </Formik>
-  );
+                <div className="FormButtonContainer">
+                  <button
+                    className="FormButton"
+                    // id="FormButton"
+                    type="submit"
+                    disabled={!(formik.dirty && formik.isValid)}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </Form>
+          );
+        }}
+      </Formik>
+    );
+  }
+  else
+  {
+    return (
+      <Formik
+        initialValues={initialValues}
+        onSubmit={(values, actions) => onSubmit(values, actions, closeModal)}
+        validate={validate}
+      >
+        {(formik) => {
+          return (
+            <Form>
+              <div className="FormContainerMinimized fs-button">
+                <div className="FormInputContainer FormInputName">
+                  <label className="FormName FormLabel">Name</label>
+                  <Field
+                    className="FormName FormInput"
+                    placeholder="Johnny Doe"
+                    name="name"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="FormInputContainer FormInputEmail">
+                  <label className="FormEmail FormLabel">Email</label>
+                  <Field
+                    className="FormEmail FormInput"
+                    placeholder="AvantFilms@example.com"
+                    name="email"
+                    type="email"
+                    required
+                  />
+                </div>
+                <div className="FormErrorContainer">
+                  <ErrorMessage name="email">
+                    {(errorMsg) => (
+                      <div className="FormError fs-label">{errorMsg}</div>
+                    )}
+                  </ErrorMessage>
+                </div>
+
+                <div className="FormInputContainer FormInputCompany">
+                  <label className="FormCompany FormLabel">Company</label>
+                  <Field
+                    className="FormCompany FormInput"
+                    placeholder="Avant Film Collection"
+                    name="company"
+                    type="text"
+                    required
+                  />
+                </div>
+
+                <div className="FormInputContainer FormInputMessage">
+                  <label className="FormMessage FormLabel">Message</label>
+                  <Field
+                    className="FormMessage FormInput"
+                    as="textarea"
+                    placeholder="Hey! It would be great working with you on our next project..."
+                    name="message"
+                    required
+                  />
+                </div>
+
+                <div className="FormInputContainer FormInputQuestion">
+                  <label className="FormQuestion FormLabel">
+                    How'd You Hear Of Me?
+                  </label>
+                  <Field
+                    className="FormQuestion FormInput"
+                    as="select"
+                    name="question"
+                    type="text"
+                    required
+                  >
+                    <option value="We've Chatted In Person">
+                      We've Chatted In Person
+                    </option>
+                    <option value="By Working Together Before">
+                      Working Together Before
+                    </option>
+                    <option value="Through A Recommendation">
+                      Through A Recommendation
+                    </option>
+                    <option value="Discovered On The Web">
+                      Discovered On The Web
+                    </option>
+                    <option value="Found On Social Media">
+                      Found On Social Media
+                    </option>
+                  </Field>
+                </div>
+
+                <div className="FormButtonContainer">
+                  <button
+                    className="FormButton"
+                    // id="FormButton"
+                    type="submit"
+                    disabled={!(formik.dirty && formik.isValid)}
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </Form>
+          );
+        }}
+      </Formik>
+    );
+  }
 }
 
 export default FormCont;
