@@ -4,6 +4,8 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import React, { useState } from "react";
 import ResponsivePlayer from "./Helpers/ResponsivePlayer";
 import Loader from "../../../Loader/LoaderRing";
+import { FiXCircle } from "react-icons/fi";
+import {useMediaQuery} from "../../../Hooks/useMediaQuery"
 
 import { TbBrandVimeo } from "react-icons/tb";
 
@@ -19,10 +21,14 @@ export default function FilmInstance(props) {
     }, 500);
   }
 
+  console.log("${$media-300}");
+   const isSmall = useMediaQuery("(min-width: 480px)");
+
+
   const sideInfoAnim = {
     visible: {
-      x: "0vh",
-      width: "100%",
+      x: "70vw",
+      width: "30%",
       opacity: 1,
       transition: {
         duration: 1,
@@ -33,7 +39,7 @@ export default function FilmInstance(props) {
       },
     },
     hidden: {
-      x: "200vh",
+      x: "200vw",
       width: "100%",
       opacity: 0,
       transition: {
@@ -46,11 +52,11 @@ export default function FilmInstance(props) {
   const childAnim = {
     visible: {
       opacity: 1,
-      x: "0vh",
+      x: "0vw",
     },
     hidden: {
       opacity: 0,
-      x: "10vh",
+      x: "10vw",
     },
   };
 
@@ -76,22 +82,29 @@ export default function FilmInstance(props) {
             exit="hidden"
           >
             <div className="FilmInstanceAsideContainer text-neutral-400">
-              <h1 className="fs-title" onClick={openInfo}>
-                {" "}
-                ( CLOSE ){" "}
-              </h1>
-              <motion.div className="fs-title" variants={childAnim}>
-                {props.filmInfo.date} / {props.filmInfo.workType}
-              </motion.div>
-              <motion.div
-                className="heading text-neutral-400"
-                variants={childAnim}
-              >
-                {props.filmInfo.title}
-              </motion.div>
-              <motion.div className="fs-title" variants={childAnim}>
-                {props.filmInfo.info}
-              </motion.div>
+              <div className="FilmInstanceAsideClose">
+                <h1 className="fs-title" onClick={openInfo}>
+                  <FiXCircle />
+                </h1>
+              </div>
+              <div className="FilmInstanceAsideContent fs-button">
+                <motion.div className="fs-body" variants={childAnim}>
+                  {props.filmInfo.date} / {props.filmInfo.workType}
+                </motion.div>
+                <motion.div
+                  className="heading text-neutral-400 FilmInstanceAsideTitle"
+                  variants={childAnim}
+                >
+                  {props.filmInfo.title}
+                </motion.div>
+                <motion.div
+                  className="fs-body FilmInstanceAsideBody"
+                  variants={childAnim}
+                >
+                  {props.filmInfo.info}
+                </motion.div>
+              </div>
+              <div className="FilmInstanceAsideBottomSpacer"/>
             </div>
           </motion.aside>
         )}
