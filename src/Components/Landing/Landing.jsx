@@ -1,6 +1,8 @@
 import React from "react";
 import "./landing.scss";
 import Typewriter from "typewriter-effect";
+import Resume from "../../Assets/Resume/BrunoArnabarResume.pdf";  
+import { FiDownload } from "react-icons/fi";
 
 export default function Landing() {
   return (
@@ -23,10 +25,18 @@ export default function Landing() {
       <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
-      {/* <div className="poster-accent bottom">
-        Copyright ⓒ MMXV LinkedIn&nbsp;Instagram&nbsp;Vimeo,
-        <br /> All Rights Reserved.
-      </div> */}
+      <div className="LandingResumeContainer">
+        <a
+          href={Resume}
+          download
+          className="LandingResume link-color link-primary-900 fs-button text-shadow-halation-dark"
+        >
+          <FiDownload className="svg-shadow-halation-dark"/>
+          &nbsp;my&nbsp;resume
+        </a>
+        <div className="LandingResumeInfo text-shadow-halation">(PDF 69kb)</div>
+      </div>
+
       <div className="poster-accent bottom">
         <div className="LandingCopyright">
           Copyright&nbsp;ⓒ&nbsp;MMXV&emsp;

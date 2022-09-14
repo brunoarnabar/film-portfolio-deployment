@@ -10,7 +10,7 @@ export default function Preview(props) {
   const [over, setOver] = useState(false);
 
   let className =
-    "PreviewContent fs-body text-accent-400 ff-body fw-bold text-shadow-accent-900";
+    "PreviewContent fs-body text-neutral-400 ff-body fw-bold text-shadow-halation";
   if (over) {
     className += " PreviewIsHovered";
   }

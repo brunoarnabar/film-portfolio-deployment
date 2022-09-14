@@ -85,6 +85,50 @@
   letter-spacing: 6.83px;
 }
 
+.LandingResumeContainer {
+  // display
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  // grid-area
+  grid-row-start: r7c1;
+  grid-column-start: r7c1;
+  grid-row-end: r7c4;
+  grid-column-end: r7c4;
+
+   // type
+   font-size: var(--fs-label);
+  font-family: var(--ff-body);
+  color: var(--clr-neutral-400);
+  letter-spacing: .18rem;
+}
+
+.LandingResume{
+  // display
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--clr-neutral-400);
+  box-shadow: var(--shadow-halation);
+  padding-inline: var(--padding);
+  font-weight: var(--fw-regular);
+  padding-block:.15em;
+  margin-top: var(--padding);
+
+  color: var(--clr-primary-900);
+  border-radius: 2rem;
+
+  text-transform: lowercase;
+
+  // type
+  
+}
+
 .LandingLinks {
   margin: 0;
   padding: 0;
@@ -96,6 +140,6 @@
 
 @media (max-width: App.$media-250) {
   .LandingCopyright {
-      flex-direction: column;
+    flex-direction: column;
   }
 }

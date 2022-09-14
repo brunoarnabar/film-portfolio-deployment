@@ -23,7 +23,7 @@
   --clr-navbar: var(--clr-primary-900);
   --clr-navbar-hover: var(--clr-primary-400);
 
-  --shadow-halation: .2rem .2rem .4rem var(--clr-halation);
+  --shadow-halation: .1rem .1rem .3rem var(--clr-halation);
 
   --ff-primary: "Arsenal", sans-serif;
   --ff-accent: "Josefin Sans", sans-serif;
@@ -359,6 +359,12 @@ a {
   }
 }
 
+.link-color{
+  &.link-primary-900{
+    color: var(--clr-primary-900);
+  }
+}
+
 .switch-text {
   color: var(--clr-primary-400);
   text-shadow: 0 0 1px var(--clr-primary-900);
@@ -475,6 +481,16 @@ a {
 
 .text-shadow-halation {
   text-shadow: 0 0 2px var(--clr-halation);
+}
+
+.text-shadow-halation-dark {
+  text-shadow: 0 0 2px var(--clr-dark);
+}
+
+.svg-shadow-halation-dark {
+  -webkit-filter: drop-shadow( 0 0 1px var(--clr-dark));
+  filter: drop-shadow( 0 0 1px var(--clr-dark));
+  /* Similar syntax to box-shadow */
 }
 
 .text-shadow-accent-900 {
