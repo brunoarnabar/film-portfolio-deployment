@@ -60,7 +60,7 @@ export default function Contact() {
       contactFormTitle = "Developer Form";
       // {setFullFormTrue};
     } else {
-      contactFormTitle = "Just Saying Hello";
+      contactFormTitle = "Contact Form";
       // {setFullFormFalse};
     }
 
@@ -79,16 +79,10 @@ export default function Contact() {
       </div>
       <div className="ContactContent fs-body">
         <div className="text-neutral-400">
-          To make an inquiry about a project, please select from the following:
-        </div>
-        <div className="ContactOptionBlock" onClick={openModalTwo}>
-          Employ Me As A Developer
-        </div>
-        <div className="ContactOptionBlock" onClick={openModalOne}>
-          Hire Me As A Director
+          To make an inquiry about a project, or to just say hello click the following:
         </div>
         <div className="ContactOptionBlock" onClick={openModalThree}>
-          Just Reach Out To Say Hello
+          Contact Form
         </div>
       </div>
 
