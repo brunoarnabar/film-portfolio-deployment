@@ -7,7 +7,7 @@ Modal.setAppElement("#root");
 export default function Contact() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const showFullForm = false;
+  // const showFullForm = false;
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -60,7 +60,6 @@ export default function Contact() {
           <FormCont
             className="formStyle"
             closeModal={closeModal}
-            employer={showFullForm}
           />
         </div>
       </Modal>
