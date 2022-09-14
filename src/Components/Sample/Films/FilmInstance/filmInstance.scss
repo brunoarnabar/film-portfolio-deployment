@@ -7,7 +7,7 @@
   min-height:  100vh;
   // min-height: 100vh;
   /* mobile viewport bug fix */
-  height: -webkit-fill-available;
+  min-height: -webkit-fill-available;
 
   background: #ffefba; /* fallback for old browsers */
   background: -webkit-linear-gradient(
