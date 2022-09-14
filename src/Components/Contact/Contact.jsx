@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./contact.scss";
 import Modal from "react-modal";
 import FormCont from "./FormContainer/FormCont";
@@ -10,7 +10,7 @@ export default function Contact() {
   const [three, setThree] = useState(false);
 
   const [dirModalIsOpen, setDirModalIsOpen] = useState(false);
-  const [helloModalIsOpen, setHelloModalIsOpen] = useState(false);
+  const [showFullForm, setShowFullForm] = useState(false);
 
   const openModalOne = () => {
     setDirModalIsOpen(true);
@@ -26,14 +26,12 @@ export default function Contact() {
 
   const openModalThree = () => {
     setDirModalIsOpen(true);
-    setHelloModalIsOpen(true);
     document.body.style.overflow = "hidden";
     setThree((current) => !current);
   };
 
   const closeModal = () => {
     setDirModalIsOpen(false);
-    setHelloModalIsOpen(true);
     document.body.style.overflow = "unset";
     setOne(false);
     setTwo(false);
@@ -46,10 +44,25 @@ export default function Contact() {
     if (!one & !two & !three) return null;
     else if (one) {
       contactFormTitle = "Director Form";
+
+      useCallback(() => {
+        setShowFullForm(true);
+      }, []); 
+
     } else if (two) {
       contactFormTitle = "Developer Form";
+
+      useCallback(() => {
+        setShowFullForm(true);
+      }, []); 
+
     } else {
       contactFormTitle = "Just Saying Hello";
+      
+      useCallback(() => {
+        setShowFullForm(false);
+      }, []); 
+
     }
 
     return (
@@ -81,7 +94,7 @@ export default function Contact() {
           Just Reach Out To Say Hello
         </div>
       </div>
-     
+
       <Modal
         isOpen={dirModalIsOpen}
         onRequestClose={() => closeModal()}
@@ -103,11 +116,10 @@ export default function Contact() {
           <FormCont
             className="formStyle"
             closeModal={closeModal}
-            employer={!helloModalIsOpen}
+            employer={showFullForm}
           />
         </div>
       </Modal>
-      
     </div>
   );
 }
