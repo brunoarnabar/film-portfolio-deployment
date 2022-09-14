@@ -62,10 +62,10 @@ export default function FilmInstance(props) {
         x: "10vw",
       },
     };
-  } else {
+  } else if (isMobile) {
     sideInfoAnim = {
       visible: {
-        y: "60vh",
+        y: "30vh",
         height: "30%",
         width: "100%",
         opacity: 1,
