@@ -5,69 +5,19 @@ import FormCont from "./FormContainer/FormCont";
 Modal.setAppElement("#root");
 
 export default function Contact() {
-  const [one, setOne] = useState(false);
-  const [two, setTwo] = useState(false);
-  const [three, setThree] = useState(false);
 
-  const [dirModalIsOpen, setDirModalIsOpen] = useState(false);
-  const [showFullForm, setShowFullForm] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showFullForm = false;
 
-  const openModalOne = () => {
-    setDirModalIsOpen(true);
-    setShowFullForm(true);
+  const openModal = () => {
+    setIsModalOpen(true);
     document.body.style.overflow = "hidden";
-    setOne((current) => !current);
-  };
-
-  const openModalTwo = () => {
-    setDirModalIsOpen(true);
-    setShowFullForm(true);
-    document.body.style.overflow = "hidden";
-    setTwo((current) => !current);
-  };
-
-  const openModalThree = () => {
-    setDirModalIsOpen(true);
-    setShowFullForm(false);
-    document.body.style.overflow = "hidden";
-    setThree((current) => !current);
   };
 
   const closeModal = () => {
-    setDirModalIsOpen(false);
+    setIsModalOpen(false);
     document.body.style.overflow = "unset";
-    setOne(false);
-    setTwo(false);
-    setThree(false);
   };
-
-  // const setFullFormTrue = useCallback(() => {
-  //   setShowFullForm(true);
-  // }, []);
-
-  // const setFullFormFalse = useCallback(() => {
-  //   setShowFullForm(false);
-  // }, []);
-
-  function outputHTML(one, two, three) {
-    let contactFormTitle = "";
-
-    if (!one & !two & !three) return null;
-    else if (one) {
-      contactFormTitle = "Director Form";
-      // {setFullFormTrue};
-    } else if (two) {
-      contactFormTitle = "Developer Form";
-      // {setFullFormTrue};
-    } else {
-      contactFormTitle = "Contact Form";
-      // {setFullFormFalse};
-    }
-
-    return (
-      <div className="ContactFormTopTitle fs-title">{contactFormTitle}</div>
-    );
-  }
 
   return (
     <div className="ContactContainer" id="contact">
@@ -79,18 +29,19 @@ export default function Contact() {
       </div>
       <div className="ContactContent fs-body">
         <div className="text-neutral-400">
-          To make an inquiry about a project, or to just say hello click the following:
+          To make an inquiry about a project, or to just say hello click the
+          following:
         </div>
-        <div className="ContactOptionBlock" onClick={openModalThree}>
+        <div className="ContactOptionBlock" onClick={openModal}>
           Contact Form
         </div>
       </div>
 
       <Modal
-        isOpen={dirModalIsOpen}
+        isOpen={isModalOpen}
         onRequestClose={() => closeModal()}
         className="Modal"
-        overlayClassName="Overlay"
+        overlayClassName="ContactOverlay"
         onAfterOpen={() => {
           document.body.style.top = `-${window.scrollY}px`;
           document.body.style.position = `fixed`;
@@ -102,7 +53,9 @@ export default function Contact() {
           window.scrollTo(0, parseInt(scrollY || "0") * -1);
         }}
       >
-        <div className="ContactFormHeader">{outputHTML(one, two, three)}</div>
+        <div className="ContactFormHeader">
+          <div className="ContactFormTopTitle fs-title">Contact Form</div>
+        </div>
         <div className="form-container-contact">
           <FormCont
             className="formStyle"
