@@ -29,7 +29,7 @@ export default function Contact() {
       </div>
       <div className="ContactContent fs-body">
         <div className="text-neutral-400">
-          To make an inquiry about a project, or to just say hello click the
+          To reach out to me, click the
           following:
         </div>
         <div className="ContactOptionBlock" onClick={openModal}>

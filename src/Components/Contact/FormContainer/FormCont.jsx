@@ -15,6 +15,7 @@ const USER_ID = "CN0RNMNddtaLSaAyj";
 const initialValues = {
   name:"",
   email:"",
+  phone:"",
   company:"",
   budget:"",
   message:"",
@@ -110,7 +111,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputEmail">
                   <label className="FormEmail FormLabel">Email</label>
                   <Field
@@ -129,6 +129,15 @@ function FormCont({closeModal, employer}) {
                   </ErrorMessage>
                 </div>
 
+                <div className="FormInputContainer FormInputPhone">
+                  <label className="FormPhone FormLabel">Phone Number</label>
+                  <Field
+                    className="FormPhone FormInput"
+                    placeholder="(___) ___-____"
+                    name="phone"
+                    type="text"
+                  />
+                </div>
                 <div className="FormInputContainer FormInputCompany">
                   <label className="FormCompany FormLabel">Company</label>
                   <Field
@@ -139,7 +148,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputBudget">
                   <label className="FormBudget FormLabel">Budget</label>
                   <Field
@@ -150,7 +158,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputStart">
                   <label className="FormStart FormLabel">Start Date</label>
                   <DatePicker
@@ -159,7 +166,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputEnd">
                   <label className="FormEnd FormLabel">End Date</label>
                   <DatePicker
@@ -168,7 +174,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputMessage">
                   <label className="FormMessage FormLabel">Message</label>
                   <Field
@@ -179,7 +184,6 @@ function FormCont({closeModal, employer}) {
                     required
                   />
                 </div>
-
                 <div className="FormInputContainer FormInputQuestion">
                   <label className="FormQuestion FormLabel">
                     How'd You Hear Of Me?
@@ -189,7 +193,6 @@ function FormCont({closeModal, employer}) {
                     as="select"
                     name="question"
                     type="text"
-                    required
                   >
                     <option value="We've Chatted In Person">
                       We've Chatted In Person
@@ -208,7 +211,6 @@ function FormCont({closeModal, employer}) {
                     </option>
                   </Field>
                 </div>
-
                 <div className="FormButtonContainer">
                   <button
                     className="FormButton"
@@ -265,6 +267,16 @@ function FormCont({closeModal, employer}) {
                       <div className="FormError fs-label">{errorMsg}</div>
                     )}
                   </ErrorMessage>
+                </div>
+
+                <div className="FormInputContainer FormInputPhone">
+                  <label className="FormPhone FormLabel">Phone Number</label>
+                  <Field
+                    className="FormPhone FormInput"
+                    placeholder="(___) ___-____"
+                    name="phone"
+                    type="text"
+                  />
                 </div>
 
                 <div className="FormInputContainer FormInputCompany">

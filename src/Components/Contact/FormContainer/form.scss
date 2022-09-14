@@ -37,21 +37,21 @@
   grid-template-rows:
     repeat(2, minmax(0, 1fr))
     auto
-    minmax(0, 1fr)
+    repeat(2, minmax(0, 1fr))
     auto
     minmax(0, 1fr)
     auto;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.5em;
-  column-gap: 1em;
   grid-template-areas:
-    "FormName FormName"
-    "FormEmail FormEmail"
-    "error error"
-    "FormCompany FormCompany"
-    "FormMessage FormMessage"
-    "FormQuestion FormQuestion"
-    "FormButton FormButton";
+    "FormName"
+    "FormEmail"
+    "error"
+    "FormPhone"
+    "FormCompany"
+    "FormMessage"
+    "FormQuestion"
+    "FormButton";
   // positioning
   position: relative;
   z-index: 10;
@@ -103,9 +103,14 @@
   &.FormInputEmail {
     grid-area: FormEmail;
   }
+  &.FormInputPhone {
+    grid-area: FormPhone;
+    margin-top: -0.25em;
+  }
   &.FormInputCompany {
     grid-area: FormCompany;
-    margin-top: -0.25em;
+      //needed under the error
+    // margin-top: -0.25em;
   }
   &.FormInputBudget {
     grid-area: FormBudget;
