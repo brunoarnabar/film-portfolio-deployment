@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./form.scss";
+import "./formHello.scss";
 import DatePicker from "./DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -97,36 +97,40 @@ function FormCont({closeModal}) {
     >
       {(formik) => { return (
         <Form>
-          <div className="form-container">
-            <div className="inputContainer name">
-              <label className="form-name form-label">Name</label>
+          <div className="FormContainer fs-button">
+            <div className="FormInputContainer FormInputName">
+              <label className="FormName FormLabel">Name</label>
               <Field
-                className="form-name input"
-                placeholder="Johnny Doe"
+                className="FormName FormInput"
+                placeholder="Jane Doe"
                 name="name"
                 type="text"
                 required
               />
             </div>
 
-            <div className="inputContainer email">
-              <label className="form-email form-label">Email</label>
+            <div className="FormInputContainer FormInputEmail">
+              <label className="FormEmail FormLabel">Email</label>
               <Field
-                className="form-email input"
+                className="FormEmail FormInput"
                 placeholder="AvantFilms@example.com"
                 name="email"
                 type="email"
                 required
               />
             </div>
-            <ErrorMessage name="email">
-              {(errorMsg) => <div className="error">{errorMsg}</div>}
-            </ErrorMessage>
+            <div className="FormErrorContainer">
+              <ErrorMessage name="email">
+                {(errorMsg) => (
+                  <div className="FormError fs-label">{errorMsg}</div>
+                )}
+              </ErrorMessage>
+            </div>
 
-            <div className="inputContainer company">
-              <label className="form-company form-label">Company</label>
+            <div className="FormInputContainer FormInputCompany">
+              <label className="FormCompany FormLabel">Company</label>
               <Field
-                className="form-company input"
+                className="FormCompany FormInput"
                 placeholder="Avant Film Collection"
                 name="company"
                 type="text"
@@ -134,31 +138,10 @@ function FormCont({closeModal}) {
               />
             </div>
 
-            <div className="inputContainer budget">
-              <label className="form-budget form-label">Budget</label>
+            <div className="FormInputContainer FormInputMessage">
+              <label className="FormMessage FormLabel">Message</label>
               <Field
-                className="form-budget input"
-                placeholder="$5,000 - $8,000"
-                name="budget"
-                type="text"
-                required
-              />
-            </div>
-
-            <div className="inputContainer start">
-              <label className="form-start form-label">Start Date</label>
-              <DatePicker name="start" className="form-start input" required />
-            </div>
-
-            <div className="inputContainer end">
-              <label className="form-end form-label">End Date</label>
-              <DatePicker name="end" className="form-start input" required />
-            </div>
-
-            <div className="inputContainer message">
-              <label className="form-message form-label">Message</label>
-              <Field
-                className="form-message input"
+                className="FormMessage FormInput"
                 as="textarea"
                 placeholder="Hey! It would be great working with you on our next project..."
                 name="message"
@@ -166,12 +149,12 @@ function FormCont({closeModal}) {
               />
             </div>
 
-            <div className="inputContainer question">
-              <label className="form-question form-label">
+            <div className="FormInputContainer FormInputQuestion">
+              <label className="FormQuestion FormLabel">
                 How'd You Hear Of Me?
               </label>
               <Field
-                className="form-question input"
+                className="FormQuestion FormInput"
                 as="select"
                 name="question"
                 type="text"
@@ -195,10 +178,10 @@ function FormCont({closeModal}) {
               </Field>
             </div>
 
-            <div className="buttonContainer">
+            <div className="FormButtonContainer">
               <button
-                className="form-button"
-                // id="form-button"
+                className="FormButton"
+                // id="FormButton"
                 type="submit"
                 disabled={!(formik.dirty && formik.isValid)}
               >

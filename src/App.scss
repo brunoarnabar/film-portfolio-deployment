@@ -1,6 +1,6 @@
 :root {
   --clr-primary-200: #819299;
-  --clr-primary-400: #546267;
+  --clr-primary-400: #4a565c;
   --clr-primary-900: #253746;
 
   --clr-neutral-200: #dfd8cf;
@@ -15,8 +15,15 @@
   --clr-halation-logo: #f7b51caf;
   --clr-dark: #25374680;
 
+  --clr-form-input: var(--clr-neutral-200);
+
+  --clr-error: #ff0b0b;
+  --clr-error-bg: #ff78786f;
+
   --clr-navbar: var(--clr-primary-900);
   --clr-navbar-hover: var(--clr-primary-400);
+
+  --shadow-halation: .2rem .2rem .4rem var(--clr-halation);
 
   --ff-primary: "Arsenal", sans-serif;
   --ff-accent: "Josefin Sans", sans-serif;
@@ -164,13 +171,13 @@ a {
     color: var(--clr-accent-400);
 
     // box-model
-      max-width: 73vw;
+    max-width: 73vw;
   }
 }
 
-.link-poster-accent.bottom{
-   color: var(--clr-accent-400);
-   margin-bottom: 0;
+.link-poster-accent.bottom {
+  color: var(--clr-accent-400);
+  margin-bottom: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -314,7 +321,6 @@ a {
   letter-spacing: var(--letter-spacing);
 
   &.bottom {
-
     // @media (max-width: $media-350){
     //   display:flex;
     //   flex-direction: column;
@@ -322,7 +328,7 @@ a {
 
     // display:flex;
     //   flex-direction: column;
-    display:inline-block;
+    display: inline-block;
 
     // display
     justify-self: center;

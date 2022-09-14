@@ -17,101 +17,71 @@
   text-align: center;
 }
 
+.ContactFormHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  background-color: var(--clr-primary-400);
+
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+
+  --form-padding: 1.8rem;
+padding: var(--form-padding);
+
+
+}
+
+.ContactFormTop{
+  // display
+display: flex;
+align-items: center;
+gap: 5%;
+margin-inline: auto;
+max-height: 100%;
+}
+
+
+.ContactFormTopImg{
+  // box-model
+  height: 4em;
+}
+
+.ContactListImg{
+  // box-model
+  height: 100%;
+  // misc
+  border-radius: 50%;
+}
+
+.ContactFormTopTitle{
+  // type
+  color: var(--clr-form-input);
+  font-weight: var(--fw-bold);
+}
+
 .ContactOptionBlock {
+  // display
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // box-model
   min-width: 25rem;
   padding: var(--padding);
   margin-inline: var(--padding);
   margin: 0 auto;
   background-color: antiquewhite;
-
   // type
   color: var(--clr-primary-900);
   text-align: left;
   // misc
   border-radius: var(--thick-padding);
+  cursor: pointer;
 }
 
-.BackdropCo {
-  //SIZE OF PAGE
-  //not sure if I should be setting height
-  // height: 65vh;
-
-  //SET POSTER BACKGROUND
-  //background color
-  background: rgba(158, 180, 184);
-
-  //MAKE GRID
-  //design grid
-  display: grid;
-  //minmax to prevent overflow
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr)) minmax(0, 1.15fr);
-  grid-gap: 0.4rem;
-  //create matrix
-  grid-template-areas:
-    "r1c1 r1c2 r1c3 r1c4"
-    "r2c1 r2c2 r2c3 r2c4"
-    "r3c1 r3c2 r3c3 r3c4"
-    "r4c1 r4c2 r4c3 r4c4"
-    "r5c1 r5c2 r5c3 r5c4"
-    "footer footer footer footer";
-}
-
-.HeadingCo {
-  // display
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // grid-area
-  grid-row-start: r1c1;
-  grid-column-start: r1c1;
-  grid-row-end: r1c4;
-  grid-column-end: r1c4;
-
-  //AESTETIC
-  //font and color
-  // font-family: 'Arsenal', sans-serif;
-  // font-weight: bolder;
-  // font-size: 355%;
-  // color: rgb(255, 255, 255);
-  //alignment
-  padding-bottom: 0.5rem;
-}
-
-.Message-con {
-  //AESTETIC
-  //font and color
-  font-family: "Arsenal", sans-serif;
-  font-weight: bolder;
-  font-size: 117%;
-  color: rgb(255, 247, 228);
-  //alignment
-  padding: 3%;
-
-  //CENTER WITHIN DIV
-  //flexbox
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  &.First-con {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r2c1;
-    grid-column-start: r2c1;
-    //end
-    grid-row-end: r2c4;
-    grid-column-end: r2c4;
-
-    //AESTETIC
-    //alignment
-    padding: 4%;
-  }
-}
-
-.List {
+.ContactList {
   //CENTER WITHIN DIV
   //flexbox
   display: flex;
@@ -148,7 +118,7 @@
     grid-row-end: r5c4;
     grid-column-end: r5c4;
   }
-  .Option {
+  .ContactOption {
     //MAKE GRID
     //design grid
     display: grid;
@@ -173,7 +143,7 @@
     justify-content: center;
     align-items: center;
 
-    .OptImg {
+    .ContactOptionImg {
       //ASSIGN GRID AREA
       //area
       grid-area: op1;
@@ -184,7 +154,7 @@
       justify-content: center;
       align-items: center;
 
-      .ListImg {
+      .ContactListImg {
         //DISPLAY
         //snug fit in its grid
         width: 3rem;
@@ -193,15 +163,7 @@
       }
     }
 
-    &.formHead {
-      width: 84%;
-      justify-content: center;
-      //slightly-noticable button
-      background-color: rgba(137, 138, 97, 0);
-      // border: 1px rgba(0, 0, 0, 0) solid;
-    }
-
-    .OptPromt {
+    .ContactOptionPrompt {
       //ASSIGN GRID AREA
       //start
       grid-column-start: op2;
@@ -227,10 +189,6 @@
         margin-right: 10%;
       }
 
-      &.formHead {
-        text-align: center;
-        font-size: 120%;
-      }
     }
   }
 }
@@ -241,7 +199,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(102, 51, 153, 0.222);
+  background-color: var(--clr-dark);
+  z-index: 30;
 }
 
 .ReactModal__Content.ReactModal__Content--after-open.Modal {
@@ -252,8 +211,12 @@
   left: 40px;
   right: 40px;
   bottom: 40px;
-  background-color: rgb(130, 192, 223);
-  border-radius: 15px;
+  background-color: var(--clr-primary-200);
+  border-radius: 1.5rem;
+  z-index: 300000000000000;
+
+  max-width: 80rem;
+  margin-inline: auto;
 
   // border: rgb(136, 255, 0) 10px solid;
 
@@ -282,7 +245,7 @@
     //ASSIGN GRID AREA
     //area
     grid-area: header;
-    background-color: #74b7d8;
+    background-color:  var(--clr-primary-400);
     height: 100%;
     width: 100%;
     border-radius: 10px;

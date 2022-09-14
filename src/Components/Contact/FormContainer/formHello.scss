@@ -1,0 +1,213 @@
+// .FormContainer {
+//   // display
+//   display: grid;
+//   grid-template-rows:
+//     repeat(2, minmax(0, 1fr))
+//     auto
+//     minmax(0, 1fr)
+//     auto
+//     minmax(0, 1fr)
+//     auto;
+//   grid-template-columns: repeat(2, minmax(0, 1fr));
+//   gap: 0.5em;
+//   column-gap: 1em;
+//   grid-template-areas:
+//     "FormName FormName"
+//     "FormEmail FormEmail"
+//     "error error"
+//     "FormCompany FormCompany"
+//     "FormMessage FormMessage"
+//     "FormQuestion FormQuestion"
+//     "FormButton FormButton";
+//   // positioning
+//   position: relative;
+//   z-index: 10;
+//   // box-model
+//   --form-padding: 1.8rem;
+//   padding: var(--form-padding);
+//   padding-top: 0;
+// }
+
+// .FormInput {
+//   // box-model
+//   padding-inline: 1rem;
+//   background-color: var(--clr-form-input);
+//   width: 100%;
+//   width: calc(100% - var(--form-padding));
+//   height: 3.25em;
+//   border: none;
+//   // type
+//   font-family: var(--ff-body);
+//   font-weight: var(--fw-skinny);
+//   color: var(--clr-primary-900);
+//   border: none;
+//   // misc
+//   border-radius: 0.6rem;
+// }
+
+// .FormInputContainer {
+//   // display
+//   display: grid;
+//   grid-template-rows: minmax(0, 2em) auto;
+//   grid-template-areas:
+//     "formLabel"
+//     "input";
+//   // box-model
+//   margin-bottom: 1em;
+
+//   // grid-area
+//   &.FormLabel {
+//     grid-area: formLabel;
+//   }
+//   &.FormInput {
+//     grid-area: input;
+//   }
+
+//   &.FormInputName {
+//     grid-area: FormName;
+//   }
+//   &.FormInputEmail {
+//     grid-area: FormEmail;
+//   }
+//   &.FormInputCompany {
+//     grid-area: FormCompany;
+//     margin-top: -0.25em;
+//   }
+//   &.FormInputQuestion {
+//     grid-area: FormQuestion;
+//   }
+//   &.FormInputMessage {
+//     grid-area: FormMessage;
+//   }
+// }
+// .FormMessage.FormInput {
+//   // box-model
+//   padding-block: 1rem;
+//   // misc
+//   resize: vertical;
+// }
+// .FormQuestion.FormInput {
+//   // box-model
+//   width: 100%;
+// }
+
+// .FormButtonContainer {
+//   // display
+//   display: grid;
+//   justify-content: center;
+//   align-items: center;
+//   // grid-area
+//   grid-area: FormButton;
+// }
+
+// .FormButton {
+//   // display
+//   justify-self: center;
+//   // box-model
+//   height: 2.5em;
+//   width: 10em;
+//   margin-inline: auto;
+//   background-color: var(--clr-primary-400);
+//   // type
+//   font-family: var(--ff-body);
+//   font-weight: var(--fw-skinny);
+//   color: var(--clr-neutral-400);
+//   border: none;
+//   // misc
+//   border-radius: 3rem;
+// }
+
+// .FormLabel {
+//   // display
+//   align-self: flex-start;
+//   // box-model
+//   padding-bottom: 0.4rem;
+//   // type
+//   font-family: var(--ff-body);
+//   font-weight: var(--fw-bold);
+//   color: var(--clr-form-input);
+// }
+
+// .FormStart.FormInput,
+// .FormEnd.FormInput {
+//   // box-model
+//   padding-inline: 0;
+//   width: 100%;
+//   // type
+//   text-align: center;
+//   // misc
+//   resize: vertical;
+// }
+// .FormInputContainer.FormInputStart {
+//   // display
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+// }
+// .react-datepicker__input-container {
+//   // display
+//   justify-content: center;
+// }
+// .react-datepicker {
+//   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+//   background-color: rgb(115, 123, 134);
+//   border: 0px;
+//   border-radius: 0;
+//   display: inline-block;
+//   position: relative;
+// }
+
+// .react-datepicker__header {
+//   text-align: center;
+//   background-color: #3e82cf;
+//   border-bottom: 0px;
+//   border-top-left-radius: 0;
+//   border-top-right-radius: 0;
+//   padding-top: 8px;
+//   position: relative;
+// }
+
+// .react-datepicker__today-button {
+//   background: #82afe2;
+//   border-top: 0px;
+//   cursor: pointer;
+//   text-align: center;
+//   font-weight: bold;
+//   padding: 5px 0;
+//   clear: left;
+// }
+
+// .FormErrorContainer {
+//   // grid-area
+//   grid-area: error;
+//   // box-model
+//   align-self: center;
+// }
+
+// .FormError {
+//   // display
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // box-model
+//   height: 1em;
+//   padding: 0.25em;
+//   margin-top: -1rem;
+//   margin-bottom: -1rem;
+//   margin-inline: auto;
+//   background-color: var(--clr-error-bg);
+//   // type
+//   line-height: 0.9;
+//   letter-spacing: 0.182em;
+//   font-weight: 600;
+//   font-style: italic;
+//   color: var(--clr-error);
+//   // misc
+//   border-radius: 1rem;
+// }
+
+// ::placeholder {
+//   // type
+//   opacity: .8;
+// }

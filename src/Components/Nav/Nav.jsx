@@ -86,7 +86,7 @@ function Nav() {
       ref={NavRefTop}
     >
       <div className="NavLogo">
-        <a href="#top" onClick={toggleMenu ? toggleNav : null}>
+        <a href="#" onClick={toggleMenu ? toggleNav : null}>
           <BrunoLogo />
         </a>
       </div>
@@ -105,7 +105,7 @@ function Nav() {
         ref={NavRefBot}
       >
         <div className="NavHome NavListItem">
-          <a href="#top" onClick={toggleNav}>
+          <a href="#" onClick={toggleNav}>
             Home
           </a>
         </div>
