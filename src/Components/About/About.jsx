@@ -40,11 +40,9 @@ export default function About() {
   if (aboutMinimized) {
     return (
       <div className="AboutContainer" id="about" ref={AboutRef}>
+        
         <div className="sectionHeading">
           <div className="heading AboutMin">ABOUT</div>
-          {/* <div className="subHeading wrap-sm">
-              Let Me Introduce&nbsp;Myself
-            </div> */}
         </div>
 
         <div className="AboutContent AboutMin">
@@ -53,7 +51,7 @@ export default function About() {
             <div className="textBody">
               I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer with
               degrees from the University of Pittsburgh. I use these tools to
-              transform ideas into experiences.
+              create experiences based on ideas.
             </div>
             <div className="textBody">
               I’m looking for employment as a programmer or developer for a
@@ -61,22 +59,26 @@ export default function About() {
             </div>
           </div>
         </div>
+
         <a href="#about">
           <div className="AboutExpand fs-heading" onClick={toggleAbout}>
             <BsArrowsExpand size={iconSize} color={iconColor} />
           </div>
         </a>
+
       </div>
     );
   } else {
     return (
       <div className="AboutContainer" id="about" ref={AboutRef}>
+
         <div className="sectionHeading">
           <div className="heading">ABOUT</div>
           <div className="subHeading wrap-sm">Let Me Introduce&nbsp;Myself</div>
         </div>
 
         <div className="AboutContent">
+
           <div className="AboutDesc">
             <div className="title"> Hey! </div>
             <div className="textBody">
@@ -113,12 +115,15 @@ export default function About() {
               <div className="label">Traveling</div>
             </div>
           </div>
+          
         </div>
+
         <a href="#about">
           <div className="AboutExpand fs-heading" onClick={toggleAbout}>
             <BsArrowsCollapse size={iconSize} color={iconColor} />
           </div>
         </a>
+
       </div>
     );
   }

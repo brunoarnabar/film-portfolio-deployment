@@ -1,3 +1,5 @@
+@use "../../App.scss";
+
 .AboutContainer {
   // display
   display: flex;
@@ -7,8 +9,9 @@
   align-items: center;
 }
 
-.heading{
-  &.AboutMin{
+.heading {
+  &.AboutMin {
+    // box-model
     margin-bottom: 0;
   }
 }
@@ -16,13 +19,16 @@
 .AboutContent {
   // display
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr .5fr;
   grid-template-rows: 1fr;
   grid-template-areas: "AboutDesc AboutEnjoy";
+  gap: var(--thick-padding);
+  width: 100%;
   // box-model
-  margin: 0 0 var(--padding) var(--padding);
+  padding-bottom: var(--padding);
 
   &.AboutMin {
+    // display
     display: flex;
   }
 }
@@ -35,12 +41,12 @@
   grid-area: AboutDesc;
   // box-model
   max-width: 200ch;
-  padding: 0 0 0 var(--padding);
-  margin: 0 0 0 auto;
+  margin-inline: auto;
+  padding-left: var(--thick-padding);
 
   &.AboutMin {
+    // box-model
     max-width: clamp(80ch, 75vw, 340ch);
-    //80ch175ch
   }
 }
 
@@ -53,23 +59,23 @@
   // grid-area
   grid-area: AboutEnjoy;
   // box-model
-  margin: 0 auto;
+  margin-right: auto;
+  padding-right: var(--thick-padding);
 }
 
 .AboutExpand {
+  // display
   display: flex;
   justify-self: center;
-
   justify-content: center;
   align-items: center;
-
-  background-color: var(--clr-primary-400);
-  width: clamp(25rem, 75vw, 75rem);
-  // min-width: 75vw;
-  border-radius: 2rem;
+  // box-model
   height: 1em;
+  width: clamp(25rem, 75vw, 75rem);
+  background-color: var(--clr-primary-400);
   padding: -var(--thick-padding);
-  // margin:
+  // misc
+  border-radius: 2rem;
 }
 
 .AboutImgBox {
@@ -89,22 +95,26 @@
 }
 
 .AboutCinema {
+  // box-model
   background-image: url("../../Images/About_Enjoy/cinema01.jpg");
   margin-top: 0;
 }
 .AboutPhilosophy {
+  // box-model
   background-image: url("../../Images/About_Enjoy/philosophy01.jpg");
   background-position: 35%;
 }
 .AboutTravel {
+  // box-model
   background-image: url("../../Images/About_Enjoy/travel01.jpg");
   background-position: right;
   margin: auto 0 2rem 0;
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: App.$media-300) {
   .AboutCinema,
   .AboutTravel {
+    // box-model
     margin: auto 0 auto 0;
   }
 }
