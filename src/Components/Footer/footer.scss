@@ -2,7 +2,7 @@
 
 .FooterContainer {
   //   outline: red 1px solid;
-  margin-top: auto;
+  margin-top: var(--thick-padding);
   display: flex;
   flex-direction: column;
   margin-inline: var(--thick-padding);
