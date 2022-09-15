@@ -6,6 +6,7 @@ import {
   TbBrandVimeo,
   TbBrandYoutube,
 } from "react-icons/tb";
+import { GiFilmSpool } from "react-icons/gi";
 import "./footer.scss";
 
 function Footer() {
@@ -29,6 +30,9 @@ function Footer() {
             </a>
             <a href="https://youtube.com/channel/UCHmzU48QCUVIF9VeTr4f7bg">
               <TbBrandYoutube />
+            </a>
+            <a href="https://letterboxd.com/brunardothegoat/">
+              <GiFilmSpool />
             </a>
           </div>
         </div>
