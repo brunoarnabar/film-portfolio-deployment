@@ -1,4 +1,3 @@
-import GoBack from "./Helpers/GoBack";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import React, { useState } from "react";
 import ResponsivePlayer from "./Helpers/ResponsivePlayer";
@@ -6,6 +5,7 @@ import Loader from "../../../Loader/LoaderRing";
 import { FiXCircle } from "react-icons/fi";
 import { useMediaQuery } from "../../../Hooks/useMediaQuery";
 import { TbBrandVimeo } from "react-icons/tb";
+import back from "../../../../Images/Icons/back.png";
 
 import { HashLink } from "react-router-hash-link";
 
@@ -155,7 +155,9 @@ export default function FilmInstance(props) {
         </AnimatePresence>
         <div className="FilmInstanceContainer bg-neutral-200">
           <div className="FilmInstanceTopNav">
-            <GoBack />
+            <HashLink to="/#sample">
+              <img src={back} alt="backButton" width="35rem" />
+            </HashLink>
           </div>
           <div className="FilmInstanceOpenAside" onClick={openInfo}>
             <div className="FilmInstanceId">
