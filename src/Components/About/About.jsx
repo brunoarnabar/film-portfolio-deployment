@@ -1,20 +1,17 @@
 import "./about.scss";
-import React from "react";
+
+import React, { useRef, useEffect, useCallback, useState } from "react";
 
 //goToContext
-import { useRef, useEffect, useCallback, useState } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
-import { useGoToContactContext } from "../../Contexts/GoToContactContext";
-
+import { useGoToAboutContext } from "../../Contexts/GoToAboutContext";
 import { useAboutClickerContext } from "../../Contexts/AboutClickerContext";
 
 import { BsArrowsExpand, BsArrowsCollapse } from "react-icons/bs";
-// BsCaretUp;
 
 export default function About() {
   //goToContext
-  const setAtAbout = useGoToContactContext();
-
+  const setAtAbout = useGoToAboutContext();
   const { aboutClicked } = useAboutClickerContext();
 
   const AboutRef = useRef();
@@ -22,7 +19,6 @@ export default function About() {
 
   const checkIfVisible = useCallback(() => {
     if (isVisible) {
-      console.log("About is Visible... setAtAbout(true)");
       setAtAbout(true);
     }
   }, [isVisible, setAtAbout]);
@@ -37,6 +33,7 @@ export default function About() {
   const toggleAbout = () => {
     setAboutMinimized(!aboutMinimized);
   };
+
   const iconSize = 25;
   const iconColor = "var(--clr-neutral-400)";
 
@@ -65,7 +62,7 @@ export default function About() {
           </div>
         </div>
         <a href="#about">
-          <div className="AboutExpand  fs-heading" onClick={toggleAbout}>
+          <div className="AboutExpand fs-heading" onClick={toggleAbout}>
             <BsArrowsExpand size={iconSize} color={iconColor} />
           </div>
         </a>
