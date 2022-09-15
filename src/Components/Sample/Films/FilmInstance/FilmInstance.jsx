@@ -1,5 +1,4 @@
 import GoBack from "./Helpers/GoBack";
-import GoTo from "./Helpers/GoTo";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import React, { useState } from "react";
 import ResponsivePlayer from "./Helpers/ResponsivePlayer";
@@ -7,6 +6,8 @@ import Loader from "../../../Loader/LoaderRing";
 import { FiXCircle } from "react-icons/fi";
 import { useMediaQuery } from "../../../Hooks/useMediaQuery";
 import { TbBrandVimeo } from "react-icons/tb";
+
+import { HashLink } from "react-router-hash-link";
 
 import "./filmInstance.scss";
 
@@ -189,8 +190,13 @@ export default function FilmInstance(props) {
                 <TbBrandVimeo color={"var(--clr-primary-900)"} />
               </a>
             </div>
-            <GoTo location="About" />
-            <GoTo location="Contact" />
+            {/* <GoTo location="About" /> */}
+            <HashLink to="/#about">
+              <div className="title text-primary-900 pointer">About</div>
+            </HashLink>
+            <HashLink to="/#contact">
+              <div className="title text-primary-900 pointer">Contact</div>
+            </HashLink>
           </div>
         </div>
       </>
