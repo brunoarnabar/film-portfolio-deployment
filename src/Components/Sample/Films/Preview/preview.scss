@@ -11,11 +11,10 @@
 
 @media (min-width: App.$media-300) {
   .PreviewContainer {
-  // box-model
-  width: 40rem;
-  width: 100%;
+    // box-model
+    width: 40rem;
+    width: 100%;
   }
-
 }
 
 .PreviewContent {
@@ -26,9 +25,9 @@
   grid-template-areas:
     "vid vid"
     "title date";
+  gap: 0.5rem;
   // box-model
   align-items: flex-end;
-  gap: 0.5rem;
 
   &.PreviewIsHovered {
     .PreviewTitle {
@@ -74,22 +73,33 @@
 }
 
 .PreviewDate {
-  opacity: 100;
-  transition: opacity 0.25s ease-in-out;
-
-  // grid-area
-  grid-area: date;
-  // type
-  text-align: right;
-  padding: 0 5% 2% 0;
-
+  // positioning
   position: relative;
   z-index: 3;
+  // grid-area
+  grid-area: date;
+  // box-model
+  padding: 0 5% 2% 0;
+  // type
+  text-align: right;
+  // manipulation
+  transition: opacity 0.25s ease-in-out;
+  opacity: 100;
 }
 
 .PreviewBanner {
-  background: 
-    linear-gradient(
+  // positioning
+  position: relative;
+  z-index: 2;
+  // grid-area
+  grid-row-start: vid;
+  grid-column-start: vid;
+  grid-row-end: date;
+  grid-column-end: date;
+  // box-model
+  height: 100%;
+  border-radius: 1rem;
+  background: linear-gradient(
     0deg,
     rgba(13, 20, 33, 0.694) 0%,
     rgba(0, 0, 0, 0.472) 5%,
@@ -97,20 +107,8 @@
     rgba(0, 0, 0, 0) 62%,
     rgba(0, 0, 0, 0) 100%
   );
-  height: 100%;
-  border-radius: 10px;
-
-  //ASSIGN GRID AREA
-  //start
-  grid-row-start: vid;
-  grid-column-start: vid;
-  //end
-  grid-row-end: date;
-  grid-column-end: date;
-
-  position: relative;
-  z-index: 2;
-
+  // manipulation
   opacity: 100;
+  // misc
   transition: opacity 0.25s ease-in-out;
 }

@@ -5,7 +5,6 @@ import { useAboutClickerContext } from "../../../../../Contexts/AboutClickerCont
 import { useContactClickerContext } from "../../../../../Contexts/ContactClickerContext";
 
 export default function GoTo({ location }) {
-  // let startRedirect = null;
   const { setAtAbout } = useGoToAboutContext();
   const { setAtContact } = useGoToContactContext();
   const { setContactClicked } = useContactClickerContext();

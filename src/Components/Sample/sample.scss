@@ -16,7 +16,6 @@
   flex-direction: column;
   // box-model
   gap: 2rem;
-  // padding: 0 0 2rem 0;
 }
 
 $max-col-count: 2;
@@ -24,14 +23,15 @@ $max-col-count: 2;
   .SamplePreviewContainers {
     // display
     display: grid;
-    // grid
-    grid-auto-flow: column;
     gap: 2rem;
+    grid-auto-flow: column;
+    // box-model
     margin: 0 2rem;
   }
 
   @for $i from 1 through $max-col-count {
     .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
+      // grid-area
       grid-column: $i;
     }
   }
@@ -41,19 +41,16 @@ $max-col-count: 3;
   .SamplePreviewContainers {
     // display
     display: grid;
-    // grid
-    grid-auto-flow: column;
     gap: 3rem;
+    grid-auto-flow: column;
+    // box-model
     margin: 0 3rem;
   }
 
   @for $i from 1 through $max-col-count {
     .SamplePreview:nth-child(#{$max-col-count}n + #{$i}) {
+      // grid-area
       grid-column: $i;
     }
   }
 }
-
-// .SampleContainer > * {
-//   background: hsl(200, 100%, 50%, 10%);
-// }

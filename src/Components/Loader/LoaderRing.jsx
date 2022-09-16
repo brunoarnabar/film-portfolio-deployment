@@ -4,7 +4,6 @@ import "./loader.scss"
 
 function Loader() {
 
-  //  let [loading, setLoading] = useState(true);
    let [color] = useState("var(--clr-accent-300)");
 
   return (

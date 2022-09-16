@@ -21,8 +21,8 @@ export default function Landing() {
           cursorClassName: "poster-accent typewriter",
         }}
       />
-      <div className="name LandingMyName">BRUNO ARNABAR</div>
-      <div className="ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation LandingLogline">
+      <div className="LandingMyName name">BRUNO ARNABAR</div>
+      <div className="LandingLogline ff-accent fw-bold fs-logline text-neutral-200 text-shadow-halation">
         Turning&nbsp;Ideas Into&nbsp;Experiences
       </div>
       <div className="LandingResumeContainer">
@@ -31,7 +31,7 @@ export default function Landing() {
           download
           className="LandingResume link-color link-primary-900 fs-button text-shadow-halation-dark"
         >
-          <FiDownload className="svg-shadow-halation-dark"/>
+          <FiDownload className="svg-shadow-halation-dark" />
           &nbsp;my&nbsp;resume
         </a>
         <div className="LandingResumeInfo text-shadow-halation">(PDF 69kb)</div>
@@ -64,7 +64,6 @@ export default function Landing() {
           </div>
         </div>
         <div className="LandingAllRights">
-          {/* <br/> */}
           All Rights Reserved.
         </div>
       </div>

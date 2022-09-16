@@ -1,19 +1,21 @@
 @use "../../App.scss";
 
 .NavContainer {
-  // --value: 30rem;
+  // positioning
   --nav-height: 0;
-
-  background-color: var(--clr-navbar);
-  outline: 3px solid var(--clr-navbar);
-  text-align: right;
   position: sticky;
   top: var(--nav-height);
   z-index: 20;
-  width: 100%;
+  // box-model
   padding: 0.5em 0;
-
+  width: 100%;
+  background-color: var(--clr-navbar);
+  // type
+  text-align: right;
+  // manipulation
   transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  // misc
+  outline: 3px solid var(--clr-navbar);
 }
 
 .NavContainer.NavDown {
@@ -22,32 +24,37 @@
 }
 
 .NavLogo {
-  height: 3rem;
+  // display
   display: flex;
   justify-content: left;
   align-items: center;
+  // box-model
+  height: 3rem;
   margin-inline: 1em;
 }
 
 .NavLinkContainer {
+  // positioning
   position: absolute;
-  text-align: left;
   top: 100%;
   left: 0;
-  background-color: var(--clr-navbar);
+  // box-model
   width: 100%;
+  background-color: var(--clr-navbar);
+  // type
+  text-align: left;
+  // manipulation
   transform: scale(1, 0);
   transform-origin: top;
-  // transition: transform 400ms ease-in-out;
 
   &.NavShowing {
-    // display: none;
+    // manipulation
     transform: scale(1, 1);
     transition: transform 400ms ease-in-out;
 
     .NavListItem {
+      // manipulation
       opacity: 1;
-
       transform: scale(1, 1);
       transform-origin: bottom;
       transition: opacity 1050ms ease-in-out 300ms;
@@ -57,102 +64,115 @@
 }
 
 .NavListItem {
-  margin: 0 1em;
-  margin-bottom: 1em;
-  text-transform: uppercase;
-  font-weight: var(--fw-skinny);
-  opacity: 0;
-
-  transform: scale(1, 0);
-  transition: opacity 250ms ease-in-out;
-
+  // display
   display: flex;
   justify-content: center;
+  // box-model
+  margin: 0 1em;
+  margin-bottom: 1em;
+  // type
+  font-weight: var(--fw-skinny);
+  // manipulation
+  text-transform: uppercase;
+  opacity: 0;
+  transform: scale(1, 0);
+  transition: opacity 250ms ease-in-out;
 }
 
 .NavListItem:hover {
+  // type
   font-weight: var(--fw-bold);
-  // background-color: var(--clr-navbar-hover);
 
   a {
-    background-color: var(--clr-navbar-hover);
+    // box-model
     padding-inline: 1em;
+    background-color: var(--clr-navbar-hover);
+    // misc
     border-radius: 1.5rem;
     cursor: pointer;
   }
 }
 
 .NavMobileToggler {
+  // display
+  display: flex;
+  align-items: center;
+  // positioning
   position: absolute;
   top: 0;
   right: 0;
-  margin-inline: 1em;
+  // box-model
   height: 100%;
-  display: flex;
-  align-items: center;
+  margin-inline: 1em;
 }
 
 @media (min-width: App.$media-300) {
   .NavMobileToggler {
+    // display
     display: none;
   }
   .NavContainer {
+    // display
     display: grid;
-    grid-template-columns: 1fr auto minmax(40rem , 5fr) 1fr;
+    grid-template-columns: 1fr auto minmax(40rem, 5fr) 1fr;
     grid-template-rows: auto;
   }
   .NavLogo {
-    grid-column: 1;
-    grid-row: 1;
-    min-width: 5rem;
-    margin-left: var(--thick-padding);
+    // display
     display: flex;
     justify-content: left;
+    // grid-area
+    grid-column: 1;
+    grid-row: 1;
+    // box-model
+    min-width: 5rem;
+    margin-left: var(--thick-padding);
   }
 
   .NavLinkContainer {
+    // display
     all: unset;
-    grid-column: 2 / span 3;
-    grid-row: 1;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    // grid-area
+    grid-column: 2 / span 3;
+    grid-row: 1;
 
-    // gap: calc(2 * .01vw);
   }
   .NavListItem {
+    // display
     all: unset;
-    opacity: 1;
-    color: var(--clr-neutral-400);
-
     display: grid;
+    // box-model
     padding-inline: 1rem;
-
-    // min-width: 20rem;
-    
-    
-    }
-
-    .NavListItem:hover {
-      all: unset;
-  // font-weight: var(--fw-bold);
-  // background-color: var(--clr-navbar-hover);
-
-  a {
-    all: unset;
-    background-color: var(--clr-navbar-hover);
-    padding-inline: 1rem;
-    border-radius: 1.5rem;
+    // type
     color: var(--clr-neutral-400);
-    cursor: pointer;
+    // manipulation
+    opacity: 1;
+  }
+
+  .NavListItem:hover {
+    // display
+    all: unset;
+    a {
+      // display
+      all: unset;
+      // box-model
+      padding-inline: 1rem;
+      background-color: var(--clr-navbar-hover);
+      // type
+      color: var(--clr-neutral-400);
+      // misc
+      border-radius: 1.5rem;
+      cursor: pointer;
+    }
   }
 }
-}
 
-@media (min-width: App.$media-600){
-
+@media (min-width: App.$media-600) {
   .NavLinkContainer {
+    // grid-area
     grid-column: 1 / span 4;
   }
-
 }

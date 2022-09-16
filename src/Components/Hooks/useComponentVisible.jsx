@@ -11,7 +11,6 @@ export default function useComponentVisible(initialIsVisible) {
       if (ref.current && !ref.current.contains(event.target)) {
         setIsComponentVisible(false);
       }
-      // console.log("event.target: " + event.target);
       console.log("ref: " + ref);
       console.log("ref.current: " + ref.current);
       console.log("isComponentVisible: " + isComponentVisible);

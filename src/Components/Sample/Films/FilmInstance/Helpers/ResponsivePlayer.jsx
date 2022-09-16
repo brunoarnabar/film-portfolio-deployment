@@ -1,18 +1,8 @@
 import React from "react";
 import ReactPlayer from "react-player";
-import "../filmInstance.scss";
-// import Loader from "../../../../Loader/LoaderRing";
-// import LoadCaller from "../../../../Loader/LoadCaller";
+import "../filmInstance.scss"; 
 
-function ResponsivePlayer({ url, skinny, successState }) {
-  // const [spin, setSpin] = useState(true);
-  // const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
-  // function successState() {
-  //   setTimeout(() => {
-  //     setInstanceLoadSuccess(true);
-  //   }, 500);
-  // }
-
+function ResponsivePlayer({ url, skinny, successState }) { 
   let className = "player-wrapper";
 
   if (skinny) {
@@ -21,7 +11,6 @@ function ResponsivePlayer({ url, skinny, successState }) {
 
   return (
     <div className={className}>
-      {/* {instanceLoadSuccess === false ? <Loader /> : null} */}
       <ReactPlayer
         url={url}
         className="react-player"

@@ -11,6 +11,8 @@
 .SkillGrid {
   // display
   display: grid;
+  justify-items: center;
+  align-items: center;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows:
     minmax(0, 0.7fr) minmax(0, 0.3fr)
@@ -20,23 +22,20 @@
     "subHeader"
     "titleToggle"
     "roulToggle";
-  justify-items: center;
-  align-items: center;
 }
-@media(max-width: App.$media-800)
-{
+@media (max-width: App.$media-800) {
   .SkillRouletteToggle {
     // display
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // grid-area
+    grid-area: roulToggle;
     // box-model
     height: 100%;
     width: 100%;
     min-height: 50vh;
-
-    grid-area: roulToggle;
   }
 
   .SkillCardToggle {
@@ -45,13 +44,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    // grid-area
+    grid-area: cardToggle;
     // box-model
     min-width: 90vw;
-
     height: 100%;
     width: 100%;
-
-    grid-area: cardToggle;
   }
 
   .SkillCardDev,
@@ -60,6 +58,7 @@
   .SkillTitleFilm,
   .SkillRouletteDev,
   .SkillRouletteFilm {
+    // display
     display: none;
   }
 }
@@ -78,22 +77,23 @@
   .SkillCardToggle,
   .SkillRouletteToggle,
   .SkillTitleToggle {
+    // display
     display: none;
   }
 
-  
-  .SkillCardDev, .SkillCardFilm {
+  .SkillCardDev,
+  .SkillCardFilm {
     // display
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // box-model    
+    // box-model
     height: 100%;
     width: 100%;
-    
   }
-  .SkillRouletteDev, .SkillRouletteFilm {
+  .SkillRouletteDev,
+  .SkillRouletteFilm {
     // display
     display: flex;
     flex-direction: column;
@@ -105,41 +105,56 @@
     min-height: 80vh;
     min-height: 50vh;
   }
-  
+
   .SkillCardDev {
+    // display
     display: flex;
+    // grid-area
     grid-area: cardDev;
   }
   .SkillCardFilm {
+    // display
     display: flex;
+    // grid-area
     grid-area: cardFilm;
   }
   .SkillTitleDev {
+    // display
     display: flex;
+    // grid-area
     grid-area: titleDev;
   }
   .SkillTitleFilm {
+    // display
     display: flex;
+    // grid-area
     grid-area: titleFilm;
   }
   .SkillRouletteDev {
+    // display
     display: flex;
+    // grid-area
     grid-area: roulDev;
   }
   .SkillRouletteFilm {
+    // display
     display: flex;
+    // grid-area
     grid-area: roulFilm;
   }
   .SkillGridSubHeading {
+    // display
+    display: flex;
+    // grid-area
     grid-area: subHeader;
   }
 }
 
 .SkillSwitchWrapper {
+  // display
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: clamp(3rem, 10vw, 8rem);
 }
 @media (min-width: App.$media-800) {
@@ -150,22 +165,29 @@
 }
 
 .SkillSwitchWrapper > * {
+  // display
   flex-basis: 100%;
+  // misc
   cursor: pointer;
 }
 
 .SkillGridSubHeading {
+  // display
   display: flex;
-  text-align: center;
-  // padding: calc(2 * var(--padding));
-  // max-width: 50%;
-  max-width:clamp(90em, 75%, 110em);
   justify-content: center;
+  // grid-area
   grid-area: subHeader;
+  // box-model
+  max-width: clamp(90em, 75%, 110em);
+  // type
+  text-align: center;
 }
 
 .SkillGridTitle {
+  // display
   display: flex;
-  text-align: center;
+  // box-model
   padding: calc(2 * var(--padding));
+  // type
+  text-align: center;
 }

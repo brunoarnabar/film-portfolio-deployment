@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Greenless from "./Components/Sample/Films/FilmComponent/Greenless";
 import TheBox from "./Components/Sample/Films/FilmComponent/TheBox";
-import GoBack from "./Components/Sample/Films/FilmInstance/Helpers/GoBack";
 // import Nav from "./Components/Nav/Nav"
 
 //goToContext
@@ -30,9 +29,8 @@ root.render(
                   <Route
                     path="*"
                     element={
-                      <div style={{ backgroundColor: "white", height: "86vh" }}>
-                        <GoBack />
-                        <p>There's nothing here!</p>
+                      <div style={{ backgroundColor: "var(--clr-primary-900)", height: "100vh" }}>
+                        <p>There's nothing here :/ New sections are coming though! :) Check out what I've currently got at brunoarnabar.com</p>
                       </div>
                     }
                   />

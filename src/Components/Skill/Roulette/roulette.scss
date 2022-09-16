@@ -1,154 +1,110 @@
-
-.RouletteContainer{
-    position: relative;
-      height: 90%;
-      width: 90%;
-    //   display: flex;
-    //   flex: 1;
-    //   justify-content: center;
-    //   align-items: center;
- 
-    // background-color: peru;
-
-        display: flex;
-        justify-content: center; 
-        align-items: flex-end;
-
-        justify-items: center;
-        align-content: center;
-
-        // background-color: rgb(146, 222, 255) 3px solid;
-
-        // margin: 0 auto;
+.RouletteContainer {
+  // display
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  justify-items: center;
+  align-content: center;
+  // positioning
+  position: relative;
+  // box-model
+  height: 90%;
+  width: 90%;
 }
 
-.RouletteCardBody{
-    height: 40em;
-    // height: clamp(45rem, 65vh, 55rem);
-    width: 60vw;
-    width: clamp(15em, 60vw, 30em);
-    width: 20em;
-    // padding-top: 5rem; clamp(15em, 60vw, 30em);
-    // text-align: center;
-    // background: #52C0F5;
-    // background-image: url("/Images/Backgrounds/bg-2.jpg");
-    // color: #FFF;
-    // font-family: sans-serif;
-    // font-size: 12px;
-    // text-transform: uppercase;
-    border-radius: 10px;
-    box-sizing: border-box;
-
-    // margin: 0 auto;
-
-    // padding: 2rem;
-    padding: 0 4rem;
-     background-color:var(--clr-primary-900);
-    border-radius: 1.5rem;
-    box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
-    display: none;
+.RouletteCardBody {
+  // display
+  display: none;
+  // box-model
+  height: 40em;
+  padding: 0 4rem;
+  background-color: var(--clr-primary-900);
+  // height: clamp(45rem, 65vh, 55rem);
+  width: 60vw;
+  width: clamp(15em, 60vw, 30em);
+  width: 20em;
+  // misc
+  border-radius: 1.5rem;
+  box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
 }
-@media (min-width: 50em) and (max-width: 64em)
-{
-  .RouletteCardBody{
+@media (min-width: 50em) and (max-width: 64em) {
+  .RouletteCardBody {
+    // display
     display: flex;
+    // box-model
     height: 45vh;
     height: clamp(45rem, 65vh, 55rem);
     width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
-@media (min-width: 64em) 
-{
-  .RouletteCardBody{
+@media (min-width: 64em) {
+  .RouletteCardBody {
+    // display
     display: flex;
+    // box-model
     height: 25em;
     width: 35em;
-
     height: 45vh;
     width: clamp(30rem, 70vw, clamp(36rem, 70vw, 40rem));
   }
 }
 
 .RouletteContent {
-    height: 100%;
-    width: 100%;
+  // display
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 1fr;
+  grid-template-areas:
+    "step"
+    "example";
+  // box-model
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    margin: 0 auto;
+.RouletteStep {
+  // display
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  flex-basis: 1;
+  flex: 1 0 auto;
+  // grid-area
+  grid-area: step;
+  // box-model
+  max-width: 22ch;
+  margin: 0 auto;
+}
+.RouletteExample {
+  // display
+  display: flex;
+  justify-content: center;
+  // grid-area
+  grid-area: example;
+  // box-model
+  padding-left: 3rem;
+}
 
-   
+.RouletteList {
+  // display
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
-    // outline:#f552d7 solid 3px;
-    // padding: 0 4rem;
-  
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 1fr;
-    grid-template-areas:
-      "step"
-      "example";
-  }
-
-  // .StepContainer{
-
-  // }
-  
-  .RouletteStep {
-    grid-area: step;
-  
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-
-    max-width: 22ch;
-
-    display: flex;
-    
-    justify-content: space-evenly; 
-    align-items: center; 
-    /* flex-flow: column; */ 
-    flex-direction: column;  
-    align-content: center;
-    flex-basis: 1;
-
-    flex: 1 0 auto;
-
-    margin: 0 auto;
-
-  }
-  .RouletteExample {
-    grid-area: example;
-    display: flex;
-    justify-content: center;
-
-    padding-left: 3rem;
-
-    // display: flex;
-    
-    // justify-content: space-evenly; 
-    // align-items: center; 
-    // /* flex-flow: column; */ 
-    // flex-direction: column;  
-    // align-content: stretch;
-
-  }
-  
-  .RouletteList {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  
-    // background-color: rgb(254, 195, 205, 0.8);
-  }
-  
-  .RouletteListItem {
-    display:list-item;
-    list-style: circle;
-    flex: 1 0 auto;
-    margin: 10px;
-    max-width: 25ch;
-  }
+.RouletteListItem {
+  // display
+  display: list-item;
+  list-style: circle;
+  flex: 1 0 auto;
+  // box-model
+  margin: 1rem;
+  max-width: 25ch;
+}

@@ -3,39 +3,31 @@
   display: flex;
   justify-self: center;
   align-self: flex-start;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
-
   justify-items: center;
   align-content: flex-start;
-
-  text-align: start;
-
   // box-model
   height: 75vh;
   height: clamp(45rem, 65vh, 55rem);
   width: clamp(32rem, 70vw, 40rem);
   margin: 0 auto;
   background-color: var(--clr-primary-900);
+  // type
+  text-align: start;
   // misc
-  // border-radius: 2rem; 
   border-radius: clamp(0rem, -12rem + 36vw, 2rem);
   box-shadow: var(--clr-dark) 0.2rem 0.3rem 0.6rem 0.1rem;
 }
 
-// OverRides
 .MobileRouletteContainer {
   // display
   display: flex;
   flex-direction: column;
-
-  display: flex;
   justify-content: center;
-  align-items: flex-start;
-
   justify-items: center;
+  align-items: flex-start;
   align-content: flex-start;
   //  box-model
   width: 100%;

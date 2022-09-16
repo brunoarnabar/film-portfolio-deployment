@@ -1,25 +1,27 @@
-.LoaderContainer{
+.LoaderContainer {
+  // display
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // positioning
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  // box-model
   height: 100vh;
   width: 100vw;
-  position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-  overflow: hidden;
-
-  
-
+  width: 100%;
+  height: 100%;
   background-color: var(--clr-primary-900);
-
+  // type
   color: var(--clr-neutral-400);
+  // misc
+  overflow: hidden;
 }
 
-.LoaderHeading{
-    margin-top: calc(3 * var(--thick-padding));
+.LoaderHeading {
+  // box-model
+  margin-top: calc(3 * var(--thick-padding));
 }

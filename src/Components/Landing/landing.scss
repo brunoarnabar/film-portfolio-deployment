@@ -5,12 +5,7 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
-  grid-gap: 0.2rem;
-  //position
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // grid-area
+  gap: 0.2rem;
   grid-template-areas:
     "r1c1 r1c2 r1c3 r1c4"
     "r2c1 r2c2 r2c3 r2c4"
@@ -22,12 +17,7 @@
     "r8c1 r8c2 r8c3 r8c4";
   // box-model
   min-width: 100vw;
-  // min-height: 100vh;
-  // min-height: calc(100vh - clamp(5rem, -14.5rem + 26vw, 6.3rem));
   height: calc(100vh - clamp(5rem, -14.5rem + 26vw, 6.3rem));
-  /* mobile viewport bug fix */
-  // min-height: -webkit-fill-available;
-
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../../Images/Backgrounds/BrunoPoster.jpg");
   background-size: 100% 100%;
@@ -88,17 +78,14 @@
 .LandingResumeContainer {
   // display
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
   // grid-area
   grid-row-start: r7c1;
   grid-column-start: r7c1;
   grid-row-end: r7c4;
   grid-column-end: r7c4;
-
    // type
    font-size: var(--fs-label);
   font-family: var(--ff-body);
@@ -111,35 +98,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-
-  background-color: var(--clr-neutral-400);
-  box-shadow: var(--shadow-halation);
-  padding-inline: var(--padding);
-  font-weight: var(--fw-regular);
-  padding-block:.15em;
+  // box-model
   margin-top: var(--padding);
-
-  color: var(--clr-primary-900);
-  border-radius: 2rem;
-
-  text-transform: lowercase;
-
+  padding-block:.15em;
+  padding-inline: var(--padding);
+  background-color: var(--clr-neutral-400);
   // type
-  
+  text-align: center;
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-900);
+  // manipulation
+  text-transform: lowercase;
+  // misc
+  box-shadow: var(--shadow-halation);
+  border-radius: 2rem;
 }
 
 .LandingLinks {
+  // box-model
   margin: 0;
   padding: 0;
 }
 
 .LandingCopyright {
+  // display
   display: flex;
 }
 
 @media (max-width: App.$media-250) {
   .LandingCopyright {
+    // display
     flex-direction: column;
   }
 }

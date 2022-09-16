@@ -4,7 +4,6 @@ import BrunoLogo from "../../Images/Logo/MyLogo";
 import { FiMenu } from "react-icons/fi";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import usePersistedState from "../Hooks/usePersistedState";
-// import useComponentVisible from "../Hooks/useComponentVisible";
 import "./nav.scss";
 import ReactDOM from "react-dom";
 
@@ -12,13 +11,10 @@ function Nav() {
   const initialToggleMenuValue = false;
   let scrollDirection = useScrollDirection();
 
-  // const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenu, setToggleMenu] = usePersistedState(
     "toggleMenuValue",
     initialToggleMenuValue
   );
-  // const { NavRefClick, isComponentVisible, setIsComponentVisible } =
-  //   useComponentVisible(!toggleMenu);
 
   const [totalHeight, setTotalHeight] = useState(0);
 
@@ -48,8 +44,6 @@ function Nav() {
 
   const toggleNav = useCallback(() => {
     setToggleMenu(!toggleMenu);
-    // setIsComponentVisible(!toggleMenu);
-    // console.log(toggleMenu);
     getNavSize();
   }, [toggleMenu, setToggleMenu, getNavSize]);
 
@@ -78,7 +72,6 @@ function Nav() {
   }, [toggleMenu, toggleNav]);
 
   return (
-    // <div className="NavFullContainer" ref={clickerRef}>
     <div
       className={`NavContainer text-neutral-400 fs-logline ${
         scrollDirection === "down" ? "NavDown" : "NavUp"
@@ -136,7 +129,6 @@ function Nav() {
         </div>
       </div>
     </div>
-    // </div>
   );
 }
 

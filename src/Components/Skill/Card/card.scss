@@ -5,13 +5,13 @@
   justify-self: center;
   align-items: center;
   // box-model
-  width: clamp(80%, 80vw, 90%); 
-  height: clamp(75%, 30vh, 85%); 
+  width: clamp(80%, 80vw, 90%);
+  height: clamp(75%, 30vh, 85%);
   max-width: 160ch;
   margin: 0 2rem;
-  // background-image: url("/Images/Backgrounds/bg-1.jpg");
   background-size: cover;
   background-position: center center;
+  background-color: var(--clr-neutral-900);
   // type
   text-align: center;
   // manipulation
@@ -20,8 +20,6 @@
   // misc
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
   border-radius: 1.5rem;
-
-  background-color: var(--clr-neutral-900);
 }
 
 .CardBody:hover {
@@ -30,40 +28,58 @@
 }
 
 .CardContent {
-  height: 100%;
-  width: 100%;
-  color: rgb(0, 0, 0);
-
-  display: grid; 
-  grid-auto-rows: 1fr; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: .75fr 0.50fr 1fr 1fr; 
-  gap: 0px 1%; 
-  grid-template-areas: 
+  // display
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.75fr 0.5fr 1fr 1fr;
+  gap: 0px 1%;
+  grid-template-areas:
     "cardIcon cardIcon"
     "cardTitle cardTitle"
     "cardCol1 cardCol2"
-    "cardCol1 cardCol2"; 
+    "cardCol1 cardCol2";
+
+  // box-model
+  height: 100%;
+  width: 100%;
 }
 
-.CardTitle { grid-area: cardTitle;display: flex; justify-content: center; }
-.CardIcon { grid-area: cardIcon;display: flex; justify-content: center; }
-.CardCol1 { grid-area: cardCol1;display: flex; justify-content: center; }
-.CardCol2 { grid-area: cardCol2; display: flex; justify-content: center; }
+.CardTitle {
+  // display
+  display: flex;
+  justify-content: center;
+  // grid-area
+  grid-area: cardTitle;
+}
+.CardIcon {
+  // display
+  display: flex;
+  justify-content: center;
+  // grid-area
+  grid-area: cardIcon;
+}
+.CardCol1 {
+  // display
+  display: flex;
+  justify-content: center;
+  // grid-area
+  grid-area: cardCol1;
+}
+.CardCol2 {
+  // display
+  display: flex;
+  justify-content: center;
+  // grid-area
+  grid-area: cardCol2;
+}
 
 .CardList {
   // display
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
-
-  display: flex;
-    
-    justify-content: space-evenly; 
-    align-items: center; 
-    /* flex-flow: column; */ 
-    flex-direction: column; 
 }
