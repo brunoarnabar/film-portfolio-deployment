@@ -7,8 +7,10 @@ import theBoxImg from "../../Video/Thumbnail/theBox.png";
 import BirdsEyeViewGif from "../../Video/Gifs/BirdsEyeView.gif";
 import BirdsEyeViewImg from "../../Video/Thumbnail/BirdsEyeView.png";
 
+const key = map[key] ? map[key]++ : (map[key] = 1);
+
 export const GreenlessInfo = {
-  key: 1,
+  key: key,
   title: "Sample Of Greenless",
   date: "06-22-2021",
   vidUrl: "https://vimeo.com/600195237",
@@ -21,7 +23,7 @@ export const GreenlessInfo = {
 };
 
 export const TheBoxInfo = {
-  key: 2,
+  key: key,
   title: "The Box",
   date: "11-25-2019",
   vidUrl: "https://vimeo.com/600214381",
@@ -34,7 +36,7 @@ export const TheBoxInfo = {
 };
 
 export const BirdsEyeViewInfo = {
-  key: 3,
+  key: key,
   title: "Birds Eye View",
   date: "01-27-2020",
   vidUrl: "https://vimeo.com/750443103",
