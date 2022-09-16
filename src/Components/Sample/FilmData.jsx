@@ -1,8 +1,11 @@
-import greenlessImg from "../../Video/Thumbnail/Greenless.png";
 import greenlessGif from "../../Video/Gifs/Greenless.gif";
+import greenlessImg from "../../Video/Thumbnail/Greenless.png";
 
-import theBoxImg from "../../Video/Thumbnail/theBox.png";
 import theBoxGif from "../../Video/Gifs/theBox.gif";
+import theBoxImg from "../../Video/Thumbnail/theBox.png";
+
+import BirdsEyeViewGif from "../../Video/Gifs/BirdsEyeView.gif";
+import BirdsEyeViewImg from "../../Video/Thumbnail/BirdsEyeView.png";
 
 export const GreenlessInfo = {
   key: 1,
@@ -28,4 +31,17 @@ export const TheBoxInfo = {
   gif: theBoxGif,
   img: theBoxImg,
   url: "TheBox",
+};
+
+export const BirdsEyeViewInfo = {
+  key: 3,
+  title: "Birds Eye View",
+  date: "01-27-2020",
+  vidUrl: "https://vimeo.com/750443103",
+  workType: "Personal",
+  info: "Under the metallic rhythm of Tame Impala's 'Powerlines' and the synthetic ambiance of London streets, the intention of camera and those looking through them are examined -- while those in front of the lens either neglect, avoid, or embrace the filmic gaze",
+  skinny: false,
+  gif: BirdsEyeViewGif,
+  img: BirdsEyeViewImg,
+  url: "BirdsEyeView",
 };
