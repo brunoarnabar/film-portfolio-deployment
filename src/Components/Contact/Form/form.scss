@@ -30,8 +30,7 @@
   padding-top: 0;
 }
 
-.FormContainerMinimized{
-
+.FormContainerMinimized {
   // display
   display: grid;
   grid-template-rows:
@@ -60,7 +59,6 @@
   padding: var(--form-padding);
   padding-top: 0;
   margin-top: 1.25em;
-
 }
 
 .FormInput {
@@ -110,7 +108,7 @@
   }
   &.FormInputCompany {
     grid-area: FormCompany;
-      //needed under the error
+    //needed under the error
     // margin-top: -0.25em;
   }
   &.FormInputBudget {
@@ -199,32 +197,44 @@
   justify-content: center;
 }
 .react-datepicker {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: rgb(115, 123, 134);
-  border: 0px;
-  border-radius: 0;
+  // display
   display: inline-block;
+  // positioning
   position: relative;
+  // box-model
+  border: 0px;
+  background-color: var(--clr-primary-200);
+  // type
+  font-family: var(--ff-body);
+  // misc
+  border-radius: 0;
 }
 
 .react-datepicker__header {
-  text-align: center;
-  background-color: #3e82cf;
+  // positioning
+  position: relative;
+  // box-model
+  padding-top: 8px;
   border-bottom: 0px;
+  background-color: var(--clr-primary-200);
+  // type
+  text-align: center;
+  // misc
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  padding-top: 8px;
-  position: relative;
 }
 
 .react-datepicker__today-button {
-  background: #82afe2;
+  // box-model
+  background-color: var(--clr-primary-200);
   border-top: 0px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
   padding: 5px 0;
   clear: left;
+  // type
+  text-align: center;
+  font-weight: var(--fw-bold);
+  // misc
+  cursor: pointer;
 }
 
 .FormErrorContainer {
@@ -258,5 +268,5 @@
 
 ::placeholder {
   // type
-  opacity: .8;
+  opacity: 0.8;
 }

@@ -1,11 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import "./contact.scss";
 import Modal from "react-modal";
-import FormCont from "./FormContainer/FormCont";
+import Form from "./Form/Form";
 Modal.setAppElement("#root");
 
 export default function Contact() {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   // const showFullForm = false;
 
@@ -29,8 +28,7 @@ export default function Contact() {
       </div>
       <div className="ContactContent fs-body">
         <div className="text-neutral-400">
-          To reach out to me, click the
-          following:
+          To reach out to me, click the following:
         </div>
         <div className="ContactOptionBlock" onClick={openModal}>
           Contact Form
@@ -56,11 +54,8 @@ export default function Contact() {
         <div className="ContactFormHeader">
           <div className="ContactFormTopTitle fs-title">Contact Form</div>
         </div>
-        <div className="form-container-contact">
-          <FormCont
-            className="formStyle"
-            closeModal={closeModal}
-          />
+        <div className="ContactFormContainer">
+          <Form closeModal={closeModal} />
         </div>
       </Modal>
     </div>

@@ -15,45 +15,44 @@
 }
 
 .ContactFormHeader {
+  // display
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  
+  // box-model
+  --form-padding: 1.8rem;
+  padding: var(--form-padding);
   background-color: var(--clr-primary-400);
-
+  // type
+  text-align: center;
+  // misc
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
-
-  --form-padding: 1.8rem;
-padding: var(--form-padding);
-
-
 }
 
-.ContactFormTop{
+.ContactFormTop {
   // display
-display: flex;
-align-items: center;
-gap: 5%;
-margin-inline: auto;
-max-height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  // box-model
+  margin-inline: auto;
+  max-height: 100%;
 }
 
-
-.ContactFormTopImg{
+.ContactFormTopImg {
   // box-model
   height: 4em;
 }
 
-.ContactListImg{
+.ContactListImg {
   // box-model
   height: 100%;
   // misc
   border-radius: 50%;
 }
 
-.ContactFormTopTitle{
+.ContactFormTopTitle {
   // type
   color: var(--clr-form-input);
   font-family: var(--ff-heading);
@@ -68,202 +67,57 @@ max-height: 100%;
   // box-model
   min-width: 25rem;
   padding: var(--padding);
-  margin-inline: var(--padding);
-  margin: 0 auto;
-  background-color: antiquewhite;
-
-  margin-block: calc(1.5* var(--thick-padding));
-
+  margin: calc(1.5 * var(--thick-padding)) auto;
+  background-color: var(--clr-neutral-400);
   // type
   color: var(--clr-primary-900);
   font-family: var(--ff-heading);
   font-weight: var(--fw-bold);
-  text-align: left;
-  letter-spacing: .28rem;
+  text-align: center;
+  letter-spacing: 0.28rem;
   // misc
   border-radius: var(--thick-padding);
   cursor: pointer;
 }
 
-.ContactList {
-  //CENTER WITHIN DIV
-  //flexbox
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  // padding: 1em;
-  // margin: 1em;
-
-  &.OneDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r3c1;
-    grid-column-start: r3c1;
-    //end
-    grid-row-end: r3c4;
-    grid-column-end: r3c4;
-  }
-  &.TwoDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r4c1;
-    grid-column-start: r4c1;
-    //end
-    grid-row-end: r4c4;
-    grid-column-end: r4c4;
-  }
-  &.ThreeDir {
-    //ASSIGN GRID AREA
-    //start
-    grid-row-start: r5c1;
-    grid-column-start: r5c1;
-    //end
-    grid-row-end: r5c4;
-    grid-column-end: r5c4;
-  }
-  .ContactOption {
-    //MAKE GRID
-    //design grid
-    display: grid;
-    //minmax to prevent overflow
-    grid-template-columns: minmax(0, 0.66fr) repeat(2, minmax(0, 1fr));
-    grid-template-rows: minmax(0, 1fr);
-    grid-gap: 0.4rem;
-    //create matrix
-    grid-template-areas: "op1 op2 op3";
-
-    //AESTETIC
-    //size of button
-    height: 70%;
-    width: 65%;
-    //rounded edges
-    border-radius: 30px;
-    //slightly-noticable button
-    background-color: rgba(70, 145, 192, 0.344);
-    border: 3px rgba(0, 0, 0, 0) solid;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .ContactOptionImg {
-      //ASSIGN GRID AREA
-      //area
-      grid-area: op1;
-
-      //CENTER WITHIN DIV
-      //flexbox
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .ContactListImg {
-        //DISPLAY
-        //snug fit in its grid
-        width: 3rem;
-        //circular
-        border-radius: 50%;
-      }
-    }
-
-    .ContactOptionPrompt {
-      //ASSIGN GRID AREA
-      //start
-      grid-column-start: op2;
-      //end
-      grid-column-end: op3;
-
-      //CENTER WITHIN DIV
-      //flexbox
-      display: flex;
-      justify-content: left;
-      align-items: center;
-
-      //AESTETIC
-      //font and color
-      font-family: "Arsenal", sans-serif;
-      font-weight: bolder;
-      font-size: 140%;
-      color: rgb(255, 247, 228);
-
-      &.HelloOpt {
-        //AESTETIC
-        //shorter prompt needed to be shifted for mobile
-        margin-right: 10%;
-      }
-
-    }
-  }
-}
-
 .ContactOverlay {
+  // positioning
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--clr-dark);
   z-index: 30;
+  // box-model
+  background-color: var(--clr-dark);
 }
 
 .ReactModal__Content.ReactModal__Content--after-open.Modal {
-  // height: 90vh;
-
+  // display
+  display: grid;
+  grid-template-rows: minmax(0, 0.14fr) minmax(0, 1fr);
+  grid-template-areas:
+    "header"
+    "form";
+  // positioning
   position: absolute;
   top: 40px;
   left: 40px;
   right: 40px;
   bottom: 40px;
-  background-color: var(--clr-primary-200);
-  border-radius: 1.5rem;
   z-index: 40;
-
+  // box-model
   max-width: 80rem;
   margin-inline: auto;
+  background-color: var(--clr-primary-200);
+  // misc
+  border-radius: 1.5rem;
 
-  // border: rgb(136, 255, 0) 10px solid;
-
-  //MAKE GRID
-  //design grid
-  display: grid;
-  //minmax to prevent overflow
-  grid-template-rows: minmax(0, 0.14fr) minmax(0, 1fr);
-  // grid-gap: .4rem;
-  //create matrix
-  grid-template-areas:
-    "header"
-    "form";
-
-  .form-container-contact {
-    //ASSIGN GRID AREA
-    //area
+  .ContactFormContainer {
+    // grid-area
     grid-area: form;
-
-    //form should scroll
+    // misc
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-
-  .formHeader {
-    //ASSIGN GRID AREA
-    //area
-    grid-area: header;
-    background-color:  var(--clr-primary-400);
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-
-    //AESTETIC
-    //font and color
-    font-family: "Arsenal", sans-serif;
-    font-weight: bolder;
-    font-size: 100%;
-    color: rgb(255, 255, 255);
-    //alignment
-    // padding-bottom: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

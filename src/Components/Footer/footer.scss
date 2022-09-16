@@ -1,35 +1,33 @@
 @use "../../App.scss";
 
 .FooterContainer {
-  //   outline: red 1px solid;
-  margin-top: var(--thick-padding);
+  // display
   display: flex;
   flex-direction: column;
-  margin-inline: var(--thick-padding);
   gap: calc(2 * var(--padding));
+  // box-model
+  margin-top: var(--thick-padding);
+  margin-inline: var(--thick-padding);
 }
 
 .FooterText {
+  // display
   display: flex;
+  // box-model
   max-width: 55ch;
 }
 
 .FooterTopDiv {
   // display
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-template-rows: 1fr 1fr;
-  // grid-template-areas:
-  // "footerSoc"
-  // "footerAbout";
-
   display: flex;
   flex-direction: column;
   gap: calc(2 * var(--padding));
+  // box-model
   margin-inline: auto;
 }
 
 .FooterBotDiv {
+  // display
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,70 +36,68 @@
 
 @media (min-width: App.$media-300) {
   .FooterTopDiv {
+    // display
     display: inline-grid;
     grid-template-columns: auto auto;
-    //     // grid-template-columns:  max-content auto;
-    //     grid-template-rows: 1fr;
     grid-template-areas: "footerAbout footerSoc";
+    // box-model
     width: clamp(25rem, 70vw, 120rem);
-    //     gap: var(--thick-padding);
-
-    //     display: flex;
-    // justify-content: space-between;
-    // padding-inline: calc(3 * var(--thick-padding));
-    // max-width: 50vw;
-    // margin-inline: auto;
-    // gap: auto;
   }
   .FooterAbout {
+    // display
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    // box-model
     width: 100%;
   }
   .FooterSoc {
+    // display
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    /* flex-flow: column; */
-    flex-direction: column;
   }
-
   .FooterDivider {
+    // box-model
     min-width: clamp(25rem, 70vw, 120rem);
   }
 }
 
 .FooterAbout {
-  //   outline: rgb(0, 166, 255) 1px solid;
+  // grid-area
   grid-area: footerAbout;
 }
 
 .FooterSoc {
-  //   outline: rgb(0, 166, 255) 1px solid;
+  // grid-area
   grid-area: footerSoc;
 }
 
 .FooterTitle {
+  // manipulation
   text-transform: uppercase;
 }
 
 .FooterDivider {
+  // display
   display: inline-block;
+  // box-model
+  width: 25rem;
   margin-bottom: calc(2 * var(--padding));
   border-top: 0.4rem solid var(--clr-primary-400);
-  width: 25rem;
 }
 
 .FooterCopyright {
-  // outline: rgb(0, 166, 255) 1px solid;
-  margin-bottom: var(--thick-padding);
-
+  // display
   display: flex;
   justify-content: center;
   align-items: center;
+  // box-model
+  margin-bottom: var(--thick-padding);
 }
 
 .FooterUnderline {
+  // box-model
   border-bottom: 0.1rem solid var(--clr-neutral-400);
 }

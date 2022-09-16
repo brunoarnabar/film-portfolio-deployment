@@ -14,8 +14,8 @@ function Footer() {
     <div className="FooterContainer text-neutral-400">
       <div className="FooterTopDiv">
         <div className="FooterSoc">
-          <div className="fs-logline ff-heading FooterTitle">Social</div>
-          <div className="fs-logline text-neutral-400 FooterText">
+          <div className="FooterTitle fs-logline ff-heading">Social</div>
+          <div className="FooterText fs-logline text-neutral-400">
             <a href="https://www.instagram.com/bruno.arnabar/">
               <TbBrandInstagram />
             </a>
@@ -37,8 +37,8 @@ function Footer() {
           </div>
         </div>
         <div className="FooterAbout">
-          <div className="fs-logline ff-heading FooterTitle">Bruno Arnabar</div>
-          <div className="fs-body FooterText">
+          <div className="FooterTitle fs-logline ff-heading">Bruno Arnabar</div>
+          <div className="FooterText fs-body">
             Creative programmer. Filmmaker.
           </div>
         </div>
@@ -46,7 +46,7 @@ function Footer() {
       <div className="FooterBotDiv">
         <div className="FooterDivider" />
         <div className="FooterCopyright">
-          <div className="fs-label FooterClosingTag">
+          <div className="FooterClosingTag fs-label">
             © Copyright {new Date().getFullYear()}. Created by&nbsp;
             <a href="#top" className="FooterUnderline">
               Bruno Arnabar
@@ -55,7 +55,6 @@ function Footer() {
         </div>
       </div>
     </div>
-    // <div>Footer</div>
   );
 }
 
