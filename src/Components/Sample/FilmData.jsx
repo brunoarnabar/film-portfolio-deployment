@@ -13,7 +13,7 @@ export const GreenlessInfo = {
   date: "06-22-2021",
   vidUrl: "https://vimeo.com/600195237",
   workType: "Personal",
-  info: "Shots from a feature film that was never finished due to complications. The <a href='https://docs.google.com/document/d/1fwpR5-fPEgVoCyHbAVTihwzq7plt0OnTIJ8YyZq_roQ/edit?usp=sharing'> script </a>  was feature length, and the experience on set the days we shoot have been invaluable",
+  info: "Scenes from a feature film left unfinished due to complications. The" + <a href='https://docs.google.com/document/d/1fwpR5-fPEgVoCyHbAVTihwzq7plt0OnTIJ8YyZq_roQ/edit?usp=sharing'> script </a> + "was feature length, and the experience on set the days we shoot have been invaluable",
   skinny: true,
   gif: greenlessGif,
   img: greenlessImg,
