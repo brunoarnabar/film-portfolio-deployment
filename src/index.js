@@ -5,6 +5,7 @@ import App from "./App";
 import Greenless from "./Components/Sample/Films/FilmComponent/Greenless";
 import TheBox from "./Components/Sample/Films/FilmComponent/TheBox";
 import BirdsEyeView from "./Components/Sample/Films/FilmComponent/BirdsEyeView";
+import Phenomena from "./Components/Sample/Films/FilmComponent/Phenomena";
 // import Nav from "./Components/Nav/Nav"
 
 //goToContext
@@ -29,6 +30,7 @@ root.render(
                 <Route path="/Greenless" element={<Greenless />} />
                 <Route path="/TheBox" element={<TheBox />} />
                 <Route path="/BirdsEyeView" element={<BirdsEyeView />} />
+                <Route path="/Phenomena" element={<Phenomena />} />
                 <Route
                   path="*"
                   element={

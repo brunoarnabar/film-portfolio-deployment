@@ -1,5 +1,5 @@
-import greenlessGif from "../../Video/Gifs/Greenless.gif";
-import greenlessImg from "../../Video/Thumbnail/Greenless.png";
+import GreenlessGif from "../../Video/Gifs/Greenless.gif";
+import GreenlessImg from "../../Video/Thumbnail/Greenless.png";
 
 import theBoxGif from "../../Video/Gifs/theBox.gif";
 import theBoxImg from "../../Video/Thumbnail/theBox.png";
@@ -7,16 +7,19 @@ import theBoxImg from "../../Video/Thumbnail/theBox.png";
 import BirdsEyeViewGif from "../../Video/Gifs/BirdsEyeView.gif";
 import BirdsEyeViewImg from "../../Video/Thumbnail/BirdsEyeView.png";
 
+import PhenomenaGif from "../../Video/Gifs/Phenomena.gif";
+import PhenomenaImg from "../../Video/Thumbnail/Phenomena.png";
+
 export const GreenlessInfo = {
   key: 1,
   title: "Scenes From Greenless",
   date: "06-22-2021",
   vidUrl: "https://vimeo.com/600195237",
   workType: "Personal",
-  info: "Scenes from a feature film left unfinished due to complications. The" + <a href='https://docs.google.com/document/d/1fwpR5-fPEgVoCyHbAVTihwzq7plt0OnTIJ8YyZq_roQ/edit?usp=sharing'> script </a> + "was feature length, and the experience on set the days we shoot have been invaluable",
+  info: "Shots from a feature film that was never finished due to complications. The script was feature length, and the experience on set the days we shoot has been invaluable",
   skinny: true,
-  gif: greenlessGif,
-  img: greenlessImg,
+  gif: GreenlessGif,
+  img: GreenlessImg,
   url: "Greenless",
 };
 
@@ -44,4 +47,17 @@ export const BirdsEyeViewInfo = {
   gif: BirdsEyeViewGif,
   img: BirdsEyeViewImg,
   url: "BirdsEyeView",
+};
+
+export const PhenomenaInfo = {
+  key: 4,
+  title: "Phenomena",
+  date: "05-31-2020",
+  vidUrl: "https://youtu.be/uVNm_LsNVBw",
+  workType: "Personal",
+  info: "A meditation on film, language, and human nature. Graphic design by Daniel Arnabar",
+  skinny: false,
+  gif: PhenomenaGif,
+  img: PhenomenaImg,
+  url: "Phenomena",
 };
