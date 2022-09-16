@@ -12,8 +12,7 @@ import { HashLink } from "react-router-hash-link";
 import "./filmInstance.scss";
 
 export default function FilmInstance(props) {
-  
-  const isMobile = useMediaQuery("(max-width: 30em)");
+  const isMobile = useMediaQuery("(max-width: 37.5em)");
 
   const num = String(props.filmInfo.key).padStart(2, "0");
   const [instanceLoadSuccess, setInstanceLoadSuccess] = useState(false);
@@ -111,96 +110,95 @@ export default function FilmInstance(props) {
   const handleMouseOut = () => {
     openInfo(false);
   };
-    return (
-      <>
-        <AnimatePresence>
-          {open && (
-            <motion.aside
-              variants={sideInfoAnim}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
+  return (
+    <>
+      <AnimatePresence>
+        {open && (
+          <motion.aside
+            variants={sideInfoAnim}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <div
+              className={`FilmInstanceAsideContainer text-neutral-400 fs-logline ${
+                isMobile ? "" : "isFullScreen"
+              }`}
             >
-              <div
-                className={`FilmInstanceAsideContainer text-neutral-400 fs-logline ${
-                  isMobile ? "" : "isFullScreen"
-                }`}
-              >
-                <div className="FilmInstanceAsideClose">
-                  <h1 className="fs-title" onClick={openInfo}>
-                    <FiXCircle />
-                  </h1>
-                </div>
-                <div className="FilmInstanceAsideContent fs-button">
-                  <motion.div className="fs-body" variants={childAnim}>
-                    {props.filmInfo.date} / {props.filmInfo.workType}
-                  </motion.div>
-                  <motion.div
-                    className="heading text-neutral-400 FilmInstanceAsideTitle"
-                    variants={childAnim}
-                  >
-                    {props.filmInfo.title}
-                  </motion.div>
-                  <motion.div
-                    className="fs-body FilmInstanceAsideBody"
-                    variants={childAnim}
-                  >
-                    {props.filmInfo.info}
-                  </motion.div>
-                </div>
-                <div className="FilmInstanceAsideBottomSpacer" />
+              <div className="FilmInstanceAsideClose">
+                <h1 className="fs-title" onClick={openInfo}>
+                  <FiXCircle />
+                </h1>
               </div>
-            </motion.aside>
-          )}
-        </AnimatePresence>
-        <div className="FilmInstanceContainer bg-neutral-200">
-          <div className="FilmInstanceTopNav">
-            <HashLink to="/#sample">
-              <img src={back} alt="backButton" width="35rem" />
-            </HashLink>
-          </div>
-          <div className="FilmInstanceOpenAside" onClick={openInfo}>
-            <div className="FilmInstanceId">
-              <div className="title noPad">
-                {num} / {props.filmInfo.workType}
+              <div className="FilmInstanceAsideContent fs-button">
+                <motion.div className="fs-body" variants={childAnim}>
+                  {props.filmInfo.date} / {props.filmInfo.workType}
+                </motion.div>
+                <motion.div
+                  className="heading text-neutral-400 FilmInstanceAsideTitle"
+                  variants={childAnim}
+                >
+                  {props.filmInfo.title}
+                </motion.div>
+                <motion.div
+                  className="fs-body FilmInstanceAsideBody"
+                  variants={childAnim}
+                >
+                  {props.filmInfo.info}
+                </motion.div>
               </div>
-              <div className="title noPad">{props.filmInfo.title}</div>
+              <div className="FilmInstanceAsideBottomSpacer" />
             </div>
-            <div className="FilmInstanceInfo">
-              <div
-                className="fs-sub-heading ff-body fw-bold text-primary-900 pointer FilmInstanceInfoButton"
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-              >
-                information
-              </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+      <div className="FilmInstanceContainer bg-neutral-200">
+        <div className="FilmInstanceTopNav">
+          <HashLink to="/#sample">
+            <img src={back} alt="backButton" width="35rem" />
+          </HashLink>
+        </div>
+        <div className="FilmInstanceOpenAside" onClick={openInfo}>
+          <div className="FilmInstanceId">
+            <div className="title noPad">
+              {num} / {props.filmInfo.workType}
             </div>
+            <div className="title noPad">{props.filmInfo.title}</div>
           </div>
-
-          {instanceLoadSuccess === false ? <Loader /> : null}
-          <div className="FilmInstancePlayerContainer">
-            <ResponsivePlayer
-              url={props.filmInfo.vidUrl}
-              skinny={props.filmInfo.skinny}
-              successState={successState}
-            />
-          </div>
-
-          <div className="FilmInstanceBotNav">
-            <div className="fs-sub-heading FilmInstanceVimeo">
-              <a href="https://vimeo.com/brunoarnabar">
-                <TbBrandVimeo color={"var(--clr-primary-900)"} />
-              </a>
+          <div className="FilmInstanceInfo">
+            <div
+              className="fs-sub-heading ff-body fw-bold text-primary-900 pointer FilmInstanceInfoButton"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
+              information
             </div>
-            {/* <GoTo location="About" /> */}
-            <HashLink to="/#about">
-              <div className="title text-primary-900 pointer">About</div>
-            </HashLink>
-            <HashLink to="/#contact">
-              <div className="title text-primary-900 pointer">Contact</div>
-            </HashLink>
           </div>
         </div>
-      </>
-    );
+
+        {instanceLoadSuccess === false ? <Loader /> : null}
+        <div className="FilmInstancePlayerContainer">
+          <ResponsivePlayer
+            url={props.filmInfo.vidUrl}
+            skinny={props.filmInfo.skinny}
+            successState={successState}
+          />
+        </div>
+
+        <div className="FilmInstanceBotNav">
+          <div className="fs-sub-heading FilmInstanceVimeo">
+            <a href="https://vimeo.com/brunoarnabar">
+              <TbBrandVimeo color={"var(--clr-primary-900)"} />
+            </a>
+          </div>
+          <HashLink to="/#about">
+            <div className="title text-primary-900 pointer">About</div>
+          </HashLink>
+          <HashLink to="/#contact">
+            <div className="title text-primary-900 pointer">Contact</div>
+          </HashLink>
+        </div>
+      </div>
+    </>
+  );
 }

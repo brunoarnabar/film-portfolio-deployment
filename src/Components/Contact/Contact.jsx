@@ -6,8 +6,7 @@ Modal.setAppElement("#root");
 
 export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const showFullForm = false;
-
+  
   const openModal = () => {
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
