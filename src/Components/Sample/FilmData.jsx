@@ -7,15 +7,13 @@ import theBoxImg from "../../Video/Thumbnail/theBox.png";
 import BirdsEyeViewGif from "../../Video/Gifs/BirdsEyeView.gif";
 import BirdsEyeViewImg from "../../Video/Thumbnail/BirdsEyeView.png";
 
-const key = map[key] ? map[key]++ : (map[key] = 1);
-
 export const GreenlessInfo = {
-  key: key,
-  title: "Sample Of Greenless",
+  key: 1,
+  title: "Scenes From Greenless",
   date: "06-22-2021",
   vidUrl: "https://vimeo.com/600195237",
   workType: "Personal",
-  info: "Shots from a feature film that was never finished due to in-cast complications. The script was feature length, and the experience on set the days we shoot have been invaluable",
+  info: "Shots from a feature film that was never finished due to complications. The <a href='https://docs.google.com/document/d/1fwpR5-fPEgVoCyHbAVTihwzq7plt0OnTIJ8YyZq_roQ/edit?usp=sharing'> script </a>  was feature length, and the experience on set the days we shoot have been invaluable",
   skinny: true,
   gif: greenlessGif,
   img: greenlessImg,
@@ -23,7 +21,7 @@ export const GreenlessInfo = {
 };
 
 export const TheBoxInfo = {
-  key: key,
+  key: 2,
   title: "The Box",
   date: "11-25-2019",
   vidUrl: "https://vimeo.com/600214381",
@@ -36,7 +34,7 @@ export const TheBoxInfo = {
 };
 
 export const BirdsEyeViewInfo = {
-  key: key,
+  key: 3,
   title: "Birds Eye View",
   date: "01-27-2020",
   vidUrl: "https://vimeo.com/750443103",
