@@ -5,6 +5,53 @@ import Resume from "../../Assets/Resume/BrunoArnabarResume.pdf";
 import { FiDownload } from "react-icons/fi";
 
 export default function Landing() {
+
+  function romanize(num) {
+    if (!+num) return false;
+    var digits = String(+num).split(""),
+      key = [
+        "",
+        "C",
+        "CC",
+        "CCC",
+        "CD",
+        "D",
+        "DC",
+        "DCC",
+        "DCCC",
+        "CM",
+        "",
+        "X",
+        "XX",
+        "XXX",
+        "XL",
+        "L",
+        "LX",
+        "LXX",
+        "LXXX",
+        "XC",
+        "",
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX",
+      ],
+      roman = "",
+      i = 3;
+    while (i--) roman = (key[+digits.pop() + i * 10] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+  }
+
+  const currentYear = new Date().getFullYear();
+  const currentRomanYear = romanize(currentYear); 
+
+
+
   return (
     <div className="LandingPoster" id="landing">
       <div className="poster-accent">SITE DEVELOPED BY&nbsp;A</div>
@@ -39,7 +86,7 @@ export default function Landing() {
 
       <div className="poster-accent bottom">
         <div className="LandingCopyright">
-          Copyright&nbsp;ⓒ&nbsp;MMXV&emsp;
+          Copyright&nbsp;ⓒ&nbsp;{currentRomanYear}&emsp;
           <div className="LandingLinks">
             <a
               className="link-poster-accent bottom"
@@ -63,9 +110,7 @@ export default function Landing() {
             </a>
           </div>
         </div>
-        <div className="LandingAllRights">
-          All Rights Reserved.
-        </div>
+        <div className="LandingAllRights">All Rights Reserved.</div>
       </div>
     </div>
   );
