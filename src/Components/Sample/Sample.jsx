@@ -42,13 +42,13 @@ export default function Samples() {
           <Preview {...GreenlessInfo} />
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...PhenomenaInfo} />
+          <Preview {...TheBoxInfo} />
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...BirdsEyeViewInfo} />
         </div>
         <div className="SamplePreview fs-heading">
-          <Preview {...TheBoxInfo} />
+          <Preview {...PhenomenaInfo} />
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...FilmNetInfo} />
