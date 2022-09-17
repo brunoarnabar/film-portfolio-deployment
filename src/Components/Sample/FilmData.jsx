@@ -69,7 +69,7 @@ export const FilmNetInfo = {
   key: 5,
   title: "FilmNet",
   date: "05-31-2020",
-  vidUrl: "https://youtu.be/Y_3S7xtuKas",
+  vidUrl: "https://youtu.be/d5ZHovQE2lA",
   workType: "CompSci Capstone",
   info: "A webapp focused on creating a film society. Built with React and Flask. I worked on networking the graphs on the front-end, managing the film states, concepts, and general user interface",
   skinny: false,
