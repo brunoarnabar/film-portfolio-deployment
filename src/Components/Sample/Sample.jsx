@@ -1,7 +1,13 @@
 import "./sample.scss";
 
 import Preview from "./Films/Preview/Preview";
-import { GreenlessInfo, BirdsEyeViewInfo, TheBoxInfo, PhenomenaInfo } from "./FilmData";
+import {
+  GreenlessInfo,
+  BirdsEyeViewInfo,
+  TheBoxInfo,
+  PhenomenaInfo,
+  FilmNetInfo,
+} from "./FilmData";
 
 //goToContext
 import { useRef, useEffect } from "react";
@@ -43,6 +49,9 @@ export default function Samples() {
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...TheBoxInfo} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview {...FilmNetInfo} />
         </div>
       </div>
     </div>

@@ -10,6 +10,9 @@ import BirdsEyeViewImg from "../../Video/Thumbnail/BirdsEyeView.png";
 import PhenomenaGif from "../../Video/Gifs/Phenomena.gif";
 import PhenomenaImg from "../../Video/Thumbnail/Phenomena.png";
 
+import FilmNetGif from "../../Video/Gifs/FilmNet.gif";
+import FilmNetImg from "../../Video/Thumbnail/FilmNet.png";
+
 export const GreenlessInfo = {
   key: 1,
   title: "Scenes From Greenless",
@@ -61,3 +64,18 @@ export const PhenomenaInfo = {
   img: PhenomenaImg,
   url: "Phenomena",
 };
+
+export const FilmNetInfo = {
+  key: 5,
+  title: "FilmNet",
+  date: "05-31-2020",
+  vidUrl: "https://youtu.be/Y_3S7xtuKas",
+  workType: "CompSci Capstone",
+  info: "A webapp focused on creating a film society. Built with React and Flask. I worked on networking the graphs on the front-end, managing the film states, concepts, and general user interface",
+  skinny: false,
+  gif: FilmNetGif,
+  img: FilmNetImg,
+  url: "FilmNet",
+};
+
+
