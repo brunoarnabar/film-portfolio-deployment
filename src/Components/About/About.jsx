@@ -1,8 +1,7 @@
 import "./about.scss";
 
 import React, { useRef, useEffect, useCallback, useState } from "react";
-// import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 //goToContext
 import useOnScreen from "../Hooks/useOnScreen";
