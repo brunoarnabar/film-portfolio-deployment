@@ -2,7 +2,7 @@ import "./sample.scss";
 
 import Preview from "./Films/Preview/Preview";
 import {
-  GreenlessInfo,
+  // GreenlessInfo,
   BirdsEyeViewInfo,
   TheBoxInfo,
   PhenomenaInfo,
@@ -38,9 +38,9 @@ export default function Samples() {
         </div>
       </div>
       <div className="SamplePreviewContainers text-neutral-400">
-        <div className="SamplePreview fs-heading">
+        {/* <div className="SamplePreview fs-heading">
           <Preview {...GreenlessInfo} />
-        </div>
+        </div> */}
         <div className="SamplePreview fs-heading">
           <Preview {...TheBoxInfo} />
         </div>

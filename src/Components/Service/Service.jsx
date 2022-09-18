@@ -21,6 +21,7 @@ const entryThree = {
 };
 
 export default function Service() {
+
   return (
     <div className="ServiceContainer" id="service">
       <div className="sectionHeading">

@@ -14,7 +14,7 @@ import FilmNetGif from "../../Video/Gifs/FilmNet.gif";
 import FilmNetImg from "../../Video/Thumbnail/FilmNet.png";
 
 export const GreenlessInfo = {
-  key: 1,
+  key: 5,
   title: "Scenes From Greenless",
   date: "06-22-2021",
   vidUrl: "https://vimeo.com/600195237",
@@ -27,7 +27,7 @@ export const GreenlessInfo = {
 };
 
 export const TheBoxInfo = {
-  key: 2,
+  key: 1,
   title: "The Box",
   date: "11-25-2019",
   vidUrl: "https://vimeo.com/600214381",
@@ -40,7 +40,7 @@ export const TheBoxInfo = {
 };
 
 export const BirdsEyeViewInfo = {
-  key: 3,
+  key: 2,
   title: "Birds Eye View",
   date: "01-27-2020",
   vidUrl: "https://vimeo.com/750443103",
@@ -53,7 +53,7 @@ export const BirdsEyeViewInfo = {
 };
 
 export const PhenomenaInfo = {
-  key: 4,
+  key: 3,
   title: "Phenomena",
   date: "05-31-2020",
   vidUrl: "https://youtu.be/uVNm_LsNVBw",
@@ -66,9 +66,9 @@ export const PhenomenaInfo = {
 };
 
 export const FilmNetInfo = {
-  key: 5,
+  key: 4,
   title: "FilmNet",
-  date: "05-31-2020",
+  date: "04-27-2022",
   vidUrl: "https://youtu.be/d5ZHovQE2lA",
   workType: "CompSci Capstone",
   info: "A webapp focused on creating a film society. Built with React and Flask. I worked on networking the graphs on the front-end, managing the film states, concepts, and general user interface",
