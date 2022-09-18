@@ -2,6 +2,7 @@ import "./about.scss";
 
 import React, { useRef, useEffect, useCallback, useState } from "react";
 // import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 //goToContext
 import useOnScreen from "../Hooks/useOnScreen";
@@ -30,53 +31,56 @@ export default function About() {
     }
   }, [checkIfVisible, aboutClicked]);
 
-  // ------------
-
-  // const sideInfoAnim = {
-  //   visible: {
-  //     x: "70vw",
-  //     height: "100vh",
-  //     width: "30%",
-  //     opacity: 1,
-  //     transition: {
-  //       duration: 1,
-  //       mass: 0.005,
-  //       type: "tween",
-  //       when: "beforeChildren",
-  //       staggerChildren: 0.125,
-  //     },
-  //   },
-  //   hidden: {
-  //     x: "200vw",
-  //     height: "100vh",
-  //     width: "100%",
-  //     opacity: 0,
-  //     transition: {
-  //       duration: 1,
-  //       when: "afterChildren",
-  //       staggerChildren: 0.125,
-  //     },
-  //   },
-  // };
-  // const childAnim = {
-  //   visible: {
-  //     opacity: 1,
-  //     x: "0vw",
-  //   },
-  //   hidden: {
-  //     opacity: 0,
-  //     x: "10vw",
-  //   },
-  // };
-  // ------------
-
   const [aboutMinimized, setAboutMinimized] = useState(true);
   const toggleAbout = () => {
     setAboutMinimized(!aboutMinimized);
   };
 
+  const myRef = useRef();
+  const [aboutVisible, setAboutVisible] = useState();
+
+  useEffect(() => {
+    const options = {
+      threshold: .5,
+    };
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setAboutVisible(entry.isIntersecting);
+    }, options);
+    observer.observe(myRef.current);
+  }, []);
+
   const iconSize = 25;
   const iconColor = "var(--clr-neutral-400)";
+
+  const animX = -50;
+  const animDelay = 0.1;
+
+  const container = {
+    hidden: {
+      x: animX,
+      opacity: 0,
+    },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: animDelay,
+        staggerChildren: animDelay,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { x: animX, opacity: 0 },
+    show: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: animDelay,
+      },
+    },
+  };
 
   if (aboutMinimized) {
     return (
@@ -85,29 +89,31 @@ export default function About() {
           <div className="heading AboutMin">ABOUT</div>
         </div>
 
-        <div className="AboutContent AboutMin">
+        <div className="AboutContent AboutMin" ref={myRef}>
           <div className="AboutDesc AboutMin">
             {/* <AnimatePresence> */}
-                <div className="title">
-                  Hey!{" "}
-                </div>
-                <div className="textBody" 
-                // variants={childAnim}
-                >
-                  I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer
-                  with degrees from the University of Pittsburgh. I use these
-                  tools to create experiences based on ideas.
-                </div>
-                <div className="textBody" 
-                // variants={childAnim}
-                >
-                  I’m looking for employment as a programmer or developer for a
-                  company that values art and storytelling.
-                </div>
+            {/* {aboutVisible && ( */}
+            <motion.div
+              className="title"
+              variants={container}
+              initial="hidden"
+              animate={aboutVisible ? "show" : "hidden"}
+            >
+              Hey!
+              <motion.div className="textBody" variants={item}>
+                I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer with
+                degrees from the University of Pittsburgh. I use these tools to
+                create experiences based on ideas.
+              </motion.div>
+              <motion.div className="textBody" variants={item}>
+                I’m looking for employment as a programmer or developer for a
+                company that values art and storytelling.
+              </motion.div>
+            </motion.div>
+            {/* )} */}
             {/* </AnimatePresence> */}
           </div>
         </div>
-
         <a href="#about">
           <div className="AboutExpand fs-heading" onClick={toggleAbout}>
             <BsArrowsExpand size={iconSize} color={iconColor} />
@@ -123,29 +129,44 @@ export default function About() {
           <div className="subHeading wrap-sm">Let Me Introduce&nbsp;Myself</div>
         </div>
 
-        <div className="AboutContent">
+        <div className="AboutContent" ref={myRef}>
           <div className="AboutDesc">
-            <div className="title"> Hey! </div>
-            <div className="textBody">
-              I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer with
-              degrees from the University of Pittsburgh. I use these tools to
-              transform ideas into experiences.
-            </div>
-            <div className="textBody">
-              I’m looking for employment as a programmer or developer for a
-              company that values art and storytelling.
-            </div>
-            <div className="title"> I’m enthusiastic about… </div>
-            <div className="textBody">
-              exploring and redesigning technologies to create amazing
-              experiences for people. Cinema is one of my biggest inspirations
-              because it’s constantly evolving and pushing boundaries, and it
-              too began from scientific innovation.
-            </div>
-            <div className="textBody">
-              I want to use my skills to create art that will entertain, engage,
-              and inspire people to consider the world in a different light.
-            </div>
+            <motion.div
+              className="title"
+              variants={container}
+              initial="hidden"
+              animate={aboutVisible ? "show" : "hidden"}
+            >
+              Hey!
+              <motion.div className="textBody" variants={item}>
+                I’m Bruno&nbsp;Arnabar, a filmmaker and computer programmer with
+                degrees from the University of Pittsburgh. I use these tools to
+                transform ideas into experiences.
+              </motion.div>
+              <motion.div className="textBody" variants={item}>
+                I’m looking for employment as a programmer or developer for a
+                company that values art and storytelling.
+              </motion.div>
+            </motion.div>
+            <motion.div
+              className="title"
+              variants={container}
+              initial="hidden"
+              animate={aboutVisible ? "show" : "hidden"}
+            >
+              I’m enthusiastic about…
+              <motion.div className="textBody" variants={item}>
+                exploring and redesigning technologies to create amazing
+                experiences for people. Cinema is one of my biggest inspirations
+                because it’s constantly evolving and pushing boundaries, and it
+                too began from scientific innovation.
+              </motion.div>
+              <motion.div className="textBody" variants={item}>
+                I want to use my skills to create art that will entertain,
+                engage, and inspire people to consider the world in a different
+                light.
+              </motion.div>
+            </motion.div>
           </div>
 
           <div className="AboutEnjoy">
