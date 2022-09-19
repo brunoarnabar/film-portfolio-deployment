@@ -2,8 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import "./service.scss";
 
 export default function ServiceEntry({ icon, sub, txt }) {
-  const myRef = useRef();
-  const [serviceVisible, setServiceVisible] = useState();
+  const serviceRef = useRef();
+  const [serviceVisble, setServiceVisble] = useState();
 
   useEffect(() => {
     const options = {
@@ -11,17 +11,18 @@ export default function ServiceEntry({ icon, sub, txt }) {
     };
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
-      setServiceVisible(entry.isIntersecting);
+
+      setServiceVisble(entry.isIntersecting);
     }, options);
-    observer.observe(myRef.current);
+    observer.observe(serviceRef.current);
   }, []);
 
   return (
     <div
       className={`ServiceEntry box-shadow-dark text-neutral-400 ${
-        serviceVisible ? "animateServiceEntry" : ""
+        serviceVisble ? "animateServiceEntry" : ""
       }`}
-      ref={myRef}
+      ref={serviceRef}
     >
       {icon}
       <div className="ServiceCardText">

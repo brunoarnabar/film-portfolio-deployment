@@ -36,14 +36,15 @@
   background-color: var(--clr-primary-200);
   // manipulation
   opacity: 0;
-  transition: opacity 0.55s ease-in;
+  transition: opacity 0.55s ease-in-out;
   // misc
   border-radius: 1.5rem;
 }
+
 .animateServiceEntry {
   // manipulation
   opacity: 1;
-  transition: opacity 0.75s ease-in;
+  transition: opacity 0.75s ease-in-out;
 }
 
 .ServiceCardText {
