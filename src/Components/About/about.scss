@@ -27,6 +27,8 @@
   width: 100%;
   // box-model
   padding-bottom: var(--padding);
+  overflow-x: hidden;
+
 
   &.AboutMin {
     // display
@@ -85,7 +87,7 @@
   align-items: flex-end;
   justify-items: center;
   // box-model
-  width: clamp(10rem, 25vw, 40rem);
+  width: clamp(9rem, 25vw, 40rem);
   min-height: clamp(5rem, 20%, 35rem);
   margin: auto 0;
   background-size: cover;
