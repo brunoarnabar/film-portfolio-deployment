@@ -24,12 +24,12 @@ export default function About() {
       setAboutVisible(entry.isIntersecting);
     }, options);
     observer.observe(myRef.current);
-  }, [options]);
+  }, []);
 
   const iconSize = 25;
   const iconColor = "var(--clr-neutral-400)";
 
-  const xFromLeft = -50;
+  const xFromLeft = -50; 
   const xFromRight = 150;
   const animDelay = 0.2;
   const stagDelay = 0.15;
