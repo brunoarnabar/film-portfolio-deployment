@@ -14,11 +14,11 @@ export default function About() {
   const myRef = useRef();
   const [aboutVisible, setAboutVisible] = useState();
 
-  let options = {
+  
+  useEffect(() => {
+    let options = {
     threshold: 0.15,
   };
-
-  useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setAboutVisible(entry.isIntersecting);
