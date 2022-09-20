@@ -3,7 +3,7 @@ import "./service.scss";
 
 export default function ServiceEntry({ icon, sub, txt }) {
   const serviceRef = useRef();
-  const [serviceVisble, setServiceVisble] = useState();
+  const [serviceVisible, setServiceVisible] = useState();
 
   useEffect(() => {
     const options = {
@@ -12,7 +12,7 @@ export default function ServiceEntry({ icon, sub, txt }) {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
 
-      setServiceVisble(entry.isIntersecting);
+      setServiceVisible(entry.isIntersecting);
     }, options);
     observer.observe(serviceRef.current);
   }, []);
@@ -20,7 +20,7 @@ export default function ServiceEntry({ icon, sub, txt }) {
   return (
     <div
       className={`ServiceEntry box-shadow-dark text-neutral-400 ${
-        serviceVisble ? "animateServiceEntry" : ""
+        serviceVisible ? "animateServiceEntry" : ""
       }`}
       ref={serviceRef}
     >
