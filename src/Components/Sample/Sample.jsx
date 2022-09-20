@@ -31,14 +31,18 @@ export default function Samples() {
   }, [isVisible, setSampleTrue]);
 
   return (
-    <div className="SampleContainer" id="sample" ref={SampleRef}>
+    <div
+      className="SampleContainer text-neutral-400"
+      id="sample"
+      ref={SampleRef}
+    >
       <div className="sectionHeading noMarginBot">
         <div className="heading text-neutral-400">SAMPLES</div>
         <div className="subHeading wrap-lg text-neutral-200">
           Check&nbsp;Out My&nbsp;Work
         </div>
       </div>
-      <div className="SamplePreviewContainers text-neutral-400">
+      <div className="SamplePreviewContainers">
         {/* <div className="SamplePreview fs-heading">
           <Preview {...GreenlessInfo} />
         </div> */}

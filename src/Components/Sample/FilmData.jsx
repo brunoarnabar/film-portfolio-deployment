@@ -93,7 +93,7 @@ export const ThisPortfolioInfo = {
   title: "This Portfolio",
   date: today,
   vidUrl: "https://youtu.be/ELhRPzP8GW4",
-  workType: "Personal",
+  workType: "CompSci Personal",
   info: "A self reference as to how I hand coded this website using React and CSS rather than using Wix, Webpress, Squarespace, or other web-building software. Here, I use a javascript intersection observer to translate the opacity of the cards based on their position",
   skinny: false,
   gif: ThisPortfolioGif,

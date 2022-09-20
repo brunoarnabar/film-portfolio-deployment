@@ -14,11 +14,10 @@ export default function About() {
   const myRef = useRef();
   const [aboutVisible, setAboutVisible] = useState();
 
-  
   useEffect(() => {
     let options = {
-    threshold: 0.15,
-  };
+      threshold: 0.15,
+    };
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       setAboutVisible(entry.isIntersecting);
@@ -29,7 +28,7 @@ export default function About() {
   const iconSize = 25;
   const iconColor = "var(--clr-neutral-400)";
 
-  const xFromLeft = -50; 
+  const xFromLeft = -50;
   const xFromRight = 150;
   const animDelay = 0.2;
   const stagDelay = 0.15;
@@ -107,11 +106,13 @@ export default function About() {
           <motion.div
             className="AboutDesc AboutMin"
             variants={framerContainerLeft}
-            key={Math.random()}
             initial="hidden"
             animate={aboutVisible ? "show" : "hidden"}
           >
-            <motion.div className="title" variants={framerItemLeft}>
+            <motion.div
+              className="title"
+              variants={framerItemLeft}
+            >
               Hey!
             </motion.div>
             <motion.div className="textBody" variants={framerItemLeft}>
@@ -143,7 +144,6 @@ export default function About() {
         <div className="AboutContent" ref={myRef}>
           <motion.div
             className="AboutDesc"
-            key={Math.random()}
             variants={framerContainerLeft}
             initial="hidden"
             animate={aboutVisible ? "show" : "hidden"}
@@ -177,7 +177,6 @@ export default function About() {
 
           <motion.div
             className="AboutEnjoy"
-            key={Math.random()}
             variants={framerContainerRight}
             initial="hidden"
             animate={aboutVisible ? "show" : "hidden"}

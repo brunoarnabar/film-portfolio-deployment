@@ -18,6 +18,13 @@
   gap: 2rem;
 }
 
+.SampleDivider{
+   display: flex;
+  justify-content: center;
+  font-family: var(--ff-heading); 
+  font-weight: var(--ff-bold);
+}
+
 $max-col-count: 2;
 @media (min-width: App.$media-300) {
   .SamplePreviewContainers {
@@ -37,6 +44,7 @@ $max-col-count: 2;
     }
   }
 }
+
 $max-col-count: 3;
 @media (min-width: App.$media-600) {
   .SamplePreviewContainers {
