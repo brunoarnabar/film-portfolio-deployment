@@ -13,6 +13,16 @@ import PhenomenaImg from "../../Video/Thumbnail/Phenomena.png";
 import FilmNetGif from "../../Video/Gifs/FilmNet.gif";
 import FilmNetImg from "../../Video/Thumbnail/FilmNet.png";
 
+import ThisPortfolioGif from "../../Video/Gifs/ThisPortfolio.gif";
+import ThisPortfolioImg from "../../Video/Thumbnail/ThisPortfolio.png";
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, "0");
+var mm = String(today.getMonth() + 1).padStart(2, "0");
+var yyyy = today.getFullYear();
+
+today = mm + "-" + dd + "-" + yyyy;
+
 export const GreenlessInfo = {
   key: 5,
   title: "Scenes From Greenless",
@@ -78,4 +88,15 @@ export const FilmNetInfo = {
   url: "FilmNet",
 };
 
-
+export const ThisPortfolioInfo = {
+  key: 4,
+  title: "This Portfolio",
+  date: today,
+  vidUrl: "https://youtu.be/IwkIxyegiZ0",
+  workType: "Personal",
+  info: "A self reference as to how I hand coded this website using React and CSS rather than using Wix, Webpress, Squarespace or other web building software. Here I use a javascript intersection observer to translate the opacity of the cards based on their position.",
+  skinny: false,
+  gif: ThisPortfolioGif,
+  img: ThisPortfolioImg,
+  url: "ThisPortfolio",
+};

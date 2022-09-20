@@ -7,6 +7,7 @@ import TheBox from "./Components/Sample/Films/FilmComponent/TheBox";
 import BirdsEyeView from "./Components/Sample/Films/FilmComponent/BirdsEyeView";
 import Phenomena from "./Components/Sample/Films/FilmComponent/Phenomena";
 import FilmNet from "./Components/Sample/Films/FilmComponent/FilmNet";
+import ThisPortfolio from "./Components/Sample/Films/FilmComponent/ThisPortfolio";
 // import Nav from "./Components/Nav/Nav"
 
 //goToContext
@@ -33,6 +34,7 @@ root.render(
                 <Route path="/BirdsEyeView" element={<BirdsEyeView />} />
                 <Route path="/Phenomena" element={<Phenomena />} />
                 <Route path="/FilmNet" element={<FilmNet />} />
+                <Route path="/ThisPortfolio" element={<ThisPortfolio />} />
                 <Route
                   path="*"
                   element={

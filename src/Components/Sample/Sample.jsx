@@ -7,6 +7,7 @@ import {
   TheBoxInfo,
   PhenomenaInfo,
   FilmNetInfo,
+  ThisPortfolioInfo,
 } from "./FilmData";
 
 //goToContext
@@ -52,6 +53,9 @@ export default function Samples() {
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...FilmNetInfo} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview {...ThisPortfolioInfo} />
         </div>
       </div>
     </div>
