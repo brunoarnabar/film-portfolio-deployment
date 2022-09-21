@@ -47,7 +47,8 @@ function Footer() {
         <div className="FooterDivider" />
         <div className="FooterCopyright">
           <div className="FooterClosingTag fs-label">
-            © Copyright {new Date().getFullYear()}. Created by&nbsp;
+            {/* © Copyright  */}
+            {new Date().getFullYear()}. Built by&nbsp;
             <a href="#top" className="FooterUnderline">
               Bruno Arnabar
             </a>

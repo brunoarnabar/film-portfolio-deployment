@@ -86,7 +86,7 @@ export default function Landing() {
 
       <div className="poster-accent bottom">
         <div className="LandingCopyright">
-          Copyright&nbsp;ⓒ&nbsp;{currentRomanYear}&emsp;
+          Creating&nbsp;🎬&nbsp;{currentRomanYear}&emsp;
           <div className="LandingLinks">
             <a
               className="link-poster-accent bottom"

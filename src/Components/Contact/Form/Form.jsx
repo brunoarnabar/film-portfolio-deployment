@@ -130,7 +130,6 @@ export default function Form({ closeModal }) {
                   placeholder="Avant Film Collection"
                   name="company"
                   type="text"
-                  required
                 />
               </div>
 
@@ -154,7 +153,6 @@ export default function Form({ closeModal }) {
                   as="select"
                   name="question"
                   type="text"
-                  required
                 >
                   <option value="We've Chatted In Person">
                     We've Chatted In Person
