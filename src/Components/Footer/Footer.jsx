@@ -52,7 +52,7 @@ function Footer() {
             <a href="#top" className="FooterUnderline">
               Bruno Arnabar
             </a>
-            -- {new Date().getFullYear()}.
+            &emsp;-- {new Date().getFullYear()}.
           </div>
         </div>
       </div>
