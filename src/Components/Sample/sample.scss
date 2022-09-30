@@ -16,6 +16,7 @@
   flex-direction: column;
   // box-model
   gap: 2rem;
+  grid-auto-rows: minmax(0, 1fr);
 }
 
 .SampleDivider{
