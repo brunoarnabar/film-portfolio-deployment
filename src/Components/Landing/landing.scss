@@ -16,7 +16,6 @@
     "r7c1 r7c2 r7c3 r7c4"
     "r8c1 r8c2 r8c3 r8c4";
   // box-model
-  min-width: 100vw;
   height: calc(100vh - clamp(5rem, -14.5rem + 26vw, 6.3rem));
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("../../Images/Backgrounds/BrunoPoster.jpg");
