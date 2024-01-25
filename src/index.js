@@ -3,6 +3,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import Greenless from "./Components/Sample/Films/FilmComponent/Greenless";
+import FiveMoreMinutes from "./Components/Sample/Films/FilmComponent/FiveMoreMinutes";
+import ItWasALeafThatFell from "./Components/Sample/Films/FilmComponent/ItWasALeafThatFell";
+import DownBad from "./Components/Sample/Films/FilmComponent/DownBad";
 import TheBox from "./Components/Sample/Films/FilmComponent/TheBox";
 import BirdsEyeView from "./Components/Sample/Films/FilmComponent/BirdsEyeView";
 import Phenomena from "./Components/Sample/Films/FilmComponent/Phenomena";
@@ -29,6 +32,12 @@ root.render(
               {/* <Nav/> */}
               <Routes>
                 <Route path="/" element={<App />} />
+                <Route path="/FiveMoreMinutes" element={<FiveMoreMinutes />} />
+                <Route
+                  path="/ItWasALeafThatFell"
+                  element={<ItWasALeafThatFell />}
+                />
+                <Route path="/DownBad" element={<DownBad />} />
                 <Route path="/Greenless" element={<Greenless />} />
                 <Route path="/TheBox" element={<TheBox />} />
                 <Route path="/BirdsEyeView" element={<BirdsEyeView />} />

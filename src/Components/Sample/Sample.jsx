@@ -3,11 +3,14 @@ import "./sample.scss";
 import Preview from "./Films/Preview/Preview";
 import {
   // GreenlessInfo,
+  FiveMoreMinutesInfo,
+  ItWasALeafThatFellInfo,
+  DownBadInfo,
   BirdsEyeViewInfo,
   TheBoxInfo,
   PhenomenaInfo,
-  FilmNetInfo,
-  ThisPortfolioInfo,
+  // FilmNetInfo,
+  // ThisPortfolioInfo,
 } from "./FilmData";
 
 //goToContext
@@ -47,6 +50,15 @@ export default function Samples() {
           <Preview {...GreenlessInfo} />
         </div> */}
         <div className="SamplePreview fs-heading">
+          <Preview {...FiveMoreMinutesInfo} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview {...ItWasALeafThatFellInfo} />
+        </div>
+        <div className="SamplePreview fs-heading">
+          <Preview {...DownBadInfo} />
+        </div>
+        <div className="SamplePreview fs-heading">
           <Preview {...TheBoxInfo} />
         </div>
         <div className="SamplePreview fs-heading">
@@ -55,12 +67,12 @@ export default function Samples() {
         <div className="SamplePreview fs-heading">
           <Preview {...PhenomenaInfo} />
         </div>
-        <div className="SamplePreview fs-heading">
+        {/* <div className="SamplePreview fs-heading">
           <Preview {...FilmNetInfo} />
         </div>
         <div className="SamplePreview fs-heading">
           <Preview {...ThisPortfolioInfo} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

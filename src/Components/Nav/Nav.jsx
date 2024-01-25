@@ -131,5 +131,4 @@ function Nav() {
     </div>
   );
 }
-
 export default Nav;

@@ -4,7 +4,7 @@ import ResponsivePlayer from "./Helpers/ResponsivePlayer";
 import Loader from "../../../Loader/LoaderRing";
 import { FiXCircle } from "react-icons/fi";
 import { useMediaQuery } from "../../../Hooks/useMediaQuery";
-import { TbBrandVimeo } from "react-icons/tb";
+import { TbBrandYoutube } from "react-icons/tb";
 import back from "../../../../Images/Icons/back.png";
 
 import { HashLink } from "react-router-hash-link";
@@ -187,8 +187,8 @@ export default function FilmInstance(props) {
 
         <div className="FilmInstanceBotNav">
           <div className="fs-sub-heading FilmInstanceVimeo">
-            <a href="https://vimeo.com/brunoarnabar">
-              <TbBrandVimeo color={"var(--clr-primary-900)"} />
+            <a href="https://www.youtube.com/@brunoarnabar7450">
+              <TbBrandYoutube color={"var(--clr-primary-900)"} />
             </a>
           </div>
           <HashLink to="/#about">
