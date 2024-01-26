@@ -72,7 +72,7 @@ export default function Landing() {
       <div className="LandingResumeContainer">
         <a
           href={Resume}
-          download
+          download="BrunoArnabarResume.pdf"
           className="LandingResume link-color link-primary-900 fs-button text-shadow-halation-dark"
         >
           <FiDownload className="svg-shadow-halation-dark" />
