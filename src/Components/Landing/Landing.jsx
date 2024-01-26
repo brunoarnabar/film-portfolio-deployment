@@ -1,11 +1,10 @@
 import React from "react";
 import "./landing.scss";
 import Typewriter from "typewriter-effect";
-import Resume from "../../Assets/Resume/BrunoArnabarResume.pdf";  
+import Resume from "../../Assets/Resume/BrunoArnabarResume.pdf";
 import { FiDownload } from "react-icons/fi";
 
 export default function Landing() {
-
   function romanize(num) {
     if (!+num) return false;
     var digits = String(+num).split(""),
@@ -48,9 +47,7 @@ export default function Landing() {
   }
 
   const currentYear = new Date().getFullYear();
-  const currentRomanYear = romanize(currentYear); 
-
-
+  const currentRomanYear = romanize(currentYear);
 
   return (
     <div className="LandingPoster" id="landing">
@@ -81,7 +78,8 @@ export default function Landing() {
           <FiDownload className="svg-shadow-halation-dark" />
           &nbsp;my&nbsp;resume
         </a>
-        <div className="LandingResumeInfo text-shadow-halation">(PDF 69kb)</div>
+        <div className="LandingResumeInfo text-shadow-halation">(PDF 56kb)</div>
+        {/* <div className="LandingResumeInfo text-shadow-halation">(PDF 69kb)</div> */}
       </div>
 
       <div className="poster-accent bottom">
