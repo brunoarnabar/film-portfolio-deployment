@@ -148,7 +148,7 @@ export default function About() {
             initial="hidden"
             animate={aboutVisible ? "show" : "hidden"}
           >
-            <motion.div className="title" variants={framerItemLeft}>
+            {/* <motion.div className="title" variants={framerItemLeft}>
               Hey!
             </motion.div>
             <motion.div className="textBody" variants={framerItemLeft}>
@@ -172,6 +172,34 @@ export default function About() {
             <motion.div className="textBody" variants={framerItemLeft}>
               I want to use my skills to create art that will entertain, engage,
               and inspire people to consider the world in a different light.
+            </motion.div> */}
+            <motion.div className="title" variants={framerItemLeft}>
+              Hey!
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              I’m Bruno&nbsp;Arnabar, a filmmaker with a background in computer
+              programming and degrees from the University of Pittsburgh. I
+              leverage these skills to craft compelling narratives and transform
+              ideas into immersive cinematic experiences.
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              I’m pursuing opportunities in filmmaking, aiming to join a team
+              that prioritizes innovative storytelling and values the art of
+              cinema.
+            </motion.div>
+            <motion.div className="title" variants={framerItemLeft}>
+              I’m passionate about…
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              diving deep into the world of filmmaking, where technology meets
+              creativity. I draw inspiration from the ever-evolving realm of
+              cinema, a field that consistently breaks new ground and challenges
+              perceptions.
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              My goal is to harness my unique blend of technical know-how and
+              creative vision to produce films that not only entertain but also
+              provoke thought and inspire a fresh perspective on the world.
             </motion.div>
           </motion.div>
 

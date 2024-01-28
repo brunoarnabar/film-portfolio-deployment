@@ -55,7 +55,7 @@ export default function Landing() {
       <Typewriter
         className="LandingTypewriter"
         options={{
-          strings: ["SCREENWRITER", "DEVELOPER", "FILMMAKER", "CREATOR"],
+          strings: ["SCREENWRITER", "FILMMAKER", "DEVELOPER", "CREATOR"],
           autoStart: true,
           loop: true,
           delay: 110,
@@ -99,12 +99,19 @@ export default function Landing() {
             >
               Instagram
             </a>
-            &nbsp;
+            {/* &nbsp;
             <a
               className="link-poster-accent bottom"
               href="https://vimeo.com/brunoarnabar"
             >
               Vimeo,&nbsp;
+            </a> */}
+            &nbsp;
+            <a
+              className="link-poster-accent bottom"
+              href="https://www.youtube.com/@brunoarnabar7450"
+            >
+              Youtube,&nbsp;
             </a>
           </div>
         </div>

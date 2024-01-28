@@ -28,7 +28,7 @@ function Footer() {
             <a href="https://vimeo.com/brunoarnabar">
               <TbBrandVimeo />
             </a>
-            <a href="https://youtube.com/channel/UCHmzU48QCUVIF9VeTr4f7bg">
+            <a href="https://www.youtube.com/@brunoarnabar7450">
               <TbBrandYoutube />
             </a>
             <a href="https://letterboxd.com/brunardothegoat/">
@@ -39,7 +39,8 @@ function Footer() {
         <div className="FooterAbout">
           <div className="FooterTitle fs-logline ff-heading">Bruno Arnabar</div>
           <div className="FooterText fs-body">
-            Creative programmer. Filmmaker.
+            {/* Creative programmer. Filmmaker. */}
+            Filmmaker.
           </div>
         </div>
       </div>

@@ -2,7 +2,8 @@ import "./App.scss";
 import Nav from "./Components/Nav/Nav";
 import Landing from "./Components/Landing/Landing";
 import About from "./Components/About/About";
-import Service from "./Components/Service/Service";
+// import Service from "./Components/Service/Service";
+import Goals from "./Components/Goals/Goals";
 import Contact from "./Components/Contact/Contact";
 import Sample from "./Components/Sample/Sample";
 // import Skill from "./Components/Skill/Skill";
@@ -18,7 +19,8 @@ export default function App() {
       <Nav />
       <Landing />
       <About />
-      <Service />
+      <Goals />
+      {/* <Service /> */}
       {/* <Skill /> */}
       <Sample />
       {/* <Philosophy /> */}
