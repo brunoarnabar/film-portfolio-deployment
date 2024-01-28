@@ -108,10 +108,15 @@ function Nav() {
           </a>
         </div>
         <div className="NavService NavListItem">
+          <a href="#goals" onClick={toggleNav}>
+            Goals
+          </a>
+        </div>
+        {/* <div className="NavService NavListItem">
           <a href="#service" onClick={toggleNav}>
             Services
           </a>
-        </div>
+        </div> */}
         {/* <div className="NavSkill NavListItem">
           <a href="#skill" onClick={toggleNav}>
             Skills
