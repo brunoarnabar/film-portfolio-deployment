@@ -130,7 +130,7 @@ export default function About() {
             </motion.div>
             <motion.div className="textBody" variants={framerItemLeft}>
               I'm Bruno&nbsp;Arnabar, a filmmaker focused on crafting narratives
-              that explore the intricate layers of identity and morality. My
+              that explore the intricacy of identity and morality. My
               passion lies in creating thought-provoking cinema that challenges
               but also resonates deeply with audiences.
             </motion.div>
