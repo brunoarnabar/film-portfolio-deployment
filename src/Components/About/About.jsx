@@ -109,7 +109,7 @@ export default function About() {
             initial="hidden"
             animate={aboutVisible ? "show" : "hidden"}
           >
-            <motion.div
+            {/* <motion.div
               className="title"
               variants={framerItemLeft}
             >
@@ -123,6 +123,21 @@ export default function About() {
             <motion.div className="textBody" variants={framerItemLeft}>
               I’m looking for employment as a programmer or developer for a
               company that values art and storytelling.
+            </motion.div> */}
+
+            <motion.div className="title" variants={framerItemLeft}>
+              Hey!
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              I'm Bruno&nbsp;Arnabar, a filmmaker focused on crafting narratives
+              that explore the intricate layers of identity and morality. My
+              passion lies in creating thought-provoking cinema that challenges
+              but also resonates deeply with audiences.
+            </motion.div>
+            <motion.div className="textBody" variants={framerItemLeft}>
+              I’m actively seeking opportunities in filmmaking where innovative
+              storytelling intersects with community engagement, fostering a
+              dynamic and collaborative creative environment.
             </motion.div>
           </motion.div>
         </div>
