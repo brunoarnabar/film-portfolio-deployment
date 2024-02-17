@@ -1,20 +1,10 @@
 import "./sample.scss";
 
+import { useRef, useEffect } from "react";
 import Preview from "./Films/Preview/Preview";
-import {
-  // GreenlessInfo,
-  FiveMoreMinutesInfo,
-  ItWasALeafThatFellInfo,
-  DownBadInfo,
-  BirdsEyeViewInfo,
-  TheBoxInfo,
-  PhenomenaInfo,
-  // FilmNetInfo,
-  // ThisPortfolioInfo,
-} from "./FilmData";
+import filmData from "./FilmData";
 
 //goToContext
-import { useRef, useEffect } from "react";
 import useOnScreen from "../Hooks/useOnScreen";
 import { useSampleTrueContext } from "../../Contexts/BackToSample";
 
@@ -46,33 +36,11 @@ export default function Samples() {
         </div>
       </div>
       <div className="SamplePreviewContainers">
-        {/* <div className="SamplePreview fs-heading">
-          <Preview {...GreenlessInfo} />
-        </div> */}
-        <div className="SamplePreview fs-heading">
-          <Preview {...FiveMoreMinutesInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...ItWasALeafThatFellInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...DownBadInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...TheBoxInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...BirdsEyeViewInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...PhenomenaInfo} />
-        </div>
-        {/* <div className="SamplePreview fs-heading">
-          <Preview {...FilmNetInfo} />
-        </div>
-        <div className="SamplePreview fs-heading">
-          <Preview {...ThisPortfolioInfo} />
-        </div> */}
+        {filmData.map((film) => (
+          <div className="SamplePreview fs-heading">
+            <Preview key={film.key} film={film} />
+          </div>
+        ))}
       </div>
     </div>
   );

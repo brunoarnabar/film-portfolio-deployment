@@ -2,8 +2,10 @@ import { React, useState } from "react";
 import "./preview.scss";
 import { Link } from "react-router-dom";
 
-export default function Preview({ film }) {
-  const { img, gif, url, title, date } = film;
+export default function Preview(props) {
+  const img = props.img;
+  const gif = props.gif;
+  const string = props.url;
 
   const [over, setOver] = useState(false);
 
@@ -14,7 +16,7 @@ export default function Preview({ film }) {
   }
 
   return (
-    <Link to={`/films/${url}`}>
+    <Link to={string}>
       <div
         className="PreviewContainer"
         onMouseOver={() => setOver(true)}
@@ -25,10 +27,10 @@ export default function Preview({ film }) {
           <img
             className="PreviewBgImg"
             src={over ? gif : img}
-            alt={title}
+            alt={props.title}
           />
-          <div className="PreviewTitle">{title}</div>
-          <div className="PreviewDate">{date}</div>
+          <div className="PreviewTitle">{props.title}</div>
+          <div className="PreviewDate">{props.date}</div>
         </div>
       </div>
     </Link>
