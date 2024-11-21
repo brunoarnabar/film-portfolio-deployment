@@ -1,7 +1,7 @@
 import React from "react";
 import "./landing.scss";
 import Typewriter from "typewriter-effect";
-import Resume from "../../Assets/Resume/BrunoArnabarResume.pdf";
+import Resume from "../../Assets/Resume/Arnabar_Bruno_CV.pdf";
 import { FiDownload } from "react-icons/fi";
 
 export default function Landing() {
@@ -55,7 +55,13 @@ export default function Landing() {
       <Typewriter
         className="LandingTypewriter"
         options={{
-          strings: ["SCREENWRITER", "FILMMAKER", "DEVELOPER", "CREATOR"],
+          strings: [
+            "FILMMAKER",
+            "EDITOR",
+            "DEVELOPER",
+            "CREATOR",
+            "SCREENWRITER",
+          ],
           autoStart: true,
           loop: true,
           delay: 110,
@@ -72,7 +78,7 @@ export default function Landing() {
       <div className="LandingResumeContainer">
         <a
           href={Resume}
-          download="BrunoArnabarResume.pdf"
+          download="Arnabar_Bruno_CV.pdf"
           className="LandingResume link-color link-primary-900 fs-button text-shadow-halation-dark"
         >
           <FiDownload className="svg-shadow-halation-dark" />
