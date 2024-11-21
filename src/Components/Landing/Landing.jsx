@@ -84,7 +84,7 @@ export default function Landing() {
           <FiDownload className="svg-shadow-halation-dark" />
           &nbsp;my&nbsp;resume
         </a>
-        <div className="LandingResumeInfo text-shadow-halation">(PDF 56kb)</div>
+        <div className="LandingResumeInfo text-shadow-halation">(PDF 72kb)</div>
         {/* <div className="LandingResumeInfo text-shadow-halation">(PDF 69kb)</div> */}
       </div>
 
