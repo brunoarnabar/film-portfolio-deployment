@@ -30,11 +30,11 @@ const today = new Date().toLocaleDateString("en-US", {
 let filmsData = [
   {
     title: "Spared",
-    date: "10-06-2025",
+    date: "10-03-2025",
     vidUrl: "https://youtu.be/J6pfrIjd8gk",
     workType: "Personal",
     info: "Shot in 16mm film, secondary footage shot with a Lumix GH5.",
-    skinny: true,
+    skinny: false,
     gif: SparedGif,
     img: SparedImg,
     url: "Spared",
@@ -122,7 +122,7 @@ let filmsData = [
     gif: PhenomenaGif,
     img: PhenomenaImg,
     url: "Phenomena",
-    shown: true,
+    shown: false,
   },
   {
     title: "FilmNet",
