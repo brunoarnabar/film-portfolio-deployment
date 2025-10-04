@@ -17,6 +17,9 @@ import FilmNetGif from "../../Video/Gifs/FilmNet.gif";
 import FilmNetImg from "../../Video/Thumbnail/FilmNet.png";
 import ThisPortfolioGif from "../../Video/Gifs/ThisPortfolio.gif";
 import ThisPortfolioImg from "../../Video/Thumbnail/ThisPortfolio.png";
+import SparedGif from "../../Video/Gifs/Spared.gif";
+import SparedImg from "../../Video/Thumbnail/Spared.png";
+
 
 const today = new Date().toLocaleDateString("en-US", {
   year: "numeric",
@@ -25,6 +28,18 @@ const today = new Date().toLocaleDateString("en-US", {
 });
 
 let filmsData = [
+  {
+    title: "Spared",
+    date: "10-06-2025",
+    vidUrl: "https://youtu.be/J6pfrIjd8gk",
+    workType: "Personal",
+    info: "Shot in 16mm film, secondary footage shot with a Lumix GH5.",
+    skinny: true,
+    gif: SparedGif,
+    img: SparedImg,
+    url: "Spared",
+    shown: true,
+  },
   {
     title: "Scenes From Greenless",
     date: "06-22-2021",
